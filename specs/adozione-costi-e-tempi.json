@@ -1,0 +1,207 @@
+{
+  "slug": "adozione-costi-e-tempi",
+  "title": "Calcolatore Adozione (costi e tempi)",
+  "lang": "it",
+  "category": "Famiglia e Vita Quotidiana",
+  "description": "Elenca costi e tempistiche medi per procedura di adozione nazionale o internazionale.",
+  "inputs": [
+    {
+      "id": "tipo_adozione",
+      "label": "Tipo di adozione",
+      "type": "select",
+      "required": true,
+      "options": [
+        {
+          "label": "Nazionale",
+          "value": 1
+        },
+        {
+          "label": "Internazionale",
+          "value": 2
+        }
+      ],
+      "default": 2
+    },
+    {
+      "id": "paese_categoria",
+      "label": "Area di provenienza",
+      "type": "select",
+      "required": true,
+      "options": [
+        {
+          "label": "Europa dell'Est",
+          "value": 1
+        },
+        {
+          "label": "America Latina",
+          "value": 2
+        },
+        {
+          "label": "Asia",
+          "value": 3
+        },
+        {
+          "label": "Africa",
+          "value": 4
+        },
+        {
+          "label": "Altro",
+          "value": 5
+        }
+      ],
+      "default": 2
+    },
+    {
+      "id": "costo_ente",
+      "label": "Contributo all'ente autorizzato",
+      "type": "number",
+      "unit": "€",
+      "required": true,
+      "min": 0,
+      "step": 100,
+      "default": 3500
+    },
+    {
+      "id": "durata_soggiorno_giorni",
+      "label": "Durata soggiorno",
+      "type": "number",
+      "unit": "giorni",
+      "required": true,
+      "min": 0,
+      "step": 1,
+      "default": 60
+    },
+    {
+      "id": "costo_giornaliero_persona",
+      "label": "Costo medio giornaliero per persona",
+      "type": "number",
+      "unit": "€",
+      "required": true,
+      "min": 0,
+      "step": 10,
+      "default": 110
+    },
+    {
+      "id": "numero_viaggiatori",
+      "label": "Numero viaggiatori",
+      "type": "number",
+      "required": true,
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "id": "altre_spese_documentate",
+      "label": "Altre spese documentate",
+      "type": "number",
+      "unit": "€",
+      "required": false,
+      "min": 0,
+      "step": 50,
+      "default": 2000
+    }
+  ],
+  "outputs": [
+    {
+      "id": "costo_procedura",
+      "label": "Costo Stimato Procedura (Ente + Estero)",
+      "unit": "€"
+    },
+    {
+      "id": "costo_viaggio",
+      "label": "Costo Stimato Viaggio e Soggiorno",
+      "unit": "€"
+    },
+    {
+      "id": "costo_totale",
+      "label": "Costo Totale Lordo Stimato",
+      "unit": "€"
+    },
+    {
+      "id": "beneficio_fiscale",
+      "label": "Beneficio Fiscale (50% Detrazione IRPEF)",
+      "unit": "€"
+    },
+    {
+      "id": "costo_netto",
+      "label": "Costo Finale Netto Stimato",
+      "unit": "€"
+    },
+    {
+      "id": "tempo_min_mesi",
+      "label": "Tempo minimo (mesi)",
+      "unit": "mesi"
+    },
+    {
+      "id": "tempo_max_mesi",
+      "label": "Tempo massimo (mesi)",
+      "unit": "mesi"
+    }
+  ],
+  "formulaSteps": [
+    {
+      "id": "costo_base_paese",
+      "expr": "if(paese_categoria==1,7000, if(paese_categoria==2,8500, if(paese_categoria==3,11000, if(paese_categoria==4,9500,9000))))"
+    },
+    {
+      "id": "costo_procedura",
+      "expr": "costo_ente + costo_base_paese + altre_spese_documentate"
+    },
+    {
+      "id": "costo_viaggio",
+      "expr": "durata_soggiorno_giorni * costo_giornaliero_persona * numero_viaggiatori"
+    },
+    {
+      "id": "costo_totale",
+      "expr": "costo_procedura + costo_viaggio"
+    },
+    {
+      "id": "beneficio_fiscale",
+      "expr": "costo_totale * 0.5"
+    },
+    {
+      "id": "costo_netto",
+      "expr": "costo_totale - beneficio_fiscale"
+    },
+    {
+      "id": "tempo_min_mesi",
+      "expr": "if(tipo_adozione==1,36,36)"
+    },
+    {
+      "id": "tempo_max_mesi",
+      "expr": "if(tipo_adozione==1,48,60)"
+    }
+  ],
+  "examples": [
+    {
+      "inputs": {
+        "tipo_adozione": 2,
+        "paese_categoria": 2,
+        "costo_ente": 3500,
+        "durata_soggiorno_giorni": 60,
+        "costo_giornaliero_persona": 110,
+        "numero_viaggiatori": 2,
+        "altre_spese_documentate": 2000
+      },
+      "outputs": {
+        "costo_procedura": 14000,
+        "costo_viaggio": 13200,
+        "costo_totale": 27200,
+        "beneficio_fiscale": 13600,
+        "costo_netto": 13600,
+        "tempo_min_mesi": 36,
+        "tempo_max_mesi": 60
+      }
+    }
+  ],
+  "tags": [
+    "adozione",
+    "costi adozione",
+    "tempi adozione",
+    "adozione internazionale",
+    "adozione nazionale",
+    "calcolatore"
+  ],
+  "content": "## Calcolatore Adozione: una stima di costi e tempi\\n\\nIntraprendere il percorso dell'adozione è una scelta carica di amore e speranza, ma anche un viaggio che richiede pianificazione, specialmente dal punto di vista economico e temporale. Questo calcolatore è pensato per offrirti una **stima realistica e trasparente** dei costi e delle tempistiche che potresti affrontare, distinguendo tra il percorso nazionale e quello internazionale.\\n\\nRicorda: i valori presentati sono una **simulazione basata su dati medi**. Ogni percorso adottivo è unico e i costi possono variare significativamente. Usa questo strumento come punto di partenza per orientarti e pianificare con maggiore consapevolezza.\\n\\n---\\n\\n### Come Funziona il Calcolatore\\n\\nIl calcolatore analizza i principali fattori di costo dell'adozione internazionale, la tipologia più onerosa. Per l'adozione nazionale, che ha costi quasi nulli, forniamo una sezione informativa dettagliata.\\n\\n1.  **Tipo di Adozione**: Seleziona \\\"Nazionale\\\" per leggere le informazioni specifiche. Scegliendo \\\"Internazionale\\\", attiverai i campi di calcolo.\\n2.  **Area Geografica**: Il paese di origine del bambino è il fattore che più influenza i costi della procedura all'estero.\\n3.  **Costo dell'Ente**: In Italia, l'adozione internazionale è gestita da enti autorizzati. La loro tariffa copre l'assistenza burocratica e legale nel nostro paese.\\n4.  **Viaggio e Soggiorno**: Stima la durata della permanenza all'estero e il costo giornaliero. Questa è una delle voci più variabili e impattanti sul budget totale.\\n5.  **Altre Spese**: Include costi per traduzioni giurate, legalizzazioni di documenti e altre piccole spese burocratiche.\\n\\n---\\n\\n### Adozione Nazionale: Un Percorso Quasi Gratuito\\n\\nSe stai considerando l'adozione nazionale, la buona notizia è che i costi economici sono estremamente contenuti. La procedura presso il Tribunale per i Minorenni è **gratuita**. Le uniche spese da prevedere sono quelle per marche da bollo e diritti di cancelleria, per un totale di poche decine di euro.\\n\\n**E i tempi?** Questa è la vera incognita. L'attesa per un'adozione nazionale può essere molto lunga e imprevedibile, estendendosi in media per **3 o 4 anni**, a volte anche di più, dal momento della presentazione della dichiarazione di disponibilità.\\n\\n---\\n\\n### Adozione Internazionale: Analisi Dettagliata dei Costi\\n\\nAdottare un bambino da un altro paese comporta un impegno economico significativo, con un costo totale che può variare **dai 10.000€ a oltre 35.000€**. Vediamo le voci principali:\\n\\n* **Costi in Italia**: Si riferiscono principalmente alla parcella dell'**ente autorizzato**, che per legge deve assistere la coppia. Questa cifra, solitamente tra i **3.000€ e i 5.000€**, copre la gestione della pratica, la formazione e il supporto psico-sociale.\\n* **Costi all'Estero**: È la voce più consistente e variabile. Include le spese per la procedura legale nel paese di origine del bambino, eventuali donazioni a istituti e i costi per la preparazione dei documenti richiesti dalle autorità locali. La nostra stima si basa su medie regionali.\\n* **Costi di Viaggio e Soggiorno**: La coppia deve trascorrere un periodo nel paese del bambino, che può variare da poche settimane a diversi mesi. Questo costo, che il nostro calcolatore ti aiuta a stimare, dipende dalla destinazione, dalla durata della permanenza e dallo stile di vita.\\n\\n---\\n\\n### Il Vantaggio Fiscale: Detrazione del 50%\\n\\nLo Stato italiano supporta le coppie che scelgono l'adozione internazionale con un importante beneficio fiscale. È possibile portare in **detrazione dall'IRPEF il 50% di tutte le spese sostenute e certificate** dall'ente autorizzato.\\n\\nQuesto significa che, su una spesa totale di 25.000€, potrai recuperare 12.500€ sotto forma di minore imposta da pagare. La detrazione può essere ripartita in 5 o 10 quote annuali.\\n\\n**Quali spese sono incluse?** Generalmente, tutte le spese necessarie e documentate dall'ente, inclusi i costi di viaggio e soggiorno, sono ammesse alla detrazione. Conserva tutta la documentazione con cura!\\n\\n---\\n\\n### Le Tappe e i Tempi dell'Adozione Internazionale\\n\\nAnche il percorso internazionale richiede pazienza. Sebbene i tempi possano essere leggermente più prevedibili rispetto a quello nazionale, l'intero processo dura in media **dai 3 ai 5 anni**. Le fasi principali sono:\\n\\n1.  **Dichiarazione di Disponibilità**: Si presenta al Tribunale per i Minorenni della propria regione.\\n2.  **Indagine dei Servizi Sociali**: Gli assistenti sociali valutano l'idoneità della coppia.\\n3.  **Decreto di Idoneità**: Se l'esito è positivo, il Tribunale emette un decreto che certifica l'idoneità all'adozione (richiede circa 1-2 anni).\\n4.  **Incarico all'Ente Autorizzato**: Entro un anno dal decreto, la coppia deve scegliere un ente che la seguirà nel percorso all'estero.\\n5.  **Attesa e Abbinamento**: L'ente avvia le pratiche nel paese scelto. Questa fase di attesa di una proposta di abbinamento bambino-coppia è la più lunga e variabile.\\n6.  **Viaggio e Incontro**: La coppia si reca all'estero per incontrare il bambino e finalizzare l'adozione.\\n7.  **Ritorno in Italia**: Una volta rientrati, l'adozione viene resa effettiva anche in Italia."
+}

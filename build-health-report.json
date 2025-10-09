@@ -1,0 +1,61 @@
+{
+  "startedAt": "2025-08-13T15:22:35.457Z",
+  "fix": {
+    "ok": true,
+    "summary": {
+      "total": 141,
+      "successes": 0
+    }
+  },
+  "eslint": {
+    "ok": false,
+    "totals": {
+      "files": 250,
+      "errors": 134,
+      "warnings": 29
+    },
+    "topRules": [
+      {
+        "rule": "unknown",
+        "total": 98,
+        "errors": 98,
+        "warnings": 0
+      },
+      {
+        "rule": "unused-imports/no-unused-vars",
+        "total": 20,
+        "errors": 0,
+        "warnings": 20
+      },
+      {
+        "rule": "@typescript-eslint/no-unused-vars",
+        "total": 20,
+        "errors": 20,
+        "warnings": 0
+      },
+      {
+        "rule": "react/no-unescaped-entities",
+        "total": 16,
+        "errors": 16,
+        "warnings": 0
+      },
+      {
+        "rule": "react-hooks/exhaustive-deps",
+        "total": 9,
+        "errors": 0,
+        "warnings": 9
+      }
+    ]
+  },
+  "nextBuild": {
+    "ok": false,
+    "failed": true,
+    "compileMarkers": 0,
+    "ruleTotals": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "topRules": []
+  },
+  "finishedAt": "2025-08-13T15:32:30.759Z"
+}

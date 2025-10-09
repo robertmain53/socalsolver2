@@ -1,0 +1,26 @@
+[
+  {
+    "file": "abbonamento-stadio-vs-biglietto.json",
+    "issues": [
+      {
+        "error": "Cannot read properties of undefined (reading '_zod')"
+      }
+    ]
+  },
+  {
+    "file": "adozione-costi-e-tempi.json",
+    "issues": [
+      {
+        "error": "Cannot read properties of undefined (reading '_zod')"
+      }
+    ]
+  },
+  {
+    "file": "ammortamento-auto-agenti-commercio.json",
+    "issues": [
+      {
+        "error": "Cannot read properties of undefined (reading '_zod')"
+      }
+    ]
+  }
+]

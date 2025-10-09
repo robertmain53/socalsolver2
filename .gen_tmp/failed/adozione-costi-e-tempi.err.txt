@@ -1,0 +1,11 @@
+TypeError: Cannot read properties of undefined (reading '_zod')
+    at inst._zod.parse (file:///home/yeahupsrl/socalsolver-pro/node_modules/zod/v4/core/schemas.js:1186:46)
+    at inst._zod.parse (file:///home/yeahupsrl/socalsolver-pro/node_modules/zod/v4/core/schemas.js:1414:35)
+    at inst._zod.parse (file:///home/yeahupsrl/socalsolver-pro/node_modules/zod/v4/core/schemas.js:1447:43)
+    at eval (eval at compile (file:///home/yeahupsrl/socalsolver-pro/node_modules/zod/v4/core/doc.js:33:16), <anonymous>:5:38)
+    at file:///home/yeahupsrl/socalsolver-pro/node_modules/zod/v4/core/schemas.js:747:34
+    at inst._zod.parse (file:///home/yeahupsrl/socalsolver-pro/node_modules/zod/v4/core/schemas.js:773:23)
+    at inst._zod.parse (file:///home/yeahupsrl/socalsolver-pro/node_modules/zod/v4/core/schemas.js:646:45)
+    at inst._zod.parse (file:///home/yeahupsrl/socalsolver-pro/node_modules/zod/v4/core/schemas.js:1414:35)
+    at inst._zod.parse (file:///home/yeahupsrl/socalsolver-pro/node_modules/zod/v4/core/schemas.js:1447:43)
+    at eval (eval at compile (file:///home/yeahupsrl/socalsolver-pro/node_modules/zod/v4/core/doc.js:33:16), <anonymous>:165:41)

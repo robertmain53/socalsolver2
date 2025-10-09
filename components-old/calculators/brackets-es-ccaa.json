@@ -1,0 +1,161 @@
+{
+  "_comment": "Tramos IRPF 2024. Fuente principal: Manual práctico AEAT Renta 2024 – páginas por CCAA (gravamen autonómico). Las entradas no listadas mantienen el valor previo.",
+  "tramosEstatales": [
+    { "hasta": 12450, "tipo": 9.5 },
+    { "hasta": 20200, "tipo": 12.0 },
+    { "hasta": 35200, "tipo": 15.0 },
+    { "hasta": 60000, "tipo": 18.5 },
+    { "hasta": 300000, "tipo": 22.5 },
+    { "hasta": null, "tipo": 24.5 }
+  ],
+  "tramosAutonomicos": {
+    "Genérico": [
+      { "hasta": 12450, "tipo": 9.5 },
+      { "hasta": 20200, "tipo": 12.0 },
+      { "hasta": 35200, "tipo": 15.0 },
+      { "hasta": 60000, "tipo": 18.5 },
+      { "hasta": 300000, "tipo": 22.5 },
+      { "hasta": null, "tipo": 24.5 }
+    ],
+
+    "Comunidad de Madrid": [
+      { "hasta": 13362.22, "tipo": 8.5 },
+      { "hasta": 19004.63, "tipo": 10.7 },
+      { "hasta": 35425.68, "tipo": 12.8 },
+      { "hasta": 57320.40, "tipo": 17.4 },
+      { "hasta": null, "tipo": 20.5 }
+    ],
+
+    "Cataluña": [
+      { "hasta": 12450.00, "tipo": 10.5 },
+      { "hasta": 17707.20, "tipo": 12.0 },
+      { "hasta": 21000.00, "tipo": 14.0 },
+      { "hasta": 33007.20, "tipo": 15.0 },
+      { "hasta": 53407.20, "tipo": 18.8 },
+      { "hasta": 90000.00, "tipo": 21.5 },
+      { "hasta": 120000.00, "tipo": 23.5 },
+      { "hasta": 175000.00, "tipo": 24.5 },
+      { "hasta": null, "tipo": 25.5 }
+    ],
+
+    "Andalucía": [
+      { "hasta": 13000.00, "tipo": 9.5 },
+      { "hasta": 21100.00, "tipo": 12.0 },
+      { "hasta": 35200.00, "tipo": 15.0 },
+      { "hasta": 60000.00, "tipo": 18.5 },
+      { "hasta": null, "tipo": 22.5 }
+    ],
+
+    "Comunitat Valenciana": [
+      { "hasta": 12000.00, "tipo": 9.0 },
+      { "hasta": 22000.00, "tipo": 12.0 },
+      { "hasta": 32000.00, "tipo": 15.0 },
+      { "hasta": 42000.00, "tipo": 17.5 },
+      { "hasta": 52000.00, "tipo": 20.0 },
+      { "hasta": 62000.00, "tipo": 22.5 },
+      { "hasta": 72000.00, "tipo": 25.0 },
+      { "hasta": 100000.00, "tipo": 26.5 },
+      { "hasta": 150000.00, "tipo": 27.5 },
+      { "hasta": 200000.00, "tipo": 28.5 },
+      { "hasta": null, "tipo": 29.5 }
+    ],
+
+    "Galicia": [
+      { "hasta": 12985.35, "tipo": 9.0 },
+      { "hasta": 21068.60, "tipo": 11.65 },
+      { "hasta": 35200.00, "tipo": 14.9 },
+      { "hasta": 60000.00, "tipo": 18.4 },
+      { "hasta": null, "tipo": 22.5 }
+    ],
+
+    "Aragón": [
+      { "hasta": 13072.50, "tipo": 9.5 },
+      { "hasta": 21210.00, "tipo": 12.0 },
+      { "hasta": 36960.00, "tipo": 15.0 },
+      { "hasta": 52500.00, "tipo": 18.5 },
+      { "hasta": 60000.00, "tipo": 20.5 },
+      { "hasta": 80000.00, "tipo": 23.0 },
+      { "hasta": 90000.00, "tipo": 24.0 },
+      { "hasta": null, "tipo": 25.0 }
+    ],
+
+    "Principado de Asturias": [
+      { "hasta": 12450.00, "tipo": 10.0 },
+      { "hasta": 17707.20, "tipo": 12.0 },
+      { "hasta": 33007.20, "tipo": 14.0 },
+      { "hasta": 53407.20, "tipo": 18.5 },
+      { "hasta": 70000.00, "tipo": 21.5 },
+      { "hasta": 90000.00, "tipo": 22.5 },
+      { "hasta": 175000.00, "tipo": 25.0 },
+      { "hasta": null, "tipo": 25.5 }
+    ],
+
+    "Illes Balears": [
+      { "hasta": 10000.00, "tipo": 9.0 },
+      { "hasta": 18000.00, "tipo": 11.25 },
+      { "hasta": 30000.00, "tipo": 14.25 },
+      { "hasta": 48000.00, "tipo": 17.5 },
+      { "hasta": 70000.00, "tipo": 19.0 },
+      { "hasta": 90000.00, "tipo": 21.75 },
+      { "hasta": 120000.00, "tipo": 22.75 },
+      { "hasta": 175000.00, "tipo": 23.75 },
+      { "hasta": null, "tipo": 24.75 }
+    ],
+
+    "Cantabria": [
+      { "hasta": 13000.00, "tipo": 8.5 },
+      { "hasta": 21000.00, "tipo": 11.0 },
+      { "hasta": 35200.00, "tipo": 14.5 },
+      { "hasta": 60000.00, "tipo": 18.0 },
+      { "hasta": 90000.00, "tipo": 22.5 },
+      { "hasta": null, "tipo": 24.5 }
+    ],
+
+    "Castilla-La Mancha": [
+      { "hasta": 12450.00, "tipo": 9.5 },
+      { "hasta": 20200.00, "tipo": 12.0 },
+      { "hasta": 35200.00, "tipo": 15.0 },
+      { "hasta": 60000.00, "tipo": 18.5 },
+      { "hasta": null, "tipo": 22.5 }
+    ],
+
+    "Castilla y León": [
+      { "hasta": 12450.00, "tipo": 9.0 },
+      { "hasta": 20200.00, "tipo": 12.0 },
+      { "hasta": 35200.00, "tipo": 14.0 },
+      { "hasta": 53407.20, "tipo": 18.5 },
+      { "hasta": null, "tipo": 21.5 }
+    ],
+
+    "Extremadura": [
+      { "hasta": 12450.00, "tipo": 8.0 },
+      { "hasta": 20200.00, "tipo": 10.0 },
+      { "hasta": 24200.00, "tipo": 16.0 },
+      { "hasta": 35200.00, "tipo": 17.5 },
+      { "hasta": 60000.00, "tipo": 21.0 },
+      { "hasta": 80200.00, "tipo": 23.5 },
+      { "hasta": 99200.00, "tipo": 24.0 },
+      { "hasta": 120200.00, "tipo": 24.5 },
+      { "hasta": null, "tipo": 25.0 }
+    ],
+
+    "La Rioja": [
+      { "hasta": 12450.00, "tipo": 8.0 },
+      { "hasta": 20200.00, "tipo": 10.6 },
+      { "hasta": 35200.00, "tipo": 13.6 },
+      { "hasta": 40000.00, "tipo": 17.8 },
+      { "hasta": 50000.00, "tipo": 18.3 },
+      { "hasta": 60000.00, "tipo": 19.0 },
+      { "hasta": 120000.00, "tipo": 24.5 },
+      { "hasta": null, "tipo": 27.0 }
+    ],
+
+    "Región de Murcia": [
+      { "hasta": 12450.00, "tipo": 9.5 },
+      { "hasta": 20200.00, "tipo": 11.2 },
+      { "hasta": 34000.00, "tipo": 13.3 },
+      { "hasta": 60000.00, "tipo": 17.9 },
+      { "hasta": null, "tipo": 22.5 }
+    ]
+  }
+}

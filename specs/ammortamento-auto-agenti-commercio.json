@@ -1,0 +1,161 @@
+{
+  "slug": "ammortamento-auto-agenti-commercio",
+  "title": "Calcolatore Ammortamento Fiscale Auto per Agenti di Commercio",
+  "lang": "it",
+  "category": "Auto e Trasporti",
+  "description": "Calcola quote di ammortamento deducibili e limiti di costo per le auto degli agenti di commercio.",
+  "inputs": [
+    {
+      "id": "costo_acquisto",
+      "label": "Costo di acquisto del veicolo (IVA inclusa)",
+      "type": "number",
+      "unit": "€",
+      "min": 0,
+      "step": 100
+    }
+  ],
+  "outputs": [
+    {
+      "id": "piano_ammortamento",
+      "label": "Piano di Ammortamento Fiscale Deducibile",
+      "type": "table",
+      "columns": [
+        {
+          "key": "anno",
+          "label": "Anno"
+        },
+        {
+          "key": "base_calcolo",
+          "label": "Base di Calcolo",
+          "unit": "€"
+        },
+        {
+          "key": "coefficiente",
+          "label": "Coefficiente",
+          "unit": "%"
+        },
+        {
+          "key": "quota_ammortamento",
+          "label": "Quota Ammortamento",
+          "unit": "€"
+        },
+        {
+          "key": "quota_deducibile",
+          "label": "Quota Deducibile (80%)",
+          "unit": "€"
+        }
+      ]
+    },
+    {
+      "id": "totale_deducibile",
+      "label": "Totale Deducibile nei 5 Anni",
+      "unit": "€"
+    },
+    {
+      "id": "iva_detraibile",
+      "label": "IVA Detraibile al 100% sull'Acquisto",
+      "unit": "€"
+    }
+  ],
+  "formulaSteps": [
+    {
+      "id": "base_calcolo",
+      "expr": "Math.min(costo_acquisto, 25822.84)"
+    },
+    {
+      "id": "quota_ammortamento_anno1",
+      "expr": "base_calcolo * 0.125"
+    },
+    {
+      "id": "quota_deducibile_anno1",
+      "expr": "quota_ammortamento_anno1 * 0.80"
+    },
+    {
+      "id": "quota_ammortamento_anni_intermedi",
+      "expr": "base_calcolo * 0.25"
+    },
+    {
+      "id": "quota_deducibile_anni_intermedi",
+      "expr": "quota_ammortamento_anni_intermedi * 0.80"
+    },
+    {
+      "id": "quota_ammortamento_anno5",
+      "expr": "base_calcolo * 0.125"
+    },
+    {
+      "id": "quota_deducibile_anno5",
+      "expr": "quota_ammortamento_anno5 * 0.80"
+    },
+    {
+      "id": "totale_deducibile",
+      "expr": "quota_deducibile_anno1 + (quota_deducibile_anni_intermedi * 3) + quota_deducibile_anno5"
+    },
+    {
+      "id": "iva_detraibile",
+      "expr": "(costo_acquisto / 1.22) * 0.22"
+    },
+    {
+      "id": "piano_ammortamento",
+      "expr": "[{'anno': 1, 'base_calcolo': base_calcolo, 'coefficiente': 12.5, 'quota_ammortamento': quota_ammortamento_anno1, 'quota_deducibile': quota_deducibile_anno1}, {'anno': 2, 'base_calcolo': base_calcolo, 'coefficiente': 25, 'quota_ammortamento': quota_ammortamento_anni_intermedi, 'quota_deducibile': quota_deducibile_anni_intermedi}, {'anno': 3, 'base_calcolo': base_calcolo, 'coefficiente': 25, 'quota_ammortamento': quota_ammortamento_anni_intermedi, 'quota_deducibile': quota_deducibile_anni_intermedi}, {'anno': 4, 'base_calcolo': base_calcolo, 'coefficiente': 25, 'quota_ammortamento': quota_ammortamento_anni_intermedi, 'quota_deducibile': quota_deducibile_anni_intermedi}, {'anno': 5, 'base_calcolo': base_calcolo, 'coefficiente': 12.5, 'quota_ammortamento': quota_ammortamento_anno5, 'quota_deducibile': quota_deducibile_anno5}]"
+    }
+  ],
+  "examples": [
+    {
+      "inputs": {
+        "costo_acquisto": 35000
+      },
+      "outputs": {
+        "piano_ammortamento": [
+          {
+            "anno": 1,
+            "base_calcolo": 25822.84,
+            "coefficiente": 12.5,
+            "quota_ammortamento": 3227.86,
+            "quota_deducibile": 2582.29
+          },
+          {
+            "anno": 2,
+            "base_calcolo": 25822.84,
+            "coefficiente": 25,
+            "quota_ammortamento": 6455.71,
+            "quota_deducibile": 5164.57
+          },
+          {
+            "anno": 3,
+            "base_calcolo": 25822.84,
+            "coefficiente": 25,
+            "quota_ammortamento": 6455.71,
+            "quota_deducibile": 5164.57
+          },
+          {
+            "anno": 4,
+            "base_calcolo": 25822.84,
+            "coefficiente": 25,
+            "quota_ammortamento": 6455.71,
+            "quota_deducibile": 5164.57
+          },
+          {
+            "anno": 5,
+            "base_calcolo": 25822.84,
+            "coefficiente": 12.5,
+            "quota_ammortamento": 3227.86,
+            "quota_deducibile": 2582.29
+          }
+        ],
+        "totale_deducibile": 20658.28,
+        "iva_detraibile": 6311.48
+      }
+    }
+  ],
+  "tags": [
+    "agente di commercio",
+    "ammortamento auto",
+    "fisco",
+    "deducibilità",
+    "partita iva",
+    "tasse",
+    "auto aziendale",
+    "calcolo fiscale"
+  ],
+  "content": "## Ammortamento Auto per Agenti di Commercio: Calcola la Tua Deducibilità\\n\\nPer un agente o rappresentante di commercio, l'auto non è solo un mezzo di trasporto, ma il principale strumento di lavoro. Per questo motivo, la normativa fiscale italiana (art. 164 del TUIR) riconosce a questa categoria un regime di deducibilità dei costi auto decisamente vantaggioso.\\n\\nQuesto calcolatore ti permette di simulare in modo semplice e immediato il piano di ammortamento fiscale per la tua auto, mostrandoti esattamente quale importo potrai dedurre dal tuo reddito imponibile ogni anno. Inserisci il costo di acquisto del veicolo per scoprire il tuo risparmio fiscale.\\n\\n---\\n\\n### I Principi Chiave del Calcolo\\n\\nIl calcolo dell'ammortamento deducibile per un agente di commercio si fonda su tre pilastri normativi. Comprendere questi punti è essenziale per pianificare l'investimento.\\n\\n1. **Costo Massimo Fiscalmente Riconosciuto: € 25.822,84**\\n Questo è il tetto massimo di spesa su cui puoi calcolare l'ammortamento. Se acquisti un'auto che costa, ad esempio, 40.000 €, i tuoi calcoli fiscali dovranno comunque basarsi sulla cifra di 25.822,84 €. La parte eccedente è fiscalmente irrilevante ai fini della deduzione del costo.\\n\\n2. **Percentuale di Deducibilità: 80%**\\n Gli agenti di commercio possono dedurre l'80% dei costi. Questo si applica non solo alla quota di ammortamento annuale calcolata, ma anche a tutte le altre spese di gestione del veicolo (carburante, manutenzione, assicurazione, bollo, pedaggi autostradali, etc.).\\n\\n3. **Coefficiente di Ammortamento: 25% (con eccezione)**\\n Il costo del veicolo viene ammortizzato in 4 anni, applicando un'aliquota del 25% ogni anno. Tuttavia, la legge prevede che **per il primo anno** l'aliquota sia **dimezzata al 12,5%**, indipendentemente dal giorno esatto dell'acquisto. Questo 'sdoppiamento' della prima quota fa sì che il processo di ammortamento si completi di fatto in 5 anni solari.\\n\\n---\\n\\n### Il Piano di Ammortamento in 5 Anni\\n\\nEcco come si sviluppa il piano di ammortamento sulla base delle regole viste:\\n\\n* **Anno 1**: Si calcola il 12,5% della base imponibile (max 25.822,84 €). L'80% di questo risultato è la quota deducibile.\\n* **Anno 2, 3, 4**: Si calcola il 25% della base imponibile. L'80% di questo risultato è la quota deducibile per ciascuno di questi tre anni.\\n* **Anno 5**: Si calcola il restante 12,5% della base imponibile. L'80% di questo risultato è la quota deducibile finale.\\n\\nIl nostro calcolatore esegue automaticamente questi passaggi, fornendoti un piano chiaro e dettagliato.\\n\\n---\\n\\n### Non Dimenticare l'IVA: Detraibilità al 100%\\n\\nUn altro enorme vantaggio per gli agenti di commercio è la **detraibilità totale (100%) dell'IVA** sull'acquisto dell'auto e su tutte le spese correlate (carburante, manutenzione, etc.). Questo significa che l'Imposta sul Valore Aggiunto pagata può essere interamente recuperata, riducendo di fatto il costo vivo dell'investimento e della gestione del veicolo. Il calcolatore mostra l'importo dell'IVA che potrai detrarre al momento dell'acquisto.\\n\\n### E per Leasing o Noleggio a Lungo Termine?\\n\\nLeasing e Noleggio a Lungo Termine (NLT) seguono logiche di deducibilità simili ma con regole specifiche per i canoni mensili e tetti di spesa differenti. Se stai valutando queste opzioni, questo calcolatore ti dà un'ottima base di partenza per capire i benefici fiscali legati all'uso dell'auto, ma è consigliabile consultare un commercialista per un'analisi precisa basata sui dettagli del tuo contratto."
+}

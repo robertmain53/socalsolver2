@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS Custom Properties for the SoCalSolver color palette */
+:root {
+  --color-sunset-orange: #F26B2E;
+  --color-golden-yellow: #F9B934;
+  --color-light-sand: #FCD96F;
+  --color-ocean-teal: #3C9DA7;
+  --blue: #3C9DA7 !important;
+  --color-dark-brown: #3A2A1A;
+  --color-cream-bg: #F9F5E9;
+
+  /* Shades for design flexibility */
+  --color-sunset-orange-light: #F47E4A;
+  --color-sunset-orange-dark: #D85C20;
+  --color-golden-yellow-light: #FFD257;
+  --color-golden-yellow-dark: #E1A500;
+  --color-ocean-teal-light: #56B5BD;
+  --color-ocean-teal-dark: #2C7A82;
+  --color-dark-brown-light: #5A4632;
+  --color-dark-brown-dark: #241810;
+  --color-cream-bg-dark: #F0EDE5;
+}
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--color-dark-brown);
+  background-color: var(--color-cream-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography improvements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-dark-brown);
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(242, 107, 46, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(242, 107, 46, 0.5); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Utility classes */
+.animate-fade-in { animation: fadeIn 0.6s ease-out; }
+.animate-slide-up { animation: slideUp 0.4s ease-out; }
+.animate-glow { animation: glow 2s ease-in-out infinite; }
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Gradient backgrounds */
+.gradient-sunset {
+  background: linear-gradient(135deg, var(--color-golden-yellow), var(--color-sunset-orange));
+}
+
+.gradient-ocean {
+  background: linear-gradient(135deg, var(--color-ocean-teal), var(--color-dark-brown));
+}
+
+.gradient-sand {
+  background: linear-gradient(135deg, var(--color-cream-bg), var(--color-cream-bg-dark));
+}
+
+.gradient-warm {
+  background: linear-gradient(135deg, var(--color-sunset-orange-light), var(--color-golden-yellow));
+}
+
+/* Shadows */
+.shadow-sunset {
+  box-shadow:
+    0 4px 6px -1px rgba(242, 107, 46, 0.1),
+    0 2px 4px -1px rgba(242, 107, 46, 0.06);
+}
+
+.shadow-ocean {
+  box-shadow:
+    0 4px 6px -1px rgba(60, 157, 167, 0.1),
+    0 2px 4px -1px rgba(60, 157, 167, 0.06);
+}
+
+.shadow-warm {
+  box-shadow:
+    0 10px 15px -3px rgba(249, 185, 52, 0.1),
+    0 4px 6px -2px rgba(242, 107, 46, 0.05);
+}
+
+.shadow-deep {
+  box-shadow:
+    0 20px 25px -5px rgba(58, 42, 26, 0.15),
+    0 10px 10px -5px rgba(58, 42, 26, 0.08);
+}
+
+/* Hover states */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 25px -5px rgba(58, 42, 26, 0.1),
+    0 10px 10px -5px rgba(58, 42, 26, 0.04);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-cream-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-sunset-orange);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sunset-orange-dark);
+}
+
+/* Focus styles */
+.focus-ring {
+  outline: 2px solid var(--color-ocean-teal);
+  outline-offset: 2px;
+}
+
+/* Text selection */
+::selection {
+  background-color: var(--color-golden-yellow);
+  color: var(--color-dark-brown);
+}
+
+/* Print styles */
+@media print {
+  body { background: white; color: black; }
+  .no-print { display: none !important; }
+}
+
+a {
+  
+ color: #3C9DA7
+
+}
+
+.text-blue-600 {
+  
+ color: #3C9DA7
+
+}

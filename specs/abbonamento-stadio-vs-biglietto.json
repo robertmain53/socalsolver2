@@ -1,0 +1,154 @@
+{
+  "slug": "abbonamento-stadio-vs-biglietto",
+  "title": "Calcolatore Costo Abbonamento Stadio vs. Biglietto Singolo",
+  "lang": "it",
+  "category": "Hobby e Tempo Libero",
+  "description": "Confronta la spesa complessiva di un abbonamento stagionale allo stadio con l’acquisto di singoli biglietti, includendo prevendita e partite di coppa.",
+  "inputs": [
+    {
+      "id": "costo_abbonamento",
+      "label": "Costo totale dell'abbonamento stagionale",
+      "type": "number",
+      "unit": "€",
+      "min": 0,
+      "step": 10
+    },
+    {
+      "id": "num_partite_abbonamento",
+      "label": "Numero di partite incluse nell'abbonamento",
+      "type": "number",
+      "unit": "partite",
+      "min": 1,
+      "step": 1
+    },
+    {
+      "id": "costo_medio_biglietto",
+      "label": "Costo medio di un singolo biglietto",
+      "type": "number",
+      "unit": "€",
+      "min": 0,
+      "step": 1
+    },
+    {
+      "id": "partite_previste",
+      "label": "Quante partite pensi realisticamente di vedere?",
+      "type": "number",
+      "unit": "partite",
+      "min": 0,
+      "step": 1
+    },
+    {
+      "id": "costo_extra_partita",
+      "label": "Costo extra medio per partita (trasporto, cibo, etc.)",
+      "type": "number",
+      "unit": "€",
+      "min": 0,
+      "step": 1
+    },
+    {
+      "id": "valore_benefici_abbonato",
+      "label": "Valore stimato dei benefit per abbonati (sconti, gadget, etc.)",
+      "type": "number",
+      "unit": "€",
+      "min": 0,
+      "step": 5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "costo_totale_biglietti",
+      "label": "Costo Totale con Biglietti Singoli (incluse spese extra)",
+      "unit": "€"
+    },
+    {
+      "id": "costo_totale_abbonamento",
+      "label": "Costo Totale con Abbonamento (incluse spese extra)",
+      "unit": "€"
+    },
+    {
+      "id": "risparmio_con_abbonamento",
+      "label": "Risparmio/Perdita con l'Abbonamento",
+      "unit": "€"
+    },
+    {
+      "id": "punto_di_pareggio",
+      "label": "Punto di Pareggio (numero minimo di partite per risparmiare)",
+      "unit": "partite"
+    },
+    {
+      "id": "costo_effettivo_partita_abbonamento",
+      "label": "Costo Effettivo a Partita (con Abbonamento)",
+      "unit": "€"
+    },
+    {
+      "id": "costo_effettivo_partita_singola",
+      "label": "Costo Effettivo a Partita (con Biglietti Singoli)",
+      "unit": "€"
+    }
+  ],
+  "formulaSteps": [
+    {
+      "id": "costo_abbonamento_netto",
+      "expr": "costo_abbonamento - valore_benefici_abbonato"
+    },
+    {
+      "id": "costo_totale_extra",
+      "expr": "costo_extra_partita * partite_previste"
+    },
+    {
+      "id": "costo_totale_biglietti",
+      "expr": "(costo_medio_biglietto * partite_previste) + costo_totale_extra"
+    },
+    {
+      "id": "costo_totale_abbonamento",
+      "expr": "costo_abbonamento_netto + costo_totale_extra"
+    },
+    {
+      "id": "risparmio_con_abbonamento",
+      "expr": "costo_totale_biglietti - costo_totale_abbonamento"
+    },
+    {
+      "id": "punto_di_pareggio",
+      "expr": "Math.ceil(costo_abbonamento_netto / costo_medio_biglietto)"
+    },
+    {
+      "id": "costo_effettivo_partita_abbonamento",
+      "expr": "partite_previste > 0 ? costo_totale_abbonamento / partite_previste : 0"
+    },
+    {
+      "id": "costo_effettivo_partita_singola",
+      "expr": "partite_previste > 0 ? costo_totale_biglietti / partite_previste : 0"
+    }
+  ],
+  "examples": [
+    {
+      "inputs": {
+        "costo_abbonamento": 380,
+        "num_partite_abbonamento": 19,
+        "costo_medio_biglietto": 25,
+        "partite_previste": 15,
+        "costo_extra_partita": 10,
+        "valore_benefici_abbonato": 20
+      },
+      "outputs": {
+        "costo_totale_biglietti": 525,
+        "costo_totale_abbonamento": 510,
+        "risparmio_con_abbonamento": 15,
+        "punto_di_pareggio": 15,
+        "costo_effettivo_partita_abbonamento": 34,
+        "costo_effettivo_partita_singola": 35
+      }
+    }
+  ],
+  "tags": [
+    "abbonamento",
+    "stadio",
+    "biglietti",
+    "calcio",
+    "serie a",
+    "convenienza",
+    "calcolatore",
+    "tifoso"
+  ],
+  "content": "## Abbonamento o Biglietti Singoli? Il Calcolatore Definitivo del Tifoso\\n\\nOgni estate, per il vero tifoso, arriva il momento della grande decisione: rinnovo l'abbonamento o quest'anno vado con i biglietti singoli? Tra la passione che chiama e il portafoglio che risponde, trovare la quadra non è sempre facile. \\n\\nQuesto calcolatore è stato creato per te: non si limita a un semplice confronto di prezzi, ma analizza la tua spesa reale da tifoso per darti una risposta chiara e completa. Inserisci i dati e scopri non solo se conviene, ma *da quale partita inizi a risparmiare*.\\n\\n---\\n\\n### Come Interpretare i Risultati\\n\\nUna volta inseriti i dati, non fermarti al risparmio finale. Ecco cosa significano le metriche più importanti:\\n\\n* **Punto di Pareggio**: È il numero magico. Rappresenta il numero minimo di partite che devi vedere affinché il costo dell'abbonamento diventi più basso rispetto all'acquisto dei singoli biglietti. Se pensi di andare a un numero di partite superiore a questo, l'abbonamento è quasi certamente la scelta giusta dal punto di vista economico.\\n\\n* **Costo Effettivo a Partita**: Questa metrica ti mostra quanto ti costa *realmente* ogni partita a cui assisti, includendo anche le spese extra come il parcheggio o il panino allo stadio. È l'indicatore perfetto per capire l'impatto di ogni singola trasferta allo stadio sul tuo budget.\\n\\n* **Risparmio/Perdita con l'Abbonamento**: La riga finale del bilancio. Un numero positivo indica un risparmio netto, un numero negativo indica che, per il numero di partite che hai previsto di vedere, i biglietti singoli sarebbero stati più convenienti.\\n\\n---\\n\\n### Oltre i Numeri: I Fattori Imponderabili della Scelta\\n\\nLa decisione, però, non è solo matematica. Ci sono vantaggi e svantaggi che nessuna formula può calcolare fino in fondo.\\n\\n#### Vantaggi dell'Abbonamento\\n\\n1. **Posto Fisso e Senso di Appartenenza**: Avere il proprio seggiolino, ritrovare gli stessi vicini di posto ogni partita, sentirsi parte di una comunità. È un valore inestimabile.\\n2. **Accesso Garantito ai Big Match**: Niente più code online o caccia al biglietto per le partite di cartello. Il tuo posto è assicurato.\\n3. **Diritto di Prelazione**: Gli abbonati hanno quasi sempre la priorità per l'acquisto di biglietti per altre competizioni (Coppe Europee, Coppa Italia).\\n4. **Possibilità di Rivendita**: Molti club moderni offrono piattaforme ufficiali per rimettere in vendita il proprio posto per le partite a cui non si può assistere, permettendo di recuperare parte della spesa.\\n\\n#### Vantaggi del Biglietto Singolo\\n\\n1. **Massima Flessibilità**: Impegni di lavoro? Weekend fuori porta? Con il biglietto singolo non hai vincoli e decidi di andare allo stadio solo quando vuoi e puoi.\\n2. **Nessun Costo Iniziale Elevato**: Non devi affrontare una spesa importante tutta in una volta a inizio stagione.\\n3. **Possibilità di Cambiare Settore**: Vuoi vedere una partita dalla tribuna e un'altra dalla curva? Con i biglietti singoli hai la libertà di scegliere il posto che preferisci di volta in volta.\\n\\n### In Conclusione\\n\\nUsa questo calcolatore come una solida base di partenza. Se il risultato economico è nettamente a favore di una delle due opzioni, la scelta è semplice. Se invece la differenza è minima, lascia che a decidere siano i fattori immateriali: la comodità, la flessibilità e, soprattutto, il cuore del tifoso."
+}

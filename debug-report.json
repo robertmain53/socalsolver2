@@ -1,0 +1,10 @@
+{
+  "timestamp": "2025-08-01T16:53:57.862Z",
+  "environment": {
+    "SHEET_ID": true,
+    "GEMINI_API_KEY": true,
+    "OPENAI_API_KEY": true
+  },
+  "nodeVersion": "v20.19.4",
+  "platform": "linux"
+}

@@ -1,0 +1,18 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /xn
+Disallow: /xn/*
+Disallow: /xs
+Disallow: /xs/*
+Disallow: /xr
+Disallow: /xr/*
+
+# Host
+Host: https://www.socalsolver.com
+
+# Sitemaps
+Sitemap: https://www.socalsolver.com/sitemap.xml
