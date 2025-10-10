@@ -10,9 +10,12 @@ Disallow: /xs
 Disallow: /xs/*
 Disallow: /xr
 Disallow: /xr/*
+Disallow: /api/*
+Disallow: /draft/*
 
 # Host
 Host: https://www.socalsolver.com
 
 # Sitemaps
 Sitemap: https://www.socalsolver.com/sitemap.xml
+Sitemap: https://www.socalsolver.com/sitemap-0.xml

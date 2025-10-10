@@ -2,7 +2,9 @@
   "permissions": {
     "allow": [
       "Bash(npm run build:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(timeout 300 npm run build)",
+      "Bash(tee:*)"
     ],
     "deny": [],
     "ask": []
