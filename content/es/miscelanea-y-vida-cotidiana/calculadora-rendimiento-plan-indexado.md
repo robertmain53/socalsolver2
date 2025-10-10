@@ -13,101 +13,101 @@ Calcula rentabilidad plan de pensiones indexado a índice bursátil con aportaci
 
 ## Qué Es
 
-Calculadora Rendimiento Plan de Pensiones Indexado è uno strumento professionale e gratuito che ti permette di calcolare in modo preciso e rapido plan pensiones.
+Calculadora Rendimiento Plan de Pensiones Indexado es una herramienta profesional y gratuita que te permite calcular de forma precisa y rápida plan pensiones.
 
-Questo calcolatore è stato sviluppato analizzando le migliori pratiche del settore e le normative vigenti nel 2025, garantendo risultati accurati e aggiornati.
+Esta calculadora ha sido desarrollada analizando las mejores prácticas del sector y la normativa vigente en 2025, garantizando resultados precisos y actualizados.
 
-### Caratteristiche Principali
+### Características Principales
 
-- **Calcolo Immediato**: Risultati in tempo reale senza attese
-- **Sempre Aggiornato**: Normative e aliquote 2025
-- **100% Gratuito**: Nessuna registrazione richiesta
-- **Privacy Garantita**: I tuoi dati non vengono salvati
+- **Cálculo Inmediato**: Resultados en tiempo real sin esperas
+- **Siempre Actualizado**: Normativa y tipos 2025
+- **100% Gratuito**: Sin registro requerido
+- **Privacidad Garantizada**: Tus datos no se guardan
 
 ## Cómo Funciona
 
-Il calcolatore utilizza formule precise e aggiornate per elaborare i dati che inserisci e fornirti risultati dettagliati.
+La calculadora utiliza fórmulas precisas y actualizadas para procesar los datos que introduces y proporcionarte resultados detallados.
 
-### Metodo di Calcolo
+### Método de Cálculo
 
-1. **Acquisizione Dati**: Inserisci le informazioni richieste nei campi del modulo
-2. **Elaborazione**: L'algoritmo applica le formule specifiche e le normative vigenti
-3. **Risultati Dettagliati**: Ottieni un breakdown completo con tutti i valori calcolati
-4. **Interpretazione**: Ogni risultato è accompagnato da spiegazioni chiare
+1. **Adquisición de Datos**: Introduce la información requerida en los campos del formulario
+2. **Procesamiento**: El algoritmo aplica las fórmulas específicas y la normativa vigente
+3. **Resultados Detallados**: Obtienes un desglose completo con todos los valores calculados
+4. **Interpretación**: Cada resultado viene acompañado de explicaciones claras
 
-## Por Qué Usar Esta Calculadora
+## Por Qué Usar
 
-### Vantaggi del Nostro Calcolatore
+### Ventajas de Nuestra Calculadora
 
-✅ **Precisione Garantita**
-Formule verificate e normative 2025 integrate nel sistema di calcolo.
+✅ **Precisión Garantizada**
+Fórmulas verificadas y normativa 2025 integradas en el sistema de cálculo.
 
-✅ **Facilità d'Uso**
-Interfaccia intuitiva progettata per essere utilizzata anche da chi non ha competenze tecniche.
+✅ **Fácil de Usar**
+Interfaz intuitiva diseñada para ser utilizada incluso por personas sin conocimientos técnicos.
 
-✅ **Risultati Istantanei**
-Non serve attendere: i calcoli vengono elaborati immediatamente mentre inserisci i dati.
+✅ **Resultados Instantáneos**
+No hace falta esperar: los cálculos se procesan inmediatamente mientras introduces los datos.
 
 ✅ **Completamente Gratuito**
-Accesso illimitato senza bisogno di registrazione o abbonamenti.
+Acceso ilimitado sin necesidad de registro ni suscripciones.
 
-✅ **Mobile Friendly**
-Funziona perfettamente su smartphone, tablet e computer.
+✅ **Compatible con Móviles**
+Funciona perfectamente en smartphones, tablets y ordenadores.
 
 ## Cómo Utilizarla
 
-### Guida Passo-Passo
+### Guía Paso a Paso
 
-#### Passo 1: Preparazione Dati
+#### Paso 1: Preparación de Datos
 
-Prima di utilizzare il calcolatore, assicurati di avere a portata di mano tutti i dati necessari. Questo renderà il processo più rapido ed efficiente.
+Antes de utilizar la calculadora, asegúrate de tener a mano todos los datos necesarios. Esto hará el proceso más rápido y eficiente.
 
-#### Passo 2: Compilazione Campi
+#### Paso 2: Rellenar Campos
 
-Inserisci i valori richiesti nei campi del calcolatore. Ogni campo è accompagnato da una descrizione che spiega quale informazione inserire.
+Introduce los valores requeridos en los campos de la calculadora. Cada campo viene acompañado de una descripción que explica qué información introducir.
 
-#### Passo 3: Calcolo
+#### Paso 3: Cálculo
 
-Clicca sul pulsante "Calcola" per elaborare i dati. Il sistema genererà immediatamente i risultati.
+Haz clic en el botón "Calcular" para procesar los datos. El sistema generará inmediatamente los resultados.
 
-#### Passo 4: Analisi Risultati
+#### Paso 4: Análisis de Resultados
 
-Esamina attentamente i risultati forniti. Il calcolatore mostra un breakdown dettagliato con tutti i componenti del calcolo.
+Examina atentamente los resultados proporcionados. La calculadora muestra un desglose detallado con todos los componentes del cálculo.
 
-#### Passo 5: Salvataggio (Opzionale)
+#### Paso 5: Guardar (Opcional)
 
-Puoi salvare o stampare i risultati per conservarli o condividerli con il tuo commercialista.
+Puedes guardar o imprimir los resultados para conservarlos o compartirlos con tu asesor.
 
 ## Preguntas Frecuentes
 
-### Domanda 1: I risultati sono vincolanti?
+### Pregunta 1: ¿Los resultados son vinculantes?
 
-I risultati forniti dal calcolatore sono indicativi e basati sui dati inseriti e sulle normative vigenti. Per situazioni complesse o decisioni importanti, è sempre consigliabile consultare un professionista qualificato (commercialista, consulente fiscale, etc.).
+Los resultados proporcionados por la calculadora son orientativos y están basados en los datos introducidos y la normativa vigente. Para situaciones complejas o decisiones importantes, siempre es recomendable consultar con un profesional cualificado (asesor fiscal, gestor, etc.).
 
-### Domanda 2: Quanto sono aggiornati i dati?
+### Pregunta 2: ¿Qué tan actualizados están los datos?
 
-Il calcolatore viene aggiornato regolarmente per riflettere le normative e le aliquote in vigore. Tutti i calcoli sono basati sulla legislazione 2025.
+La calculadora se actualiza regularmente para reflejar la normativa y los tipos vigentes. Todos los cálculos están basados en la legislación de 2025.
 
-### Domanda 3: I miei dati vengono salvati?
+### Pregunta 3: ¿Se guardan mis datos?
 
-No, tutti i calcoli vengono eseguiti localmente nel tuo browser. Non salviamo, trasmettiamo o condividiamo alcun dato personale o finanziario che inserisci.
+No, todos los cálculos se realizan localmente en tu navegador. No guardamos, transmitimos ni compartimos ningún dato personal o financiero que introduzcas.
 
-### Domanda 4: Posso usare il calcolatore su mobile?
+### Pregunta 4: ¿Puedo usar la calculadora en el móvil?
 
-Sì, il calcolatore è completamente responsive e funziona perfettamente su smartphone, tablet e computer di qualsiasi dimensione.
+Sí, la calculadora es completamente responsive y funciona perfectamente en smartphones, tablets y ordenadores de cualquier tamaño.
 
-### Domanda 5: Cosa devo fare se trovo un errore?
+### Pregunta 5: ¿Qué hago si encuentro un error?
 
-Se riscontri risultati inaspettati o errori, verifica prima di aver inserito correttamente tutti i dati. Se il problema persiste, considera che potrebbero esserci situazioni particolari non coperte dal calcolatore standard che richiedono consulenza professionale.
+Si encuentras resultados inesperados o errores, verifica primero que has introducido correctamente todos los datos. Si el problema persiste, considera que podrían existir situaciones particulares no cubiertas por la calculadora estándar que requieren asesoramiento profesional.
 
-## Fuentes y Referencias
+## Fuentes
 
 1. [Add authoritative source]
 2. [Add authoritative source]
 
 ---
 
-**Analisi Competitors Completata:**
+**Análisis de Competidores Completado:**
 - [Competitor 1](https://myinvestor.es/inversion/simulador-planes-pensiones/)
 - [Competitor 2](https://javilinares.com/calculadora/desgravacion-plan-de-pensiones/)
 - [Competitor 3](https://www.bancosantander.es/particulares/ahorro-inversion/planes-pensiones/simulador)
@@ -123,4 +123,4 @@ Se riscontri risultati inaspettati o errori, verifica prima di aver inserito cor
 
 ---
 
-*Disclaimer: I risultati forniti da questo calcolatore sono indicativi e basati sui dati inseriti. Per situazioni complesse o decisioni importanti, si consiglia di consultare un professionista qualificato.*
+*Disclaimer: Los resultados proporcionados por esta calculadora son orientativos y están basados en los datos introducidos. Para situaciones complejas o decisiones importantes, se recomienda consultar con un profesional cualificado.*

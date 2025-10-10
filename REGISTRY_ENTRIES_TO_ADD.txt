@@ -1,0 +1,1064 @@
+  {
+    slug: 'adozione-costi-e-tempi',
+    title: 'Calcolatore Adozione (costi e tempi)',
+    description: 'Calcolatore Adozione (costi e tempi)',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/AdozioneCostiETempi'))
+  },
+  {
+    slug: 'tassazione-consulenti-finanziari-ocf',
+    title: 'Calcolatore Tassazione per Consulenti Finanziari (con OCF)',
+    description: 'Calcolatore Tassazione per Consulenti Finanziari (con OCF)',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneConsulentiFinanziariOcf'))
+  },
+  {
+    slug: 'tassazione-agenti-immobiliari-inps',
+    title: 'Calcolatore Tassazione per Agenti Immobiliari (con INPS Commercianti)',
+    description: 'Calcolatore Tassazione per Agenti Immobiliari (con INPS Commercianti)',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneAgentiImmobiliariInps'))
+  },
+  {
+    slug: 'cuneo-fiscale',
+    title: 'Calcolatore Costo Totale Dipendente (Cuneo Fiscale)',
+    description: 'Calcolatore Costo Totale Dipendente (Cuneo Fiscale)',
+    category: 'pmi-e-impresa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CuneoFiscale'))
+  },
+  {
+    slug: 'calcolo-ires-irap-srl-srls',
+    title: 'Calcolatore IRES e IRAP per SRL e SRLS',
+    description: 'Calcolatore IRES e IRAP per SRL e SRLS',
+    category: 'pmi-e-impresa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CalcoloIresIrapSrlSrls'))
+  },
+  {
+    slug: 'imu-tasi-seconda-casa',
+    title: 'Calcolatore IMU/TASI per seconda casa (con aliquote comunali)',
+    description: 'Calcolatore IMU/TASI per seconda casa (con aliquote comunali)',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/ImuTasiSecondaCasa'))
+  },
+  {
+    slug: 'cedolare-secca-vs-tassazione-ordinaria',
+    title: 'Calcolatore Cedolare Secca vs. Tassazione Ordinaria per affitti',
+    description: 'Calcolatore Cedolare Secca vs. Tassazione Ordinaria per affitti',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CedolareSeccaVsTassazioneOrdinaria'))
+  },
+  {
+    slug: 'detrazioni-ristrutturazione-50',
+    title: 'Calcolatore Detrazioni Fiscali per Ristrutturazione (50%)',
+    description: 'Calcolatore Detrazioni Fiscali per Ristrutturazione (50%)',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/DetrazioniRistrutturazione50'))
+  },
+  {
+    slug: 'detrazioni-ecobonus-65',
+    title: 'Calcolatore Detrazioni Fiscali per Ecobonus (65%)',
+    description: 'Calcolatore Detrazioni Fiscali per Ecobonus (65%)',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/DetrazioniEcobonus65'))
+  },
+  {
+    slug: 'piano-di-accumulo-pac-tassazione',
+    title: 'Calcolatore PAC (Piano di Accumulo Capitale) con tassazione italiana (26%)',
+    description: 'Calcolatore PAC (Piano di Accumulo Capitale) con tassazione italiana (26%)',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/PianoDiAccumuloPacTassazione'))
+  },
+  {
+    slug: 'tassazione-etf-armonizzati-non',
+    title: 'Calcolatore Tassazione ETF (armonizzati vs. non armonizzati)',
+    description: 'Calcolatore Tassazione ETF (armonizzati vs. non armonizzati)',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneEtfArmonizzatiNon'))
+  },
+  {
+    slug: 'costo-proprieta-auto-tco',
+    title: 'Calcolatore Costo Totale di Proprietà Auto (TCO) per Regione (Bollo, Assicurazione)',
+    description: 'Calcolatore Costo Totale di Proprietà Auto (TCO) per Regione (Bollo, Assicurazione)',
+    category: 'auto-e-trasporti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoProprietaAutoTco'))
+  },
+  {
+    slug: 'auto-elettrica-vs-termica',
+    title: 'Calcolatore Convenienza Auto Elettrica vs. Termica (con incentivi)',
+    description: 'Calcolatore Convenienza Auto Elettrica vs. Termica (con incentivi)',
+    category: 'auto-e-trasporti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/AutoElettricaVsTermica'))
+  },
+  {
+    slug: 'rimborso-chilometrico-aci',
+    title: 'Calcolatore Rimborso Chilometrico ACI',
+    description: 'Calcolatore Rimborso Chilometrico ACI',
+    category: 'auto-e-trasporti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/RimborsoChilometricoAci'))
+  },
+  {
+    slug: 'assegno-unico-universale-figli',
+    title: 'Calcolatore Assegno Unico Universale per Figli a Carico',
+    description: 'Calcolatore Assegno Unico Universale per Figli a Carico',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/AssegnoUnicoUniversaleFigli'))
+  },
+  {
+    slug: 'retta-asilo-nido-con-bonus',
+    title: 'Calcolatore Retta Asilo Nido con Bonus INPS',
+    description: 'Calcolatore Retta Asilo Nido con Bonus INPS',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/RettaAsiloNidoConBonus'))
+  },
+  {
+    slug: 'tfr-colf-badanti-babysitter',
+    title: 'Calcolatore TFR per Colf, Badanti e Babysitter',
+    description: 'Calcolatore TFR per Colf, Badanti e Babysitter',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TfrColfBadantiBabysitter'))
+  },
+  {
+    slug: 'costi-gestione-agriturismo',
+    title: 'Calcolatore Costi di Gestione di un Agriturismo',
+    description: 'Calcolatore Costi di Gestione di un Agriturismo',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostiGestioneAgriturismo'))
+  },
+  {
+    slug: 'pac-politica-agricola-contributi',
+    title: 'Calcolatore PAC (Politica Agricola Comune) - Stima Contributi',
+    description: 'Calcolatore PAC (Politica Agricola Comune) - Stima Contributi',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/PacPoliticaAgricolaContributi'))
+  },
+  {
+    slug: 'costo-impianto-vigneto-uliveto',
+    title: 'Calcolatore Costo Impianto Vigneto/Uliveto per ettaro',
+    description: 'Calcolatore Costo Impianto Vigneto/Uliveto per ettaro',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoImpiantoVignetoUliveto'))
+  },
+  {
+    slug: 'rendita-orto-urbano',
+    title: 'Calcolatore Rendita di un Orto Urbano',
+    description: 'Calcolatore Rendita di un Orto Urbano',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/RenditaOrtoUrbano'))
+  },
+  {
+    slug: 'calculateur-versement-liberatoire',
+    title: 'Calculateur du Versement Libératoire de l\'impôt pour micro-entrepreneur',
+    description: 'Calculateur du Versement Libératoire de l\'impôt pour micro-entrepreneur',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    component: lazy(() => import('@/components/calculators/CalculateurVersementLiberatoire'))
+  },
+  {
+    slug: 'calculateur-acre',
+    title: 'Calculateur de l\'ACRE (Aide à la Création ou à la Reprise d\'une Entreprise)',
+    description: 'Calculateur de l\'ACRE (Aide à la Création ou à la Reprise d\'une Entreprise)',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    component: lazy(() => import('@/components/calculators/CalculateurAcre'))
+  },
+  {
+    slug: 'calculateur-cfe',
+    title: 'Calculateur de la CFE (Cotisation Foncière des Entreprises)',
+    description: 'Calculateur de la CFE (Cotisation Foncière des Entreprises)',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    component: lazy(() => import('@/components/calculators/CalculateurCfe'))
+  },
+  {
+    slug: 'gestione-separata',
+    title: 'Simulatore Convenienza: Forfettario vs. Semplificato',
+    description: 'Simulatore Convenienza: Forfettario vs. Semplificato',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/GestioneSeparata'))
+  },
+  {
+    slug: 'contributi-gestione',
+    title: 'Calcolatore Contributi Gestione Separata INPS vs. Cassa Professionale (es. Inarcassa, CNPADC)',
+    description: 'Calcolatore Contributi Gestione Separata INPS vs. Cassa Professionale (es. Inarcassa, CNPADC)',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/ContributiGestione'))
+  },
+  {
+    slug: 'flat-tax-pi',
+    title: 'Calcolatore Flat Tax Incrementale per Partite IVA',
+    description: 'Calcolatore Flat Tax Incrementale per Partite IVA',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/FlatTaxPi'))
+  },
+  {
+    slug: 'tassazione-sportivi',
+    title: 'Simulatore Tassazione per Lavoratori Sportivi',
+    description: 'Simulatore Tassazione per Lavoratori Sportivi',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneSportivi'))
+  },
+  {
+    slug: 'tassazione-medici',
+    title: 'Calcolatore Tassazione per Medici in Partita IVA (con ENPAM)',
+    description: 'Calcolatore Tassazione per Medici in Partita IVA (con ENPAM)',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneMedici'))
+  },
+  {
+    slug: 'tassazione-avvocati',
+    title: 'Calcolatore Tassazione per Avvocati (con Cassa Forense)',
+    description: 'Calcolatore Tassazione per Avvocati (con Cassa Forense)',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneAvvocati'))
+  },
+  {
+    slug: 'tassazione-musicisti-artisti',
+    title: 'Calcolatore Tassazione per Musicisti e Artisti (con ENPALS)',
+    description: 'Calcolatore Tassazione per Musicisti e Artisti (con ENPALS)',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneMusicistiArtisti'))
+  },
+  {
+    slug: 'tassazione-fisioterapisti',
+    title: 'Calcolatore Tassazione per Fisioterapisti in Partita IVA',
+    description: 'Calcolatore Tassazione per Fisioterapisti in Partita IVA',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneFisioterapisti'))
+  },
+  {
+    slug: 'tassazione-ing-architetti',
+    title: 'Calcolatore Tassazione per Ingegneri e Architetti (con Inarcassa)',
+    description: 'Calcolatore Tassazione per Ingegneri e Architetti (con Inarcassa)',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneIngArchitetti'))
+  },
+  {
+    slug: 'tassazione-geometri',
+    title: 'Calcolatore Tassazione per Geometri (con CIPAG)',
+    description: 'Calcolatore Tassazione per Geometri (con CIPAG)',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneGeometri'))
+  },
+  {
+    slug: 'tassazione-sviluppatori-software-freelance',
+    title: 'Calcolatore Tassazione per Sviluppatori Software Freelance',
+    description: 'Calcolatore Tassazione per Sviluppatori Software Freelance',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneSviluppatoriSoftwareFreelance'))
+  },
+  {
+    slug: 'tassazione-traduttori-freelance',
+    title: 'Calcolatore Tassazione per Traduttori Freelance',
+    description: 'Calcolatore Tassazione per Traduttori Freelance',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneTraduttoriFreelance'))
+  },
+  {
+    slug: 'tassazione-fotografi-freelance',
+    title: 'Calcolatore Tassazione per Fotografi Freelance',
+    description: 'Calcolatore Tassazione per Fotografi Freelance',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneFotografiFreelance'))
+  },
+  {
+    slug: 'tassazione-videomaker-freelance',
+    title: 'Calcolatore Tassazione per Videomaker Freelance',
+    description: 'Calcolatore Tassazione per Videomaker Freelance',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneVideomakerFreelance'))
+  },
+  {
+    slug: 'tassazione-social-media-manager-freelance',
+    title: 'Calcolatore Tassazione per Social Media Manager Freelance',
+    description: 'Calcolatore Tassazione per Social Media Manager Freelance',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneSocialMediaManagerFreelance'))
+  },
+  {
+    slug: 'tassazione-guide-turistiche-partita-iva',
+    title: 'Calcolatore Tassazione per Guide Turistiche in Partita IVA',
+    description: 'Calcolatore Tassazione per Guide Turistiche in Partita IVA',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneGuideTuristichePartitaIva'))
+  },
+  {
+    slug: 'plusvalenza-vendita-immobile',
+    title: 'Calcolatore Plusvalenza sulla Vendita di un Immobile (prima/seconda casa)',
+    description: 'Calcolatore Plusvalenza sulla Vendita di un Immobile (prima/seconda casa)',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/PlusvalenzaVenditaImmobile'))
+  },
+  {
+    slug: 'rendita-e-valore-catastale',
+    title: 'Calcolatore Rendita Catastale e Valore Catastale',
+    description: 'Calcolatore Rendita Catastale e Valore Catastale',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/RenditaEValoreCatastale'))
+  },
+  {
+    slug: 'canone-concordato-vantaggi-fiscali',
+    title: 'Calcolatore Canone Concordato e relativi vantaggi fiscali',
+    description: 'Calcolatore Canone Concordato e relativi vantaggi fiscali',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CanoneConcordatoVantaggiFiscali'))
+  },
+  {
+    slug: 'detrazione-interessi-mutuo-prima-casa',
+    title: 'Calcolatore Detrazione Interessi Passivi Mutuo Prima Casa',
+    description: 'Calcolatore Detrazione Interessi Passivi Mutuo Prima Casa',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/DetrazioneInteressiMutuoPrimaCasa'))
+  },
+  {
+    slug: 'costo-pannelli-fotovoltaici-incentivi',
+    title: 'Calcolatore Costo Installazione Pannelli Fotovoltaici (con incentivi)',
+    description: 'Calcolatore Costo Installazione Pannelli Fotovoltaici (con incentivi)',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoPannelliFotovoltaiciIncentivi'))
+  },
+  {
+    slug: 'costo-pompa-di-calore-incentivi',
+    title: 'Calcolatore Costo Installazione Pompa di Calore (con incentivi)',
+    description: 'Calcolatore Costo Installazione Pompa di Calore (con incentivi)',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoPompaDiCaloreIncentivi'))
+  },
+  {
+    slug: 'costo-infissi-con-incentivi',
+    title: 'Calcolatore Costo Sostituzione Infissi (con incentivi)',
+    description: 'Calcolatore Costo Sostituzione Infissi (con incentivi)',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoInfissiConIncentivi'))
+  },
+  {
+    slug: 'spese-condominiali-millesimi',
+    title: 'Calcolatore Spese Condominiali per millesimi',
+    description: 'Calcolatore Spese Condominiali per millesimi',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/SpeseCondominialiMillesimi'))
+  },
+  {
+    slug: 'aumento-istat-canone-locazione',
+    title: 'Calcolatore Aumento ISTAT Canone di Locazione',
+    description: 'Calcolatore Aumento ISTAT Canone di Locazione',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/AumentoIstatCanoneLocazione'))
+  },
+  {
+    slug: 'deposito-cauzionale-e-interessi-legali',
+    title: 'Calcolatore Deposito Cauzionale e Interessi Legali',
+    description: 'Calcolatore Deposito Cauzionale e Interessi Legali',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/DepositoCauzionaleEInteressiLegali'))
+  },
+  {
+    slug: 'tassazione-vendita-terreno-edificabile',
+    title: 'Calcolatore Tassazione Vendita Terreno Edificabile',
+    description: 'Calcolatore Tassazione Vendita Terreno Edificabile',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneVenditaTerrenoEdificabile'))
+  },
+  {
+    slug: 'imposta-bollo-conto-e-titoli',
+    title: 'Calcolatore Imposta di Bollo su Conto Corrente e Deposito Titoli',
+    description: 'Calcolatore Imposta di Bollo su Conto Corrente e Deposito Titoli',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/ImpostaBolloContoETitoli'))
+  },
+  {
+    slug: 'tassazione-plusvalenze-capital-gain',
+    title: 'Calcolatore Tassazione Plusvalenze (Capital Gain)',
+    description: 'Calcolatore Tassazione Plusvalenze (Capital Gain)',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazionePlusvalenzeCapitalGain'))
+  },
+  {
+    slug: 'rendimento-netto-buoni-fruttiferi',
+    title: 'Calcolatore Rendimento Netto Buoni Fruttiferi Postali',
+    description: 'Calcolatore Rendimento Netto Buoni Fruttiferi Postali',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/RendimentoNettoBuoniFruttiferi'))
+  },
+  {
+    slug: 'tassazione-p2p-lending',
+    title: 'Calcolatore Tassazione P2P Lending',
+    description: 'Calcolatore Tassazione P2P Lending',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneP2pLending'))
+  },
+  {
+    slug: 'interesse-composto-tassazione',
+    title: 'Calcolatore Interesse Composto (con tassazione 26%)',
+    description: 'Calcolatore Interesse Composto (con tassazione 26%)',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/InteresseCompostoTassazione'))
+  },
+  {
+    slug: 'calcolo-rita-rendita-integrativa',
+    title: 'Calcolatore RITA (Rendita Integrativa Temporanea Anticipata)',
+    description: 'Calcolatore RITA (Rendita Integrativa Temporanea Anticipata)',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CalcoloRitaRenditaIntegrativa'))
+  },
+  {
+    slug: 'costo-consulente-finanziario',
+    title: 'Calcolatore Costo di un Consulente Finanziario (parcella vs. % gestito)',
+    description: 'Calcolatore Costo di un Consulente Finanziario (parcella vs. % gestito)',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoConsulenteFinanziario'))
+  },
+  {
+    slug: 'defi-yield-calculator',
+    title: 'DeFi Yield Calculator',
+    description: 'DeFi Yield Calculator',
+    category: 'finance-and-investment',
+    lang: 'en',
+    component: lazy(() => import('@/components/calculators/DefiYieldCalculator'))
+  },
+  {
+    slug: 'nft-roi-calculator',
+    title: 'NFT ROI Calculator',
+    description: 'NFT ROI Calculator',
+    category: 'finance-and-investment',
+    lang: 'en',
+    component: lazy(() => import('@/components/calculators/NftRoiCalculator'))
+  },
+  {
+    slug: 'dollar-cost-averaging-calculator',
+    title: 'Dollar Cost Averaging Calculator',
+    description: 'Dollar Cost Averaging Calculator',
+    category: 'finance-and-investment',
+    lang: 'en',
+    component: lazy(() => import('@/components/calculators/DollarCostAveragingCalculator'))
+  },
+  {
+    slug: 'student-loan-forgiveness-calculator',
+    title: 'Student Loan Forgiveness Calculator',
+    description: 'Student Loan Forgiveness Calculator',
+    category: 'finance-and-investment',
+    lang: 'en',
+    component: lazy(() => import('@/components/calculators/StudentLoanForgivenessCalculator'))
+  },
+  {
+    slug: 'side-hustle-income-calculator',
+    title: 'Side Hustle Income Calculator',
+    description: 'Side Hustle Income Calculator',
+    category: 'finance-and-investment',
+    lang: 'en',
+    component: lazy(() => import('@/components/calculators/SideHustleIncomeCalculator'))
+  },
+  {
+    slug: 'tfm-fine-mandato-amministratori',
+    title: 'Calcolatore TFM (Trattamento di Fine Mandato) per Amministratori',
+    description: 'Calcolatore TFM (Trattamento di Fine Mandato) per Amministratori',
+    category: 'pmi-e-impresa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TfmFineMandatoAmministratori'))
+  },
+  {
+    slug: 'margine-di-contribuzione',
+    title: 'Calcolatore Margine di Contribuzione',
+    description: 'Calcolatore Margine di Contribuzione',
+    category: 'pmi-e-impresa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/MargineDiContribuzione'))
+  },
+  {
+    slug: 'finanziamento-resto-al-sud',
+    title: 'Calcolatore Finanziamento "Resto al Sud"',
+    description: 'Calcolatore Finanziamento "Resto al Sud"',
+    category: 'pmi-e-impresa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/FinanziamentoRestoAlSud'))
+  },
+  {
+    slug: 'contributi-fondo-perduto-bandi',
+    title: 'Calcolatore Contributi a Fondo Perduto (per bandi specifici)',
+    description: 'Calcolatore Contributi a Fondo Perduto (per bandi specifici)',
+    category: 'pmi-e-impresa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/ContributiFondoPerdutoBandi'))
+  },
+  {
+    slug: 'fatturato-qualifica-pmi',
+    title: 'Calcolatore Fatturato per Mantenere la Qualifica di PMI',
+    description: 'Calcolatore Fatturato per Mantenere la Qualifica di PMI',
+    category: 'pmi-e-impresa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/FatturatoQualificaPmi'))
+  },
+  {
+    slug: 'cash-flow-operativo',
+    title: 'Calcolatore Cash Flow Operativo',
+    description: 'Calcolatore Cash Flow Operativo',
+    category: 'pmi-e-impresa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CashFlowOperativo'))
+  },
+  {
+    slug: 'importazione-auto-estero',
+    title: 'Calcolatore Costo Importazione Auto dall\'Estero',
+    description: 'Calcolatore Costo Importazione Auto dall\'Estero',
+    category: 'auto-e-trasporti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/ImportazioneAutoEstero'))
+  },
+  {
+    slug: 'costo-patente-a-b-c',
+    title: 'Calcolatore Costo Patente (A, B, C)',
+    description: 'Calcolatore Costo Patente (A, B, C)',
+    category: 'auto-e-trasporti',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoPatenteABC'))
+  },
+  {
+    slug: 'detrazione-spese-sanitarie-730',
+    title: 'Calcolatore Detrazioni Spese Mediche e Sanitarie (730)',
+    description: 'Calcolatore Detrazioni Spese Mediche e Sanitarie (730)',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/DetrazioneSpeseSanitarie730'))
+  },
+  {
+    slug: 'detrazione-spese-veterinarie-730',
+    title: 'Calcolatore Detrazioni Spese Veterinarie (730)',
+    description: 'Calcolatore Detrazioni Spese Veterinarie (730)',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/DetrazioneSpeseVeterinarie730'))
+  },
+  {
+    slug: 'costo-animale-domestico',
+    title: 'Calcolatore Costo Animale Domestico (cane/gatto)',
+    description: 'Calcolatore Costo Animale Domestico (cane/gatto)',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoAnimaleDomestico'))
+  },
+  {
+    slug: 'isee-semplificato',
+    title: 'Calcolatore ISEE (Indicatore della Situazione Economica Equivalente) Semplificato',
+    description: 'Calcolatore ISEE (Indicatore della Situazione Economica Equivalente) Semplificato',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/IseeSemplificato'))
+  },
+  {
+    slug: 'quota-ereditaria-legittima',
+    title: 'Calcolatore Quota Ereditaria Legittima',
+    description: 'Calcolatore Quota Ereditaria Legittima',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/QuotaEreditariaLegittima'))
+  },
+  {
+    slug: 'costo-funerale',
+    title: 'Calcolatore Costo Funerale',
+    description: 'Calcolatore Costo Funerale',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoFunerale'))
+  },
+  {
+    slug: 'risparmio-pannelli-solari',
+    title: 'Calcolatore Risparmio con Pannelli Solari Domestici',
+    description: 'Calcolatore Risparmio con Pannelli Solari Domestici',
+    category: 'famiglia-e-vita-quotidiana',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/RisparmioPannelliSolari'))
+  },
+  {
+    slug: 'costo-produzione-olio-vino',
+    title: 'Calcolatore Costo Produzione Olio d\'Oliva/Vino',
+    description: 'Calcolatore Costo Produzione Olio d\'Oliva/Vino',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoProduzioneOlioVino'))
+  },
+  {
+    slug: 'tassazione-vendita-prodotti-agricoli',
+    title: 'Calcolatore Tassazione Vendita Diretta Prodotti Agricoli',
+    description: 'Calcolatore Tassazione Vendita Diretta Prodotti Agricoli',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneVenditaProdottiAgricoli'))
+  },
+  {
+    slug: 'costo-allevamento-galline-api',
+    title: 'Calcolatore Costo Allevamento (es. galline ovaiole, api)',
+    description: 'Calcolatore Costo Allevamento (es. galline ovaiole, api)',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoAllevamentoGallineApi'))
+  },
+  {
+    slug: 'diritto-prelazione-agraria',
+    title: 'Calcolatore Diritto di Prelazione Agraria',
+    description: 'Calcolatore Diritto di Prelazione Agraria',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/DirittoPrelazioneAgraria'))
+  },
+  {
+    slug: 'spreco-alimentare-costo-impatto',
+    title: 'Calcolatore Spreco Alimentare Familiare (costo e impatto)',
+    description: 'Calcolatore Spreco Alimentare Familiare (costo e impatto)',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/SprecoAlimentareCostoImpatto'))
+  },
+  {
+    slug: 'costo-attrezzatura-sci-noleggio',
+    title: 'Calcolatore Costo Attrezzatura da Sci/Snowboard (acquisto vs. noleggio)',
+    description: 'Calcolatore Costo Attrezzatura da Sci/Snowboard (acquisto vs. noleggio)',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoAttrezzaturaSciNoleggio'))
+  },
+  {
+    slug: 'costo-brevetto-sub',
+    title: 'Calcolatore Costo Brevetto da Sub',
+    description: 'Calcolatore Costo Brevetto da Sub',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoBrevettoSub'))
+  },
+  {
+    slug: 'costo-mantenimento-barca',
+    title: 'Calcolatore Costo Mantenimento Barca a Vela/Motore',
+    description: 'Calcolatore Costo Mantenimento Barca a Vela/Motore',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoMantenimentoBarca'))
+  },
+  {
+    slug: 'costo-palestra-piscina',
+    title: 'Calcolatore Costo Iscrizione e Tesseramento Palestra/Piscina',
+    description: 'Calcolatore Costo Iscrizione e Tesseramento Palestra/Piscina',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoPalestraPiscina'))
+  },
+  {
+    slug: 'costo-collezionismo-fumetti-vinili',
+    title: 'Calcolatore Costo Collezionismo (es. fumetti, vinili)',
+    description: 'Calcolatore Costo Collezionismo (es. fumetti, vinili)',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoCollezionismoFumettiVinili'))
+  },
+  {
+    slug: 'costo-strumentazione-musicale',
+    title: 'Calcolatore Costo Strumentazione Musicale (chitarra, pianoforte)',
+    description: 'Calcolatore Costo Strumentazione Musicale (chitarra, pianoforte)',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoStrumentazioneMusicale'))
+  },
+  {
+    slug: 'costo-attrezzatura-fotografica',
+    title: 'Calcolatore Costo Attrezzatura Fotografica Professionale',
+    description: 'Calcolatore Costo Attrezzatura Fotografica Professionale',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoAttrezzaturaFotografica'))
+  },
+  {
+    slug: 'costo-viaggio-on-the-road',
+    title: 'Calcolatore Costo Viaggio On The Road in Italia',
+    description: 'Calcolatore Costo Viaggio On The Road in Italia',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoViaggioOnTheRoad'))
+  },
+  {
+    slug: 'costo-hobby-giardinaggio',
+    title: 'Calcolatore Costo Hobby del Giardinaggio (annuale)',
+    description: 'Calcolatore Costo Hobby del Giardinaggio (annuale)',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoHobbyGiardinaggio'))
+  },
+  {
+    slug: 'costo-produzione-olio-vino',
+    title: 'Calcolatore Costo Produzione Olio d\'Oliva/Vino',
+    description: 'Calcolatore Costo Produzione Olio d\'Oliva/Vino',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoProduzioneOlioVino'))
+  },
+  {
+    slug: 'tassazione-vendita-prodotti-agricoli',
+    title: 'Calcolatore Tassazione Vendita Diretta Prodotti Agricoli',
+    description: 'Calcolatore Tassazione Vendita Diretta Prodotti Agricoli',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/TassazioneVenditaProdottiAgricoli'))
+  },
+  {
+    slug: 'costo-allevamento-galline-api',
+    title: 'Calcolatore Costo Allevamento (es. galline ovaiole, api)',
+    description: 'Calcolatore Costo Allevamento (es. galline ovaiole, api)',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoAllevamentoGallineApi'))
+  },
+  {
+    slug: 'diritto-prelazione-agraria',
+    title: 'Calcolatore Diritto di Prelazione Agraria',
+    description: 'Calcolatore Diritto di Prelazione Agraria',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/DirittoPrelazioneAgraria'))
+  },
+  {
+    slug: 'spreco-alimentare-costo-impatto',
+    title: 'Calcolatore Spreco Alimentare Familiare (costo e impatto)',
+    description: 'Calcolatore Spreco Alimentare Familiare (costo e impatto)',
+    category: 'agricoltura-e-cibo',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/SprecoAlimentareCostoImpatto'))
+  },
+  {
+    slug: 'costo-attrezzatura-sci-noleggio',
+    title: 'Calcolatore Costo Attrezzatura da Sci/Snowboard (acquisto vs. noleggio)',
+    description: 'Calcolatore Costo Attrezzatura da Sci/Snowboard (acquisto vs. noleggio)',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoAttrezzaturaSciNoleggio'))
+  },
+  {
+    slug: 'costo-brevetto-sub',
+    title: 'Calcolatore Costo Brevetto da Sub',
+    description: 'Calcolatore Costo Brevetto da Sub',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoBrevettoSub'))
+  },
+  {
+    slug: 'costo-mantenimento-barca',
+    title: 'Calcolatore Costo Mantenimento Barca a Vela/Motore',
+    description: 'Calcolatore Costo Mantenimento Barca a Vela/Motore',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoMantenimentoBarca'))
+  },
+  {
+    slug: 'costo-palestra-piscina',
+    title: 'Calcolatore Costo Iscrizione e Tesseramento Palestra/Piscina',
+    description: 'Calcolatore Costo Iscrizione e Tesseramento Palestra/Piscina',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoPalestraPiscina'))
+  },
+  {
+    slug: 'costo-collezionismo-fumetti-vinili',
+    title: 'Calcolatore Costo Collezionismo (es. fumetti, vinili)',
+    description: 'Calcolatore Costo Collezionismo (es. fumetti, vinili)',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoCollezionismoFumettiVinili'))
+  },
+  {
+    slug: 'costo-strumentazione-musicale',
+    title: 'Calcolatore Costo Strumentazione Musicale (chitarra, pianoforte)',
+    description: 'Calcolatore Costo Strumentazione Musicale (chitarra, pianoforte)',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoStrumentazioneMusicale'))
+  },
+  {
+    slug: 'costo-attrezzatura-fotografica',
+    title: 'Calcolatore Costo Attrezzatura Fotografica Professionale',
+    description: 'Calcolatore Costo Attrezzatura Fotografica Professionale',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoAttrezzaturaFotografica'))
+  },
+  {
+    slug: 'costo-viaggio-on-the-road',
+    title: 'Calcolatore Costo Viaggio On The Road in Italia',
+    description: 'Calcolatore Costo Viaggio On The Road in Italia',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoViaggioOnTheRoad'))
+  },
+  {
+    slug: 'costo-hobby-giardinaggio',
+    title: 'Calcolatore Costo Hobby del Giardinaggio (annuale)',
+    description: 'Calcolatore Costo Hobby del Giardinaggio (annuale)',
+    category: 'hobby-e-tempo-libero',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CostoHobbyGiardinaggio'))
+  },
+  {
+    slug: 'calcolo-stipendio-netto',
+    title: 'Calcolo Stipendio Netto',
+    description: 'Calcolo Stipendio Netto',
+    category: 'pmi-e-impresa',
+    lang: 'it',
+    component: lazy(() => import('@/components/calculators/CalcoloStipendioNetto'))
+  },
+  {
+    slug: 'calculadora-irpf-comunidad-autonoma',
+    title: 'Calculadora de IRPF por Comunidad Autónoma',
+    description: 'Calculadora de IRPF por Comunidad Autónoma',
+    category: 'impuestos-y-trabajo-autónomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIrpfComunidadAutonoma'))
+  },
+  {
+    slug: 'simulador-estimacion-directa-modulos',
+    title: 'Simulador Conveniencia: Estimación Directa vs. Módulos',
+    description: 'Simulador Conveniencia: Estimación Directa vs. Módulos',
+    category: 'impuestos-y-trabajo-autónomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/SimuladorEstimacionDirectaModulos'))
+  },
+  {
+    slug: 'calculadora-iva-modelo-303',
+    title: 'Calculadora de IVA trimestral (Modelo 303)',
+    description: 'Calculadora de IVA trimestral (Modelo 303)',
+    category: 'impuestos-y-trabajo-autónomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIvaModelo303'))
+  },
+  {
+    slug: 'calculadora-tarifa-plana-autonomos',
+    title: 'Calculadora de la "Tarifa Plana" para nuevos autónomos',
+    description: 'Calculadora de la "Tarifa Plana" para nuevos autónomos',
+    category: 'impuestos-y-trabajo-autónomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraTarifaPlanaAutonomos'))
+  },
+  {
+    slug: 'calculadora-ley-beckham',
+    title: 'Calculadora de la "Ley Beckham" para expatriados',
+    description: 'Calculadora de la "Ley Beckham" para expatriados',
+    category: 'impuestos-y-trabajo-autónomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraLeyBeckham'))
+  },
+  {
+    slug: 'calculadora-capitalizacion-paro',
+    title: 'Calculadora de la "Capitalización del Paro" para emprender',
+    description: 'Calculadora de la "Capitalización del Paro" para emprender',
+    category: 'impuestos-y-trabajo-autónomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraCapitalizacionParo'))
+  },
+  {
+    slug: 'calculadora-impuestos-ecommerce',
+    title: 'Calculadora de Impuestos para un e-commerce en España',
+    description: 'Calculadora de Impuestos para un e-commerce en España',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraImpuestosEcommerce'))
+  },
+  {
+    slug: 'calculadora-cuota-autonomo-societario',
+    title: 'Calculadora de la cuota de autónomo societario',
+    description: 'Calculadora de la cuota de autónomo societario',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraCuotaAutonomoSocietario'))
+  },
+  {
+    slug: 'calculadora-cese-actividad-autonomos',
+    title: 'Calculadora de la prestación por cese de actividad (paro de autónomos)',
+    description: 'Calculadora de la prestación por cese de actividad (paro de autónomos)',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraCeseActividadAutonomos'))
+  },
+  {
+    slug: 'calculadora-irpf-artistas-deportistas',
+    title: 'Calculadora de IRPF para artistas y deportistas',
+    description: 'Calculadora de IRPF para artistas y deportistas',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIrpfArtistasDeportistas'))
+  },
+  {
+    slug: 'calculadora-irpf-traductores',
+    title: 'Calculadora de IRPF para traductores e intérpretes autónomos',
+    description: 'Calculadora de IRPF para traductores e intérpretes autónomos',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIrpfTraductores'))
+  },
+  {
+    slug: 'calculadora-irpf-consultores-marketing',
+    title: 'Calculadora de IRPF para consultores de marketing autónomos',
+    description: 'Calculadora de IRPF para consultores de marketing autónomos',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIrpfConsultoresMarketing'))
+  },
+  {
+    slug: 'calculadora-irpf-arquitectos',
+    title: 'Calculadora de IRPF para arquitectos y aparejadores autónomos',
+    description: 'Calculadora de IRPF para arquitectos y aparejadores autónomos',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIrpfArquitectos'))
+  },
+  {
+    slug: 'calculadora-irpf-medicos',
+    title: 'Calculadora de IRPF para médicos y profesionales sanitarios autónomos',
+    description: 'Calculadora de IRPF para médicos y profesionales sanitarios autónomos',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIrpfMedicos'))
+  },
+  {
+    slug: 'uka-vat-calculator',
+    title: 'UK VAT Calculator',
+    description: 'UK VAT Calculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    component: lazy(() => import('@/components/calculators/UkaVatCalculator'))
+  },
+  {
+    slug: 'ukb-vat-calculator',
+    title: 'UK VAT Calculator',
+    description: 'UK VAT Calculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    component: lazy(() => import('@/components/calculators/UkbVatCalculator'))
+  },
+  {
+    slug: 'ukc-vat-calculator',
+    title: 'UK VAT Calculator',
+    description: 'UK VAT Calculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    component: lazy(() => import('@/components/calculators/UkcVatCalculator'))
+  },
+  {
+    slug: 'calculadora-irpf-fotografos',
+    title: 'Calculadora de IRPF para fotógrafos autónomos',
+    description: 'Calculadora de IRPF para fotógrafos autónomos',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIrpfFotografos'))
+  },
+  {
+    slug: 'calculadora-irpf-disenadores-graficos',
+    title: 'Calculadora de IRPF para diseñadores gráficos autónomos',
+    description: 'Calculadora de IRPF para diseñadores gráficos autónomos',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIrpfDisenadoresGraficos'))
+  },
+  {
+    slug: 'calculadora-irpf-fisioterapeutas',
+    title: 'Calculadora de IRPF para fisioterapeutas autónomos',
+    description: 'Calculadora de IRPF para fisioterapeutas autónomos',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIrpfFisioterapeutas'))
+  },
+  {
+    slug: 'calculadora-irpf-psicologos',
+    title: 'Calculadora de IRPF para psicólogos autónomos',
+    description: 'Calculadora de IRPF para psicólogos autónomos',
+    category: 'impuestos-y-trabajo-autonomo',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraIrpfPsicologos'))
+  },
+  {
+    slug: 'calculadora-gastos-compraventa-vivienda',
+    title: 'Calculadora de Gastos de Compraventa de Vivienda (ITP vs. IVA por C.A.)',
+    description: 'Calculadora de Gastos de Compraventa de Vivienda (ITP vs. IVA por C.A.)',
+    category: 'bienes-raices-y-vivienda',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraGastosCompraventaVivienda'))
+  },
+  {
+    slug: 'calculadora-rentabilidad-alquiler',
+    title: 'Calculadora de Rentabilidad Neta de Alquiler (descontando IBI, comunidad, etc.)',
+    description: 'Calculadora de Rentabilidad Neta de Alquiler (descontando IBI, comunidad, etc.)',
+    category: 'bienes-raices-y-vivienda',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraRentabilidadAlquiler'))
+  },
+  {
+    slug: 'calculadora-desgravacion-alquiler',
+    title: 'Calculadora de Desgravación por Alquiler de Vivienda Habitual',
+    description: 'Calculadora de Desgravación por Alquiler de Vivienda Habitual',
+    category: 'bienes-raices-y-vivienda',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraDesgravacionAlquiler'))
+  },
+  {
+    slug: 'calculadora-costes-notaria-registro',
+    title: 'Calculadora de Costes de Notaría y Registro para compraventa',
+    description: 'Calculadora de Costes de Notaría y Registro para compraventa',
+    category: 'bienes-raices-y-vivienda',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraCostesNotariaRegistro'))
+  },
+  {
+    slug: 'calculadora-cedula-habitabilidad',
+    title: 'Calculadora de la Cédula de Habitabilidad (costes y trámites)',
+    description: 'Calculadora de la Cédula de Habitabilidad (costes y trámites)',
+    category: 'bienes-raices-y-vivienda',
+    lang: 'es',
+    component: lazy(() => import('@/components/calculators/CalculadoraCedulaHabitabilidad'))
+  }

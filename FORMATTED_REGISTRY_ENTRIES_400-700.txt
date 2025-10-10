@@ -1,0 +1,2999 @@
+  {
+    slug: 'calculateur-budget-potager',
+    component: 'CalculateurBudgetPotager',
+    category: 'agriculture-et-alimentation',
+    lang: 'fr',
+    title: 'Calculateur du Budget pour un Potager Familial',
+    description: 'Calculateur du Budget pour un Potager Familial',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-cout-saison-ski',
+    component: 'CalculateurCoutSaisonSki',
+    category: 'loisirs-et-temps-libre',
+    lang: 'fr',
+    title: 'Calculateur du Coût d\'une Saison de Ski (forfait, matériel, logement)',
+    description: 'Calculateur du Coût d\'une Saison de Ski (forfait, matériel, logement)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-cout-cheval',
+    component: 'CalculateurCoutCheval',
+    category: 'loisirs-et-temps-libre',
+    lang: 'fr',
+    title: 'Calculateur du Coût d\'un Cheval (pension, soins)',
+    description: 'Calculateur du Coût d\'un Cheval (pension, soins)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-budget-tour-de-france',
+    component: 'CalculateurBudgetTourDeFrance',
+    category: 'loisirs-et-temps-libre',
+    lang: 'fr',
+    title: 'Calculateur du Budget pour le Tour de France (spectateur)',
+    description: 'Calculateur du Budget pour le Tour de France (spectateur)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-cout-licence-sportive',
+    component: 'CalculateurCoutLicenceSportive',
+    category: 'loisirs-et-temps-libre',
+    lang: 'fr',
+    title: 'Calculateur du Coût d\'une Licence Sportive',
+    description: 'Calculateur du Coût d\'une Licence Sportive',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-pass-culture',
+    component: 'CalculateurPassCulture',
+    category: 'loisirs-et-temps-libre',
+    lang: 'fr',
+    title: 'Calculateur du Pass Culture',
+    description: 'Calculateur du Pass Culture',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-cout-instrument-musique',
+    component: 'CalculateurCoutInstrumentMusique',
+    category: 'loisirs-et-temps-libre',
+    lang: 'fr',
+    title: 'Calculateur du Coût d\'un Instrument de Musique (achat vs. location)',
+    description: 'Calculateur du Coût d\'un Instrument de Musique (achat vs. location)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-budget-festival-musique',
+    component: 'CalculateurBudgetFestivalMusique',
+    category: 'loisirs-et-temps-libre',
+    lang: 'fr',
+    title: 'Calculateur du Budget pour un Festival de Musique (billet, transport, logement)',
+    description: 'Calculateur du Budget pour un Festival de Musique (billet, transport, logement)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-cout-rentree-litteraire',
+    component: 'CalculateurCoutRentreeLitteraire',
+    category: 'loisirs-et-temps-libre',
+    lang: 'fr',
+    title: 'Calculateur du Coût de la Rentrée Littéraire',
+    description: 'Calculateur du Coût de la Rentrée Littéraire',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-cout-salle-sport',
+    component: 'CalculateurCoutSalleSport',
+    category: 'loisirs-et-temps-libre',
+    lang: 'fr',
+    title: 'Calculateur du Coût d\'un Abonnement à une Salle de Sport',
+    description: 'Calculateur du Coût d\'un Abonnement à une Salle de Sport',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-bilan-carbone-voyage',
+    component: 'CalculateurBilanCarboneVoyage',
+    category: 'loisirs-et-temps-libre',
+    lang: 'fr',
+    title: 'Calculateur du Bilan Carbone d\'un Voyage',
+    description: 'Calculateur du Bilan Carbone d\'un Voyage',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-self-assessment-tax-calculator',
+    component: 'UkSelfAssessmentTaxCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK Self-Assessment Tax Calculator (Income Tax & Class 2/4 NI)',
+    description: 'UK Self-Assessment Tax Calculator (Income Tax & Class 2/4 NI)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-self-employment-tax-calculator',
+    component: 'UsSelfEmploymentTaxCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US Self-Employment Tax Calculator (Schedule C & SE Tax)',
+    description: 'US Self-Employment Tax Calculator (Schedule C & SE Tax)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-self-employment-tax-calculator',
+    component: 'CanadaSelfEmploymentTaxCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'Canada Self-Employment Tax Calculator (CPP & EI Premiums)',
+    description: 'Canada Self-Employment Tax Calculator (CPP & EI Premiums)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-ir35-deemed-salary-calculator',
+    component: 'UkIr35DeemedSalaryCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK IR35 "Deemed Salary" Calculator for Contractors',
+    description: 'UK IR35 "Deemed Salary" Calculator for Contractors',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-quarterly-estimated-tax-calculator',
+    component: 'UsQuarterlyEstimatedTaxCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US Quarterly Estimated Tax Calculator (Form 1040-ES)',
+    description: 'US Quarterly Estimated Tax Calculator (Form 1040-ES)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-foreign-earned-income-calculator',
+    component: 'UsForeignEarnedIncomeCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US Foreign Earned Income Exclusion Calculator for Expats',
+    description: 'US Foreign Earned Income Exclusion Calculator for Expats',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-stamp-duty-land-calculator',
+    component: 'UkStampDutyLandCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK Stamp Duty Land Tax (SDLT) Calculator',
+    description: 'UK Stamp Duty Land Tax (SDLT) Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-state-income-tax-calculator',
+    component: 'UsStateIncomeTaxCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US State Income Tax Calculator (comparison across states)',
+    description: 'US State Income Tax Calculator (comparison across states)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-gsthst-small-businesses-calculator',
+    component: 'CanadaGsthstSmallBusinessesCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'Canada GST/HST Calculator for Small Businesses',
+    description: 'Canada GST/HST Calculator for Small Businesses',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-payment-account-calculator',
+    component: 'UkPaymentAccountCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK "Payment on Account" Calculator',
+    description: 'UK "Payment on Account" Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-pass-through-business-deduction-calculator',
+    component: 'UsPassThroughBusinessDeductionCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US "Pass-Through" Business Deduction Calculator (QBI)',
+    description: 'US "Pass-Through" Business Deduction Calculator (QBI)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-vat-registration-threshold-calculator',
+    component: 'UkVatRegistrationThresholdCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK VAT Registration Threshold Calculator',
+    description: 'UK VAT Registration Threshold Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-hobby-business-income-calculator',
+    component: 'UsHobbyBusinessIncomeCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US "Hobby vs. Business" Income Tax Calculator',
+    description: 'US "Hobby vs. Business" Income Tax Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-business-number-personal-calculator',
+    component: 'CanadaBusinessNumberPersonalCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'Canada Business Number (BN) vs. Personal Tax Number Calculator',
+    description: 'Canada Business Number (BN) vs. Personal Tax Number Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-making-tax-digital-calculator',
+    component: 'UkMakingTaxDigitalCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK "Making Tax Digital" (MTD) Cost Calculator',
+    description: 'UK "Making Tax Digital" (MTD) Cost Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-llc-s-corp-tax-calculator',
+    component: 'UsLlcSCorpTaxCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US LLC vs. S-Corp Tax Savings Calculator',
+    description: 'US LLC vs. S-Corp Tax Savings Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-capital-gains-tax-calculator',
+    component: 'UkCapitalGainsTaxCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK "Capital Gains Tax on Property" Calculator',
+    description: 'UK "Capital Gains Tax on Property" Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-home-office-deduction-calculator',
+    component: 'UsHomeOfficeDeductionCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US "Home Office Deduction" Calculator (simplified vs. actual expense)',
+    description: 'US "Home Office Deduction" Calculator (simplified vs. actual expense)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-home-office-expenses-calculator',
+    component: 'CanadaHomeOfficeExpensesCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'Canada "Home Office Expenses" Calculator for Employees/Self-Employed',
+    description: 'Canada "Home Office Expenses" Calculator for Employees/Self-Employed',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-mileage-allowance-calculator',
+    component: 'UkMileageAllowanceCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK "Mileage Allowance" Calculator',
+    description: 'UK "Mileage Allowance" Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-mileage-deduction-calculator',
+    component: 'UsMileageDeductionCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US "Mileage Deduction" Calculator (standard vs. actual)',
+    description: 'US "Mileage Deduction" Calculator (standard vs. actual)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-vehicle-expenses-deduction-calculator',
+    component: 'CanadaVehicleExpensesDeductionCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'Canada "Vehicle Expenses" Deduction Calculator',
+    description: 'Canada "Vehicle Expenses" Deduction Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-dividend-tax-calculator',
+    component: 'UkDividendTaxCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK "Dividend Tax" Calculator (for company directors)',
+    description: 'UK "Dividend Tax" Calculator (for company directors)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-qualified-dividends-ordinary-calculator',
+    component: 'UsQualifiedDividendsOrdinaryCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US "Qualified Dividends" vs. "Ordinary Dividends" Tax Calculator',
+    description: 'US "Qualified Dividends" vs. "Ordinary Dividends" Tax Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-eligible-ineligible-dividends-calculator',
+    component: 'CanadaEligibleIneligibleDividendsCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'Canada "Eligible vs. Ineligible Dividends" Tax Calculator',
+    description: 'Canada "Eligible vs. Ineligible Dividends" Tax Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-child-benefit-high-calculator',
+    component: 'UkChildBenefitHighCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK "Child Benefit High Income Charge" Calculator',
+    description: 'UK "Child Benefit High Income Charge" Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-child-tax-credit-calculator',
+    component: 'UsChildTaxCreditCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US "Child Tax Credit" (CTC) Phase-Out Calculator',
+    description: 'US "Child Tax Credit" (CTC) Phase-Out Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-child-benefit-calculator',
+    component: 'CanadaChildBenefitCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'Canada "Child Benefit" (CCB) Calculator',
+    description: 'Canada "Child Benefit" (CCB) Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-marriage-allowance-calculator',
+    component: 'UkMarriageAllowanceCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK "Marriage Allowance" Calculator',
+    description: 'UK "Marriage Allowance" Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-married-filing-jointly-calculator',
+    component: 'UsMarriedFilingJointlyCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'US "Married Filing Jointly vs. Separately" Tax Calculator  ',
+    description: 'US "Married Filing Jointly vs. Separately" Tax Calculator  ',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-buy-to-let-yield-roi-calculator',
+    component: 'UkBuyToLetYieldRoiCalculator',
+    category: 'tax-and-freelance-uk-us-ca',
+    lang: 'en',
+    title: 'UK Buy-to-Let Yield & ROI Calculator (incl. Section 24 mortgage interest changes)',
+    description: 'UK Buy-to-Let Yield & ROI Calculator (incl. Section 24 mortgage interest changes)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-property-tax-estimator',
+    component: 'UsPropertyTaxEstimator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'US Property Tax Estimator (by state and county)',
+    description: 'US Property Tax Estimator (by state and county)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-land-transfer-tax-calculator',
+    component: 'CanadaLandTransferTaxCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'Canada Land Transfer Tax Calculator (by province)',
+    description: 'Canada Land Transfer Tax Calculator (by province)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-help-buy-shared-calculator',
+    component: 'UkHelpBuySharedCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'UK "Help to Buy" vs. "Shared Ownership" Scheme Calculator',
+    description: 'UK "Help to Buy" vs. "Shared Ownership" Scheme Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-heloc-cash-out-refinance-calculator',
+    component: 'UsHelocCashOutRefinanceCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'US HELOC (Home Equity Line of Credit) vs. Cash-Out Refinance Calculator',
+    description: 'US HELOC (Home Equity Line of Credit) vs. Cash-Out Refinance Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-first-time-home-buyers-calculator',
+    component: 'CanadaFirstTimeHomeBuyersCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'Canada "First-Time Home Buyers\' Incentive" Calculator',
+    description: 'Canada "First-Time Home Buyers\' Incentive" Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-right-buy-discount-calculator',
+    component: 'UkRightBuyDiscountCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'UK "Right to Buy" Discount Calculator',
+    description: 'UK "Right to Buy" Discount Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-house-hacking-profitability-calculator',
+    component: 'UsHouseHackingProfitabilityCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'US "House Hacking" Profitability Calculator',
+    description: 'US "House Hacking" Profitability Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-rental-income-tax-calculator',
+    component: 'CanadaRentalIncomeTaxCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'Canada "Rental Income" Tax Calculator',
+    description: 'Canada "Rental Income" Tax Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-lease-extension-cost-calculator',
+    component: 'UkLeaseExtensionCostCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'UK "Lease Extension" Cost Calculator',
+    description: 'UK "Lease Extension" Cost Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-fix-flip-profit-calculator',
+    component: 'UsFixFlipProfitCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'US "Fix and Flip" Profit Calculator',
+    description: 'US "Fix and Flip" Profit Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-principal-residence-exemption-calculator',
+    component: 'CanadaPrincipalResidenceExemptionCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'Canada "Principal Residence Exemption" Calculator',
+    description: 'Canada "Principal Residence Exemption" Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-ground-rent-service-estimator',
+    component: 'UkGroundRentServiceEstimator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'UK "Ground Rent" and "Service Charge" Estimator',
+    description: 'UK "Ground Rent" and "Service Charge" Estimator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-mortgage-points-break-even-calculator',
+    component: 'UsMortgagePointsBreakEvenCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'US "Mortgage Points" (Discount Points) Break-Even Calculator',
+    description: 'US "Mortgage Points" (Discount Points) Break-Even Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-mortgage-stress-test-calculator',
+    component: 'CanadaMortgageStressTestCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'Canada "Mortgage Stress Test" Calculator',
+    description: 'Canada "Mortgage Stress Test" Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-council-tax-band-calculator',
+    component: 'UkCouncilTaxBandCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'UK "Council Tax" Band Calculator',
+    description: 'UK "Council Tax" Band Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-closing-costs-estimator',
+    component: 'UsClosingCostsEstimator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'US "Closing Costs" Estimator',
+    description: 'US "Closing Costs" Estimator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-home-buyers-plan-calculator',
+    component: 'CanadaHomeBuyersPlanCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'Canada "Home Buyers\' Plan" (HBP) RRSP Withdrawal Calculator',
+    description: 'Canada "Home Buyers\' Plan" (HBP) RRSP Withdrawal Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-energy-performance-certificate-calculator',
+    component: 'UkEnergyPerformanceCertificateCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'UK "Energy Performance Certificate" (EPC) Improvement Cost Calculator',
+    description: 'UK "Energy Performance Certificate" (EPC) Improvement Cost Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-va-loan-funding-calculator',
+    component: 'UsVaLoanFundingCalculator',
+    category: 'real-estate-&-housing',
+    lang: 'en',
+    title: 'US "VA Loan" Funding Fee Calculator',
+    description: 'US "VA Loan" Funding Fee Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-isa-portfolio-allowance-tracker',
+    component: 'UkIsaPortfolioAllowanceTracker',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'UK ISA (Individual Savings Account) Portfolio & Allowance Tracker',
+    description: 'UK ISA (Individual Savings Account) Portfolio & Allowance Tracker',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-401-roth-ira-calculator',
+    component: 'Us401RothIraCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'US 401(k) vs. Roth IRA Contribution Calculator',
+    description: 'US 401(k) vs. Roth IRA Contribution Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-rrsp-tfsa-contribution-optimizer',
+    component: 'CanadaRrspTfsaContributionOptimizer',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'Canada RRSP vs. TFSA Contribution Optimizer',
+    description: 'Canada RRSP vs. TFSA Contribution Optimizer',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-capital-gains-tax-calculator',
+    component: 'UkCapitalGainsTaxCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'UK "Capital Gains Tax" on Shares/Investments Calculator',
+    description: 'UK "Capital Gains Tax" on Shares/Investments Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-fire-calculator',
+    component: 'UsFireCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'US FIRE (Financial Independence, Retire Early) Calculator',
+    description: 'US FIRE (Financial Independence, Retire Early) Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-registered-education-savings-calculator',
+    component: 'CanadaRegisteredEducationSavingsCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'Canada "Registered Education Savings Plan" (RESP) Grant Calculator',
+    description: 'Canada "Registered Education Savings Plan" (RESP) Grant Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-sipp-tax-relief-calculator',
+    component: 'UkSippTaxReliefCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'UK "SIPP" (Self-Invested Personal Pension) Tax Relief Calculator',
+    description: 'UK "SIPP" (Self-Invested Personal Pension) Tax Relief Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-hsa-triple-tax-calculator',
+    component: 'UsHsaTripleTaxCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'US "HSA" (Health Savings Account) Triple Tax Advantage Calculator',
+    description: 'US "HSA" (Health Savings Account) Triple Tax Advantage Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-lira-unlocking-calculator',
+    component: 'CanadaLiraUnlockingCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'Canada "LIRA" (Locked-In Retirement Account) Unlocking Calculator',
+    description: 'Canada "LIRA" (Locked-In Retirement Account) Unlocking Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-premium-bonds-chance-calculator',
+    component: 'UkPremiumBondsChanceCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'UK "Premium Bonds" Prize Chance Calculator',
+    description: 'UK "Premium Bonds" Prize Chance Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-social-security-benefit-estimator',
+    component: 'UsSocialSecurityBenefitEstimator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'US "Social Security" Benefit Estimator',
+    description: 'US "Social Security" Benefit Estimator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-cpp-pension-estimator',
+    component: 'CanadaCppPensionEstimator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'Canada "Pension Plan" (CPP) Estimator',
+    description: 'Canada "Pension Plan" (CPP) Estimator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-pension-lifetime-allowance-calculator',
+    component: 'UkPensionLifetimeAllowanceCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'UK "Pension Lifetime Allowance" (LTA) Calculator (historical)',
+    description: 'UK "Pension Lifetime Allowance" (LTA) Calculator (historical)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-required-minimum-distribution-calculator',
+    component: 'UsRequiredMinimumDistributionCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'US "Required Minimum Distribution" (RMD) Calculator for retirement accounts',
+    description: 'US "Required Minimum Distribution" (RMD) Calculator for retirement accounts',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-oas-clawback-calculator',
+    component: 'CanadaOasClawbackCalculator',
+    category: 'savings-&-investment',
+    lang: 'en',
+    title: 'Canada "Old Age Security" (OAS) Clawback Calculator',
+    description: 'Canada "Old Age Security" (OAS) Clawback Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-corporation-tax-calculator',
+    component: 'UkCorporationTaxCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'UK "Corporation Tax" Calculator',
+    description: 'UK "Corporation Tax" Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-s-corp-c-corp-tax-calculator',
+    component: 'UsSCorpCCorpTaxCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'US "S-Corp vs. C-Corp" Tax Comparison Calculator',
+    description: 'US "S-Corp vs. C-Corp" Tax Comparison Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-small-business-deduction-calculator',
+    component: 'CanadaSmallBusinessDeductionCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'Canada "Small Business Deduction" (SBD) Calculator',
+    description: 'Canada "Small Business Deduction" (SBD) Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-rd-tax-credit-estimator',
+    component: 'UkRdTaxCreditEstimator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'UK "R&D Tax Credit" Estimator',
+    description: 'UK "R&D Tax Credit" Estimator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-ppp-loan-forgiveness-calculator',
+    component: 'UsPppLoanForgivenessCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'US "Paycheck Protection Program" (PPP) Loan Forgiveness Calculator (historical)',
+    description: 'US "Paycheck Protection Program" (PPP) Loan Forgiveness Calculator (historical)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-ceba-loan-repayment-calculator',
+    component: 'CanadaCebaLoanRepaymentCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'Canada "Emergency Business Account" (CEBA) Loan Repayment Calculator',
+    description: 'Canada "Emergency Business Account" (CEBA) Loan Repayment Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-business-rates-calculator',
+    component: 'UkBusinessRatesCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'UK "Business Rates" Calculator',
+    description: 'UK "Business Rates" Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-net-operating-loss-calculator',
+    component: 'UsNetOperatingLossCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'US "Net Operating Loss" (NOL) Carryforward Calculator',
+    description: 'US "Net Operating Loss" (NOL) Carryforward Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-scientific-research-experimental-calculator',
+    component: 'CanadaScientificResearchExperimentalCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'Canada "Scientific Research & Experimental Development" (SR&ED) Tax Incentive Calculator',
+    description: 'Canada "Scientific Research & Experimental Development" (SR&ED) Tax Incentive Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-annual-investment-allowance-calculator',
+    component: 'UkAnnualInvestmentAllowanceCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'UK "Annual Investment Allowance" (AIA) Calculator',
+    description: 'UK "Annual Investment Allowance" (AIA) Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-employee-retention-credit-estimator',
+    component: 'UsEmployeeRetentionCreditEstimator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'US "Employee Retention Credit" (ERC) Estimator (historical)',
+    description: 'US "Employee Retention Credit" (ERC) Estimator (historical)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-wage-subsidy-calculator',
+    component: 'CanadaWageSubsidyCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'Canada "Wage Subsidy" (CEWS) Calculator (historical)',
+    description: 'Canada "Wage Subsidy" (CEWS) Calculator (historical)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'saas-churn-rate-calculator',
+    component: 'SaasChurnRateCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'SaaS Churn Rate Calculator',
+    description: 'SaaS Churn Rate Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'customer-lifetime-value-customer-calculator',
+    component: 'CustomerLifetimeValueCustomerCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'Customer Lifetime Value (CLV) to "Customer Acquisition Cost" (CAC) Ratio Calculator',
+    description: 'Customer Lifetime Value (CLV) to "Customer Acquisition Cost" (CAC) Ratio Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'monthly-recurring-revenue-annual-calculator',
+    component: 'MonthlyRecurringRevenueAnnualCalculator',
+    category: 'sme-&-business',
+    lang: 'en',
+    title: 'Monthly Recurring Revenue (MRR) & "Annual Recurring Revenue" (ARR) Calculator',
+    description: 'Monthly Recurring Revenue (MRR) & "Annual Recurring Revenue" (ARR) Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'uk-student-loan-repayment-calculator',
+    component: 'UkStudentLoanRepaymentCalculator',
+    category: 'education-&-career',
+    lang: 'en',
+    title: 'UK "Student Loan Repayment" Calculator (Plan 1, 2, 4, 5 & Postgraduate)',
+    description: 'UK "Student Loan Repayment" Calculator (Plan 1, 2, 4, 5 & Postgraduate)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'us-student-loan-forgiveness-calculator',
+    component: 'UsStudentLoanForgivenessCalculator',
+    category: 'education-&-career',
+    lang: 'en',
+    title: 'US "Student Loan Forgiveness" (PSLF, SAVE) Calculator',
+    description: 'US "Student Loan Forgiveness" (PSLF, SAVE) Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canada-student-loan-repayment-calculator',
+    component: 'CanadaStudentLoanRepaymentCalculator',
+    category: 'education-&-career',
+    lang: 'en',
+    title: 'Canada "Student Loan Repayment Assistance Plan" (RAP) Calculator',
+    description: 'Canada "Student Loan Repayment Assistance Plan" (RAP) Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'salary-freelance-net-income-calculator',
+    component: 'SalaryFreelanceNetIncomeCalculator',
+    category: 'education-&-career',
+    lang: 'en',
+    title: 'Salary vs. Freelance Net Income Comparison Calculator',
+    description: 'Salary vs. Freelance Net Income Comparison Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'cost-a-masters-degree-calculator',
+    component: 'CostAMastersDegreeCalculator',
+    category: 'education-&-career',
+    lang: 'en',
+    title: 'Cost of a Master\'s Degree ROI Calculator',
+    description: 'Cost of a Master\'s Degree ROI Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'job-offer-comparison-calculator',
+    component: 'JobOfferComparisonCalculator',
+    category: 'education-&-career',
+    lang: 'en',
+    title: 'Job Offer Comparison Calculator (salary, benefits, commute)',
+    description: 'Job Offer Comparison Calculator (salary, benefits, commute)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'salary-negotiation-range-calculator',
+    component: 'SalaryNegotiationRangeCalculator',
+    category: 'education-&-career',
+    lang: 'en',
+    title: 'Salary Negotiation Range Calculator',
+    description: 'Salary Negotiation Range Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'career-change-financial-impact-calculator',
+    component: 'CareerChangeFinancialImpactCalculator',
+    category: 'education-&-career',
+    lang: 'en',
+    title: 'Career Change Financial Impact Calculator',
+    description: 'Career Change Financial Impact Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'coding-bootcamp-roi-calculator',
+    component: 'CodingBootcampRoiCalculator',
+    category: 'education-&-career',
+    lang: 'en',
+    title: 'Coding Bootcamp ROI Calculator',
+    description: 'Coding Bootcamp ROI Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'unpaid-internship-opportunity-cost-calculator',
+    component: 'UnpaidInternshipOpportunityCostCalculator',
+    category: 'education-&-career',
+    lang: 'en',
+    title: 'Unpaid Internship Opportunity Cost Calculator',
+    description: 'Unpaid Internship Opportunity Cost Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'electric-vehicle-tco-calculator',
+    component: 'ElectricVehicleTcoCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Electric Vehicle (EV) Total Cost of Ownership Calculator (incl. local grants/credits)',
+    description: 'Electric Vehicle (EV) Total Cost of Ownership Calculator (incl. local grants/credits)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'digital-nomad-tax-residency-calculator',
+    component: 'DigitalNomadTaxResidencyCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Digital Nomad Tax Residency Calculator (183-day rule tracker)',
+    description: 'Digital Nomad Tax Residency Calculator (183-day rule tracker)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'cost-of-living-comparison-calculator',
+    component: 'CostOfLivingComparisonCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Cost of Living Comparison Calculator (City A vs. City B)',
+    description: 'Cost of Living Comparison Calculator (City A vs. City B)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'pet-ownership-lifetime-cost-calculator',
+    component: 'PetOwnershipLifetimeCostCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Pet Ownership Lifetime Cost Calculator (by breed/country)',
+    description: 'Pet Ownership Lifetime Cost Calculator (by breed/country)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'wedding-budget-calculator',
+    component: 'WeddingBudgetCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Wedding Budget Calculator (by location/guest count)',
+    description: 'Wedding Budget Calculator (by location/guest count)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'subscription-service-audit-calculator',
+    component: 'SubscriptionServiceAuditCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Subscription Service Audit & Cost Calculator',
+    description: 'Subscription Service Audit & Cost Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'diy-professional-renovation-calculator',
+    component: 'DiyProfessionalRenovationCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'DIY vs. Professional Home Renovation Cost Calculator',
+    description: 'DIY vs. Professional Home Renovation Cost Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'brew-your-own-beer-cost-calculator',
+    component: 'BrewYourOwnBeerCostCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Brewing Your Own Beer Cost vs. Buying Calculator',
+    description: 'Brewing Your Own Beer Cost vs. Buying Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'streaming-service-bundle-calculator',
+    component: 'StreamingServiceBundleCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Streaming Service Bundle Cost Optimizer',
+    description: 'Streaming Service Bundle Cost Optimizer',
+    hasContent: true,
+  },
+
+  {
+    slug: 'gym-membership-home-gym-calculator',
+    component: 'GymMembershipHomeGymCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Gym Membership vs. "Home Gym" Cost Calculator',
+    description: 'Gym Membership vs. "Home Gym" Cost Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'meal-kit-grocery-comparison-calculator',
+    component: 'MealKitGroceryComparisonCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Meal Kit vs. "Grocery Shopping" Cost Comparison',
+    description: 'Meal Kit vs. "Grocery Shopping" Cost Comparison',
+    hasContent: true,
+  },
+
+  {
+    slug: 'coffee-shop-spending-calculator',
+    component: 'CoffeeShopSpendingCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Coffee Shop Spending Calculator',
+    description: 'Coffee Shop Spending Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'fast-fashion-cost-calculator',
+    component: 'FastFashionCostCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Fast Fashion Environmental & Financial Cost Calculator',
+    description: 'Fast Fashion Environmental & Financial Cost Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'minimalism-challenge-savings-calculator',
+    component: 'MinimalismChallengeSavingsCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Minimalism Challenge Savings Calculator',
+    description: 'Minimalism Challenge Savings Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'zero-waste-savings-calculator',
+    component: 'ZeroWasteSavingsCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Zero-Waste Lifestyle Savings Calculator',
+    description: 'Zero-Waste Lifestyle Savings Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'adsense-revenues',
+    component: 'AdsenseRevenues',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'YouTube AdSense Revenue Estimator (by niche/CPM)',
+    description: 'YouTube AdSense Revenue Estimator (by niche/CPM)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'twitch-income-calculator',
+    component: 'TwitchIncomeCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Twitch Streamer Income Calculator (subs, bits, ads)',
+    description: 'Twitch Streamer Income Calculator (subs, bits, ads)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'patreon-substack-earnings-calculator',
+    component: 'PatreonSubstackEarningsCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Patreon/Substack Creator Earnings Calculator',
+    description: 'Patreon/Substack Creator Earnings Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'podcast-sponsorship-rate-calculator',
+    component: 'PodcastSponsorshipRateCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Podcast Sponsorship Rate Calculator',
+    description: 'Podcast Sponsorship Rate Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'influencer-brand-deal-calculator',
+    component: 'InfluencerBrandDealCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Influencer Brand Deal Rate Calculator',
+    description: 'Influencer Brand Deal Rate Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'etsy-profit-margin-calculator',
+    component: 'EtsyProfitMarginCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Etsy Seller Profit Margin Calculator',
+    description: 'Etsy Seller Profit Margin Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'amazon-fba-profit-calculator',
+    component: 'AmazonFbaProfitCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Amazon FBA Seller Profit Calculator (by EU/NA marketplace)',
+    description: 'Amazon FBA Seller Profit Calculator (by EU/NA marketplace)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'shopify-dropshipping-profit-calculator',
+    component: 'ShopifyDropshippingProfitCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Shopify Dropshipping Profit Calculator',
+    description: 'Shopify Dropshipping Profit Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'nft-creator-fee-calculator',
+    component: 'NftCreatorFeeCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'NFT Creator Gas Fee & Royalty Calculator',
+    description: 'NFT Creator Gas Fee & Royalty Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'self-publishing-royalties-calculator',
+    component: 'SelfPublishingRoyaltiesCalculator',
+    category: 'lifestyle-&-niche',
+    lang: 'en',
+    title: 'Self-Publishing (KDP) Royalties Calculator',
+    description: 'Self-Publishing (KDP) Royalties Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'health-insurance-plan-comparison-calculator',
+    component: 'HealthInsurancePlanComparisonCalculator',
+    category: 'health-&-sustainability',
+    lang: 'en',
+    title: 'Health Insurance Plan Comparison Calculator (deductible, premium, out-of-pocket max)',
+    description: 'Health Insurance Plan Comparison Calculator (deductible, premium, out-of-pocket max)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'co2-footprint-calculator',
+    component: 'Co2FootprintCalculator',
+    category: 'health-&-sustainability',
+    lang: 'en',
+    title: 'CO2 Footprint Calculator (travel, diet, energy)',
+    description: 'CO2 Footprint Calculator (travel, diet, energy)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'solar-panel-roi-calculator',
+    component: 'SolarPanelRoiCalculator',
+    category: 'health-&-sustainability',
+    lang: 'en',
+    title: 'Solar Panel Installation ROI Calculator (incl. local incentives)',
+    description: 'Solar Panel Installation ROI Calculator (incl. local incentives)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'rainwater-harvesting-savings-calculator',
+    component: 'RainwaterHarvestingSavingsCalculator',
+    category: 'health-&-sustainability',
+    lang: 'en',
+    title: 'Rainwater Harvesting Savings Calculator',
+    description: 'Rainwater Harvesting Savings Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'composting-savings-calculator',
+    component: 'CompostingSavingsCalculator',
+    category: 'health-&-sustainability',
+    lang: 'en',
+    title: 'Composting Waste Reduction & Savings Calculator',
+    description: 'Composting Waste Reduction & Savings Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'vegan-diet-savings-calculator',
+    component: 'VeganDietSavingsCalculator',
+    category: 'health-&-sustainability',
+    lang: 'en',
+    title: 'Vegan Diet Cost Savings Calculator',
+    description: 'Vegan Diet Cost Savings Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'bicycle-commuting-savings-calculator',
+    component: 'BicycleCommutingSavingsCalculator',
+    category: 'health-&-sustainability',
+    lang: 'en',
+    title: 'Bicycle Commuting Savings Calculator (fuel, maintenance, health)',
+    description: 'Bicycle Commuting Savings Calculator (fuel, maintenance, health)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'therapy-cost-insurance-calculator',
+    component: 'TherapyCostInsuranceCalculator',
+    category: 'health-&-sustainability',
+    lang: 'en',
+    title: 'Therapy/Counseling Cost & Insurance Calculator',
+    description: 'Therapy/Counseling Cost & Insurance Calculator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'ivf-treatment-cost-calculator',
+    component: 'IvfTreatmentCostCalculator',
+    category: 'health-&-sustainability',
+    lang: 'en',
+    title: 'IVF Treatment Cost Estimator',
+    description: 'IVF Treatment Cost Estimator',
+    hasContent: true,
+  },
+
+  {
+    slug: 'elder-care-cost-calculator',
+    component: 'ElderCareCostCalculator',
+    category: 'health-&-sustainability',
+    lang: 'en',
+    title: 'Elder Care Cost Calculator (in-home vs. facility)',
+    description: 'Elder Care Cost Calculator (in-home vs. facility)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-agente-immobiliare-calcolatore',
+    component: 'TassazioneAgenteImmobiliareCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Agente Immobiliare (con INPS Commercianti)',
+    description: 'Calcolatore Tassazione per Agente Immobiliare (con INPS Commercianti)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-amministratore-condominio-calcolatore',
+    component: 'TassazioneAmministratoreCondominioCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Amministratore di Condominio',
+    description: 'Calcolatore Tassazione per Amministratore di Condominio',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-guida-turistica-calcolatore',
+    component: 'TassazioneGuidaTuristicaCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Guida Turistica',
+    description: 'Calcolatore Tassazione per Guida Turistica',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-istruttore-palestra-calcolatore',
+    component: 'TassazioneIstruttorePalestraCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Istruttore di Palestra',
+    description: 'Calcolatore Tassazione per Istruttore di Palestra',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-nomade-digitale-calcolatore',
+    component: 'TassazioneNomadeDigitaleCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Nomade Digitale (residenza fiscale in Italia)',
+    description: 'Calcolatore Tassazione per Nomade Digitale (residenza fiscale in Italia)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-onlyfans-patreon-calcolatore',
+    component: 'TassazioneOnlyfansPatreonCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Redditi da OnlyFans/Patreon',
+    description: 'Calcolatore Tassazione per Redditi da OnlyFans/Patreon',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-twitchyoutube-calcolatore',
+    component: 'TassazioneTwitchyoutubeCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Redditi da Twitch/YouTube',
+    description: 'Calcolatore Tassazione per Redditi da Twitch/YouTube',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-vinteddepop-calcolatore',
+    component: 'TassazioneVinteddepopCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Vendite su Vinted/Depop (sotto soglia 5.000€)',
+    description: 'Calcolatore Tassazione per Vendite su Vinted/Depop (sotto soglia 5.000€)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-etsyebay-calcolatore',
+    component: 'TassazioneEtsyebayCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Vendite su Etsy/eBay',
+    description: 'Calcolatore Tassazione per Vendite su Etsy/eBay',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-dropshipping-calcolatore',
+    component: 'TassazioneDropshippingCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Dropshipping',
+    description: 'Calcolatore Tassazione per Dropshipping',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-lavoratori-impatriati-calcolatore',
+    component: 'TassazioneLavoratoriImpatriatiCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Lavoratori Impatriati (Legge Beckham italiana)',
+    description: 'Calcolatore Tassazione per Lavoratori Impatriati (Legge Beckham italiana)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-lavoratori-frontalieri-calcolatore',
+    component: 'TassazioneLavoratoriFrontalieriCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Lavoratori Frontalieri (Svizzera/Austria/Francia)',
+    description: 'Calcolatore Tassazione per Lavoratori Frontalieri (Svizzera/Austria/Francia)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'contributi-minimi-eccedenti-calcolatore',
+    component: 'ContributiMinimiEccedentiCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Contributi Minimi vs. Eccedenti per Artigiani/Commercianti',
+    description: 'Calcolatore Contributi Minimi vs. Eccedenti per Artigiani/Commercianti',
+    hasContent: true,
+  },
+
+  {
+    slug: 'riduzione-contributi-inps-calcolatore',
+    component: 'RiduzioneContributiInpsCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Riduzione Contributi INPS del 35% per Forfettari',
+    description: 'Calcolatore Riduzione Contributi INPS del 35% per Forfettari',
+    hasContent: true,
+  },
+
+  {
+    slug: 'riscatto-laurea-convenienza-calcolatore',
+    component: 'RiscattoLaureaConvenienzaCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Convenienza Riscatto Laurea (agevolato vs. ordinario)',
+    description: 'Calcolatore Convenienza Riscatto Laurea (agevolato vs. ordinario)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-prestazione-occasionale-calcolatore',
+    component: 'TassazionePrestazioneOccasionaleCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Prestazione Occasionale (con e senza ritenuta)',
+    description: 'Calcolatore Tassazione per Prestazione Occasionale (con e senza ritenuta)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'limite-5000-prestazione-occasionale-calcolatore',
+    component: 'Limite5000PrestazioneOccasionaleCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Limite 5.000€ per Prestazione Occasionale',
+    description: 'Calcolatore Limite 5.000€ per Prestazione Occasionale',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-cessione-diritto-autore-calcolatore',
+    component: 'TassazioneCessioneDirittoAutoreCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Cessione Diritto d\'Autore',
+    description: 'Calcolatore Tassazione per Cessione Diritto d\'Autore',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-insegnanti-privati-calcolatore',
+    component: 'TassazioneInsegnantiPrivatiCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Insegnanti Privati/Ripetizioni',
+    description: 'Calcolatore Tassazione per Insegnanti Privati/Ripetizioni',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-host-airbnb-calcolatore',
+    component: 'TassazioneHostAirbnbCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Host Airbnb (locazione breve vs. attività imprenditoriale)',
+    description: 'Calcolatore Tassazione per Host Airbnb (locazione breve vs. attività imprenditoriale)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-vendita-nft-calcolatore',
+    component: 'TassazioneVenditaNftCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Vendita di NFT',
+    description: 'Calcolatore Tassazione per Vendita di NFT',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-staking-farming-cripto-calcolatore',
+    component: 'TassazioneStakingFarmingCriptoCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Staking/Farming Criptovalute',
+    description: 'Calcolatore Tassazione per Staking/Farming Criptovalute',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-redditi-trading-calcolatore',
+    component: 'TassazioneRedditiTradingCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Redditi da Trading Online (regime amministrato vs. dichiarativo)',
+    description: 'Calcolatore Tassazione per Redditi da Trading Online (regime amministrato vs. dichiarativo)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-dividendi-esteri-calcolatore',
+    component: 'TassazioneDividendiEsteriCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Redditi da Dividendi Esteri (con credito d\'imposta)',
+    description: 'Calcolatore Tassazione per Redditi da Dividendi Esteri (con credito d\'imposta)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-interessi-esteri-calcolatore',
+    component: 'TassazioneInteressiEsteriCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Redditi da Interessi Esteri (es. conti P2P)',
+    description: 'Calcolatore Tassazione per Redditi da Interessi Esteri (es. conti P2P)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'ivafe-calcolatore',
+    component: 'IvafeCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore IVAFE (Imposta sul valore delle attività finanziarie detenute all\'estero)',
+    description: 'Calcolatore IVAFE (Imposta sul valore delle attività finanziarie detenute all\'estero)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'ivie-calcolatore',
+    component: 'IvieCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore IVIE (Imposta sul valore degli immobili situati all\'estero)',
+    description: 'Calcolatore IVIE (Imposta sul valore degli immobili situati all\'estero)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-lavoratori-domestici-calcolatore',
+    component: 'TassazioneLavoratoriDomesticiCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Lavoratori Domestici (Colf/Badanti)',
+    description: 'Calcolatore Tassazione per Lavoratori Domestici (Colf/Badanti)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'contributi-inps-lavoratori-domestici-calcolatore',
+    component: 'ContributiInpsLavoratoriDomesticiCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Contributi INPS per Lavoratori Domestici',
+    description: 'Calcolatore Contributi INPS per Lavoratori Domestici',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-lavoratori-agricoli-tempo-determinato-calcolatore',
+    component: 'TassazioneLavoratoriAgricoliTempoDeterminatoCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Lavoratori Agricoli a Tempo Determinato',
+    description: 'Calcolatore Tassazione per Lavoratori Agricoli a Tempo Determinato',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-lavoratori-spettacolo-calcolatore',
+    component: 'TassazioneLavoratoriSpettacoloCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Lavoratori dello Spettacolo (ex-ENPALS)',
+    description: 'Calcolatore Tassazione per Lavoratori dello Spettacolo (ex-ENPALS)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-lavoratori-marittimi-calcolatore',
+    component: 'TassazioneLavoratoriMarittimiCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Lavoratori Marittimi',
+    description: 'Calcolatore Tassazione per Lavoratori Marittimi',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-lavoratori-edili-calcolatore',
+    component: 'TassazioneLavoratoriEdiliCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Lavoratori Edili (con Cassa Edile)',
+    description: 'Calcolatore Tassazione per Lavoratori Edili (con Cassa Edile)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-lavoratori-chiamata-calcolatore',
+    component: 'TassazioneLavoratoriChiamataCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Lavoratori a Chiamata (Intermittenti)',
+    description: 'Calcolatore Tassazione per Lavoratori a Chiamata (Intermittenti)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-stage-tirocinio-calcolatore',
+    component: 'TassazioneStageTirocinioCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Stage/Tirocinio',
+    description: 'Calcolatore Tassazione per Stage/Tirocinio',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-borse-studio-dottorato-calcolatore',
+    component: 'TassazioneBorseStudioDottoratoCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Borse di Studio/Dottorato',
+    description: 'Calcolatore Tassazione per Borse di Studio/Dottorato',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-premi-produttivita-calcolatore',
+    component: 'TassazionePremiProduttivitaCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Premi di Produttività (detassazione)',
+    description: 'Calcolatore Tassazione per Premi di Produttività (detassazione)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-welfare-aziendale-calcolatore',
+    component: 'TassazioneWelfareAziendaleCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Welfare Aziendale (fringe benefit)',
+    description: 'Calcolatore Tassazione per Welfare Aziendale (fringe benefit)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-buoni-pasto-calcolatore',
+    component: 'TassazioneBuoniPastoCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Buoni Pasto (elettronici vs. cartacei)',
+    description: 'Calcolatore Tassazione per Buoni Pasto (elettronici vs. cartacei)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-indennita-trasferta-calcolatore',
+    component: 'TassazioneIndennitaTrasfertaCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Indennità di Trasferta (Italia/Estero)',
+    description: 'Calcolatore Tassazione per Indennità di Trasferta (Italia/Estero)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-indennita-cassa-calcolatore',
+    component: 'TassazioneIndennitaCassaCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Indennità di Cassa/Maneggio Denaro',
+    description: 'Calcolatore Tassazione per Indennità di Cassa/Maneggio Denaro',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-indennita-volo-calcolatore',
+    component: 'TassazioneIndennitaVoloCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Indennità di Volo/Navigazione',
+    description: 'Calcolatore Tassazione per Indennità di Volo/Navigazione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-indennita-reperibilita-calcolatore',
+    component: 'TassazioneIndennitaReperibilitaCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Indennità di Reperibilità',
+    description: 'Calcolatore Tassazione per Indennità di Reperibilità',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-lavoro-notturno-festivo-calcolatore',
+    component: 'TassazioneLavoroNotturnoFestivoCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Lavoro Notturno/Festivo',
+    description: 'Calcolatore Tassazione per Lavoro Notturno/Festivo',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-straordinari-calcolatore',
+    component: 'TassazioneStraordinariCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Straordinari',
+    description: 'Calcolatore Tassazione per Straordinari',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-tfr-calcolatore',
+    component: 'TassazioneTfrCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per TFR (Trattamento di Fine Rapporto)',
+    description: 'Calcolatore Tassazione per TFR (Trattamento di Fine Rapporto)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-naspi-calcolatore',
+    component: 'TassazioneNaspiCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per NASpI (Indennità di Disoccupazione)',
+    description: 'Calcolatore Tassazione per NASpI (Indennità di Disoccupazione)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-cassa-integrazione-calcolatore',
+    component: 'TassazioneCassaIntegrazioneCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Cassa Integrazione (CIG)',
+    description: 'Calcolatore Tassazione per Cassa Integrazione (CIG)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-pensione-vecchiaia-calcolatore',
+    component: 'TassazionePensioneVecchiaiaCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Pensione di Vecchiaia/Anticipata',
+    description: 'Calcolatore Tassazione per Pensione di Vecchiaia/Anticipata',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-pensione-invalidita-calcolatore',
+    component: 'TassazionePensioneInvaliditaCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Pensione di Invalidità/Inabilità',
+    description: 'Calcolatore Tassazione per Pensione di Invalidità/Inabilità',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-pensione-reversibilita-calcolatore',
+    component: 'TassazionePensioneReversibilitaCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Pensione di Reversibilità',
+    description: 'Calcolatore Tassazione per Pensione di Reversibilità',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-assegno-sociale-calcolatore',
+    component: 'TassazioneAssegnoSocialeCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Assegno Sociale',
+    description: 'Calcolatore Tassazione per Assegno Sociale',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-rendite-inail-calcolatore',
+    component: 'TassazioneRenditeInailCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Rendite INAIL',
+    description: 'Calcolatore Tassazione per Rendite INAIL',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-indennita-accompagnamento-calcolatore',
+    component: 'TassazioneIndennitaAccompagnamentoCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Indennità di Accompagnamento',
+    description: 'Calcolatore Tassazione per Indennità di Accompagnamento',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-fabbricati-non-locati-calcolatore',
+    component: 'TassazioneFabbricatiNonLocatiCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Redditi da Fabbricati (non locati)',
+    description: 'Calcolatore Tassazione per Redditi da Fabbricati (non locati)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-redditi-diversi-calcolatore',
+    component: 'TassazioneRedditiDiversiCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Redditi Diversi (es. vincite)',
+    description: 'Calcolatore Tassazione per Redditi Diversi (es. vincite)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-royalties-brevetti-calcolatore',
+    component: 'TassazioneRoyaltiesBrevettiCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Royalties e Brevetti',
+    description: 'Calcolatore Tassazione per Royalties e Brevetti',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-asd-calcolatore',
+    component: 'TassazioneAsdCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Associazioni Sportive Dilettantistiche (ASD)',
+    description: 'Calcolatore Tassazione per Associazioni Sportive Dilettantistiche (ASD)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-ets-calcolatore',
+    component: 'TassazioneEtsCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Enti del Terzo Settore (ETS)',
+    description: 'Calcolatore Tassazione per Enti del Terzo Settore (ETS)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-societa-semplice-calcolatore',
+    component: 'TassazioneSocietaSempliceCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Società Semplice (SS)',
+    description: 'Calcolatore Tassazione per Società Semplice (SS)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-snc-calcolatore',
+    component: 'TassazioneSncCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Società in Nome Collettivo (SNC)',
+    description: 'Calcolatore Tassazione per Società in Nome Collettivo (SNC)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-sas-calcolatore',
+    component: 'TassazioneSasCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Società in Accomandita Semplice (SAS)',
+    description: 'Calcolatore Tassazione per Società in Accomandita Semplice (SAS)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-srl-calcolatore',
+    component: 'TassazioneSrlCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Società a Responsabilità Limitata (SRL) - Trasparenza vs. Ordinario',
+    description: 'Calcolatore Tassazione per Società a Responsabilità Limitata (SRL) - Trasparenza vs. Ordinario',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-dividendi-srl-calcolatore',
+    component: 'TassazioneDividendiSrlCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Dividendi da SRL',
+    description: 'Calcolatore Tassazione per Dividendi da SRL',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-finanziamento-soci-calcolatore',
+    component: 'TassazioneFinanziamentoSociCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Finanziamento Soci',
+    description: 'Calcolatore Tassazione per Finanziamento Soci',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-cessione-quote-calcolatore',
+    component: 'TassazioneCessioneQuoteCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Cessione di Quote Sociali',
+    description: 'Calcolatore Tassazione per Cessione di Quote Sociali',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-startup-innovative-calcolatore',
+    component: 'TassazioneStartupInnovativeCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Startup Innovative (agevolazioni)',
+    description: 'Calcolatore Tassazione per Startup Innovative (agevolazioni)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-pmi-innovative-calcolatore',
+    component: 'TassazionePmiInnovativeCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per PMI Innovative (agevolazioni)',
+    description: 'Calcolatore Tassazione per PMI Innovative (agevolazioni)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'credito-imposta-rs-calcolatore',
+    component: 'CreditoImpostaRsCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Credito d\'Imposta per Ricerca e Sviluppo',
+    description: 'Calcolatore Credito d\'Imposta per Ricerca e Sviluppo',
+    hasContent: true,
+  },
+
+  {
+    slug: 'credito-imposta-formazione-40-calcolatore',
+    component: 'CreditoImpostaFormazione40Calcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Credito d\'Imposta per Formazione 4.0',
+    description: 'Calcolatore Credito d\'Imposta per Formazione 4.0',
+    hasContent: true,
+  },
+
+  {
+    slug: 'credito-imposta-pubblicita-calcolatore',
+    component: 'CreditoImpostaPubblicitaCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Credito d\'Imposta per Pubblicità',
+    description: 'Calcolatore Credito d\'Imposta per Pubblicità',
+    hasContent: true,
+  },
+
+  {
+    slug: 'patent-box-calcolatore',
+    component: 'PatentBoxCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Patent Box',
+    description: 'Calcolatore Patent Box',
+    hasContent: true,
+  },
+
+  {
+    slug: 'ace-calcolatore',
+    component: 'AceCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore ACE (Aiuto alla Crescita Economica)',
+    description: 'Calcolatore ACE (Aiuto alla Crescita Economica)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'superammortamento-iperammortamento-calcolatore',
+    component: 'SuperammortamentoIperammortamentoCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Superammortamento e Iperammortamento (storico)',
+    description: 'Calcolatore Superammortamento e Iperammortamento (storico)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'sabatini-calcolatore',
+    component: 'SabatiniCalcolatore',
+    category: 'fisco-e-lavoro-autonomo',
+    lang: 'it',
+    title: 'Calcolatore Sabatini (contributo in conto impianti)',
+    description: 'Calcolatore Sabatini (contributo in conto impianti)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'bonus-verde-calcolatore',
+    component: 'BonusVerdeCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Bonus Verde (detrazione 36%)',
+    description: 'Calcolatore Bonus Verde (detrazione 36%)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'bonus-facciate-calcolatore',
+    component: 'BonusFacciateCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Bonus Facciate (storico, 90%)',
+    description: 'Calcolatore Bonus Facciate (storico, 90%)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'sismabonus-calcolatore',
+    component: 'SismabonusCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Sismabonus (detrazioni varie)',
+    description: 'Calcolatore Sismabonus (detrazioni varie)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'bonus-barriere-architettoniche-calcolatore',
+    component: 'BonusBarriereArchitettonicheCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Bonus Barriere Architettoniche (75%)',
+    description: 'Calcolatore Bonus Barriere Architettoniche (75%)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'bonus-acqua-potabile-calcolatore',
+    component: 'BonusAcquaPotabileCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Bonus Acqua Potabile',
+    description: 'Calcolatore Bonus Acqua Potabile',
+    hasContent: true,
+  },
+
+  {
+    slug: 'detrazione-iva-casa-green-calcolatore',
+    component: 'DetrazioneIvaCasaGreenCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Detrazione IVA per Acquisto Casa Green',
+    description: 'Calcolatore Detrazione IVA per Acquisto Casa Green',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-nuda-proprieta-usufrutto-calcolatore',
+    component: 'TassazioneNudaProprietaUsufruttoCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Tassazione Nuda Proprietà vs. Usufrutto',
+    description: 'Calcolatore Tassazione Nuda Proprietà vs. Usufrutto',
+    hasContent: true,
+  },
+
+  {
+    slug: 'valore-usufrutto-nuda-proprieta-calcolatore',
+    component: 'ValoreUsufruttoNudaProprietaCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Valore Usufrutto vs. Nuda Proprietà',
+    description: 'Calcolatore Valore Usufrutto vs. Nuda Proprietà',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-comodato-uso-calcolatore',
+    component: 'TassazioneComodatoUsoCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Tassazione Comodato d\'Uso Gratuito',
+    description: 'Calcolatore Tassazione Comodato d\'Uso Gratuito',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-affitto-con-riscatto-calcolatore',
+    component: 'TassazioneAffittoConRiscattoCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Tassazione Affitto con Riscatto',
+    description: 'Calcolatore Tassazione Affitto con Riscatto',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-sublocazione-calcolatore',
+    component: 'TassazioneSublocazioneCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Sublocazione',
+    description: 'Calcolatore Tassazione per Sublocazione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-cessione-contratto-locazione-calcolatore',
+    component: 'TassazioneCessioneContrattoLocazioneCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Cessione di Contratto di Locazione',
+    description: 'Calcolatore Tassazione per Cessione di Contratto di Locazione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-risoluzione-contratto-locazione-calcolatore',
+    component: 'TassazioneRisoluzioneContrattoLocazioneCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Risoluzione Anticipata Contratto di Locazione',
+    description: 'Calcolatore Tassazione per Risoluzione Anticipata Contratto di Locazione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'imposta-registro-locazioni-calcolatore',
+    component: 'ImpostaRegistroLocazioniCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Imposta di Registro per Contratti di Locazione',
+    description: 'Calcolatore Imposta di Registro per Contratti di Locazione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'aggiornamento-istat-locazioni-commerciali-calcolatore',
+    component: 'AggiornamentoIstatLocazioniCommercialiCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Aggiornamento ISTAT per Locazioni Commerciali',
+    description: 'Calcolatore Aggiornamento ISTAT per Locazioni Commerciali',
+    hasContent: true,
+  },
+
+  {
+    slug: 'spese-straordinarie-condominio-calcolatore',
+    component: 'SpeseStraordinarieCondominioCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Spese Straordinarie Condominio (ripartizione proprietario/inquilino)',
+    description: 'Calcolatore Spese Straordinarie Condominio (ripartizione proprietario/inquilino)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-allaccio-utenze-calcolatore',
+    component: 'CostoAllaccioUtenzeCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Allaccio Utenze (acqua, luce, gas)',
+    description: 'Calcolatore Costo Allaccio Utenze (acqua, luce, gas)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'voltura-subentro-utenze-calcolatore',
+    component: 'VolturaSubentroUtenzeCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Voltura vs. Subentro Utenze',
+    description: 'Calcolatore Voltura vs. Subentro Utenze',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-certificazione-energetica-ape-calcolatore',
+    component: 'CostoCertificazioneEnergeticaApeCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Certificazione Energetica (APE)',
+    description: 'Calcolatore Costo Certificazione Energetica (APE)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-conformita-impianti-calcolatore',
+    component: 'CostoConformitaImpiantiCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Conformità Impianti (elettrico, gas)',
+    description: 'Calcolatore Costo Conformità Impianti (elettrico, gas)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-pratica-cila-scia-calcolatore',
+    component: 'CostoPraticaCilaSciaCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Pratica CILA/SCIA per ristrutturazione',
+    description: 'Calcolatore Costo Pratica CILA/SCIA per ristrutturazione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'oneri-urbanizzazione-calcolatore',
+    component: 'OneriUrbanizzazioneCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Oneri di Urbanizzazione per Nuova Costruzione',
+    description: 'Calcolatore Oneri di Urbanizzazione per Nuova Costruzione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-sanatoria-edilizia-calcolatore',
+    component: 'CostoSanatoriaEdiliziaCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Sanatoria Edilizia',
+    description: 'Calcolatore Costo Sanatoria Edilizia',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-frazionamento-immobiliare-calcolatore',
+    component: 'TassazioneFrazionamentoImmobiliareCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Frazionamento Immobiliare',
+    description: 'Calcolatore Tassazione per Frazionamento Immobiliare',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-cambio-destinazione-uso-calcolatore',
+    component: 'TassazioneCambioDestinazioneUsoCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Cambio di Destinazione d\'Uso',
+    description: 'Calcolatore Tassazione per Cambio di Destinazione d\'Uso',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-terreni-agricoli-calcolatore',
+    component: 'TassazioneTerreniAgricoliCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Terreni Agricoli',
+    description: 'Calcolatore Tassazione per Terreni Agricoli',
+    hasContent: true,
+  },
+
+  {
+    slug: 'prelazione-agraria-calcolatore',
+    component: 'PrelazioneAgrariaCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Diritto di Prelazione Agraria',
+    description: 'Calcolatore Diritto di Prelazione Agraria',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-esproprio-calcolatore',
+    component: 'TassazioneEsproprioCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Esproprio per Pubblica Utilità',
+    description: 'Calcolatore Tassazione per Esproprio per Pubblica Utilità',
+    hasContent: true,
+  },
+
+  {
+    slug: 'indennita-occupazione-senza-titolo-calcolatore',
+    component: 'IndennitaOccupazioneSenzaTitoloCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Indennità di Occupazione Senza Titolo',
+    description: 'Calcolatore Indennità di Occupazione Senza Titolo',
+    hasContent: true,
+  },
+
+  {
+    slug: 'canone-rai-calcolatore',
+    component: 'CanoneRaiCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Canone RAI (storico, in bolletta)',
+    description: 'Calcolatore Canone RAI (storico, in bolletta)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'bonus-elettrodomestici-calcolatore',
+    component: 'BonusElettrodomesticiCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Bonus Elettrodomestici',
+    description: 'Calcolatore Bonus Elettrodomestici',
+    hasContent: true,
+  },
+
+  {
+    slug: 'bonus-condizionatori-calcolatore',
+    component: 'BonusCondizionatoriCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Bonus Condizionatori',
+    description: 'Calcolatore Bonus Condizionatori',
+    hasContent: true,
+  },
+
+  {
+    slug: 'bonus-zanzariere-calcolatore',
+    component: 'BonusZanzariereCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Bonus Zanzariere',
+    description: 'Calcolatore Bonus Zanzariere',
+    hasContent: true,
+  },
+
+  {
+    slug: 'bonus-tende-sole-calcolatore',
+    component: 'BonusTendeSoleCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Bonus Tende da Sole',
+    description: 'Calcolatore Bonus Tende da Sole',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-assicurazione-casa-calcolatore',
+    component: 'CostoAssicurazioneCasaCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Assicurazione Casa (incendio, scoppio, furto)',
+    description: 'Calcolatore Costo Assicurazione Casa (incendio, scoppio, furto)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-sistema-allarme-calcolatore',
+    component: 'CostoSistemaAllarmeCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Sistema di Allarme',
+    description: 'Calcolatore Costo Sistema di Allarme',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-manutenzione-caldaia-calcolatore',
+    component: 'CostoManutenzioneCaldaiaCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Manutenzione Caldaia',
+    description: 'Calcolatore Costo Manutenzione Caldaia',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-manutenzione-condizionatore-calcolatore',
+    component: 'CostoManutenzioneCondizionatoreCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Manutenzione Condizionatore',
+    description: 'Calcolatore Costo Manutenzione Condizionatore',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-smaltimento-amianto-calcolatore',
+    component: 'CostoSmaltimentoAmiantoCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Smaltimento Amianto',
+    description: 'Calcolatore Costo Smaltimento Amianto',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-realizzazione-piscina-calcolatore',
+    component: 'CostoRealizzazionePiscinaCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Piscina',
+    description: 'Calcolatore Costo Realizzazione Piscina',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-realizzazione-giardino-calcolatore',
+    component: 'CostoRealizzazioneGiardinoCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Giardino',
+    description: 'Calcolatore Costo Realizzazione Giardino',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-impianto-irrigazione-calcolatore',
+    component: 'CostoImpiantoIrrigazioneCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Impianto di Irrigazione',
+    description: 'Calcolatore Costo Realizzazione Impianto di Irrigazione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-pozzo-artesiano-calcolatore',
+    component: 'CostoPozzoArtesianoCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Pozzo Artesiano',
+    description: 'Calcolatore Costo Realizzazione Pozzo Artesiano',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-recinzione-calcolatore',
+    component: 'CostoRecinzioneCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Recinzione',
+    description: 'Calcolatore Costo Realizzazione Recinzione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-tettoia-pergolato-calcolatore',
+    component: 'CostoTettoiaPergolatoCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Tettoia/Pergolato',
+    description: 'Calcolatore Costo Realizzazione Tettoia/Pergolato',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-soppalco-calcolatore',
+    component: 'CostoSoppalcoCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Soppalco',
+    description: 'Calcolatore Costo Realizzazione Soppalco',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-camino-stufa-pellet-calcolatore',
+    component: 'CostoCaminoStufaPelletCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Camino/Stufa a Pellet',
+    description: 'Calcolatore Costo Realizzazione Camino/Stufa a Pellet',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-sauna-bagno-turco-calcolatore',
+    component: 'CostoSaunaBagnoTurcoCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Sauna/Bagno Turco',
+    description: 'Calcolatore Costo Realizzazione Sauna/Bagno Turco',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-campo-tennis-padel-calcolatore',
+    component: 'CostoCampoTennisPadelCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Campo da Tennis/Padel',
+    description: 'Calcolatore Costo Realizzazione Campo da Tennis/Padel',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-home-cinema-calcolatore',
+    component: 'CostoHomeCinemaCalcolatore',
+    category: 'immobiliare-e-casa',
+    lang: 'it',
+    title: 'Calcolatore Costo Realizzazione Home Cinema',
+    description: 'Calcolatore Costo Realizzazione Home Cinema',
+    hasContent: true,
+  },
+
+  {
+    slug: 'pir-calcolatore',
+    component: 'PirCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore PIR (Piani Individuali di Risparmio) - Vantaggi Fiscali',
+    description: 'Calcolatore PIR (Piani Individuali di Risparmio) - Vantaggi Fiscali',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-interessi-conti-esteri-calcolatore',
+    component: 'TassazioneInteressiContiEsteriCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Interessi da Conti Correnti Esteri (con monitoraggio fiscale)',
+    description: 'Calcolatore Tassazione per Interessi da Conti Correnti Esteri (con monitoraggio fiscale)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-polizze-estere-calcolatore',
+    component: 'TassazionePolizzeEstereCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Polizze Assicurative Estere (IVAFE)',
+    description: 'Calcolatore Tassazione per Polizze Assicurative Estere (IVAFE)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-trust-calcolatore',
+    component: 'TassazioneTrustCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Trust',
+    description: 'Calcolatore Tassazione per Trust',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-fondi-immobiliari-calcolatore',
+    component: 'TassazioneFondiImmobiliariCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Fondi Immobiliari',
+    description: 'Calcolatore Tassazione per Fondi Immobiliari',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-private-equity-calcolatore',
+    component: 'TassazionePrivateEquityCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Private Equity/Venture Capital',
+    description: 'Calcolatore Tassazione per Private Equity/Venture Capital',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-social-lending-calcolatore',
+    component: 'TassazioneSocialLendingCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Social Lending',
+    description: 'Calcolatore Tassazione per Social Lending',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-opzioni-futures-calcolatore',
+    component: 'TassazioneOpzioniFuturesCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Opzioni e Futures',
+    description: 'Calcolatore Tassazione per Opzioni e Futures',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-cfd-calcolatore',
+    component: 'TassazioneCfdCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per CFD (Contracts for Difference)',
+    description: 'Calcolatore Tassazione per CFD (Contracts for Difference)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-forex-trading-calcolatore',
+    component: 'TassazioneForexTradingCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Forex Trading',
+    description: 'Calcolatore Tassazione per Forex Trading',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-oro-fisico-calcolatore',
+    component: 'TassazioneOroFisicoCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Oro Fisico da Investimento',
+    description: 'Calcolatore Tassazione per Oro Fisico da Investimento',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-metalli-preziosi-calcolatore',
+    component: 'TassazioneMetalliPreziosiCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Metalli Preziosi (diversi dall\'oro)',
+    description: 'Calcolatore Tassazione per Metalli Preziosi (diversi dall\'oro)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-opere-arte-calcolatore',
+    component: 'TassazioneOpereArteCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Opere d\'Arte e Collezionismo',
+    description: 'Calcolatore Tassazione per Opere d\'Arte e Collezionismo',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-vini-pregiati-calcolatore',
+    component: 'TassazioneViniPregiatiCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Vini Pregiati da Investimento',
+    description: 'Calcolatore Tassazione per Vini Pregiati da Investimento',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-orologi-lusso-calcolatore',
+    component: 'TassazioneOrologiLussoCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Orologi di Lusso da Investimento',
+    description: 'Calcolatore Tassazione per Orologi di Lusso da Investimento',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-auto-epoca-calcolatore',
+    component: 'TassazioneAutoEpocaCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Auto d\'Epoca da Investimento',
+    description: 'Calcolatore Tassazione per Auto d\'Epoca da Investimento',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tassazione-francobolli-monete-calcolatore',
+    component: 'TassazioneFrancobolliMoneteCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tassazione per Francobolli/Monete da Collezione',
+    description: 'Calcolatore Tassazione per Francobolli/Monete da Collezione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'rendimento-netto-affitto-garage-calcolatore',
+    component: 'RendimentoNettoAffittoGarageCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Rendimento Netto da Affitto di Garage/Posto Auto',
+    description: 'Calcolatore Rendimento Netto da Affitto di Garage/Posto Auto',
+    hasContent: true,
+  },
+
+  {
+    slug: 'rendimento-netto-affitto-terreno-calcolatore',
+    component: 'RendimentoNettoAffittoTerrenoCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Rendimento Netto da Affitto di Terreno Agricolo',
+    description: 'Calcolatore Rendimento Netto da Affitto di Terreno Agricolo',
+    hasContent: true,
+  },
+
+  {
+    slug: 'rendimento-netto-affitto-locale-commerciale-calcolatore',
+    component: 'RendimentoNettoAffittoLocaleCommercialeCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Rendimento Netto da Affitto di Locale Commerciale',
+    description: 'Calcolatore Rendimento Netto da Affitto di Locale Commerciale',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-robo-advisor-calcolatore',
+    component: 'CostoRoboAdvisorCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Costo di un Robo-Advisor',
+    description: 'Calcolatore Costo di un Robo-Advisor',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-family-office-calcolatore',
+    component: 'CostoFamilyOfficeCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Costo di un Family Office',
+    description: 'Calcolatore Costo di un Family Office',
+    hasContent: true,
+  },
+
+  {
+    slug: 'inflazione-personale-calcolatore',
+    component: 'InflazionePersonaleCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Inflazione Personale (basato sulle proprie spese)',
+    description: 'Calcolatore Inflazione Personale (basato sulle proprie spese)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'obiettivo-fire-italia-calcolatore',
+    component: 'ObiettivoFireItaliaCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Obiettivo FIRE (Financial Independence, Retire Early) in Italia',
+    description: 'Calcolatore Obiettivo FIRE (Financial Independence, Retire Early) in Italia',
+    hasContent: true,
+  },
+
+  {
+    slug: 'regola-4-pensione-calcolatore',
+    component: 'Regola4PensioneCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Regola del 4% per il Ritiro dal Capitale in Pensione',
+    description: 'Calcolatore Regola del 4% per il Ritiro dal Capitale in Pensione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'quota-risparmio-mensile-calcolatore',
+    component: 'QuotaRisparmioMensileCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Quota di Risparmio Mensile per Obiettivo',
+    description: 'Calcolatore Quota di Risparmio Mensile per Obiettivo',
+    hasContent: true,
+  },
+
+  {
+    slug: 'costo-opportunita-spesa-calcolatore',
+    component: 'CostoOpportunitaSpesaCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Costo Opportunità di una Spesa',
+    description: 'Calcolatore Costo Opportunità di una Spesa',
+    hasContent: true,
+  },
+
+  {
+    slug: 'valore-futuro-risparmio-calcolatore',
+    component: 'ValoreFuturoRisparmioCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Valore Futuro di un Risparmio Periodico',
+    description: 'Calcolatore Valore Futuro di un Risparmio Periodico',
+    hasContent: true,
+  },
+
+  {
+    slug: 'valore-attuale-rendita-calcolatore',
+    component: 'ValoreAttualeRenditaCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Valore Attuale di una Rendita Futura',
+    description: 'Calcolatore Valore Attuale di una Rendita Futura',
+    hasContent: true,
+  },
+
+  {
+    slug: 'tasso-interesse-reale-calcolatore',
+    component: 'TassoInteresseRealeCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Tasso di Interesse Reale (nominale - inflazione)',
+    description: 'Calcolatore Tasso di Interesse Reale (nominale - inflazione)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'diversificazione-portafoglio-calcolatore',
+    component: 'DiversificazionePortafoglioCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Diversificazione di Portafoglio (Asset Allocation)',
+    description: 'Calcolatore Diversificazione di Portafoglio (Asset Allocation)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'ribilanciamento-portafoglio-calcolatore',
+    component: 'RibilanciamentoPortafoglioCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Ribilanciamento di Portafoglio',
+    description: 'Calcolatore Ribilanciamento di Portafoglio',
+    hasContent: true,
+  },
+
+  {
+    slug: 'sharpe-ratio-portafoglio-calcolatore',
+    component: 'SharpeRatioPortafoglioCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Sharpe Ratio di un Portafoglio',
+    description: 'Calcolatore Sharpe Ratio di un Portafoglio',
+    hasContent: true,
+  },
+
+  {
+    slug: 'sortino-ratio-portafoglio-calcolatore',
+    component: 'SortinoRatioPortafoglioCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Sortino Ratio di un Portafoglio',
+    description: 'Calcolatore Sortino Ratio di un Portafoglio',
+    hasContent: true,
+  },
+
+  {
+    slug: 'drawdown-massimo-calcolatore',
+    component: 'DrawdownMassimoCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Drawdown Massimo di un Investimento',
+    description: 'Calcolatore Drawdown Massimo di un Investimento',
+    hasContent: true,
+  },
+
+  {
+    slug: 'volatilita-portafoglio-calcolatore',
+    component: 'VolatilitaPortafoglioCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Volatilità di un Titolo/Portafoglio',
+    description: 'Calcolatore Volatilità di un Titolo/Portafoglio',
+    hasContent: true,
+  },
+
+  {
+    slug: 'correlazione-asset-calcolatore',
+    component: 'CorrelazioneAssetCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Correlazione tra Asset Finanziari',
+    description: 'Calcolatore Correlazione tra Asset Finanziari',
+    hasContent: true,
+  },
+
+  {
+    slug: 'beta-azione-calcolatore',
+    component: 'BetaAzioneCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Beta di un\'Azione',
+    description: 'Calcolatore Beta di un\'Azione',
+    hasContent: true,
+  },
+
+  {
+    slug: 'alpha-fondo-calcolatore',
+    component: 'AlphaFondoCalcolatore',
+    category: 'risparmio-e-investimenti',
+    lang: 'it',
+    title: 'Calcolatore Alpha di un Fondo di Investimento',
+    description: 'Calcolatore Alpha di un Fondo di Investimento',
+    hasContent: true,
+  }

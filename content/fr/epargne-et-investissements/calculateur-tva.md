@@ -13,101 +13,101 @@ Calculez TVA HT, TTC et montant TVA selon les taux français 20%, 10%, 5,5% et 2
 
 ## Qu'est-ce que c'est
 
-Calculateur TVA - Taux 20%, 10%, 5.5% è uno strumento professionale e gratuito che ti permette di calcolare in modo preciso e rapido tva.
+Calculateur TVA - Taux 20%, 10%, 5.5% est un outil professionnel et gratuit qui vous permet de calculer de manière précise et rapide TVA.
 
-Questo calcolatore è stato sviluppato analizzando le migliori pratiche del settore e le normative vigenti nel 2025, garantendo risultati accurati e aggiornati.
+Ce calculateur a été développé en analysant les meilleures pratiques du secteur et la réglementation en vigueur en 2025, garantissant des résultats précis et à jour.
 
-### Caratteristiche Principali
+### Caractéristiques Principales
 
-- **Calcolo Immediato**: Risultati in tempo reale senza attese
-- **Sempre Aggiornato**: Normative e aliquote 2025
-- **100% Gratuito**: Nessuna registrazione richiesta
-- **Privacy Garantita**: I tuoi dati non vengono salvati
+- **Calcul Immédiat**: Résultats en temps réel sans attente
+- **Toujours à Jour**: Réglementation et taux 2025
+- **100% Gratuit**: Aucune inscription requise
+- **Confidentialité Garantie**: Vos données ne sont pas sauvegardées
 
 ## Comment ça Marche
 
-Il calcolatore utilizza formule precise e aggiornate per elaborare i dati che inserisci e fornirti risultati dettagliati.
+Le calculateur utilise des formules précises et à jour pour traiter les données que vous saisissez et vous fournir des résultats détaillés.
 
-### Metodo di Calcolo
+### Méthode de Calcul
 
-1. **Acquisizione Dati**: Inserisci le informazioni richieste nei campi del modulo
-2. **Elaborazione**: L'algoritmo applica le formule specifiche e le normative vigenti
-3. **Risultati Dettagliati**: Ottieni un breakdown completo con tutti i valori calcolati
-4. **Interpretazione**: Ogni risultato è accompagnato da spiegazioni chiare
+1. **Acquisition de Données**: Saisissez les informations requises dans les champs du formulaire
+2. **Traitement**: L'algorithme applique les formules spécifiques et la réglementation en vigueur
+3. **Résultats Détaillés**: Vous obtenez une ventilation complète avec toutes les valeurs calculées
+4. **Interprétation**: Chaque résultat est accompagné d'explications claires
 
-## Pourquoi Utiliser Ce Calculateur
+## Pourquoi Utiliser
 
-### Vantaggi del Nostro Calcolatore
+### Avantages de Notre Calculateur
 
-✅ **Precisione Garantita**
-Formule verificate e normative 2025 integrate nel sistema di calcolo.
+✅ **Précision Garantie**
+Formules vérifiées et réglementation 2025 intégrées dans le système de calcul.
 
-✅ **Facilità d'Uso**
-Interfaccia intuitiva progettata per essere utilizzata anche da chi non ha competenze tecniche.
+✅ **Facilité d'Utilisation**
+Interface intuitive conçue pour être utilisée même par ceux qui n'ont pas de compétences techniques.
 
-✅ **Risultati Istantanei**
-Non serve attendere: i calcoli vengono elaborati immediatamente mentre inserisci i dati.
+✅ **Résultats Instantanés**
+Pas besoin d'attendre: les calculs sont traités immédiatement pendant que vous saisissez les données.
 
-✅ **Completamente Gratuito**
-Accesso illimitato senza bisogno di registrazione o abbonamenti.
+✅ **Entièrement Gratuit**
+Accès illimité sans besoin d'inscription ou d'abonnements.
 
-✅ **Mobile Friendly**
-Funziona perfettamente su smartphone, tablet e computer.
+✅ **Compatible Mobile**
+Fonctionne parfaitement sur smartphones, tablettes et ordinateurs.
 
-## Comment l'Utiliser
+## Comment Utiliser
 
-### Guida Passo-Passo
+### Guide Étape par Étape
 
-#### Passo 1: Preparazione Dati
+#### Étape 1: Préparation des Données
 
-Prima di utilizzare il calcolatore, assicurati di avere a portata di mano tutti i dati necessari. Questo renderà il processo più rapido ed efficiente.
+Avant d'utiliser le calculateur, assurez-vous d'avoir toutes les données nécessaires à portée de main. Cela rendra le processus plus rapide et efficace.
 
-#### Passo 2: Compilazione Campi
+#### Étape 2: Remplir les Champs
 
-Inserisci i valori richiesti nei campi del calcolatore. Ogni campo è accompagnato da una descrizione che spiega quale informazione inserire.
+Saisissez les valeurs requises dans les champs du calculateur. Chaque champ est accompagné d'une description expliquant quelle information saisir.
 
-#### Passo 3: Calcolo
+#### Étape 3: Calcul
 
-Clicca sul pulsante "Calcola" per elaborare i dati. Il sistema genererà immediatamente i risultati.
+Cliquez sur le bouton "Calculer" pour traiter les données. Le système générera immédiatement les résultats.
 
-#### Passo 4: Analisi Risultati
+#### Étape 4: Analyse des Résultats
 
-Esamina attentamente i risultati forniti. Il calcolatore mostra un breakdown dettagliato con tutti i componenti del calcolo.
+Examinez attentivement les résultats fournis. Le calculateur affiche une ventilation détaillée avec tous les composants du calcul.
 
-#### Passo 5: Salvataggio (Opzionale)
+#### Étape 5: Sauvegarde (Optionnel)
 
-Puoi salvare o stampare i risultati per conservarli o condividerli con il tuo commercialista.
+Vous pouvez sauvegarder ou imprimer les résultats pour les conserver ou les partager avec votre conseiller.
 
 ## Questions Fréquentes
 
-### Domanda 1: I risultati sono vincolanti?
+### Question 1: Les résultats sont-ils contraignants?
 
-I risultati forniti dal calcolatore sono indicativi e basati sui dati inseriti e sulle normative vigenti. Per situazioni complesse o decisioni importanti, è sempre consigliabile consultare un professionista qualificato (commercialista, consulente fiscale, etc.).
+Les résultats fournis par le calculateur sont indicatifs et basés sur les données saisies et la réglementation en vigueur. Pour des situations complexes ou des décisions importantes, il est toujours conseillé de consulter un professionnel qualifié (expert-comptable, conseiller fiscal, etc.).
 
-### Domanda 2: Quanto sono aggiornati i dati?
+### Question 2: À quel point les données sont-elles à jour?
 
-Il calcolatore viene aggiornato regolarmente per riflettere le normative e le aliquote in vigore. Tutti i calcoli sono basati sulla legislazione 2025.
+Le calculateur est mis à jour régulièrement pour refléter la réglementation et les taux en vigueur. Tous les calculs sont basés sur la législation de 2025.
 
-### Domanda 3: I miei dati vengono salvati?
+### Question 3: Mes données sont-elles sauvegardées?
 
-No, tutti i calcoli vengono eseguiti localmente nel tuo browser. Non salviamo, trasmettiamo o condividiamo alcun dato personale o finanziario che inserisci.
+Non, tous les calculs sont effectués localement dans votre navigateur. Nous ne sauvegardons, ne transmettons ni ne partageons aucune donnée personnelle ou financière que vous saisissez.
 
-### Domanda 4: Posso usare il calcolatore su mobile?
+### Question 4: Puis-je utiliser le calculateur sur mobile?
 
-Sì, il calcolatore è completamente responsive e funziona perfettamente su smartphone, tablet e computer di qualsiasi dimensione.
+Oui, le calculateur est entièrement responsive et fonctionne parfaitement sur smartphones, tablettes et ordinateurs de toutes tailles.
 
-### Domanda 5: Cosa devo fare se trovo un errore?
+### Question 5: Que faire si je trouve une erreur?
 
-Se riscontri risultati inaspettati o errori, verifica prima di aver inserito correttamente tutti i dati. Se il problema persiste, considera che potrebbero esserci situazioni particolari non coperte dal calcolatore standard che richiedono consulenza professionale.
+Si vous constatez des résultats inattendus ou des erreurs, vérifiez d'abord que vous avez correctement saisi toutes les données. Si le problème persiste, considérez qu'il pourrait y avoir des situations particulières non couvertes par le calculateur standard qui nécessitent un conseil professionnel.
 
-## Sources et Références
+## Sources
 
 1. [Add authoritative source]
 2. [Add authoritative source]
 
 ---
 
-**Analisi Competitors Completata:**
+**Analyse des Concurrents Complétée:**
 - [Competitor 1](https://wise.com/fr/vat/tva/calcul)
 - [Competitor 2](https://www.tva.fr/)
 - [Competitor 3](https://www.l-expert-comptable.com/calculateurs/calcul-tva.html)
@@ -123,4 +123,4 @@ Se riscontri risultati inaspettati o errori, verifica prima di aver inserito cor
 
 ---
 
-*Disclaimer: I risultati forniti da questo calcolatore sono indicativi e basati sui dati inseriti. Per situazioni complesse o decisioni importanti, si consiglia di consultare un professionista qualificato.*
+*Disclaimer: Les résultats fournis par ce calculateur sont indicatifs et basés sur les données saisies. Pour des situations complexes ou des décisions importantes, il est recommandé de consulter un professionnel qualifié.*

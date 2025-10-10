@@ -13,101 +13,101 @@ Calculate rental property cash flow, ROI, cap rate, and net operating income for
 
 ## What Is It
 
-Rental Property Cash Flow Calculator è uno strumento professionale e gratuito che ti permette di calcolare in modo preciso e rapido rental property.
+Rental Property Cash Flow Calculator is a professional and free tool that allows you to accurately and quickly calculate rental property.
 
-Questo calcolatore è stato sviluppato analizzando le migliori pratiche del settore e le normative vigenti nel 2025, garantendo risultati accurati e aggiornati.
+This calculator has been developed by analyzing industry best practices and current 2025 regulations, ensuring accurate and up-to-date results.
 
-### Caratteristiche Principali
+### Key Features
 
-- **Calcolo Immediato**: Risultati in tempo reale senza attese
-- **Sempre Aggiornato**: Normative e aliquote 2025
-- **100% Gratuito**: Nessuna registrazione richiesta
-- **Privacy Garantita**: I tuoi dati non vengono salvati
+- **Instant Calculation**: Real-time results without waiting
+- **Always Updated**: 2025 regulations and rates
+- **100% Free**: No registration required
+- **Privacy Guaranteed**: Your data is not saved
 
 ## How It Works
 
-Il calcolatore utilizza formule precise e aggiornate per elaborare i dati che inserisci e fornirti risultati dettagliati.
+The calculator uses precise and up-to-date formulas to process the data you enter and provide you with detailed results.
 
-### Metodo di Calcolo
+### Calculation Method
 
-1. **Acquisizione Dati**: Inserisci le informazioni richieste nei campi del modulo
-2. **Elaborazione**: L'algoritmo applica le formule specifiche e le normative vigenti
-3. **Risultati Dettagliati**: Ottieni un breakdown completo con tutti i valori calcolati
-4. **Interpretazione**: Ogni risultato è accompagnato da spiegazioni chiare
+1. **Data Input**: Enter the required information in the form fields
+2. **Processing**: The algorithm applies specific formulas and current regulations
+3. **Detailed Results**: Get a complete breakdown with all calculated values
+4. **Interpretation**: Each result comes with clear explanations
 
-## Why Use This Calculator
+## Why Use
 
-### Vantaggi del Nostro Calcolatore
+### Advantages of Our Calculator
 
-✅ **Precisione Garantita**
-Formule verificate e normative 2025 integrate nel sistema di calcolo.
+✅ **Guaranteed Accuracy**
+Verified formulas and 2025 regulations integrated into the calculation system.
 
-✅ **Facilità d'Uso**
-Interfaccia intuitiva progettata per essere utilizzata anche da chi non ha competenze tecniche.
+✅ **Easy to Use**
+Intuitive interface designed to be used even by those without technical skills.
 
-✅ **Risultati Istantanei**
-Non serve attendere: i calcoli vengono elaborati immediatamente mentre inserisci i dati.
+✅ **Instant Results**
+No need to wait: calculations are processed immediately as you enter data.
 
-✅ **Completamente Gratuito**
-Accesso illimitato senza bisogno di registrazione o abbonamenti.
+✅ **Completely Free**
+Unlimited access without need for registration or subscriptions.
 
 ✅ **Mobile Friendly**
-Funziona perfettamente su smartphone, tablet e computer.
+Works perfectly on smartphones, tablets and computers.
 
-## How to Use It
+## How to Use
 
-### Guida Passo-Passo
+### Step-by-Step Guide
 
-#### Passo 1: Preparazione Dati
+#### Step 1: Data Preparation
 
-Prima di utilizzare il calcolatore, assicurati di avere a portata di mano tutti i dati necessari. Questo renderà il processo più rapido ed efficiente.
+Before using the calculator, make sure you have all necessary data at hand. This will make the process faster and more efficient.
 
-#### Passo 2: Compilazione Campi
+#### Step 2: Fill in Fields
 
-Inserisci i valori richiesti nei campi del calcolatore. Ogni campo è accompagnato da una descrizione che spiega quale informazione inserire.
+Enter the required values in the calculator fields. Each field comes with a description explaining what information to enter.
 
-#### Passo 3: Calcolo
+#### Step 3: Calculate
 
-Clicca sul pulsante "Calcola" per elaborare i dati. Il sistema genererà immediatamente i risultati.
+Click the "Calculate" button to process the data. The system will immediately generate results.
 
-#### Passo 4: Analisi Risultati
+#### Step 4: Results Analysis
 
-Esamina attentamente i risultati forniti. Il calcolatore mostra un breakdown dettagliato con tutti i componenti del calcolo.
+Carefully examine the provided results. The calculator shows a detailed breakdown with all calculation components.
 
-#### Passo 5: Salvataggio (Opzionale)
+#### Step 5: Save (Optional)
 
-Puoi salvare o stampare i risultati per conservarli o condividerli con il tuo commercialista.
+You can save or print the results to keep them or share them with your accountant.
 
-## Frequently Asked Questions
+## FAQ
 
-### Domanda 1: I risultati sono vincolanti?
+### Question 1: Are the results binding?
 
-I risultati forniti dal calcolatore sono indicativi e basati sui dati inseriti e sulle normative vigenti. Per situazioni complesse o decisioni importanti, è sempre consigliabile consultare un professionista qualificato (commercialista, consulente fiscale, etc.).
+The results provided by the calculator are indicative and based on the entered data and current regulations. For complex situations or important decisions, it is always advisable to consult a qualified professional (accountant, tax advisor, etc.).
 
-### Domanda 2: Quanto sono aggiornati i dati?
+### Question 2: How up-to-date is the data?
 
-Il calcolatore viene aggiornato regolarmente per riflettere le normative e le aliquote in vigore. Tutti i calcoli sono basati sulla legislazione 2025.
+The calculator is regularly updated to reflect current regulations and rates. All calculations are based on 2025 legislation.
 
-### Domanda 3: I miei dati vengono salvati?
+### Question 3: Is my data saved?
 
-No, tutti i calcoli vengono eseguiti localmente nel tuo browser. Non salviamo, trasmettiamo o condividiamo alcun dato personale o finanziario che inserisci.
+No, all calculations are performed locally in your browser. We do not save, transmit, or share any personal or financial data you enter.
 
-### Domanda 4: Posso usare il calcolatore su mobile?
+### Question 4: Can I use the calculator on mobile?
 
-Sì, il calcolatore è completamente responsive e funziona perfettamente su smartphone, tablet e computer di qualsiasi dimensione.
+Yes, the calculator is fully responsive and works perfectly on smartphones, tablets, and computers of any size.
 
-### Domanda 5: Cosa devo fare se trovo un errore?
+### Question 5: What should I do if I find an error?
 
-Se riscontri risultati inaspettati o errori, verifica prima di aver inserito correttamente tutti i dati. Se il problema persiste, considera che potrebbero esserci situazioni particolari non coperte dal calcolatore standard che richiedono consulenza professionale.
+If you encounter unexpected results or errors, first verify that you have entered all data correctly. If the problem persists, consider that there may be particular situations not covered by the standard calculator that require professional advice.
 
-## Sources and References
+## Sources
 
 1. [Add authoritative source]
 2. [Add authoritative source]
 
 ---
 
-**Analisi Competitors Completata:**
+**Competitor Analysis Completed:**
 - [Competitor 1](https://www.calculator.net/rental-property-calculator.html)
 - [Competitor 2](https://cashflowcalc.com/)
 - [Competitor 3](https://soundproperty.com.au/knowledge-centre/property-cashflow-calculator/)
@@ -123,4 +123,4 @@ Se riscontri risultati inaspettati o errori, verifica prima di aver inserito cor
 
 ---
 
-*Disclaimer: I risultati forniti da questo calcolatore sono indicativi e basati sui dati inseriti. Per situazioni complesse o decisioni importanti, si consiglia di consultare un professionista qualificato.*
+*Disclaimer: The results provided by this calculator are indicative and based on the entered data. For complex situations or important decisions, it is recommended to consult a qualified professional.*
