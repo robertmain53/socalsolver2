@@ -20,6 +20,7 @@
     "@heroicons/react": "^2.2.0",
     "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.1",
+    "csv-parse": "^6.1.0",
     "date-fns": "^3.6.0",
     "file-saver": "^2.0.5",
     "framer-motion": "^11.2.10",
