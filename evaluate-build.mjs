@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
  * evaluate-build.mjs
+ * -
  * Runs (optionally) your fix script, then counts ESLint + Next build errors.
  * Produces a machine-readable JSON report + a concise console summary.
  */
