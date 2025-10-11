@@ -53,7 +53,7 @@ Answer 5
 
 **Competitors:**
 - [Competitor 1](https://www.diasport.it/calc.sportiva/index.html)
-- [Competitor 2](https://www.socalsolver.com/it/fisco-e-lavoro-autonomo/tassazione-sportivi)
+- [Competitor 2](https://socalsolver.com/it/fisco-e-lavoro-autonomo/tassazione-sportivi)
 - [Competitor 3](https://www.asso360.it/riforma-dello-sport/come-si-calcolano-i-compensi-sportivi-guida-rapida-e-video-tutorial/)
 - [Competitor 4](https://flextax.it/calcolo-tasse-ed-esempi-per-istruttori-sportivi-in-forfettario/)
 - [Competitor 5](https://www.fiscoetasse.com/domande-e-risposte/12734-quali-compensi-sono-esenti-da-inps-eo-da-tassazione-per-i-lavoratori-sportivi-dilettanti.html)

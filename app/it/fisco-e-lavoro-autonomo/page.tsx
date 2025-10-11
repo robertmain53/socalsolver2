@@ -50,7 +50,7 @@ export default function CategoryPage() {
   const collectionSchema = generateCollectionSchema({
     name: categoryName,
     description: `Calcolatori professionali per ${categoryName.toLowerCase()}`,
-    url: `https://www.socalsolver.com/${LANG}/${CATEGORY}`,
+    url: `https://socalsolver.com/${LANG}/${CATEGORY}`,
     numberOfItems: calculators.length,
   });
 

@@ -52,7 +52,7 @@ Answer 5
 ---
 
 **Competitors:**
-- [Competitor 1](https://www.socalsolver.com/it/fisco-e-lavoro-autonomo/tassazione-guide-turistiche-partita-iva)
+- [Competitor 1](https://socalsolver.com/it/fisco-e-lavoro-autonomo/tassazione-guide-turistiche-partita-iva)
 - [Competitor 2](https://www.fiscozen.it/guide/tasse-guida-turistica/)
 - [Competitor 3](https://www.fiscozen.it/calcolatore-tasse-partita-iva/)
 - [Competitor 4](https://flextax.it/tasse-per-partita-iva-per-guida-turistica/)

@@ -29,13 +29,13 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'SoCalSolver',
-    url: `https://www.socalsolver.com/${LANG}`,
+    url: `https://socalsolver.com/${LANG}`,
     description: SITE_CONFIG.description.it,
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `https://www.socalsolver.com/${LANG}/search?q={search_term_string}`,
+        urlTemplate: `https://socalsolver.com/${LANG}/search?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
     },

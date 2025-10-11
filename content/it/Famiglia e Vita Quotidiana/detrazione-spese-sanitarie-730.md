@@ -55,7 +55,7 @@ Answer 5
 - [Competitor 1](https://www.cafacli.it/it/guida-fiscale/approfondimenti/spese-mediche_99_af/)
 - [Competitor 2](https://www.agenziaentrate.gov.it/portale/aspetti-generali)
 - [Competitor 3](https://www.softwareintegrato.it/calcolo-spese-sanitarie-19-per-cento-con-gbsoftware/)
-- [Competitor 4](https://www.socalsolver.com/it/auto-e-trasporti/detrazione-spese-sanitarie-730)
+- [Competitor 4](https://socalsolver.com/it/auto-e-trasporti/detrazione-spese-sanitarie-730)
 - [Competitor 5](https://www.fpcgil.it/wp-content/uploads/2021/06/DETRAZIONI-PER-SPESE-MEDICHE.pdf)
 - [Competitor 6](https://performancesanitaria.it/detrazioni-e-deduzioni-spese-sanitarie/)
 

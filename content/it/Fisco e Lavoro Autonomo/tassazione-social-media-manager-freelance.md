@@ -53,7 +53,7 @@ Answer 5
 
 **Competitors:**
 - [Competitor 1](https://flextax.it/calcolo-tasse-ed-esempi-per-social-media-manager-in-forfettario/)
-- [Competitor 2](https://www.socalsolver.com/it/fisco-e-lavoro-autonomo/tassazione-social-media-manager-freelance)
+- [Competitor 2](https://socalsolver.com/it/fisco-e-lavoro-autonomo/tassazione-social-media-manager-freelance)
 - [Competitor 3](https://calcolopiva.it/)
 - [Competitor 4](https://www.fiscozen.it/guide/regime-fiscale-social-media-manager/)
 - [Competitor 5](https://www.legalefiscale.it/professionisti-e-fisco/social-media-manager-quanto-paga-di-tasse/)

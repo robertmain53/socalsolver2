@@ -1,7 +1,7 @@
 /** @type {import('next-sitemap').IConfig} */
 const fg = require('fast-glob');
 
-const SITE = 'https://www.socalsolver.com';
+const SITE = 'https://socalsolver.com';
 const LANGUAGES = ['it', 'en', 'es', 'fr'];
 
 module.exports = {

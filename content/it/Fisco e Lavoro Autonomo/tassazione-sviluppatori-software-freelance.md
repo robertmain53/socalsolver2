@@ -52,7 +52,7 @@ Answer 5
 ---
 
 **Competitors:**
-- [Competitor 1](https://www.socalsolver.com/it/fisco-e-lavoro-autonomo/tassazione-sviluppatori-software-freelance)
+- [Competitor 1](https://socalsolver.com/it/fisco-e-lavoro-autonomo/tassazione-sviluppatori-software-freelance)
 - [Competitor 2](https://www.xolo.io/it-it/calcolatore)
 - [Competitor 3](https://calcolopiva.it/)
 - [Competitor 4](https://flextax.it/calcolo-tasse-ed-esempi-in-forfettario-per-programmatori/)

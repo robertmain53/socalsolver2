@@ -52,7 +52,7 @@ Answer 5
 ---
 
 **Competitors:**
-- [Competitor 1](https://www.socalsolver.com/it/immobiliare-e-casa/costo-infissi-con-incentivi)
+- [Competitor 1](https://socalsolver.com/it/immobiliare-e-casa/costo-infissi-con-incentivi)
 - [Competitor 2](https://www.infissiepersiane.it/quanto-e-possibile-risparmiare-con-gli-infissi-nuovi/)
 - [Competitor 3](https://www.infissiepersiane.it/costi-infissi-in-alluminio/)
 - [Competitor 4](https://www.finestre.com/)

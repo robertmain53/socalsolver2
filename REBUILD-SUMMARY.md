@@ -214,7 +214,7 @@ Use these tools to validate:
 
 #### Meta Tags:
 ```bash
-curl -s https://www.socalsolver.com/it/fisco-e-lavoro-autonomo/tasse-regime-forfettario | grep -E "<meta|<title"
+curl -s https://socalsolver.com/it/fisco-e-lavoro-autonomo/tasse-regime-forfettario | grep -E "<meta|<title"
 ```
 
 #### Schema.org:
@@ -223,15 +223,15 @@ curl -s https://www.socalsolver.com/it/fisco-e-lavoro-autonomo/tasse-regime-forf
 
 #### hreflang:
 ```bash
-curl -s https://www.socalsolver.com/it | grep hreflang
+curl -s https://socalsolver.com/it | grep hreflang
 ```
 
 Should show:
 ```html
-<link rel="alternate" hreflang="it" href="https://www.socalsolver.com/it" />
-<link rel="alternate" hreflang="en" href="https://www.socalsolver.com/en" />
-<link rel="alternate" hreflang="es" href="https://www.socalsolver.com/es" />
-<link rel="alternate" hreflang="fr" href="https://www.socalsolver.com/fr" />
+<link rel="alternate" hreflang="it" href="https://socalsolver.com/it" />
+<link rel="alternate" hreflang="en" href="https://socalsolver.com/en" />
+<link rel="alternate" hreflang="es" href="https://socalsolver.com/es" />
+<link rel="alternate" hreflang="fr" href="https://socalsolver.com/fr" />
 ```
 
 #### Sitemap:

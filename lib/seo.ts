@@ -4,7 +4,7 @@ import { Lang } from './categories';
 
 export const SITE_CONFIG = {
   name: 'SoCalSolver',
-  url: 'https://www.socalsolver.com',
+  url: 'https://socalsolver.com',
   description: {
     it: 'Calcolatori online gratuiti per fisco, finanza, immobiliare e business. Strumenti professionali per liberi professionisti e imprese.',
     en: 'Free online calculators for taxes, finance, real estate and business. Professional tools for freelancers and companies.',

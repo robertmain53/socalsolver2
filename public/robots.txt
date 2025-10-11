@@ -14,8 +14,8 @@ Disallow: /api/*
 Disallow: /draft/*
 
 # Host
-Host: https://www.socalsolver.com
+Host: https://socalsolver.com
 
 # Sitemaps
-Sitemap: https://www.socalsolver.com/sitemap.xml
-Sitemap: https://www.socalsolver.com/sitemap-0.xml
+Sitemap: https://socalsolver.com/sitemap.xml
+Sitemap: https://socalsolver.com/sitemap-0.xml

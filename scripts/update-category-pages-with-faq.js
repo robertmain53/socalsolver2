@@ -58,7 +58,7 @@ export default function CategoryPage() {
   const collectionSchema = generateCollectionSchema({
     name: categoryName,
     description: content?.description || \`Professional calculators for \${categoryName.toLowerCase()}\`,
-    url: \`https://www.socalsolver.com/\${LANG}/\${CATEGORY}\`,
+    url: \`https://socalsolver.com/\${LANG}/\${CATEGORY}\`,
     numberOfItems: calculators.length,
   });
 

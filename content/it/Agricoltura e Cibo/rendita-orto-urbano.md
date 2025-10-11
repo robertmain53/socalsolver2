@@ -52,7 +52,7 @@ Answer 5
 ---
 
 **Competitors:**
-- [Competitor 1](https://www.socalsolver.com/it/agricoltura-e-cibo/rendita-orto-urbano)
+- [Competitor 1](https://socalsolver.com/it/agricoltura-e-cibo/rendita-orto-urbano)
 - [Competitor 2](https://realadvisor.it/it/blog/valutazione-terreno-non-edificabile)
 - [Competitor 3](https://www.ortodacoltivare.it/guide/trovare-terreno/)
 - [Competitor 4](http://www.tuttoimu.it/app/calcolo-imu-terreni-agricoli.html)

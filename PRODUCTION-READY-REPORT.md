@@ -96,16 +96,16 @@ Based on the IMPLEMENTATION-GUIDE.md and REBUILD-SUMMARY.md, here's what was acc
 ```html
 ✅ <title>SoCalSolver - Calcolatori Online Professionali Gratuiti | SoCalSolver</title>
 ✅ <meta name="description" content="Calcolatori online gratuiti per fisco, finanza...">
-✅ <link rel="canonical" href="https://www.socalsolver.com/it">
-✅ <link rel="alternate" hreflang="it-IT" href="https://www.socalsolver.com/it">
-✅ <link rel="alternate" hreflang="en-US" href="https://www.socalsolver.com/en">
-✅ <link rel="alternate" hreflang="es-ES" href="https://www.socalsolver.com/es">
-✅ <link rel="alternate" hreflang="fr-FR" href="https://www.socalsolver.com/fr">
+✅ <link rel="canonical" href="https://socalsolver.com/it">
+✅ <link rel="alternate" hreflang="it-IT" href="https://socalsolver.com/it">
+✅ <link rel="alternate" hreflang="en-US" href="https://socalsolver.com/en">
+✅ <link rel="alternate" hreflang="es-ES" href="https://socalsolver.com/es">
+✅ <link rel="alternate" hreflang="fr-FR" href="https://socalsolver.com/fr">
 ✅ <meta property="og:title" content="...">
 ✅ <meta property="og:description" content="...">
-✅ <meta property="og:url" content="https://www.socalsolver.com/it">
+✅ <meta property="og:url" content="https://socalsolver.com/it">
 ✅ <meta property="og:locale" content="it_IT">
-✅ <meta property="og:image" content="https://www.socalsolver.com/og-image.png">
+✅ <meta property="og:image" content="https://socalsolver.com/og-image.png">
 ✅ <meta property="og:type" content="website">
 ✅ <meta name="twitter:card" content="summary_large_image">
 ✅ <meta name="twitter:title" content="...">
@@ -223,18 +223,18 @@ npm run start
 
 1. **Test Key Pages:**
    ```
-   https://www.socalsolver.com/it
-   https://www.socalsolver.com/en
-   https://www.socalsolver.com/es
-   https://www.socalsolver.com/fr
-   https://www.socalsolver.com/it/fisco-e-lavoro-autonomo
-   https://www.socalsolver.com/it/fisco-e-lavoro-autonomo/tasse-regime-forfettario
+   https://socalsolver.com/it
+   https://socalsolver.com/en
+   https://socalsolver.com/es
+   https://socalsolver.com/fr
+   https://socalsolver.com/it/fisco-e-lavoro-autonomo
+   https://socalsolver.com/it/fisco-e-lavoro-autonomo/tasse-regime-forfettario
    ```
 
 2. **Verify SEO:**
-   - Check meta tags: `curl -s https://www.socalsolver.com/it | grep "<meta"`
+   - Check meta tags: `curl -s https://socalsolver.com/it | grep "<meta"`
    - Validate schemas: [Google Rich Results Test](https://search.google.com/test/rich-results)
-   - Check sitemap: `https://www.socalsolver.com/sitemap.xml`
+   - Check sitemap: `https://socalsolver.com/sitemap.xml`
 
 3. **Submit to Search Engines:**
    - Google Search Console: Submit sitemap

@@ -87,7 +87,7 @@ export default async function CalculatorPage({ params }: Props) {
   const calculatorSchema = generateCalculatorSchema({
     name: calcMeta.title,
     description: calcMeta.description,
-    url: `https://www.socalsolver.com/${LANG}/${CATEGORY}/${params.slug}`,
+    url: `https://socalsolver.com/${LANG}/${CATEGORY}/${params.slug}`,
     category: CATEGORY,
     lang: LANG,
   });
@@ -96,7 +96,7 @@ export default async function CalculatorPage({ params }: Props) {
     ? generateArticleSchema({
         headline: calcMeta.title,
         description: calcMeta.description,
-        url: `https://www.socalsolver.com/${LANG}/${CATEGORY}/${params.slug}`,
+        url: `https://socalsolver.com/${LANG}/${CATEGORY}/${params.slug}`,
         datePublished: new Date().toISOString(),
         dateModified: new Date().toISOString(),
       })

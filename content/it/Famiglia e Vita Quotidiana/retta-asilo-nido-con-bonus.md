@@ -56,7 +56,7 @@ Answer 5
 - [Competitor 2](https://www.finsenas.com/bonus-nido-2025-come-calcolarlo-in-base-alla-data-di-nascita-e-quanto-spetta/)
 - [Competitor 3](https://www.inps.it/it/it/inps-comunica/notizie/dettaglio-news-page.news.2025.03.bonus-asilo-nido--novit--2025-attivo-il-servizio-per-la-domanda.html)
 - [Competitor 4](https://www.fiscoetasse.com/approfondimenti/12970-bonus-asilo-nido-tutte-le-regole.html)
-- [Competitor 5](https://www.socalsolver.com/it/famiglia-e-vita-quotidiana/retta-asilo-nido-con-bonus)
+- [Competitor 5](https://socalsolver.com/it/famiglia-e-vita-quotidiana/retta-asilo-nido-con-bonus)
 - [Competitor 6](https://www.leggioggi.it/bonus-nido-2025-importi-calcolo-requisiti-regole/)
 
 **Ultimo Aggiornamento:** 2025-10-10

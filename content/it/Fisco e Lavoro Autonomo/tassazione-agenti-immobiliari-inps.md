@@ -52,7 +52,7 @@ Answer 5
 ---
 
 **Competitors:**
-- [Competitor 1](https://www.socalsolver.com/it/fisco-e-lavoro-autonomo/tassazione-agenti-immobiliari-inps)
+- [Competitor 1](https://socalsolver.com/it/fisco-e-lavoro-autonomo/tassazione-agenti-immobiliari-inps)
 - [Competitor 2](https://www.regimeforfettario.it/calcolo-delle-tasse-per-agente-immobiliare/)
 - [Competitor 3](https://fidocommercialista.it/partita-iva-per-agente-immobiliare)
 - [Competitor 4](https://www.ilcommercialistaonline.it/calcola-imposte-regime-forfetario/)
