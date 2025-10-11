@@ -11870,7 +11870,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-loi-pinel',
     component: 'CalculateurLoiPinel',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de la loi "Pinel" / "Pinel+" (réduction d\'impôt)',
     description: 'Calculateur de la loi "Pinel" / "Pinel+" (réduction d\'impôt)',
@@ -11880,7 +11880,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-loi-denormandie',
     component: 'CalculateurLoiDenormandie',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de la loi "Denormandie" (investissement dans l\'ancien)',
     description: 'Calculateur de la loi "Denormandie" (investissement dans l\'ancien)',
@@ -11890,7 +11890,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-loi-malraux',
     component: 'CalculateurLoiMalraux',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de la loi "Malraux" (restauration immobilière)',
     description: 'Calculateur de la loi "Malraux" (restauration immobilière)',
@@ -11900,7 +11900,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-lmnp',
     component: 'CalculateurLmnp',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du statut "Loueur en Meublé Non Professionnel" (LMNP) - régime réel vs. micro-BIC',
     description: 'Calculateur du statut "Loueur en Meublé Non Professionnel" (LMNP) - régime réel vs. micro-BIC',
@@ -11910,7 +11910,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-amortissement-lmnp',
     component: 'CalculateurAmortissementLmnp',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de l\'amortissement d\'un bien en LMNP',
     description: 'Calculateur de l\'amortissement d\'un bien en LMNP',
@@ -11920,7 +11920,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-loi-censi-bouvard',
     component: 'CalculateurLoiCensiBouvard',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de la loi "Censi-Bouvard" (résidences de services)',
     description: 'Calculateur de la loi "Censi-Bouvard" (résidences de services)',
@@ -11930,7 +11930,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-deficit-foncier',
     component: 'CalculateurDeficitFoncier',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Déficit Foncier"',
     description: 'Calculateur du "Déficit Foncier"',
@@ -11940,7 +11940,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-pas',
     component: 'CalculateurPas',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Prêt à l\'Accession Sociale" (PAS)',
     description: 'Calculateur du "Prêt à l\'Accession Sociale" (PAS)',
@@ -11950,7 +11950,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-pret-conventionne',
     component: 'CalculateurPretConventionne',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Prêt Conventionné" (PC)',
     description: 'Calculateur du "Prêt Conventionné" (PC)',
@@ -11960,7 +11960,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-pret-action-logement',
     component: 'CalculateurPretActionLogement',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Prêt Action Logement" (ex 1% Logement)',
     description: 'Calculateur du "Prêt Action Logement" (ex 1% Logement)',
@@ -11970,7 +11970,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-eco-ptz',
     component: 'CalculateurEcoPtz',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de l\'"Éco-Prêt à Taux Zéro" (Éco-PTZ)',
     description: 'Calculateur de l\'"Éco-Prêt à Taux Zéro" (Éco-PTZ)',
@@ -11980,7 +11980,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-apl',
     component: 'CalculateurApl',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de l\'"Aide Personnalisée au Logement" (APL)',
     description: 'Calculateur de l\'"Aide Personnalisée au Logement" (APL)',
@@ -11990,7 +11990,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-alf',
     component: 'CalculateurAlf',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de l\'"Allocation de Logement Familiale" (ALF)',
     description: 'Calculateur de l\'"Allocation de Logement Familiale" (ALF)',
@@ -12000,7 +12000,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-als',
     component: 'CalculateurAls',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de l\'"Allocation de Logement Sociale" (ALS)',
     description: 'Calculateur de l\'"Allocation de Logement Sociale" (ALS)',
@@ -12010,7 +12010,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-garantie-visale',
     component: 'CalculateurGarantieVisale',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de la "Garantie Visale"',
     description: 'Calculateur de la "Garantie Visale"',
@@ -12020,7 +12020,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-bail-mobilite',
     component: 'CalculateurBailMobilite',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Bail Mobilité"',
     description: 'Calculateur du "Bail Mobilité"',
@@ -12030,7 +12030,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-brs',
     component: 'CalculateurBrs',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Bail Réel Solidaire" (BRS)',
     description: 'Calculateur du "Bail Réel Solidaire" (BRS)',
@@ -12040,7 +12040,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-viager',
     component: 'CalculateurViager',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Viager" (bouquet et rente)',
     description: 'Calculateur du "Viager" (bouquet et rente)',
@@ -12050,7 +12050,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-vente-a-terme',
     component: 'CalculateurVenteATerme',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de la "Vente à terme"',
     description: 'Calculateur de la "Vente à terme"',
@@ -12060,7 +12060,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-demembrement-propriete',
     component: 'CalculateurDemembrementPropriete',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Démembrement de propriété" (valeur usufruit/nue-propriété)',
     description: 'Calculateur du "Démembrement de propriété" (valeur usufruit/nue-propriété)',
@@ -12070,7 +12070,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-frais-notaire-donation-succession',
     component: 'CalculateurFraisNotaireDonationSuccession',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur des "Frais de Notaire" pour une donation/succession',
     description: 'Calculateur des "Frais de Notaire" pour une donation/succession',
@@ -12080,7 +12080,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-frais-agence-immobiliere',
     component: 'CalculateurFraisAgenceImmobiliere',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur des "Frais d\'Agence Immobilière"',
     description: 'Calculateur des "Frais d\'Agence Immobilière"',
@@ -12090,7 +12090,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-depot-garantie',
     component: 'CalculateurDepotGarantie',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Dépôt de Garantie" (caution)',
     description: 'Calculateur du "Dépôt de Garantie" (caution)',
@@ -12100,7 +12100,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-charges-recuperables',
     component: 'CalculateurChargesRecuperables',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur des "Charges Récupérables" sur le locataire',
     description: 'Calculateur des "Charges Récupérables" sur le locataire',
@@ -12110,7 +12110,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-regularisation-charges',
     component: 'CalculateurRegularisationCharges',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de la "Régularisation des charges" locatives',
     description: 'Calculateur de la "Régularisation des charges" locatives',
@@ -12120,7 +12120,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-preavis-location',
     component: 'CalculateurPreavisLocation',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Préavis" de location (locataire/bailleur)',
     description: 'Calculateur du "Préavis" de location (locataire/bailleur)',
@@ -12130,7 +12130,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-demenagement',
     component: 'CalculateurCoutDemenagement',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Déménagement"',
     description: 'Calculateur du "Coût d\'un Déménagement"',
@@ -12140,7 +12140,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-garde-meuble',
     component: 'CalculateurCoutGardeMeuble',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Garde-Meuble"',
     description: 'Calculateur du "Coût d\'un Garde-Meuble"',
@@ -12150,7 +12150,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-assurance-habitation',
     component: 'CalculateurCoutAssuranceHabitation',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'une Assurance Habitation" (MRH)',
     description: 'Calculateur du "Coût d\'une Assurance Habitation" (MRH)',
@@ -12160,7 +12160,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-assurance-pno',
     component: 'CalculateurCoutAssurancePno',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'une Assurance "Propriétaire Non Occupant" (PNO)',
     description: 'Calculateur du "Coût d\'une Assurance "Propriétaire Non Occupant" (PNO)',
@@ -12170,7 +12170,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-assurance-gli',
     component: 'CalculateurCoutAssuranceGli',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'une Assurance "Garantie Loyers Impayés" (GLI)',
     description: 'Calculateur du "Coût d\'une Assurance "Garantie Loyers Impayés" (GLI)',
@@ -12180,7 +12180,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-diagnostics-immobiliers',
     component: 'CalculateurCoutDiagnosticsImmobiliers',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût des Diagnostics Immobiliers" (DPE, amiante, plomb, etc.)',
     description: 'Calculateur du "Coût des Diagnostics Immobiliers" (DPE, amiante, plomb, etc.)',
@@ -12190,7 +12190,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-raccordement',
     component: 'CalculateurCoutRaccordement',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Raccordement" (eau, électricité, gaz, fibre)',
     description: 'Calculateur du "Coût d\'un Raccordement" (eau, électricité, gaz, fibre)',
@@ -12200,7 +12200,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-permis-construire',
     component: 'CalculateurCoutPermisConstruire',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Permis de Construire"',
     description: 'Calculateur du "Coût d\'un Permis de Construire"',
@@ -12210,7 +12210,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-declaration-prealable-travaux',
     component: 'CalculateurCoutDeclarationPrealableTravaux',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'une Déclaration Préalable de Travaux"',
     description: 'Calculateur du "Coût d\'une Déclaration Préalable de Travaux"',
@@ -12220,7 +12220,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-piscine',
     component: 'CalculateurCoutPiscine',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'une Piscine" (construction et taxes)',
     description: 'Calculateur du "Coût d\'une Piscine" (construction et taxes)',
@@ -12230,7 +12230,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-veranda',
     component: 'CalculateurCoutVeranda',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'une Véranda"',
     description: 'Calculateur du "Coût d\'une Véranda"',
@@ -12240,7 +12240,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-ravalement-facade',
     component: 'CalculateurCoutRavalementFacade',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Ravalement de Façade"',
     description: 'Calculateur du "Coût d\'un Ravalement de Façade"',
@@ -12250,7 +12250,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-renovation-toiture',
     component: 'CalculateurCoutRenovationToiture',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'une Rénovation de Toiture"',
     description: 'Calculateur du "Coût d\'une Rénovation de Toiture"',
@@ -12260,7 +12260,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-isolation',
     component: 'CalculateurCoutIsolation',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'une Isolation" (combles, murs)',
     description: 'Calculateur du "Coût d\'une Isolation" (combles, murs)',
@@ -12270,7 +12270,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-changement-fenetres',
     component: 'CalculateurCoutChangementFenetres',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Changement de Fenêtres"',
     description: 'Calculateur du "Coût d\'un Changement de Fenêtres"',
@@ -12280,7 +12280,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-systeme-chauffage',
     component: 'CalculateurCoutSystemeChauffage',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Système de Chauffage" (pompe à chaleur, chaudière)',
     description: 'Calculateur du "Coût d\'un Système de Chauffage" (pompe à chaleur, chaudière)',
@@ -12290,7 +12290,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-installation-panneaux-solaires',
     component: 'CalculateurCoutInstallationPanneauxSolaires',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'une Installation de Panneaux Solaires"',
     description: 'Calculateur du "Coût d\'une Installation de Panneaux Solaires"',
@@ -12300,7 +12300,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-rentabilite-panneaux-solaires',
     component: 'CalculateurRentabilitePanneauxSolaires',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur de la "Rentabilité" des panneaux solaires (autoconsommation vs. revente)',
     description: 'Calculateur de la "Rentabilité" des panneaux solaires (autoconsommation vs. revente)',
@@ -12310,7 +12310,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-recuperation-eau-pluie',
     component: 'CalculateurCoutRecuperationEauPluie',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Système de Récupération d\'Eau de Pluie"',
     description: 'Calculateur du "Coût d\'un Système de Récupération d\'Eau de Pluie"',
@@ -12320,7 +12320,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-poele-bois',
     component: 'CalculateurCoutPoeleBois',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Poêle à Bois/Granulés"',
     description: 'Calculateur du "Coût d\'un Poêle à Bois/Granulés"',
@@ -12330,7 +12330,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-adoucisseur-eau',
     component: 'CalculateurCoutAdoucisseurEau',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Adoucisseur d\'Eau"',
     description: 'Calculateur du "Coût d\'un Adoucisseur d\'Eau"',
@@ -12340,7 +12340,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-systeme-alarme',
     component: 'CalculateurCoutSystemeAlarme',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Système d\'Alarme"',
     description: 'Calculateur du "Coût d\'un Système d\'Alarme"',
@@ -12350,7 +12350,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-jardinier',
     component: 'CalculateurCoutJardinier',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Jardinier" (avec crédit d\'impôt)',
     description: 'Calculateur du "Coût d\'un Jardinier" (avec crédit d\'impôt)',
@@ -12360,7 +12360,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'calculateur-cout-syndic-copropriete',
     component: 'CalculateurCoutSyndicCopropriete',
-    category: 'fiscalité-et-emploi-indépendants',
+    category: 'fiscalite-et-travail-independant',
     lang: 'fr',
     title: 'Calculateur du "Coût d\'un Syndic de Copropriété"',
     description: 'Calculateur du "Coût d\'un Syndic de Copropriété"',
