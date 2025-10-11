@@ -1,0 +1,87 @@
+import { notFound } from 'next/navigation';
+import fs from 'fs/promises';
+import path from 'path';
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+import Breadcrumb from '@/components/layout/Breadcrumb';
+import { getCalculator } from '@/lib/calculator-registry';
+
+type Props = { params: { slug: string } };
+
+const CATEGORY = 'istruzione-e-università';
+const LANG = 'it';
+
+async function getCalculatorComponent(componentName: string) {
+  try {
+    return (await import(`@/components/calculators/${componentName}`)).default;
+  } catch (error) {
+    return null;
+  }
+}
+
+async function getContent(slug: string) {
+  try {
+    const contentPath = path.join(process.cwd(), 'content', LANG, CATEGORY, `${slug}.md`);
+    return await fs.readFile(contentPath, 'utf8');
+  } catch (error) {
+    return null;
+  }
+}
+
+export default async function CalculatorPage({ params }: Props) {
+  const calcMeta = getCalculator(params.slug, LANG);
+
+  if (!calcMeta) {
+    notFound();
+  }
+
+  const CalculatorComponent = await getCalculatorComponent(calcMeta.component);
+  const content = await getContent(params.slug);
+
+  if (!CalculatorComponent) {
+    notFound();
+  }
+
+  const categoryName = 'Istruzione e Università';
+
+  const crumbs = [
+    { name: 'Home', path: `/${LANG}` },
+    { name: categoryName, path: `/${LANG}/${CATEGORY}` },
+    { name: calcMeta.title },
+  ];
+
+  return (
+    <div className="space-y-8">
+      <Breadcrumb crumbs={crumbs} />
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-2 bg-white rounded-2xl shadow-lg">
+          <CalculatorComponent />
+        </div>
+
+        <div className="lg:col-span-1">
+          <div className="p-6 bg-white rounded-2xl shadow-lg">
+            <h3 className="text-xl font-bold mb-4">Strumenti</h3>
+            <div className="space-y-2">
+              <button className="w-full p-3 text-left rounded-lg hover:bg-gray-100 transition-colors">
+                📊 Salva Risultato
+              </button>
+              <button className="w-full p-3 text-left rounded-lg hover:bg-gray-100 transition-colors">
+                📄 Esporta PDF
+              </button>
+              <button className="w-full p-3 text-left rounded-lg hover:bg-gray-100 transition-colors">
+                🔗 Condividi
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {content && (
+        <article className="prose lg:prose-xl max-w-none bg-white p-8 rounded-2xl shadow-lg">
+          <ReactMarkdown>{content}</ReactMarkdown>
+        </article>
+      )}
+    </div>
+  );
+}
