@@ -20,11 +20,8 @@ type Props = { params: { slug: string } };
 const CATEGORY = 'fisco-e-lavoro-autonomo';
 const LANG = 'it';
 
-async function getCalculatorComponent(slug: string) {
+async function getCalculatorComponent(componentName: string) {
   try {
-    const componentName =
-      slug.split('-').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join('') +
-      'Calculator';
     return (await import(`@/components/calculators/${componentName}`)).default;
   } catch (error) {
     return null;
@@ -63,11 +60,16 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function CalculatorPage({ params }: Props) {
-  const CalculatorComponent = await getCalculatorComponent(params.slug);
-  const content = await getContent(params.slug);
   const calcMeta = getCalculator(params.slug, LANG);
 
-  if (!CalculatorComponent || !calcMeta) {
+  if (!calcMeta) {
+    notFound();
+  }
+
+  const CalculatorComponent = await getCalculatorComponent(calcMeta.component);
+  const content = await getContent(params.slug);
+
+  if (!CalculatorComponent) {
     notFound();
   }
 

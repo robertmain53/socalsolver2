@@ -4,14 +4,16 @@ import path from 'path';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import { getCalculator } from '@/lib/calculator-registry';
 
 type Props = { params: { slug: string } };
 
-async function getCalculatorComponent(slug: string) {
+async function getCalculatorComponent(componentName: string) {
   try {
-    const componentName = slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('') + 'Calculator';
     return (await import(`@/components/calculators/${componentName}`)).default;
-  } catch (error) { return null; }
+  } catch (error) {
+    return null;
+  }
 }
 
 async function getContent(slug: string) {
@@ -22,12 +24,18 @@ async function getContent(slug: string) {
 }
 
 export default async function CalculatorPage({ params }: Props) {
-  const CalculatorComponent = await getCalculatorComponent(params.slug);
+  const calcMeta = getCalculator(params.slug, 'it');
+
+  if (!calcMeta) {
+    notFound();
+  }
+
+  const CalculatorComponent = await getCalculatorComponent(calcMeta.component);
   const content = await getContent(params.slug);
 
   if (!CalculatorComponent) notFound();
   
-  const calculatorName = params.slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+  const calculatorName = calcMeta.title;
   const crumbs = [
       { name: "Home", path: "/it" },
       { name: "Salute e Benessere", path: "/it/salute-e-benessere" },
