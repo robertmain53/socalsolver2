@@ -4,7 +4,9 @@
       "Bash(npm run build:*)",
       "Bash(node:*)",
       "Bash(timeout 300 npm run build)",
-      "Bash(tee:*)"
+      "Bash(tee:*)",
+      "Bash(mv:*)",
+      "Bash(rmdir:*)"
     ],
     "deny": [],
     "ask": []

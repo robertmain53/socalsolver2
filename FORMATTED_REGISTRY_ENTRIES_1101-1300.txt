@@ -1,0 +1,1419 @@
+  {
+    slug: 'calculadora-honorarios-procurador',
+    component: 'CalculadoraHonorariosProcurador',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de los Honorarios de Procurador',
+    description: 'Calculadora de los Honorarios de Procurador',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-jura-cuentas',
+    component: 'CalculadoraJuraCuentas',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la "Jura de Cuentas"',
+    description: 'Calculadora de la "Jura de Cuentas"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-tasacion-costas',
+    component: 'CalculadoraTasacionCostas',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la "Tasación de Costas"',
+    description: 'Calculadora de la "Tasación de Costas"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-intereses-legales-demora',
+    component: 'CalculadoraInteresesLegalesDemora',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de los Intereses Legales y de Demora',
+    description: 'Calculadora de los Intereses Legales y de Demora',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-actualizacion-rentas-ipc',
+    component: 'CalculadoraActualizacionRentasIpc',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la Actualización de Rentas (IPC)',
+    description: 'Calculadora de la Actualización de Rentas (IPC)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-indemnizacion-accidente-trafico',
+    component: 'CalculadoraIndemnizacionAccidenteTrafico',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la Indemnización por Accidente de Tráfico (baremo)',
+    description: 'Calculadora de la Indemnización por Accidente de Tráfico (baremo)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-prescripcion-deudas-delitos',
+    component: 'CalculadoraPrescripcionDeudasDelitos',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la Prescripción de Deudas y Delitos',
+    description: 'Calculadora de la Prescripción de Deudas y Delitos',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-plazos-procesales',
+    component: 'CalculadoraPlazosProcesales',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de los Plazos Procesales (días hábiles/naturales)',
+    description: 'Calculadora de los Plazos Procesales (días hábiles/naturales)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-divorcio',
+    component: 'CalculadoraCosteDivorcio',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de un Divorcio (mutuo acuerdo vs. contencioso)',
+    description: 'Calculadora del Coste de un Divorcio (mutuo acuerdo vs. contencioso)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-herencia',
+    component: 'CalculadoraCosteHerencia',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de una Herencia (notaría, registro, impuestos)',
+    description: 'Calculadora del Coste de una Herencia (notaría, registro, impuestos)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-testamento',
+    component: 'CalculadoraCosteTestamento',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de un Testamento',
+    description: 'Calculadora del Coste de un Testamento',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-donacion',
+    component: 'CalculadoraCosteDonacion',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de una Donación',
+    description: 'Calculadora del Coste de una Donación',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-constitucion-sociedad',
+    component: 'CalculadoraCosteConstitucionSociedad',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de Constituir una Sociedad',
+    description: 'Calculadora del Coste de Constituir una Sociedad',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-registro-marca-patente',
+    component: 'CalculadoraCosteRegistroMarcaPatente',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de Registrar una Marca/Patente',
+    description: 'Calculadora del Coste de Registrar una Marca/Patente',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-nota-simple-registro-propiedad',
+    component: 'CalculadoraCosteNotaSimpleRegistroPropiedad',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de una "Nota Simple" del Registro de la Propiedad',
+    description: 'Calculadora del Coste de una "Nota Simple" del Registro de la Propiedad',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-certificado-antecedentes-penales',
+    component: 'CalculadoraCosteCertificadoAntecedentesPenales',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Certificado de Antecedentes Penales"',
+    description: 'Calculadora del Coste de un "Certificado de Antecedentes Penales"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-renovar-dni-pasaporte',
+    component: 'CalculadoraCosteRenovarDniPasaporte',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de Renovar el DNI/Pasaporte',
+    description: 'Calculadora del Coste de Renovar el DNI/Pasaporte',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-nacionalidad-espanola',
+    component: 'CalculadoraCosteNacionalidadEspanola',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de la "Nacionalidad Española"',
+    description: 'Calculadora del Coste de la "Nacionalidad Española"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-tarjeta-residencia-tie',
+    component: 'CalculadoraCosteTarjetaResidenciaTie',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de la "Tarjeta de Residencia" (TIE)',
+    description: 'Calculadora del Coste de la "Tarjeta de Residencia" (TIE)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-empadronarse',
+    component: 'CalculadoraCosteEmpadronarse',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora del Coste de "Empadronarse"',
+    description: 'Calculadora del Coste de "Empadronarse"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-tasa-extranjeria',
+    component: 'CalculadoraTasaExtranjeria',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la "Tasa de Extranjería"',
+    description: 'Calculadora de la "Tasa de Extranjería"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-tasa-trafico',
+    component: 'CalculadoraTasaTrafico',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la "Tasa de Tráfico" (renovación carnet, transferencia)',
+    description: 'Calculadora de la "Tasa de Tráfico" (renovación carnet, transferencia)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-tasa-modelo-790',
+    component: 'CalculadoraTasaModelo790',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la "Tasa Modelo 790" (para diversos trámites)',
+    description: 'Calculadora de la "Tasa Modelo 790" (para diversos trámites)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-tasa-basuras',
+    component: 'CalculadoraTasaBasuras',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la "Tasa de Basuras" por municipio',
+    description: 'Calculadora de la "Tasa de Basuras" por municipio',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-tasa-vado',
+    component: 'CalculadoraTasaVado',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la "Tasa de Vado" por municipio',
+    description: 'Calculadora de la "Tasa de Vado" por municipio',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-tasa-ocupacion-via-publica',
+    component: 'CalculadoraTasaOcupacionViaPublica',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la "Tasa por Ocupación de Vía Pública"',
+    description: 'Calculadora de la "Tasa por Ocupación de Vía Pública"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-licencia-apertura-negocio',
+    component: 'CalculadoraLicenciaAperturaNegocio',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la "Licencia de Apertura" de un negocio',
+    description: 'Calculadora de la "Licencia de Apertura" de un negocio',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-licencia-terraza-bar',
+    component: 'CalculadoraLicenciaTerrazaBar',
+    category: 'legal-y-administrativo',
+    lang: 'es',
+    title: 'Calculadora de la "Licencia de Terraza" para un bar',
+    description: 'Calculadora de la "Licencia de Terraza" para un bar',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-boda-ca',
+    component: 'CalculadoraCosteBodaCa',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de una Boda por Comunidad Autónoma',
+    description: 'Calculadora del Coste de una Boda por Comunidad Autónoma',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-bautizo-comunion',
+    component: 'CalculadoraCosteBautizoComunion',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un Bautizo/Comunión',
+    description: 'Calculadora del Coste de un Bautizo/Comunión',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-fiesta-cumpleanos',
+    component: 'CalculadoraCosteFiestaCumpleanos',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de una Fiesta de Cumpleaños',
+    description: 'Calculadora del Coste de una Fiesta de Cumpleaños',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-viaje',
+    component: 'CalculadoraCosteViaje',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un Viaje (vuelos, hotel, actividades)',
+    description: 'Calculadora del Coste de un Viaje (vuelos, hotel, actividades)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-festival-musica',
+    component: 'CalculadoraCosteFestivalMusica',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un Festival de Música',
+    description: 'Calculadora del Coste de un Festival de Música',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-abono-futbol',
+    component: 'CalculadoraCosteAbonoFutbol',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un Abono de Fútbol',
+    description: 'Calculadora del Coste de un Abono de Fútbol',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-corrida-toros',
+    component: 'CalculadoraCosteCorridaToros',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de una Corrida de Toros',
+    description: 'Calculadora del Coste de una Corrida de Toros',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-tablao-flamenco',
+    component: 'CalculadoraCosteTablaoFlamenco',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Tablao" Flamenco',
+    description: 'Calculadora del Coste de un "Tablao" Flamenco',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-tomatina-bunol',
+    component: 'CalculadoraCosteTomatinaBunol',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de la "Tomatina" de Buñol',
+    description: 'Calculadora del Coste de la "Tomatina" de Buñol',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-sanfermines',
+    component: 'CalculadoraCosteSanfermines',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de los "Sanfermines" de Pamplona',
+    description: 'Calculadora del Coste de los "Sanfermines" de Pamplona',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-fallas-valencia',
+    component: 'CalculadoraCosteFallasValencia',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de las "Fallas" de Valencia',
+    description: 'Calculadora del Coste de las "Fallas" de Valencia',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-feria-abril',
+    component: 'CalculadoraCosteFeriaAbril',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de la "Feria de Abril" de Sevilla',
+    description: 'Calculadora del Coste de la "Feria de Abril" de Sevilla',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-dia-playa',
+    component: 'CalculadoraCosteDiaPlaya',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Día de Playa" (parking, sombrilla, comida)',
+    description: 'Calculadora del Coste de un "Día de Playa" (parking, sombrilla, comida)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-dia-esqui',
+    component: 'CalculadoraCosteDiaEsqui',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Día de Esquí" (forfait, alquiler, clases)',
+    description: 'Calculadora del Coste de un "Día de Esquí" (forfait, alquiler, clases)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-cena-amigos',
+    component: 'CalculadoraCosteCenaAmigos',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de una "Cena con Amigos" (dividir la cuenta)',
+    description: 'Calculadora del Coste de una "Cena con Amigos" (dividir la cuenta)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-cesta-compra-supermercado',
+    component: 'CalculadoraCosteCestaCompraSupermercado',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de la "Cesta de la Compra" (por supermercado)',
+    description: 'Calculadora del Coste de la "Cesta de la Compra" (por supermercado)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-cafe-ciudad',
+    component: 'CalculadoraCosteCafeCiudad',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Café" por ciudad',
+    description: 'Calculadora del Coste de un "Café" por ciudad',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-tabaco-ahorro',
+    component: 'CalculadoraCosteTabacoAhorro',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste del "Tabaco" (y ahorro al dejarlo)',
+    description: 'Calculadora del Coste del "Tabaco" (y ahorro al dejarlo)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-loteria-navidad',
+    component: 'CalculadoraLoteriaNavidad',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Lotería de Navidad" (probabilidad y reparto de premios)',
+    description: 'Calculadora de la "Lotería de Navidad" (probabilidad y reparto de premios)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-quiniela',
+    component: 'CalculadoraQuiniela',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Quiniela"',
+    description: 'Calculadora de la "Quiniela"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-primitiva-euromillones',
+    component: 'CalculadoraPrimitivaEuromillones',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Primitiva" / "Euromillones"',
+    description: 'Calculadora de la "Primitiva" / "Euromillones"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-tatuaje',
+    component: 'CalculadoraCosteTatuaje',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Tatuaje"',
+    description: 'Calculadora del Coste de un "Tatuaje"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-mascota',
+    component: 'CalculadoraCosteMascota',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de una "Mascota" (adopción, comida, veterinario)',
+    description: 'Calculadora del Coste de una "Mascota" (adopción, comida, veterinario)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-paseador-perros',
+    component: 'CalculadoraCostePaseadorPerros',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Paseador de Perros"',
+    description: 'Calculadora del Coste de un "Paseador de Perros"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-guarderia-canina',
+    component: 'CalculadoraCosteGuarderiaCanina',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de una "Guardería Canina"',
+    description: 'Calculadora del Coste de una "Guardería Canina"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-libro',
+    component: 'CalculadoraCosteLibro',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Libro" (papel vs. electrónico)',
+    description: 'Calculadora del Coste de un "Libro" (papel vs. electrónico)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-suscripciones',
+    component: 'CalculadoraCosteSuscripciones',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de las "Suscripciones" (Netflix, Spotify, etc.)',
+    description: 'Calculadora del Coste de las "Suscripciones" (Netflix, Spotify, etc.)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-movil',
+    component: 'CalculadoraCosteMovil',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Móvil" (compra vs. renting)',
+    description: 'Calculadora del Coste de un "Móvil" (compra vs. renting)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-tarifa-movil',
+    component: 'CalculadoraTarifaMovil',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Tarifa de Móvil" (comparador)',
+    description: 'Calculadora de la "Tarifa de Móvil" (comparador)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-tarifa-internet',
+    component: 'CalculadoraTarifaInternet',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Tarifa de Internet" (comparador)',
+    description: 'Calculadora de la "Tarifa de Internet" (comparador)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-consumo-electrico-electrodomesticos',
+    component: 'CalculadoraConsumoElectricoElectrodomesticos',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Consumo Eléctrico" de electrodomésticos',
+    description: 'Calculadora del "Consumo Eléctrico" de electrodomésticos',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-factura-luz',
+    component: 'CalculadoraFacturaLuz',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Factura de la Luz" (mercado regulado vs. libre)',
+    description: 'Calculadora de la "Factura de la Luz" (mercado regulado vs. libre)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-factura-gas',
+    component: 'CalculadoraFacturaGas',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Factura del Gas"',
+    description: 'Calculadora de la "Factura del Gas"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-factura-agua',
+    component: 'CalculadoraFacturaAgua',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Factura del Agua"',
+    description: 'Calculadora de la "Factura del Agua"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ahorro-energetico',
+    component: 'CalculadoraAhorroEnergetico',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Ahorro Energético" (LEDs, electrodomésticos eficientes)',
+    description: 'Calculadora del "Ahorro Energético" (LEDs, electrodomésticos eficientes)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-huella-hidrica',
+    component: 'CalculadoraHuellaHidrica',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Huella Hídrica"',
+    description: 'Calculadora de la "Huella Hídrica"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-reciclaje-ahorro',
+    component: 'CalculadoraReciclajeAhorro',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Reciclaje" (cuánto ahorras)',
+    description: 'Calculadora del "Reciclaje" (cuánto ahorras)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-huerto-urbano',
+    component: 'CalculadoraCosteHuertoUrbano',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Huerto Urbano"',
+    description: 'Calculadora del Coste de un "Huerto Urbano"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-traslado',
+    component: 'CalculadoraCosteTraslado',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Traslado"',
+    description: 'Calculadora del Coste de un "Traslado"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-trastero',
+    component: 'CalculadoraCosteTrastero',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Trastero"',
+    description: 'Calculadora del Coste de un "Trastero"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-servicio-limpieza',
+    component: 'CalculadoraCosteServicioLimpieza',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Servicio de Limpieza"',
+    description: 'Calculadora del Coste de un "Servicio de Limpieza"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-canguro',
+    component: 'CalculadoraCosteCanguro',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Canguro"',
+    description: 'Calculadora del Coste de un "Canguro"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-actividades-extraescolares',
+    component: 'CalculadoraCosteActividadesExtraescolares',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de las "Actividades Extraescolares" de los niños',
+    description: 'Calculadora del Coste de las "Actividades Extraescolares" de los niños',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-paga-hijos',
+    component: 'CalculadoraPagaHijos',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Paga" Semanal/Mensual para los hijos',
+    description: 'Calculadora de la "Paga" Semanal/Mensual para los hijos',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-regalo-boda-cumpleanos',
+    component: 'CalculadoraRegaloBodaCumpleanos',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Regalo" de Boda/Cumpleaños (presupuesto)',
+    description: 'Calculadora del "Regalo" de Boda/Cumpleaños (presupuesto)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-lista-nacimiento',
+    component: 'CalculadoraListaNacimiento',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Lista de Nacimiento" (presupuesto)',
+    description: 'Calculadora de la "Lista de Nacimiento" (presupuesto)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-division-gastos-pareja',
+    component: 'CalculadoraDivisionGastosPareja',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "División de Gastos" en pareja',
+    description: 'Calculadora de la "División de Gastos" en pareja',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-presupuesto-familiar',
+    component: 'CalculadoraPresupuestoFamiliar',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Presupuesto Familiar" (regla 50/30/20)',
+    description: 'Calculadora del "Presupuesto Familiar" (regla 50/30/20)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-fondo-emergencia',
+    component: 'CalculadoraFondoEmergencia',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Fondo de Emergencia"',
+    description: 'Calculadora del "Fondo de Emergencia"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-amortizacion-anticipada-prestamo',
+    component: 'CalculadoraAmortizacionAnticipadaPrestamo',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Amortización Anticipada" de un préstamo',
+    description: 'Calculadora de la "Amortización Anticipada" de un préstamo',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-reunificacion-deudas',
+    component: 'CalculadoraReunificacionDeudas',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Reunificación de Deudas"',
+    description: 'Calculadora de la "Reunificación de Deudas"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-embargo-nomina',
+    component: 'CalculadoraEmbargoNomina',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Embargo" de la nómina',
+    description: 'Calculadora del "Embargo" de la nómina',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-lista-morosos',
+    component: 'CalculadoraListaMorosos',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Lista de Morosos" (ASNEF, RAI) - cómo salir',
+    description: 'Calculadora de la "Lista de Morosos" (ASNEF, RAI) - cómo salir',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-derecho-al-olvido',
+    component: 'CalculadoraDerechoAlOlvido',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Derecho al Olvido" en internet',
+    description: 'Calculadora del "Derecho al Olvido" en internet',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-detective-privado',
+    component: 'CalculadoraCosteDetectivePrivado',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Detective Privado"',
+    description: 'Calculadora del Coste de un "Detective Privado"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-notario',
+    component: 'CalculadoraCosteNotario',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Notario" para diversos trámites',
+    description: 'Calculadora del Coste de un "Notario" para diversos trámites',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-gestoria-autonomos',
+    component: 'CalculadoraCosteGestoriaAutonomos',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de una "Gestoría" para autónomos',
+    description: 'Calculadora del Coste de una "Gestoría" para autónomos',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-coste-abogado-oficio',
+    component: 'CalculadoraCosteAbogadoOficio',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del Coste de un "Abogado de Oficio"',
+    description: 'Calculadora del Coste de un "Abogado de Oficio"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-justicia-gratuita',
+    component: 'CalculadoraJusticiaGratuita',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Justicia Gratuita" (requisitos)',
+    description: 'Calculadora de la "Justicia Gratuita" (requisitos)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-propina-restaurante',
+    component: 'CalculadoraPropinaRestaurante',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Propina" en un restaurante',
+    description: 'Calculadora de la "Propina" en un restaurante',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-menu-del-dia',
+    component: 'CalculadoraMenuDelDia',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Menú del Día" (coste medio por ciudad)',
+    description: 'Calculadora del "Menú del Día" (coste medio por ciudad)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-bono-cultural-joven',
+    component: 'CalculadoraBonoCulturalJoven',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Bono Cultural Joven"',
+    description: 'Calculadora del "Bono Cultural Joven"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-imv',
+    component: 'CalculadoraImv',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "IMV" (Ingreso Mínimo Vital)',
+    description: 'Calculadora del "IMV" (Ingreso Mínimo Vital)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ayudas-nacimiento-adopcion',
+    component: 'CalculadoraAyudasNacimientoAdopcion',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Ayudas por Nacimiento/Adopción"',
+    description: 'Calculadora de las "Ayudas por Nacimiento/Adopción"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ayudas-alquiler',
+    component: 'CalculadoraAyudasAlquiler',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Ayudas al Alquiler" por C.A.',
+    description: 'Calculadora de las "Ayudas al Alquiler" por C.A.',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ayudas-compra-vivienda-jovenes',
+    component: 'CalculadoraAyudasCompraViviendaJovenes',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Ayudas para la Compra de Vivienda" para jóvenes',
+    description: 'Calculadora de las "Ayudas para la Compra de Vivienda" para jóvenes',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ayudas-carnet-conducir',
+    component: 'CalculadoraAyudasCarnetConducir',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Ayudas para el Carnet de Conducir"',
+    description: 'Calculadora de las "Ayudas para el Carnet de Conducir"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ayudas-eficiencia-energetica',
+    component: 'CalculadoraAyudasEficienciaEnergetica',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Ayudas para la Eficiencia Energética"',
+    description: 'Calculadora de las "Ayudas para la Eficiencia Energética"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ayudas-autoconsumo',
+    component: 'CalculadoraAyudasAutoconsumo',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Ayudas para el Autoconsumo" (placas solares)',
+    description: 'Calculadora de las "Ayudas para el Autoconsumo" (placas solares)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ayudas-contratacion',
+    component: 'CalculadoraAyudasContratacion',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Ayudas para la Contratación" de empleados',
+    description: 'Calculadora de las "Ayudas para la Contratación" de empleados',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ayudas-creacion-empresas',
+    component: 'CalculadoraAyudasCreacionEmpresas',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Ayudas para la Creación de Empresas"',
+    description: 'Calculadora de las "Ayudas para la Creación de Empresas"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ayudas-pac',
+    component: 'CalculadoraAyudasPac',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Ayudas de la PAC" (Política Agraria Común)',
+    description: 'Calculadora de las "Ayudas de la PAC" (Política Agraria Común)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-ayudas-desempleo-mayores-52',
+    component: 'CalculadoraAyudasDesempleoMayores52',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Ayudas por Desempleo" para mayores de 52 años',
+    description: 'Calculadora de las "Ayudas por Desempleo" para mayores de 52 años',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-renta-agraria',
+    component: 'CalculadoraRentaAgraria',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Renta Agraria"',
+    description: 'Calculadora de la "Renta Agraria"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-subsidio-empleadas-hogar',
+    component: 'CalculadoraSubsidioEmpleadasHogar',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Subsidio para Empleadas de Hogar"',
+    description: 'Calculadora del "Subsidio para Empleadas de Hogar"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-prestacion-riesgo-embarazo-lactancia',
+    component: 'CalculadoraPrestacionRiesgoEmbarazoLactancia',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Prestación por Riesgo durante el Embarazo/Lactancia"',
+    description: 'Calculadora de la "Prestación por Riesgo durante el Embarazo/Lactancia"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-prestacion-cuidado-menores-cancer',
+    component: 'CalculadoraPrestacionCuidadoMenoresCancer',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Prestación por Cuidado de Menores con Cáncer"',
+    description: 'Calculadora de la "Prestación por Cuidado de Menores con Cáncer"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-pension-no-contributiva',
+    component: 'CalculadoraPensionNoContributiva',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Pensión No Contributiva" de jubilación/invalidez',
+    description: 'Calculadora de la "Pensión No Contributiva" de jubilación/invalidez',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-complemento-minimos',
+    component: 'CalculadoraComplementoMinimos',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Complemento a Mínimos" de la pensión',
+    description: 'Calculadora del "Complemento a Mínimos" de la pensión',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-complemento-brecha-genero',
+    component: 'CalculadoraComplementoBrechaGenero',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Complemento por Brecha de Género" en la pensión',
+    description: 'Calculadora del "Complemento por Brecha de Género" en la pensión',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-rescate-plan-pensiones',
+    component: 'CalculadoraRescatePlanPensiones',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Rescate" de un Plan de Pensiones (forma de capital vs. renta)',
+    description: 'Calculadora del "Rescate" de un Plan de Pensiones (forma de capital vs. renta)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-jubilacion-activa',
+    component: 'CalculadoraJubilacionActiva',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Jubilación Activa" (compatibilizar pensión y trabajo)',
+    description: 'Calculadora de la "Jubilación Activa" (compatibilizar pensión y trabajo)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-jubilacion-demorada',
+    component: 'CalculadoraJubilacionDemorada',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Jubilación Demorada" (incentivos por retrasar la jubilación)',
+    description: 'Calculadora de la "Jubilación Demorada" (incentivos por retrasar la jubilación)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-jubilacion-parcial',
+    component: 'CalculadoraJubilacionParcial',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Jubilación Parcial"',
+    description: 'Calculadora de la "Jubilación Parcial"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-jubilacion-anticipada',
+    component: 'CalculadoraJubilacionAnticipada',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Jubilación Anticipada" (voluntaria e involuntaria)',
+    description: 'Calculadora de la "Jubilación Anticipada" (voluntaria e involuntaria)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-edad-jubilacion',
+    component: 'CalculadoraEdadJubilacion',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Edad de Jubilación" (según años cotizados)',
+    description: 'Calculadora de la "Edad de Jubilación" (según años cotizados)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-base-reguladora-pension',
+    component: 'CalculadoraBaseReguladoraPension',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Base Reguladora" de la pensión',
+    description: 'Calculadora de la "Base Reguladora" de la pensión',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-anos-cotizados',
+    component: 'CalculadoraAnosCotizados',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de los "Años Cotizados" a la Seguridad Social (informe de vida laboral)',
+    description: 'Calculadora de los "Años Cotizados" a la Seguridad Social (informe de vida laboral)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-lagunas-cotizacion',
+    component: 'CalculadoraLagunasCotizacion',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de las "Lagunas de Cotización"',
+    description: 'Calculadora de las "Lagunas de Cotización"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-convenio-especial-ss',
+    component: 'CalculadoraConvenioEspecialSs',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Convenio Especial" con la Seguridad Social',
+    description: 'Calculadora del "Convenio Especial" con la Seguridad Social',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-compra-anos-cotizacion',
+    component: 'CalculadoraCompraAnosCotizacion',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Compra de Años de Cotización" (si es posible)',
+    description: 'Calculadora de la "Compra de Años de Cotización" (si es posible)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-pension-alimentos',
+    component: 'CalculadoraPensionAlimentos',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Pensión de Alimentos" para hijos',
+    description: 'Calculadora de la "Pensión de Alimentos" para hijos',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-pension-compensatoria',
+    component: 'CalculadoraPensionCompensatoria',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Pensión Compensatoria" para el cónyuge',
+    description: 'Calculadora de la "Pensión Compensatoria" para el cónyuge',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-liquidacion-gananciales',
+    component: 'CalculadoraLiquidacionGananciales',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Liquidación de Gananciales" en un divorcio',
+    description: 'Calculadora de la "Liquidación de Gananciales" en un divorcio',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-herencia',
+    component: 'CalculadoraHerencia',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Herencia" (cálculo de la legítima, mejora y libre disposición)',
+    description: 'Calculadora de la "Herencia" (cálculo de la legítima, mejora y libre disposición)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-desheredacion',
+    component: 'CalculadoraDesheredacion',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Desheredación" (causas y efectos)',
+    description: 'Calculadora de la "Desheredación" (causas y efectos)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-incapacitacion-judicial',
+    component: 'CalculadoraIncapacitacionJudicial',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Incapacitación Judicial" (ahora "medidas de apoyo a personas con discapacidad")',
+    description: 'Calculadora de la "Incapacitación Judicial" (ahora "medidas de apoyo a personas con discapacidad")',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-tutela-curatela',
+    component: 'CalculadoraTutelaCuratela',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Tutela/Curatela"',
+    description: 'Calculadora de la "Tutela/Curatela"',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-poder-notarial',
+    component: 'CalculadoraPoderNotarial',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora del "Poder Notarial" (coste y tipos)',
+    description: 'Calculadora del "Poder Notarial" (coste y tipos)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculadora-fe-de-vida',
+    component: 'CalculadoraFeDeVida',
+    category: 'miscelánea-y-vida-cotidiana',
+    lang: 'es',
+    title: 'Calculadora de la "Fe de Vida" para pensionistas en el extranjero',
+    description: 'Calculadora de la "Fe de Vida" para pensionistas en el extranjero',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-flat-tax-pfu-plus-values',
+    component: 'CalculateurFlatTaxPfuPlusValues',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la "Flat Tax" (PFU) sur les plus-values mobilières',
+    description: 'Calculateur de la "Flat Tax" (PFU) sur les plus-values mobilières',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-stock-options-bspce',
+    component: 'CalculateurFiscaliteStockOptionsBspce',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité des Stock-Options et BSPCE',
+    description: 'Calculateur de la fiscalité des Stock-Options et BSPCE',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-actions-gratuites-aga',
+    component: 'CalculateurFiscaliteActionsGratuitesAga',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité des Actions Gratuites (AGA)',
+    description: 'Calculateur de la fiscalité des Actions Gratuites (AGA)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-per',
+    component: 'CalculateurFiscalitePer',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité du PER (Plan d\'Épargne Retraite) à l\'entrée et à la sortie',
+    description: 'Calculateur de la fiscalité du PER (Plan d\'Épargne Retraite) à l\'entrée et à la sortie',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-pea',
+    component: 'CalculateurFiscalitePea',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité du PEA (Plan d\'Épargne en Actions) et PEA-PME',
+    description: 'Calculateur de la fiscalité du PEA (Plan d\'Épargne en Actions) et PEA-PME',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-assurance-vie',
+    component: 'CalculateurFiscaliteAssuranceVie',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité de l\'Assurance-Vie (rachat avant/après 8 ans)',
+    description: 'Calculateur de la fiscalité de l\'Assurance-Vie (rachat avant/après 8 ans)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-revenus-fonciers',
+    component: 'CalculateurFiscaliteRevenusFonciers',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité des revenus fonciers (régime réel vs. micro-foncier)',
+    description: 'Calculateur de la fiscalité des revenus fonciers (régime réel vs. micro-foncier)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-location-meublee',
+    component: 'CalculateurFiscaliteLocationMeublee',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité de la location meublée (LMNP/LMP)',
+    description: 'Calculateur de la fiscalité de la location meublée (LMNP/LMP)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-scpi',
+    component: 'CalculateurFiscaliteScpi',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité des SCPI (Sociétés Civiles de Placement Immobilier)',
+    description: 'Calculateur de la fiscalité des SCPI (Sociétés Civiles de Placement Immobilier)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-capitaux-mobiliers-etrangers',
+    component: 'CalculateurFiscaliteCapitauxMobiliersEtrangers',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité des revenus de capitaux mobiliers étrangers (avec crédit d\'impôt)',
+    description: 'Calculateur de la fiscalité des revenus de capitaux mobiliers étrangers (avec crédit d\'impôt)',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-plus-values-crypto',
+    component: 'CalculateurFiscalitePlusValuesCrypto',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité des plus-values sur crypto-actifs',
+    description: 'Calculateur de la fiscalité des plus-values sur crypto-actifs',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-staking-lending-crypto',
+    component: 'CalculateurFiscaliteStakingLendingCrypto',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité du "staking" et "lending" de cryptomonnaies',
+    description: 'Calculateur de la fiscalité du "staking" et "lending" de cryptomonnaies',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-revenus-twitch-youtube',
+    component: 'CalculateurFiscaliteRevenusTwitchYoutube',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité des revenus de Twitch/YouTube',
+    description: 'Calculateur de la fiscalité des revenus de Twitch/YouTube',
+    hasContent: true,
+  },
+
+  {
+    slug: 'calculateur-fiscalite-revenus-onlyfans-patreon',
+    component: 'CalculateurFiscaliteRevenusOnlyfansPatreon',
+    category: 'fiscalité-et-travail-indépendant',
+    lang: 'fr',
+    title: 'Calculateur de la fiscalité des revenus de OnlyFans/Patreon',
+    description: 'Calculateur de la fiscalité des revenus de OnlyFans/Patreon',
+    hasContent: true,
+  }
