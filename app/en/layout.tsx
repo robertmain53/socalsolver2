@@ -4,17 +4,22 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { generateSEOMetadata, SITE_CONFIG } from '@/lib/seo';
 import { LANGUAGE_CONFIG } from '@/lib/i18n';
+import { getRequestOrigin } from '@/lib/request-context';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
-export const metadata = generateSEOMetadata({
-  title: 'SoCalSolver - Professional Online Calculators',
-  description: SITE_CONFIG.description.en,
-  keywords: SITE_CONFIG.keywords.en,
-  lang: 'en',
-  path: '/en',
-  type: 'website',
-});
+export async function generateMetadata() {
+  const origin = getRequestOrigin();
+  return generateSEOMetadata({
+    title: 'SoCalSolver - Professional Online Calculators',
+    description: SITE_CONFIG.description.en,
+    keywords: SITE_CONFIG.keywords.en,
+    lang: 'en',
+    path: '/en',
+    type: 'website',
+    origin,
+  });
+}
 
 export default function EnglishLayout({ children }: { children: ReactNode }) {
   return (

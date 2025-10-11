@@ -10,10 +10,12 @@ import {
   generateCollectionSchema,
 } from '@/lib/seo';
 
+import { getRequestOrigin } from '@/lib/request-context';
 const CATEGORY = 'sme-and-business';
 const LANG = 'en';
 
 export async function generateMetadata() {
+  const origin = getRequestOrigin();
   const categoryInfo = CATEGORIES[LANG].find((cat) => cat.slug === CATEGORY);
   const calculators = getCalculatorsByCategory(CATEGORY, LANG);
 
@@ -24,6 +26,7 @@ export async function generateMetadata() {
     lang: LANG,
     path: `/${LANG}/${CATEGORY}`,
     type: 'website',
+    origin,
   });
 }
 

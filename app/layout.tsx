@@ -2,18 +2,23 @@ import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { generateSEOMetadata, SITE_CONFIG, generateOrganizationSchema } from '@/lib/seo';
+import { getRequestOrigin } from '@/lib/request-context';
 import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata = generateSEOMetadata({
-  title: 'SoCalSolver - Professional Online Calculators',
-  description: SITE_CONFIG.description.en,
-  keywords: SITE_CONFIG.keywords.en,
-  lang: 'en',
-  path: '/',
-  type: 'website',
-});
+export async function generateMetadata() {
+  const origin = getRequestOrigin();
+  return generateSEOMetadata({
+    title: 'SoCalSolver - Professional Online Calculators',
+    description: SITE_CONFIG.description.en,
+    keywords: SITE_CONFIG.keywords.en,
+    lang: 'en',
+    path: '/',
+    type: 'website',
+    origin,
+  });
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const organizationSchema = generateOrganizationSchema();

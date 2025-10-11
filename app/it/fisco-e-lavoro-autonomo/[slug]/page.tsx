@@ -14,6 +14,7 @@ import {
   generateCalculatorSchema,
   generateArticleSchema,
 } from '@/lib/seo';
+import { getRequestOrigin } from '@/lib/request-context';
 
 type Props = { params: { slug: string } };
 
@@ -40,6 +41,7 @@ async function getContent(slug: string) {
 // Generate metadata for SEO
 export async function generateMetadata({ params }: Props) {
   const calcMeta = getCalculator(params.slug, LANG);
+  const origin = getRequestOrigin();
 
   if (!calcMeta) {
     return {
@@ -56,6 +58,7 @@ export async function generateMetadata({ params }: Props) {
     path: `/${LANG}/${CATEGORY}/${params.slug}`,
     type: 'article',
     author: calcMeta.author,
+    origin,
   });
 }
 

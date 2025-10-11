@@ -4,11 +4,13 @@ import { CalculatorIcon, SparklesIcon, ChartBarIcon } from '@heroicons/react/24/
 import { CATEGORIES } from '@/lib/categories';
 import { getCalculatorsByLang } from '@/lib/calculator-registry';
 import { generateSEOMetadata, SITE_CONFIG } from '@/lib/seo';
+import { getRequestOrigin } from '@/lib/request-context';
 
 const LANG = 'it';
 
 // Generate metadata for SEO
 export async function generateMetadata() {
+  const origin = getRequestOrigin();
   return generateSEOMetadata({
     title: 'SoCalSolver - Calcolatori Online Professionali Gratuiti',
     description: SITE_CONFIG.description.it,
@@ -16,6 +18,7 @@ export async function generateMetadata() {
     lang: LANG,
     path: `/${LANG}`,
     type: 'website',
+    origin,
   });
 }
 

@@ -24,7 +24,7 @@ export const SITE_CONFIG = {
   },
 };
 
-interface GenerateMetadataParams {
+export interface GenerateMetadataParams {
   title: string;
   description: string;
   keywords?: string[];
@@ -36,6 +36,7 @@ interface GenerateMetadataParams {
   publishedTime?: string;
   modifiedTime?: string;
   noindex?: boolean;
+  origin?: string;
 }
 
 /**
@@ -53,13 +54,22 @@ export function generateSEOMetadata({
   publishedTime,
   modifiedTime,
   noindex = false,
+  origin,
 }: GenerateMetadataParams): Metadata {
-  const url = `${SITE_CONFIG.url}${path}`;
+  const originUrl = normalizeOrigin(origin ?? SITE_CONFIG.url);
+  const url = `${originUrl}${path}`;
   const fullTitle = `${title} | ${SITE_CONFIG.name}`;
-  const ogImage = image || `${SITE_CONFIG.url}/og-image.png`;
+  const ogImage = image || `${originUrl}/og-image.png`;
 
   // Combine page-specific keywords with site-wide keywords
   const allKeywords = [...keywords, ...SITE_CONFIG.keywords[lang]];
+
+  const localizedPath = stripLangPrefix(path, lang);
+  const altSuffix = localizedPath
+    ? localizedPath.startsWith('/')
+      ? localizedPath
+      : `/${localizedPath}`
+    : '';
 
   return {
     title: fullTitle,
@@ -74,10 +84,10 @@ export function generateSEOMetadata({
     alternates: {
       canonical: url,
       languages: {
-        'it-IT': `${SITE_CONFIG.url}/it${path.replace(`/${lang}`, '')}`,
-        'en-US': `${SITE_CONFIG.url}/en${path.replace(`/${lang}`, '')}`,
-        'es-ES': `${SITE_CONFIG.url}/es${path.replace(`/${lang}`, '')}`,
-        'fr-FR': `${SITE_CONFIG.url}/fr${path.replace(`/${lang}`, '')}`,
+        'it-IT': `${originUrl}/it${altSuffix}`,
+        'en-US': `${originUrl}/en${altSuffix}`,
+        'es-ES': `${originUrl}/es${altSuffix}`,
+        'fr-FR': `${originUrl}/fr${altSuffix}`,
       },
     },
     openGraph: {
@@ -115,6 +125,26 @@ export function generateSEOMetadata({
   };
 }
 
+function normalizeOrigin(input: string): string {
+  if (input.endsWith('/')) {
+    return input.slice(0, -1);
+  }
+  return input;
+}
+
+function stripLangPrefix(pathname: string, lang: Lang): string {
+  if (pathname === '/' || pathname === '') {
+    return '';
+  }
+  if (pathname === `/${lang}` || pathname === `/${lang}/`) {
+    return '';
+  }
+
+  return pathname.startsWith(`/${lang}/`)
+    ? pathname.slice(lang.length + 1)
+    : pathname;
+}
+
 /**
  * Get locale string from Lang
  */
@@ -133,9 +163,10 @@ function getLocale(lang: Lang): string {
  */
 export function generateBreadcrumbSchema(
   crumbs: Array<{ name: string; path?: string }>,
-  lang: Lang
+  lang: Lang,
+  origin: string = SITE_CONFIG.url
 ) {
-  const baseUrl = SITE_CONFIG.url;
+  const baseUrl = normalizeOrigin(origin);
 
   return {
     '@context': 'https://schema.org',
