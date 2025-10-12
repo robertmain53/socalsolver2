@@ -320,7 +320,7 @@ const AdozioneCostiETempiCalculator: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
         {/* Colonna Principale */}
         <div className="lg:col-span-2 space-y-6" ref={calculatorRef}>
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className=" -lg -md p-6">
             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>
             <p className="text-gray-600 mb-4">Uno strumento per stimare l'impegno economico e le tempistiche di un percorso straordinario.</p>
             <div className="text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-md p-3 mb-6">
@@ -389,7 +389,7 @@ const AdozioneCostiETempiCalculator: React.FC = () => {
           </div>
 
           {/* Results Section */}
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className=" -lg -md p-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">Risultati della Stima</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 text-center">
               <div className="bg-indigo-50 border-b-4 border-indigo-500 p-3 rounded-t-md">

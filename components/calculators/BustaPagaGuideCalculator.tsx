@@ -50,7 +50,7 @@ const BustaPagaGuideCalculator = () => {
             </div>
 
         {/* Enhanced Regional/Municipal Tax Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className=" -2xl -lg p-8 mb-8">
           <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 flex items-center gap-3">
             <div className="w-8 h-8 bg-[var(--color-ocean-teal-dark)] rounded-full flex items-center justify-center text-white font-bold text-sm">📍</div>
             Addizionali Regionali e Comunali: La Geografia della Tassazione
@@ -156,7 +156,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* Glossary Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <div className=" -2xl -lg p-8 mb-12">
           <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 flex items-center gap-3">
             <div className="w-8 h-8 bg-[var(--color-dark-brown)] rounded-full flex items-center justify-center text-white font-bold text-sm">📖</div>
             Glossario degli Acronimi
@@ -252,7 +252,7 @@ const BustaPagaGuideCalculator = () => {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Introduction */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border-l-4 border-[var(--color-sunset-orange)]">
+        <div className=" -2xl -lg p-8 mb-12 border-l-4 border-[var(--color-sunset-orange)]">
           <h2 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6">L'Arte di Decifrare il Proprio Valore: Una Filosofia della Trasparenza Salariale</h2>
           
           <p className="text-lg text-[var(--color-dark-brown-light)] mb-6 leading-relaxed">
@@ -273,7 +273,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* Visual Flowchart */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <div className=" -2xl -lg p-8 mb-12">
           <h2 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-8 text-center">Il Percorso: Da RAL a Stipendio Netto</h2>
           
           <div className="relative">
@@ -356,7 +356,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* Key Numbers Summary Table */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <div className=" -2xl -lg p-8 mb-12">
           <h2 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 text-center">Numeri Chiave 2025</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -419,7 +419,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* RAL Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className=" -2xl -lg p-8 mb-8">
           <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 flex items-center gap-3">
             <div className="w-8 h-8 bg-[var(--color-sunset-orange)] rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
             RAL - Retribuzione Annua Lorda: La Base del Contratto Sociale
@@ -554,7 +554,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* Imponibile Fiscale Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className=" -2xl -lg p-8 mb-8">
           <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 flex items-center gap-3">
             <div className="w-8 h-8 bg-[var(--color-golden-yellow)] rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
             Imponibile Fiscale: Il Territorio dello Stato
@@ -588,7 +588,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* INPS Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className=" -2xl -lg p-8 mb-8">
           <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 flex items-center gap-3">
             <div className="w-8 h-8 bg-[var(--color-ocean-teal)] rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
             Contributi INPS: L'Investimento nel Tuo Futuro
@@ -643,7 +643,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* IRPEF Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className=" -2xl -lg p-8 mb-8">
           <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 flex items-center gap-3">
             <div className="w-8 h-8 bg-[var(--color-sunset-orange-dark)] rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
             IRPEF: La Progressività come Principio di Equità
@@ -656,15 +656,15 @@ const BustaPagaGuideCalculator = () => {
           <div className="bg-gradient-to-r from-[var(--color-cream-bg)] to-[var(--color-cream-bg-dark)] rounded-lg p-6 mb-6">
             <h4 className="font-bold text-[var(--color-dark-brown)] mb-4">Scaglioni IRPEF 2025:</h4>
             <div className="grid gap-3">
-              <div className="flex justify-between items-center bg-white p-3 rounded shadow-sm">
+              <div className="flex justify-between items-center  p-3  -sm">
                 <span>Fino a €28.000</span>
                 <span className="bg-[var(--color-ocean-teal)] text-white px-3 py-1 rounded-full text-sm font-bold">23%</span>
               </div>
-              <div className="flex justify-between items-center bg-white p-3 rounded shadow-sm">
+              <div className="flex justify-between items-center  p-3  -sm">
                 <span>Da €28.001 a €50.000</span>
                 <span className="bg-[var(--color-golden-yellow)] text-white px-3 py-1 rounded-full text-sm font-bold">35%</span>
               </div>
-              <div className="flex justify-between items-center bg-white p-3 rounded shadow-sm">
+              <div className="flex justify-between items-center  p-3  -sm">
                 <span>Oltre €50.000</span>
                 <span className="bg-[var(--color-sunset-orange)] text-white px-3 py-1 rounded-full text-sm font-bold">43%</span>
               </div>
@@ -700,7 +700,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* Detrazioni Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className=" -2xl -lg p-8 mb-8">
           <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 flex items-center gap-3">
             <div className="w-8 h-8 bg-[var(--color-golden-yellow-dark)] rounded-full flex items-center justify-center text-white font-bold text-sm">5</div>
             Detrazioni e Addizionali: Il Fine-Tuning del Sistema
@@ -742,7 +742,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* Bonus e Welfare Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <div className=" -2xl -lg p-8 mb-12">
           <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 flex items-center gap-3">
             <div className="w-8 h-8 bg-[var(--color-light-sand)] rounded-full flex items-center justify-center text-[var(--color-dark-brown)] font-bold text-sm">6</div>
             Bonus e Welfare: L'Evoluzione del Total Reward
@@ -802,7 +802,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* Your Journey Continues Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <div className=" -2xl -lg p-8 mb-12">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-4">Il Tuo Percorso Continua: Prossimi Passi</h3>
             <p className="text-[var(--color-dark-brown-light)] max-w-2xl mx-auto">
@@ -965,7 +965,7 @@ const BustaPagaGuideCalculator = () => {
         </div>
 
         {/* Author Bio */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-[var(--color-golden-yellow)]">
+        <div className=" -2xl -lg p-8 border-l-4 border-[var(--color-golden-yellow)]">
           <div className="flex items-start gap-6">
             <div className="w-20 h-20 bg-gradient-to-br from-[var(--color-sunset-orange)] to-[var(--color-sunset-orange-dark)] rounded-full flex items-center justify-center text-white text-2xl font-bold">
               UC

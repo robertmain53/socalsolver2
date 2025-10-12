@@ -382,7 +382,7 @@ const TassazioneSportiviCalculator: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-xl shadow-lg p-6">
+                    <div className=" -xl -lg p-6">
                         <h3 className="font-semibold text-gray-800">Formula Chiave Utilizzata</h3>
                         <pre className="text-xs text-gray-600 mt-2 p-3 bg-gray-100 rounded-lg font-mono break-words whitespace-pre-wrap">{formulaUsata}</pre>
                         <p className="text-xs text-gray-500 mt-2">Nota: Questa è una rappresentazione semplificata della logica di calcolo, che non include tutti i passaggi intermedi (es. calcolo IRPEF a scaglioni).</p>

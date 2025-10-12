@@ -363,7 +363,7 @@ const SideHustleIncomeCalculator: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50">
         {/* Main */}
         <div className="lg:col-span-2" ref={ref}>
-          <div className="bg-white rounded-xl shadow-md p-6">
+          <div className=" -xl -md p-6">
             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>
             <p className="text-gray-600 mb-4">Estimate your side-hustle take-home after fees, expenses and taxes — plus the gross you need to hit your target net.</p>
 

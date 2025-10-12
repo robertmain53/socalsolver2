@@ -180,7 +180,7 @@ const CostoMatrimonioCivileReligiosoCalculator: React.FC = () => {
             <FaqSchema />
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
                 {/* Colonna Sinistra: Inputs */}
-                <div className="lg:col-span-3 bg-white rounded-lg shadow-md p-6">
+                <div className="lg:col-span-3  -lg -md p-6">
                     <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>
                     <p className="text-gray-600 mb-4">Usa questo strumento per creare una stima dettagliata del budget per il tuo matrimonio.</p>
                     
@@ -279,7 +279,7 @@ const CostoMatrimonioCivileReligiosoCalculator: React.FC = () => {
                 </aside>
 
                 {/* Sezione Contenuti Approfonditi */}
-                <div className="lg:col-span-5 bg-white rounded-lg shadow-md p-6">
+                <div className="lg:col-span-5  -lg -md p-6">
                      <section>
                         <ContentRenderer content={content} />
                     </section>

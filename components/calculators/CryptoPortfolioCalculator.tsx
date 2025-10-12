@@ -220,7 +220,7 @@ const CryptoPortfolioCalculator: React.FC = () => {
             <SchemaInjector schema={seoSchema} />
             <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
                 {/* Left Column: Input and Portfolio List */}
-                <div className="lg:col-span-2 bg-white rounded-lg shadow-md p-6 h-fit">
+                <div className="lg:col-span-2  -lg -md p-6 h-fit">
                     <h2 className="text-xl font-bold mb-4 text-gray-800">Add New Asset</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {calculatorData.inputs.map(input => (

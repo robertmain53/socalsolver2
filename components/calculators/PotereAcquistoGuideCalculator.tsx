@@ -76,7 +76,7 @@ const PotereAcquistoGuide = () => {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Introduction */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border-l-4 border-[var(--color-ocean-teal)]">
+        <div className=" -2xl -lg p-8 mb-12 border-l-4 border-[var(--color-ocean-teal)]">
           <h2 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6">L&apos;Arbitraggio Geografico: Da Ricardo alla Digital Economy</h2>
           
           <p className="text-lg text-[var(--color-dark-brown-light)] mb-6 leading-relaxed">
@@ -97,7 +97,7 @@ const PotereAcquistoGuide = () => {
         </div>
 
         {/* Visual Comparison Framework */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <div className=" -2xl -lg p-8 mb-12">
           <h2 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-8 text-center">Framework PLACES: Metodologia di Valutazione Geografica</h2>
           
           <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
@@ -184,7 +184,7 @@ const PotereAcquistoGuide = () => {
         </div>
 
         {/* Interactive Cost of Living Calculator */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+        <div className=" -2xl -lg p-8 mb-8">
           <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 flex items-center gap-3">
             <div className="w-8 h-8 bg-[var(--color-golden-yellow)] rounded-full flex items-center justify-center text-white font-bold text-sm">🧮</div>
             Cost of Living Calculator: Confronto Geografico Real-Time
@@ -418,7 +418,7 @@ const PotereAcquistoGuide = () => {
         </div>
 
         {/* Author Bio */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-[var(--color-ocean-teal)]">
+        <div className=" -2xl -lg p-8 border-l-4 border-[var(--color-ocean-teal)]">
           <div className="flex items-start gap-6">
             <div className="w-20 h-20 bg-gradient-to-br from-[var(--color-ocean-teal)] to-[var(--color-ocean-teal-dark)] rounded-full flex items-center justify-center text-white text-2xl font-bold">
               UC

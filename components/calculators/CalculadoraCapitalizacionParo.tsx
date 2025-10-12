@@ -273,14 +273,14 @@ const CalculadoraCapitalizacionParo: React.FC = () => {
                         </div>
                     </div>
                     
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">Distribución del Importe Capitalizado</h3>
                         <div className="h-72 w-full bg-gray-50 p-2 rounded-lg mt-4">
                             {isClient && <DynamicBarChart data={chartData} />}
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h3 className="font-semibold text-gray-800">Fórmula de Cálculo Utilizada</h3>
                         <p className="text-sm text-gray-600 mt-2 p-3 bg-gray-100 rounded font-mono break-words text-center">{formulaText}</p>
                         <p className="text-xs text-gray-500 mt-2">Nota: Esta fórmula sigue el método oficial del SEPE, distinguiendo entre los primeros 180 días (70%) y los siguientes (60%).</p>

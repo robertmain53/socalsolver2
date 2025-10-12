@@ -81,7 +81,7 @@ const IrfepCuneoGuideCalculator = () => {
 
         <div className="max-w-6xl mx-auto px-6 py-12">
             {/* Introduction */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border-l-4 border-[var(--color-sunset-orange)]">
+            <div className=" -2xl -lg p-8 mb-12 border-l-4 border-[var(--color-sunset-orange)]">
                 <h2 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6">La Filosofia della Progressività: Dalla Teoria di Pigou alle Riforme 2025</h2>
                 <p className="text-lg text-[var(--color-dark-brown)] mb-6 leading-relaxed">Nel 1920, l'economista Arthur Cecil Pigou formulò la teoria dell'"imposta progressiva ottimale", sostenendo che <em>"il sacrificio marginale dovrebbe essere uguale per tutti i contribuenti"</em>. Un secolo dopo, questa filosofia si incarna nell'IRPEF italiana, un sistema che nel biennio 2024-2025 ha subito trasformazioni significative.</p>
                 <p className="text-lg text-[var(--color-dark-brown)] mb-6 leading-relaxed">La riforma non è solo una semplificazione: è anche una risposta parziale al "<strong>drenaggio fiscale</strong>" (fiscal drag), il fenomeno per cui l'inflazione spinge i redditi nominali in scaglioni fiscali più alti, erodendo il potere d'acquisto reale. Comprendere queste dinamiche non è un esercizio accademico, ma una competenza strategica fondamentale.</p>
@@ -94,7 +94,7 @@ const IrfepCuneoGuideCalculator = () => {
             {/* ... TUTTO IL RESTO DEL CODICE DEL COMPONENTE CHE TI HO DATO PRIMA ... */}
             {/* ... E' STATO OMESSO QUI PER BREVITA', MA VA INCLUSO ... */}
              {/* Author Bio CORRETTO */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-[var(--color-golden-yellow)]">
+            <div className=" -2xl -lg p-8 border-l-4 border-[var(--color-golden-yellow)]">
                 <div className="flex items-start gap-6">
                     <div className="w-20 h-20 bg-gradient-to-br from-[var(--color-sunset-orange)] to-[var(--color-sunset-orange-dark)] rounded-full flex items-center justify-center text-white text-2xl font-bold">UC</div>
                     <div className="flex-1">

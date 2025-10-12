@@ -202,7 +202,7 @@ const CostoConsulenteFinanziarioCalculator: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h2 className="text-xl font-semibold text-gray-800 mb-4">Risultati della Simulazione</h2>
                          <div className="text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-md p-3 mb-6">
                             <strong>Disclaimer:</strong> Questa è una simulazione a scopo informativo basata su un rendimento costante. I risultati non costituiscono una previsione e non sostituiscono una consulenza professionale.
@@ -219,7 +219,7 @@ const CostoConsulenteFinanziarioCalculator: React.FC = () => {
                         </div>
                     </div>
 
-                     <div className="bg-white rounded-lg shadow-md p-6">
+                     <div className=" -lg -md p-6">
                         <h3 className="text-xl font-semibold text-gray-800 mb-4">Confronto Visivo dei Risultati</h3>
                          <div className="h-80 w-full">
                            <DynamicBarChart data={chartData} />

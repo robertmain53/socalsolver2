@@ -164,7 +164,7 @@ const FinanziamentoRestoAlSud: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="mt-6 border bg-white rounded-xl shadow-lg p-4"><h3 className="font-semibold text-gray-700">Formula di Calcolo Utilizzata</h3><p className="text-sm text-gray-600 mt-2 p-3 bg-gray-100 rounded-md font-mono break-words">{formulaUsata}</p></div>
+                    <div className="mt-6 border  -xl -lg p-4"><h3 className="font-semibold text-gray-700">Formula di Calcolo Utilizzata</h3><p className="text-sm text-gray-600 mt-2 p-3 bg-gray-100 rounded-md font-mono break-words">{formulaUsata}</p></div>
                 </div>
 
                 <aside className="lg:col-span-1 space-y-6">

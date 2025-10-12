@@ -403,7 +403,7 @@ export default function CalcoloStipendioNettoCalculator() {
 
   // UI
   return (
-    <div className="p-4 md:p-6 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-xl shadow space-y-6">
+    <div className="p-4 md:p-6  dark:bg-gray-900 text-gray-900 dark:text-gray-100 -xl  space-y-6">
       <header>
         <h1 className="text-2xl md:text-3xl font-bold">Calcolo Stipendio Netto</h1>
         <p className="text-sm opacity-80">Lordo↔Netto, addizionali Regione/Comune, Equal-CTC, Impatriati, Welfare, Export, Share URL.</p>

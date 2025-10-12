@@ -383,7 +383,7 @@ const SimuladorDeclaracionRent: React.FC = () => {
           </div>
 
           {/* Formula trasparente */}
-          <div className="mt-6 bg-white rounded-xl shadow p-4">
+          <div className="mt-6  -xl  p-4">
             <h3 className="text-lg font-semibold text-gray-800">Fórmula resumida (modelo)</h3>
             <p className="text-xs text-gray-600 mt-2 font-mono break-words">
               Base general = max(0, (Trabajo − SS − otros − 2000) + Capital mobiliario + (Alquiler − gastos))<br/>

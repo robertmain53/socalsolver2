@@ -277,7 +277,7 @@ const CostoProprietaAutoTcoCalculator: React.FC = () => {
                         </div>
                     </div>
                      <div className="mt-8">
-                        <div className="p-4 bg-white rounded-lg shadow-md">
+                        <div className="p-4  -lg -md">
                             <h2 className="text-xl font-semibold text-gray-800 mb-4">Riepilogo dei Costi</h2>
                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {outputs.map(output => (

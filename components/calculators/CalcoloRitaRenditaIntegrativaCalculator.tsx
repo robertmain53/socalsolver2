@@ -197,7 +197,7 @@ const CalcoloRitaRenditaIntegrativaCalculator: React.FC = () => {
             </div>
           </div>
           
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className=" -lg -md p-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">Risultati della Simulazione</h2>
             <div className="space-y-4">
               {outputs.map(output => (
@@ -224,7 +224,7 @@ const CalcoloRitaRenditaIntegrativaCalculator: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-4">
+          <div className=" -lg -md p-4">
             <h3 className="font-semibold text-gray-700">Formula Tassazione Utilizzata</h3>
             <p className="text-xs text-gray-600 mt-2 p-3 bg-gray-100 rounded font-mono break-words">{formulaUsata}</p>
           </div>

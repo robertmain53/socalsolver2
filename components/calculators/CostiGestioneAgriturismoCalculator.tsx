@@ -242,7 +242,7 @@ const CostiGestioneAgriturismoCalculator: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
         <div className="lg:col-span-2">
           <div className="p-1 md:p-6" ref={calcolatoreRef}>
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className=" -lg -md p-6">
               <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>
               <div className="text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-md p-3 my-6">
                 <strong>Disclaimer:</strong> Questo strumento offre una simulazione a scopo puramente informativo e non sostituisce in alcun modo una consulenza fiscale o legale. I risultati sono una stima basata sui dati inseriti.

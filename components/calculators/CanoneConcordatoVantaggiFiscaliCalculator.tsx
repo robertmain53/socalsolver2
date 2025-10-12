@@ -140,7 +140,7 @@ const CanoneConcordatoVantaggiFiscaliCalculator: React.FC = () => {
             <FaqSchema />
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
                 <div className="lg:col-span-2">
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>
                         <div className="text-xs text-red-800 bg-red-50 border border-red-200 rounded-md p-3 mb-6">
                             <strong>Attenzione:</strong> Il calcolo del canone è un **esempio basato sull'Accordo di Bologna**. Per accedere ai vantaggi fiscali è obbligatorio rispettare i parametri del proprio Comune e ottenere l'asseverazione.

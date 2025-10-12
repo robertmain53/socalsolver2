@@ -32,7 +32,7 @@ export default function TasseGiornalistiCalculator() {
   const nettoMensile = nettoAnnuale / 12;
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+    <div>
       <h1 className="text-3xl font-bold mb-6 text-gray-800">
         Calcolo Tasse Giornalisti e Contributi INPGI
       </h1>

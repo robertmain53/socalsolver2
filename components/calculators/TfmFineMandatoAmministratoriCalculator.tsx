@@ -151,7 +151,7 @@ const TfmFineMandatoAmministratoriCalculator: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h2 className="text-xl font-semibold text-gray-800 mb-4">Risultati della Simulazione 💰</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div className="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r-lg">

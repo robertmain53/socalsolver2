@@ -209,7 +209,7 @@ const CalculadoraTir: React.FC = () => {
       <FaqSchema />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
         <div className="lg:col-span-2">
-          <div className="bg-white rounded-lg shadow-md p-6">
+          <div className=" -lg -md p-6">
             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>
             <p className="text-gray-600 mb-6">{description}</p>
 

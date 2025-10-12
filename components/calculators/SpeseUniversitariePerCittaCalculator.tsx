@@ -285,7 +285,7 @@ const SpeseUniversitariePerCittaCalculator: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                     <div className="bg-white rounded-lg shadow-md p-4">
+                     <div className=" -lg -md p-4">
                         <h3 className="font-semibold text-gray-700">Formula di Calcolo</h3>
                         <p className="text-xs text-gray-500 mt-2 p-3 bg-gray-100 rounded font-mono break-words">Costo Totale = Tasse Annuali + (Affitto + Extra) * 12 + Trasporti * 12 + Libri</p>
                     </div>

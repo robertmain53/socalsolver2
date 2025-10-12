@@ -39,7 +39,7 @@ export default function CalculadoraIrpfComunidadAutonomaCalculator() {
         </h1>
       </div>
 
-      <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+      <div className=" p-6 sm:p-8 -xl -lg">
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">

@@ -229,7 +229,7 @@ const SimuladorEstimacionDirectaModulos: React.FC = () => {
                            ))}
                         </div>
                     </div>
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h2 className="text-xl font-semibold text-gray-800 mb-4">Resultados de la Simulación</h2>
                          <div className="space-y-4">
                             {outputs.map(output => {
@@ -248,7 +248,7 @@ const SimuladorEstimacionDirectaModulos: React.FC = () => {
                             })}
                         </div>
                     </div>
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                        <h3 className="text-lg font-semibold text-gray-700 mb-2">Comparativa Visual de Impuestos</h3>
                        <div className="h-72 w-full bg-gray-50 p-2 rounded-lg">
                             {isClient && <DynamicBarChart data={chartData} />}

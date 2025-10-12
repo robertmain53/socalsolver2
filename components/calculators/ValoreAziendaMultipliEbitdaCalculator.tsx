@@ -210,7 +210,7 @@ const ValoreAziendaMultipliEbitdaCalculator: React.FC = () => {
             <SchemaInjector schema={seoSchema} />
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
                 <main className="lg:col-span-2">
-                    <div className="bg-white rounded-lg shadow-md">
+                    <div className=" -lg -md">
                         <div className="p-6" ref={calculatorRef}>
                             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>
                             <p className="text-gray-600 mb-6">Ottieni una stima rapida del valore della tua azienda basata su benchmark di mercato.</p>

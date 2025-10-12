@@ -28,7 +28,7 @@ export default function SismabonusCalcolatore() {
 
   return (
     <div className="space-y-6">
-      <div className="bg-white p-6 rounded-lg shadow-md">
+      <div className=" p-6 -lg -md">
         <h3 className="text-lg font-semibold mb-4">Inserisci i valori</h3>
 
         <div className="space-y-4">

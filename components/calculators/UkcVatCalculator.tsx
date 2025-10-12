@@ -378,7 +378,7 @@ const UkcVatCalculator: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 min-h-screen font-sans">
         <div className="lg:col-span-2">
           <div className="p-6" ref={calculatorRef}>
-            <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className=" -xl -lg p-6">
               <h1 className="text-3xl md:text-4xl font-bold mb-3 text-gray-800">{title}</h1>
               <p className="text-gray-600 mb-6 text-lg">
                 Professional VAT calculator for UK businesses. Instantly add or remove VAT at current HMRC rates.
@@ -545,7 +545,7 @@ const UkcVatCalculator: React.FC = () => {
             </div>
 
             {/* Formula Section */}
-            <div className="mt-6 bg-white rounded-lg shadow-lg p-6">
+            <div className="mt-6  -lg -lg p-6">
               <h3 className="text-lg font-semibold text-gray-800 mb-3">Calculation Formula</h3>
               <div className="bg-gray-100 p-4 rounded-lg font-mono text-sm">
                 {states.calculation_type === 'add' ? (

@@ -388,7 +388,7 @@ rows.forEach(r => lines.push(r.map(x => (typeof x === 'number' ? x.toFixed(2) : 
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans" ref={refMain}>
       {/* --- Colonna principale --- */}
       <div className="lg:col-span-2 space-y-6">
-        <div className="bg-white rounded-lg shadow p-5 md:p-6">
+        <div className=" -lg  p-5 md:p-6">
           {/* Header brand */}
           <div className="flex items-start justify-between">
             <div>
@@ -599,7 +599,7 @@ rows.forEach(r => lines.push(r.map(x => (typeof x === 'number' ? x.toFixed(2) : 
         </div>
 
         {/* Comparador de escenarios */}
-        <div className="bg-white rounded-lg shadow p-5 md:p-6">
+        <div className=" -lg  p-5 md:p-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-3">Escenarios — guardar y comparar</h2>
           <div className="flex flex-wrap items-center gap-3 mb-3">
             <input className="border rounded px-3 py-2 text-sm" placeholder="Nombre del escenario" value={nombreEsc} onChange={(e)=>setNombreEsc(e.target.value)} />

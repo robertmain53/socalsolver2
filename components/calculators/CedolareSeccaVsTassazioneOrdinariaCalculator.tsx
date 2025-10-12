@@ -311,7 +311,7 @@ const CedolareSeccaVsTassazioneOrdinariaCalculator: React.FC = () => {
                     </div>
                     
                     {/* --- Grafico e Formula --- */}
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h3 className="text-lg font-semibold text-gray-700 mb-2">Confronto Visivo della Tassazione</h3>
                         <div className="h-72 w-full bg-gray-50 p-2 rounded-lg">
                             {isClient && (

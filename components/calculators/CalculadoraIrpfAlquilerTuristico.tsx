@@ -364,7 +364,7 @@ const CalculadoraIrpfAlquilerTuristico: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-6 bg-white rounded-lg shadow-md p-6">
+          <div className="mt-6  -lg -md p-6">
             <h2 className="text-xl font-semibold text-gray-800 mb-4">Resultados Estimados</h2>
             <div className="space-y-4">
               {calculatorData.outputs.map((output: OutputField) => (

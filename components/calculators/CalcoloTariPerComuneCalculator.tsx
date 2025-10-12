@@ -214,7 +214,7 @@ const CalcoloTariPerComuneCalculator: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                     <div className="bg-white rounded-2xl shadow-lg p-6">
+                     <div className=" -2xl -lg p-6">
                         <h3 className="text-lg font-semibold text-gray-700 mb-2">Composizione del Totale</h3>
                         <div className="h-72 w-full">
                             {isClient && (

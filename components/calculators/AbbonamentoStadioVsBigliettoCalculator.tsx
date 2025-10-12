@@ -208,7 +208,7 @@ const AbbonamentoStadioVsBigliettoCalculator: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
             <div className="lg:col-span-2">
             <div className="p-0 md:p-6" ref={calcolatoreRef}>
-                <div className="bg-white rounded-lg shadow-md p-6">
+                <div className=" -lg -md p-6">
                     <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>
                     <p className="text-gray-600 mb-4">Scopri se per te è più vantaggioso l'abbonamento stagionale o l'acquisto dei singoli biglietti.</p>
                     <div className="text-xs text-blue-800 bg-blue-50 border border-blue-200 rounded-md p-3 mb-6">

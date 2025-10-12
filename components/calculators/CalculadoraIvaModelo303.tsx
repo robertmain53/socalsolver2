@@ -150,7 +150,7 @@ const CalculadoraIvaModelo303: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
                 {/* Main Content Column */}
                 <div className="lg:col-span-2 space-y-6">
-                    <div className="bg-white rounded-lg shadow-md">
+                    <div className=" -lg -md">
                         <div ref={calculatorRef} className="p-6">
                             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-900">{title}</h1>
                             <p className="text-gray-600 mb-4">Calcula el resultado de tu autoliquidación de IVA trimestral de forma rápida y sencilla.</p>
@@ -213,7 +213,7 @@ const CalculadoraIvaModelo303: React.FC = () => {
                         <div className="p-4 bg-gray-50 rounded-b-lg border-t"><p className="text-xs text-center text-gray-600 font-mono tracking-wider">{formulaUsada}</p></div>
                     </div>
                     {/* Chart */}
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h3 className="text-lg font-semibold text-gray-800 mb-2">Visualización del IVA</h3>
                         <p className="text-sm text-gray-500 mb-4">Compara el total de IVA que has cobrado frente al que has pagado.</p>
                         <div className="h-64 w-full">{isClient && <DynamicBarChart data={chartData} />}</div>

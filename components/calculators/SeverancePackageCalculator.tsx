@@ -225,7 +225,7 @@ const SeverancePackageCalculator: React.FC = () => {
                     </div>
                     
                     {/* --- Outputs Section --- */}
-                    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                    <div className=" -xl -lg p-6 border border-gray-200">
                         <h2 className="text-xl font-bold text-gray-800 mb-4">Calculation Results</h2>
                         <div className="space-y-3">
                             {outputs.map(output => (
@@ -240,7 +240,7 @@ const SeverancePackageCalculator: React.FC = () => {
                     </div>
 
                     {/* --- Chart & Formula Section --- */}
-                    <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                    <div className=" -xl -lg p-6 border border-gray-200">
                         <h3 className="text-lg font-bold text-gray-800 mb-2">Package Breakdown</h3>
                         <p className="text-sm text-gray-600 mb-4">This chart visualizes the components of your gross package and estimated taxes.</p>
                         <div className="h-72 w-full">

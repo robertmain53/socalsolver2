@@ -207,7 +207,7 @@ const TfrColfBadantiBabysitterCalculator: React.FC = () => {
         {/* Colonna Principale: Calcolatore e Risultati */}
         <div className="lg:col-span-2">
           <div className="p-1" ref={calculatorRef}>
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className=" -lg -md p-6">
               <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>
               <p className="text-gray-600 mb-4">Stima il Trattamento di Fine Rapporto per lavoratori domestici secondo il CCNL.</p>
               

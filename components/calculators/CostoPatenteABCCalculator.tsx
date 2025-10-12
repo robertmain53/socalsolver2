@@ -181,7 +181,7 @@ const CostoPatenteABCCalculator: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h2 className="text-xl font-semibold text-gray-800 mb-4">Risultati della Stima</h2>
                         <div className="space-y-4">
                             {outputs.map(output => (

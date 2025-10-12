@@ -311,7 +311,7 @@ const RettaAsiloNidoConBonusCalculator: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50/50 font-sans">
                 <div className="lg:col-span-2">
                     <div className="p-1 md:p-2" ref={calcolatoreRef}>
-                        <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+                        <div className=" -xl -lg p-6 border border-gray-100">
                             <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-900">{title}</h1>
                             <p className="text-gray-600 mb-6">Calcola il rimborso mensile e la retta netta dell'asilo nido con il Bonus INPS 2025.</p>
                             <div className="text-xs text-amber-900 bg-amber-50 border border-amber-200 rounded-lg p-3 mb-6">

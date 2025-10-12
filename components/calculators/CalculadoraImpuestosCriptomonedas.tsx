@@ -479,7 +479,7 @@ const CalculadoraImpuestosCriptomonedas: React.FC = () => {
           </div>
 
           {calculated.ganancia_patrimonial > 0 && !calculated.error && (
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className=" -lg -md p-6">
               <h3 className="text-lg font-semibold text-gray-700 mb-2">Desglose del Valor de Venta</h3>
               <div className="h-64 w-full">
                 {isClient && (

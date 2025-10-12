@@ -279,7 +279,7 @@ const TassazionePolizzeVitaRamo13Calculator: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-xl shadow-lg p-6 mt-8">
+                        <div className=" -xl -lg p-6 mt-8">
                             <h2 className="text-xl font-semibold text-slate-800 mb-4">Risultati della Simulazione</h2>
                             <div className="space-y-4">
                                 {outputs.map(output => (
@@ -293,7 +293,7 @@ const TassazionePolizzeVitaRamo13Calculator: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-xl shadow-lg p-6 mt-8">
+                        <div className=" -xl -lg p-6 mt-8">
                            <h3 className="text-lg font-semibold text-gray-700 mb-2">Scomposizione Plusvalenza Lorda</h3>
                            <div className="h-64 w-full">
                                {isClient && calculatedOutputs.plusvalenza_lorda > 0 ? (

@@ -33,7 +33,7 @@ const CostoTotaleDipendenteCuneoFiscaleCalculator: React.FC = () => {
   }, [calculatorState.stipendioLordo, calculatorState.contributiPrevidenziali, calculatorState.impostaIrpef]);
 
   return (
-    <div className="p-4 bg-white rounded-lg shadow-md">
+    <div className="p-4  -lg -md">
       <h1>Calcolatore Costo Totale Dipendente (Cuneo Fiscale)</h1>
       <p>Calcola il costo totale di un dipendente, considerando stipendio lordo, contributi previdenziali e imposta IRPEF.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

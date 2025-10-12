@@ -76,7 +76,7 @@ const NegoziazioneGuide = () => {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-6 py-12">
         {/* Introduction */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12 border-l-4 border-[var(--color-golden-yellow)]">
+        <div className=" -2xl -lg p-8 mb-12 border-l-4 border-[var(--color-golden-yellow)]">
           <h2 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6">L&apos;Arte della Persuasione Economica: Da Carnegie a Cialdini</h2>
           <p className="text-lg text-[var(--color-dark-brown-light)] mb-6 leading-relaxed">
             Nel 1936, Dale Carnegie scriveva: <em>&quot;Il successo nella gestione delle relazioni umane dipende dalla capacità di ottenere cooperazione&quot;</em>. Ottant&apos;anni dopo, Robert Cialdini ha codificato i <strong>principi della persuasione</strong> che governano ogni interazione umana - incluse le negoziazioni salariali. La negoziazione non è manipolazione, è <strong>comunicazione strategica basata su valore reciproco</strong>.
@@ -93,7 +93,7 @@ const NegoziazioneGuide = () => {
         </div>
 
         {/* Value Calculator Tool */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <div className=" -2xl -lg p-8 mb-12">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] flex items-center gap-3">
               <div className="w-8 h-8 bg-[var(--color-golden-yellow)] rounded-full flex items-center justify-center text-white font-bold text-sm">💰</div>
@@ -148,7 +148,7 @@ const NegoziazioneGuide = () => {
         </div>
 
         {/* ROI Calculator */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <div className=" -2xl -lg p-8 mb-12">
           <div className="flex items-center justify-between mb-6">
             <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] flex items-center gap-3">
               <div className="w-8 h-8 bg-[var(--color-dark-brown)] rounded-full flex items-center justify-center text-white font-bold text-sm">🛠️</div>
@@ -191,7 +191,7 @@ const NegoziazioneGuide = () => {
         </div>
 
         {/* Framework IMPACT */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <div className=" -2xl -lg p-8 mb-12">
           <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-8 text-center">Il Framework IMPACT: Metodologia Scientifica della Negoziazione</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
             {[
@@ -222,7 +222,7 @@ const NegoziazioneGuide = () => {
         </div>
 
         {/* NEW SECTION: Objections */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mb-12">
+        <div className=" -2xl -lg p-8 mb-12">
             <h3 className="text-2xl font-bold text-[var(--color-dark-brown)] mb-6 text-center flex items-center justify-center gap-3">
                 <Shield size={28} className="text-[var(--color-ocean-teal)]" />
                 Anticipa e Gestisci le Obiezioni
@@ -272,7 +272,7 @@ const NegoziazioneGuide = () => {
         </div>
 
         {/* Author Bio */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-[var(--color-golden-yellow)]">
+        <div className=" -2xl -lg p-8 border-l-4 border-[var(--color-golden-yellow)]">
           <div className="flex items-start gap-6">
             <div className="w-20 h-20 bg-gradient-to-br from-[var(--color-golden-yellow)] to-[var(--color-golden-yellow-dark)] rounded-full flex items-center justify-center text-white text-2xl font-bold">
               UC

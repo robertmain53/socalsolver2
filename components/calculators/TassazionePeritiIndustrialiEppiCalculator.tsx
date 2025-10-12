@@ -260,7 +260,7 @@ const TassazionePeritiIndustrialiEppiCalculator: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
                 {/* Colonna Principale */}
                 <div className="lg:col-span-2 space-y-6" ref={calculatorRef}>
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>
                         <p className="text-gray-600 mb-4">Simula il tuo carico fiscale e contributivo per pianificare al meglio la tua attività professionale.</p>
                         <div className="text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-md p-3 mb-6">
@@ -283,7 +283,7 @@ const TassazionePeritiIndustrialiEppiCalculator: React.FC = () => {
                         </div>
                     </div>
                     {/* Results Section */}
-                    <div className="bg-white rounded-lg shadow-md p-6">
+                    <div className=" -lg -md p-6">
                         <h2 className="text-xl font-semibold text-gray-800 mb-4">Risultati della Simulazione</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Ripartizione Grafica */}

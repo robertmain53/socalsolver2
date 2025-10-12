@@ -448,7 +448,7 @@ Ahorro Fiscal = Aportación Desgravable × (Tipo IRPF / 100)`;
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
         <div className="lg:col-span-2">
           <div className="p-6" ref={calculadorRef}>
-            <div className="bg-white rounded-lg shadow-md p-6">
+            <div className=" -lg -md p-6">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">{title}</h1>

@@ -106,7 +106,7 @@ const CalculadoraImpuestosDividendos: React.FC = () => {
   }, [inputs, brackets]);
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 font-sans">
+    <div className=" -lg -md p-6 font-sans">
       <h1 className="text-2xl md:text-3xl font-bold mb-2 text-gray-800">
         {meta.title}
       </h1>

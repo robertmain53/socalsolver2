@@ -256,7 +256,7 @@ const CalculadoraRendimientoLetrasTesoro: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+            <div className=" -xl -lg p-6 border border-gray-200">
                 <h2 className="text-xl font-bold text-gray-800 mb-4">Resultados Detallados</h2>
                 <div className="space-y-3">
                   {outputs.map(output => (
@@ -270,7 +270,7 @@ const CalculadoraRendimientoLetrasTesoro: React.FC = () => {
                 </div>
             </div>
             
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+            <div className=" -xl -lg p-6 border border-gray-200">
                 <h3 className="text-lg font-bold text-gray-700 mb-4">Desglose Visual de la Inversión</h3>
                 <div className="h-72 w-full">
                   {isClient ? (
