@@ -2,6 +2,7 @@ import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import CommonHead from '@/components/layout/CommonHead';
 import { generateSEOMetadata, SITE_CONFIG } from '@/lib/seo';
 import { LANGUAGE_CONFIG } from '@/lib/i18n';
 import { getRequestOrigin } from '@/lib/request-context';
@@ -23,8 +24,11 @@ export async function generateMetadata() {
 
 export default function FrenchLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang={LANGUAGE_CONFIG.fr.htmlLang} dir={LANGUAGE_CONFIG.fr.direction}>
-      <body className={inter.className}>
+    <html lang={LANGUAGE_CONFIG.fr.htmlLang} dir={LANGUAGE_CONFIG.fr.direction} suppressHydrationWarning>
+      <head>
+        <CommonHead />
+      </head>
+      <body className={inter.className} suppressHydrationWarning>
         <Header lang="fr" />
         <main className="min-h-screen container mx-auto px-2 sm:px-4 py-6 sm:py-8">
           {children}
