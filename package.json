@@ -12,6 +12,7 @@
     "generate": "node automation.js",
     "generate:icons": "node scripts/generate-icons.mjs",
     "check:links": "node scripts/check-internal-links.cjs",
+    "fix:calculator-wrappers": "node scripts/fix-calculator-wrappers.mjs",
     "review:single": "node review-engine.js review",
     "review:all": "node review-engine.js review-all",
     "fix:build": "npm run lint --fix && npm run build",

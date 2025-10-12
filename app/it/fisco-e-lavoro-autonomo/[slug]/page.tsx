@@ -15,6 +15,7 @@ import {
   generateArticleSchema,
 } from '@/lib/seo';
 import { getRequestOrigin } from '@/lib/request-context';
+import CalculatorWrapper from '@/components/layout/CalculatorWrapper';
 
 type Props = { params: { slug: string } };
 

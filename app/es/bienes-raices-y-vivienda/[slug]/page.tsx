@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getCalculator } from '@/lib/calculator-registry';
 import { getRequestOrigin } from '@/lib/request-context';
+import CalculatorWrapper from '@/components/layout/CalculatorWrapper';
 
 type Props = { params: { slug: string } };
 
@@ -69,9 +70,9 @@ export default async function CalculatorPage({ params }: Props) {
         
         <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
             {/* Calculator */}
-            <div className="lg:col-span-1 bg-white rounded-2xl shadow-lg">
+            <CalculatorWrapper>
                 <CalculatorComponent />
-            </div>
+            </CalculatorWrapper>
             
       
         </div>

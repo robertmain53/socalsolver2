@@ -7,6 +7,7 @@ import Breadcrumb from '@/components/layout/Breadcrumb';
 import { getCalculator } from '@/lib/calculator-registry';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getRequestOrigin } from '@/lib/request-context';
+import CalculatorWrapper from '@/components/layout/CalculatorWrapper';
 
 type Props = { params: { slug: string } };
 
@@ -80,9 +81,9 @@ export default async function CalculatorPage({ params }: Props) {
       <Breadcrumb crumbs={crumbs} />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-2 bg-white rounded-2xl shadow-lg">
+        <CalculatorWrapper>
           <CalculatorComponent />
-        </div>
+        </CalculatorWrapper>
 
         <div className="lg:col-span-1">
           <div className="p-6 bg-white rounded-2xl shadow-lg">
