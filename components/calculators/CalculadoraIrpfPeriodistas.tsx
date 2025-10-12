@@ -2,15 +2,15 @@
 
 import React, { useState, useRef, useCallback, useMemo, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import Head from 'next/head';
-import { useSearchParams, useRouter } from 'next/navigation';
+import Script from 'next/script';
+import { usePathname, useSearchParams, useRouter } from 'next/navigation';
+import { SITE_CONFIG } from '@/lib/seo';
 
 // =====================
 // Config base
 // =====================
-const SITE_ORIGIN = 'https://socalsolver.com';
 const LOCALE = 'es-ES';
-const PATHNAME = '/es/calculadora-irpf-periodistas'; // <-- aggiorna se la rotta è diversa
+const FALLBACK_PATH = '/es/impuestos-y-trabajo-autonomo/calculadora-irpf-periodistas';
 
 const calculatorData = {
   slug: 'calculadora-irpf-periodistas',
@@ -98,8 +98,6 @@ const DynamicBars = dynamic(async () => {
 // =====================
 // JSON-LD builders
 // =====================
-const buildCanonical = () => `${SITE_ORIGIN}${PATHNAME}`;
-
 const SoftwareAppJsonLd = (canonical: string) => ({
   '@context': 'https://schema.org',
   '@type': 'SoftwareApplication',
@@ -123,22 +121,22 @@ const FaqPageJsonLd = () => ({
   }))
 });
 
-const BreadcrumbJsonLd = (canonical: string) => ({
+const BreadcrumbJsonLd = (canonical: string, origin: string) => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${SITE_ORIGIN}/es/` },
-    { '@type': 'ListItem', position: 2, name: 'Impuestos y trabajo autónomo', item: `${SITE_ORIGIN}/es/impuestos-trabajo-autonomo` },
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${origin}/es` },
+    { '@type': 'ListItem', position: 2, name: 'Impuestos y trabajo autónomo', item: `${origin}/es/impuestos-y-trabajo-autonomo` },
     { '@type': 'ListItem', position: 3, name: calculatorData.title, item: canonical }
   ]
 });
 
-const OrganizationJsonLd = () => ({
+const OrganizationJsonLd = (origin: string) => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'SoCalSolver',
-  url: SITE_ORIGIN,
-  logo: `${SITE_ORIGIN}/favicon-512x512.png`
+  url: origin,
+  logo: `${origin}/favicon-512x512.png`
 });
 
 // WebPage / Article con speakable
@@ -155,7 +153,12 @@ const WebPageJsonLd = (canonical: string) => ({
   }
 });
 
-const ArticleJsonLd = (canonical: string, datePublishedISO: string, dateModifiedISO: string) => ({
+const ArticleJsonLd = (
+  canonical: string,
+  origin: string,
+  datePublishedISO: string,
+  dateModifiedISO: string
+) => ({
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: calculatorData.title,
@@ -166,7 +169,7 @@ const ArticleJsonLd = (canonical: string, datePublishedISO: string, dateModified
   publisher: {
     '@type': 'Organization',
     name: 'SoCalSolver',
-    logo: { '@type': 'ImageObject', url: `${SITE_ORIGIN}/favicon-512x512.png` }
+    logo: { '@type': 'ImageObject', url: `${origin}/favicon-512x512.png` }
   },
   datePublished: datePublishedISO,
   dateModified: dateModifiedISO,
@@ -191,6 +194,7 @@ const CalculadoraIrpfPeriodistas: React.FC<CalculadoraProps> = ({ datePublishedI
   const { slug, title, description, inputs, outputs } = calculatorData;
   const searchParams = useSearchParams();
   const router = useRouter();
+  const pathname = usePathname();
   const ref = useRef<HTMLDivElement>(null);
   const [isClient, setIsClient] = useState(false);
 
@@ -284,41 +288,63 @@ const CalculadoraIrpfPeriodistas: React.FC<CalculadoraProps> = ({ datePublishedI
 
   const setPreset = (ret: number) => setStates(s => ({ ...s, porcentajeRetencion: ret }));
 
-  // Canonical e JSON-LD
-  const canonical = buildCanonical();
+  const canonical = useMemo(() => {
+    const origin =
+      typeof window !== 'undefined' && window.location.origin
+        ? window.location.origin
+        : SITE_CONFIG.url;
+    const currentPath =
+      typeof window !== 'undefined' && pathname ? pathname : FALLBACK_PATH;
+    const normalizedPath = currentPath.startsWith('/')
+      ? currentPath
+      : `/${currentPath}`;
+    return `${origin}${normalizedPath}`;
+  }, [pathname]);
+
+  const originFromCanonical = useMemo(() => {
+    try {
+      return new URL(canonical).origin;
+    } catch {
+      return SITE_CONFIG.url;
+    }
+  }, [canonical]);
 
   return (
     <>
-      <Head>
-        <title>{title} | SoCalSolver</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={calculatorData.keywords} />
-        <link rel="canonical" href={canonical} />
-        {/* hreflang base */}
-        <link rel="alternate" hrefLang="es" href={canonical} />
-        <link rel="alternate" hrefLang="x-default" href={canonical} />
-        {/* OpenGraph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content={LOCALE} />
-        <meta property="og:site_name" content="SoCalSolver" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:url" content={canonical} />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${title} | SoCalSolver`} />
-        <meta name="twitter:description" content={description} />
-        {/* JSON-LD */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SoftwareAppJsonLd(canonical)) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FaqPageJsonLd()) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(BreadcrumbJsonLd(canonical)) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(OrganizationJsonLd()) }} />
-        {/* WebPage / Article con speakable (date da props CMS) */}
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WebPageJsonLd(canonical)) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ArticleJsonLd(canonical, datePublishedISO, dateModifiedISO)) }} />
-        {/* Robots-safe defaults */}
-        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-      </Head>
+      <Script
+        id="calc-irpf-periodistas-software-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(SoftwareAppJsonLd(canonical)) }}
+      />
+      <Script
+        id="calc-irpf-periodistas-faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(FaqPageJsonLd()) }}
+      />
+      <Script
+        id="calc-irpf-periodistas-breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(BreadcrumbJsonLd(canonical, originFromCanonical)) }}
+      />
+      <Script
+        id="calc-irpf-periodistas-organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(OrganizationJsonLd(originFromCanonical)) }}
+      />
+      <Script
+        id="calc-irpf-periodistas-webpage-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(WebPageJsonLd(canonical)) }}
+      />
+      <Script
+        id="calc-irpf-periodistas-article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            ArticleJsonLd(canonical, originFromCanonical, datePublishedISO, dateModifiedISO)
+          )
+        }}
+      />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
         <div className="lg:col-span-2">

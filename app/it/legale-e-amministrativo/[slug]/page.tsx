@@ -5,6 +5,8 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import { getCalculator } from '@/lib/calculator-registry';
+import { generateSEOMetadata } from '@/lib/seo';
+import { getRequestOrigin } from '@/lib/request-context';
 
 type Props = { params: { slug: string } };
 
@@ -26,6 +28,29 @@ async function getContent(slug: string) {
   } catch (error) {
     return null;
   }
+}
+
+export async function generateMetadata({ params }: Props) {
+  const origin = getRequestOrigin();
+  const calcMeta = getCalculator(params.slug, LANG);
+
+  if (!calcMeta) {
+    return {
+      title: 'Calculator Not Found',
+      robots: 'noindex',
+    };
+  }
+
+  return generateSEOMetadata({
+    title: calcMeta.title,
+    description: calcMeta.description,
+    keywords: calcMeta.keywords,
+    lang: LANG,
+    path: `/${LANG}/${CATEGORY}/${params.slug}`,
+    type: 'article',
+    author: calcMeta.author,
+    origin,
+  });
 }
 
 export default async function CalculatorPage({ params }: Props) {

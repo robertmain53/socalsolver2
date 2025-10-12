@@ -2,6 +2,8 @@
 
 import React, { useState, useRef, useMemo, useEffect } from 'react';
 import dynamic from 'next/dynamic';
+import { usePathname } from 'next/navigation';
+import { SITE_CONFIG } from '@/lib/seo';
 
 /* ============================== Types ============================== */
 
@@ -350,7 +352,15 @@ const CalculadoraRentabilidadAlquiler: React.FC = () => {
   const formatPercent = (v: number) =>
     `${(Number.isFinite(v) ? v : 0).toFixed(2)}%`;
 
-  const canonical = `https://socalsolver.com/${calculatorData.slug}`;
+  const pathname = usePathname();
+  const canonical = useMemo(() => {
+    const origin =
+      typeof window !== 'undefined' ? window.location.origin : SITE_CONFIG.url;
+    const fallbackPath = `/${calculatorData.lang}/${calculatorData.category}/${calculatorData.slug}`;
+    const currentPath = pathname && pathname.length > 0 ? pathname : fallbackPath;
+    const normalizedPath = currentPath.startsWith('/') ? currentPath : `/${currentPath}`;
+    return `${origin}${normalizedPath}`;
+  }, [pathname, calculatorData.category, calculatorData.lang, calculatorData.slug]);
   const datePublishedISO = '2025-08-29';
   const dateModifiedISO = todayISO;
 

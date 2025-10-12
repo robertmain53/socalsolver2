@@ -4,8 +4,14 @@ import path from 'path';
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import Breadcrumb from '@/components/layout/Breadcrumb';
+import { generateSEOMetadata } from '@/lib/seo';
+import { getCalculator } from '@/lib/calculator-registry';
+import { getRequestOrigin } from '@/lib/request-context';
 
 type Props = { params: { slug: string } };
+
+const CATEGORY = 'education-and-career';
+const LANG = 'en';
 
 async function getCalculatorComponent(slug: string) {
   try {
@@ -19,6 +25,29 @@ async function getContent(slug: string) {
     const contentPath = path.join(process.cwd(), 'content', 'en', 'education-and-career', `${slug}.md`);
     return await fs.readFile(contentPath, 'utf8');
   } catch (error) { return null; }
+}
+
+export async function generateMetadata({ params }: Props) {
+  const origin = getRequestOrigin();
+  const calcMeta = getCalculator(params.slug, LANG);
+
+  if (!calcMeta) {
+    return {
+      title: 'Calculator Not Found',
+      robots: 'noindex',
+    };
+  }
+
+  return generateSEOMetadata({
+    title: calcMeta.title,
+    description: calcMeta.description,
+    keywords: calcMeta.keywords,
+    lang: LANG,
+    path: `/${LANG}/${CATEGORY}/${params.slug}`,
+    type: 'article',
+    author: calcMeta.author,
+    origin,
+  });
 }
 
 export default async function CalculatorPage({ params }: Props) {
