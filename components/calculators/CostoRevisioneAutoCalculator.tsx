@@ -219,7 +219,7 @@ const RevisioneCalculator: React.FC = () => {
         {/* Colonna Sinistra - Input */}
         <aside className="lg:col-span-2 space-y-6">
             <div className='bg-white p-6 rounded-lg shadow-lg border border-gray-200'>
-            <h1 className="text-2xl font-bold text-gray-900 mb-1">Calcolatore Revisione</h1>
+            <h1 className="text-2xl font-bold text-gray-900 mb-1">Calcolatore Costo Revisione Auto</h1>
             <p className="text-sm text-gray-600 mb-6">Inserisci i dati per calcolare costo e scadenza.</p>
 
             <div className="space-y-5">
