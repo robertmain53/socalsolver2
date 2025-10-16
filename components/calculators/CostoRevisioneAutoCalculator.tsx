@@ -3,6 +3,14 @@ import React, { useState } from 'react';
 // Componente principale del calcolatore di revisione
 const RevisioneCalculator: React.FC = () => {
   // Stati per gestire gli input dell'utente e i risultati
+  const [tipoVeicolo, setTipoVeicolo] = useState<string>('standard');
+  const [calculationMode, setCalculationMode] = useState<string>('immatricolazione');
+  const [inputDate, setInputDate] = useState<string>('');
+  const [scadenza, setScadenza] = useState<string | null>(null);
+  const [costo, setCosto] = useState<number | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState({ title: '', body: '' });
+  const [showResult, setShowResult] = useState(false);
   const = useState<string>('standard');
   const [calculationMode, setCalculationMode] = useState<string>('immatricolazione');
   const = useState<string>('');
