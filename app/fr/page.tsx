@@ -2,13 +2,13 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { getCalculatorsByLang } from '@/lib/calculator-registry';
 import { CATEGORIES, Lang } from '@/lib/categories';
-import { generateSEOMetadata, generateWebSiteSchema } from '@/lib/seo';
-import { getTranslations } from '@/lib/i18n';
+import { generateSEOMetadata } from '@/lib/seo';
+import { getTranslation } from '@/lib/i18n';
 
 const LANG: Lang = 'fr';
 
 export async function generateMetadata() {
-  const t = getTranslations(LANG);
+  const t = getTranslation(LANG);
   return generateSEOMetadata({
     title: t.home.title,
     description: t.home.description,
@@ -18,18 +18,12 @@ export async function generateMetadata() {
 }
 
 export default function HomePage() {
-  const t = getTranslations(LANG);
+  const t = getTranslation(LANG);
   const categories = CATEGORIES[LANG];
   const totalCalculators = getCalculatorsByLang(LANG).length;
-  const webSiteSchema = generateWebSiteSchema(LANG);
 
   return (
     <>
-      <Script
-        id="website-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
-      />
       <div className="space-y-8 sm:space-y-12">
         {/* Hero Section */}
         <div className="text-center p-6 sm:p-8 md:p-12 bg-gradient-to-br from-gray-900 via-gray-800 to-slate-900 rounded-xl sm:rounded-2xl shadow-2xl">
