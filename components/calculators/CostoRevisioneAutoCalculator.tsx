@@ -53,7 +53,6 @@ const ContentRenderer = ({ content }: { content: { title: string; sections: { su
     </div>
 );
 
-// --- Componente Innovativo: Checklist Pre-Revisione ---
 const ChecklistPreRevisione = () => {
     const checklistItems = useMemo(() => [
         { id: 'luci', text: 'Funzionamento di tutte le luci (posizione, anabbaglianti, abbaglianti, stop, frecce)' },
@@ -63,15 +62,8 @@ const ChecklistPreRevisione = () => {
         { id: 'targa', text: 'Targa anteriore e posteriore pulita e leggibile' },
         { id: 'documenti', text: 'Presenza a bordo della carta di circolazione (o Documento Unico)' }
     ], []);
-    
-    const [checkedState, setCheckedState] = useState<Record<string, boolean>>(
-      Object.fromEntries(checklistItems.map(item => [item.id, false]))
-    );
-
-    const handleCheckboxChange = (id: string) => {
-        setCheckedState(prevState => ({ ...prevState, [id]: !prevState[id] }));
-    };
-
+    const [checkedState, setCheckedState] = useState<Record<string, boolean>>(Object.fromEntries(checklistItems.map(item => [item.id, false])));
+    const handleCheckboxChange = (id: string) => setCheckedState(prevState => ({ ...prevState, [id]: !prevState[id] }));
     const completedCount = Object.values(checkedState).filter(Boolean).length;
     const progress = (completedCount / checklistItems.length) * 100;
 
@@ -79,11 +71,7 @@ const ChecklistPreRevisione = () => {
         <section className="border rounded-lg p-6 bg-white shadow-md">
             <h2 className="font-bold text-xl text-gray-800 mb-2">Checklist Pre-Revisione</h2>
             <p className="text-sm text-gray-600 mb-4">Evita sorprese! Esegui questi semplici controlli prima di portare il tuo veicolo in revisione.</p>
-            
-            <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
-                <div className="bg-indigo-600 h-2.5 rounded-full transition-all duration-500" style={{ width: `${progress}%` }}></div>
-            </div>
-
+            <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4"><div className="bg-indigo-600 h-2.5 rounded-full transition-all duration-500" style={{ width: `${progress}%` }}></div></div>
             <div className="space-y-3">
                 {checklistItems.map(({ id, text }) => (
                     <label key={id} className="flex items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors cursor-pointer">
@@ -97,20 +85,18 @@ const ChecklistPreRevisione = () => {
     );
 };
 
-// --- Componente Principale del Calcolatore ---
 const RevisioneCalculator: React.FC = () => {
-    // ... existing states ...
+    const [tipoVeicolo, setTipoVeicolo] = useState<string>('standard');
+    const [calculationMode, setCalculationMode] = useState<string>('immatricolazione');
+    const [inputDate, setInputDate] = useState<string>('');
     const [scadenza, setScadenza] = useState<string | null>(null);
-    const [scadenzaDate, setScadenzaDate] = useState<Date | null>(null); // Stato per la data effettiva
+    const [scadenzaDate, setScadenzaDate] = useState<Date | null>(null);
     const [costo, setCosto] = useState<number | null>(null);
     const [showResult, setShowResult] = useState(false);
-    
     const [email, setEmail] = useState('');
     const [notificationStatus, setNotificationStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState({ title: '', body: '' });
-
     const resultRef = useRef<HTMLDivElement>(null);
 
     const content = useMemo(() => ({
@@ -124,16 +110,19 @@ const RevisioneCalculator: React.FC = () => {
             { subtitle: "Revisione Impianti GPL e Metano", text: "Oltre alla revisione standard, questi veicoli devono revisionare separatamente le bombole: ogni 10 anni per il GPL, ogni 4 o 5 per il Metano." },
         ]
     }), []);
-    
+
+    const openModal = (title: string, body: string) => {
+        setModalContent({ title, body });
+        setIsModalOpen(true);
+    };
+
     const handleCalculate = useCallback(() => {
         const date = new Date(inputDate);
         if (isNaN(date.getTime())) { openModal("Errore", "Per favore, inserisci una data valida."); return; }
-
         let scadenzaCalc = new Date(date);
         calculationMode === 'immatricolazione' ? scadenzaCalc.setFullYear(date.getFullYear() + 4) : scadenzaCalc.setFullYear(date.getFullYear() + 2);
         scadenzaCalc.setMonth(scadenzaCalc.getMonth() + 1, 0);
-
-        setScadenzaDate(scadenzaCalc); // Salva l'oggetto Date
+        setScadenzaDate(scadenzaCalc);
         setScadenza(scadenzaCalc.toLocaleDateString('it-IT', { year: 'numeric', month: 'long' }));
         setCosto(tipoVeicolo === 'storico' ? 45.00 : 79.00);
         setShowResult(true);
@@ -141,47 +130,37 @@ const RevisioneCalculator: React.FC = () => {
         setEmail('');
     }, [inputDate, calculationMode, tipoVeicolo]);
 
-        setEmail('');
+    useEffect(() => {
+        if (showResult) resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, [showResult]);
+
+    const handleReset = () => {
+        setShowResult(false);
+        setInputDate('');
     };
 
     const handleSetReminder = useCallback(async () => {
-      if (!email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
-        openModal("Errore", "Inserisci un indirizzo email valido.");
-        setNotificationStatus('error');
-        return;
-      }
-
-      setNotificationStatus('loading');
-
-      try {
-        const response = await fetch('/api/reminders/set', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                email,
-                reminderDate: scadenzaDate?.toISOString(), // Invia la data in formato standard
-                vehicleType: tipoVeicolo
-            }),
-        });
-
-        if (!response.ok) {
-            throw new Error('Errore nel salvataggio del promemoria.');
+        if (!email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+            openModal("Errore", "Inserisci un indirizzo email valido.");
+            setNotificationStatus('error');
+            return;
         }
-
-        setNotificationStatus('success');
-
-      } catch (error) {
-        console.error("Errore nell'impostare il promemoria:", error);
-        setNotificationStatus('error');
-        openModal("Errore", "Impossibile impostare il promemoria. Riprova più tardi.");
-      }
+        setNotificationStatus('loading');
+        try {
+            const response = await fetch('/api/reminders/set', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, reminderDate: scadenzaDate?.toISOString(), vehicleType: tipoVeicolo }),
+            });
+            if (!response.ok) throw new Error('Errore nel salvataggio del promemoria.');
+            setNotificationStatus('success');
+        } catch (error) {
+            console.error("Errore nell'impostare il promemoria:", error);
+            setNotificationStatus('error');
+            openModal("Errore", "Impossibile impostare il promemoria. Riprova più tardi.");
+        }
     }, [email, scadenzaDate, tipoVeicolo]);
 
-    const openModal = (title: string, body: string) => {
-        setModalContent({ title, body });
-        setIsModalOpen(true);
-    };
-    
     const costData = [{ name: 'Tariffa', value: 54.95, fill: '#4f46e5' }, { name: 'IVA 22%', value: 12.09, fill: '#818cf8' }, { name: 'Diritti e Spese', value: 11.96, fill: '#c7d2fe' }];
 
     return (
@@ -193,7 +172,7 @@ const RevisioneCalculator: React.FC = () => {
                         <h1 className="text-2xl font-bold text-gray-900 mb-1">Assistente Revisione</h1>
                         <p className="text-sm text-gray-600 mb-6">Calcola, pianifica e preparati alla revisione.</p>
                         <div className="space-y-5">
-                            <div>
+                             <div>
                                 <label className="block text-sm font-medium text-gray-700 mb-1">Calcola da</label>
                                 <div className="flex bg-gray-100 rounded-lg p-1">
                                     <button onClick={() => setCalculationMode('immatricolazione')} className={`w-1/2 text-sm py-2 rounded-md transition-all ${calculationMode === 'immatricolazione' ? 'bg-indigo-600 text-white shadow' : 'text-gray-600 hover:bg-gray-200'}`}>Immatricolazione</button>
@@ -237,8 +216,6 @@ const RevisioneCalculator: React.FC = () => {
                                     <p className="text-2xl font-bold text-indigo-700">€ {costo?.toFixed(2)}</p>
                                 </div>
                             </div>
-                            
-                            {/* Innovazione: Sistema di Notifica */}
                             <div className="mt-6 p-4 bg-gray-50 rounded-lg">
                                 <h3 className="font-semibold text-gray-800">Non dimenticartene!</h3>
                                 <p className="text-sm text-gray-600 mb-3">Imposta un promemoria gratuito. Ti invieremo un'email un mese prima della scadenza.</p>
@@ -251,12 +228,7 @@ const RevisioneCalculator: React.FC = () => {
                                             <input type="email" placeholder="La tua email" value={email} onChange={e => setEmail(e.target.value)} disabled={notificationStatus === 'loading'} className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 text-sm disabled:bg-gray-100" />
                                         </div>
                                         <button onClick={handleSetReminder} disabled={notificationStatus === 'loading'} className="bg-gray-800 text-white font-semibold text-sm py-2 px-4 rounded-md hover:bg-gray-900 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center">
-                                            {notificationStatus === 'loading' ? (
-                                                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                                </svg>
-                                            ) : 'Imposta Promemoria'}
+                                            {notificationStatus === 'loading' ? (<svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>) : 'Imposta Promemoria'}
                                         </button>
                                     </div>
                                 )}
@@ -264,14 +236,11 @@ const RevisioneCalculator: React.FC = () => {
                             <div className="mt-4"><button onClick={handleReset} className="w-full text-sm font-medium text-indigo-600 hover:text-indigo-800">Effettua un nuovo calcolo</button></div>
                         </section>
                     )}
-                    
                     <ChecklistPreRevisione />
-
                     <section className="border rounded-lg p-6 bg-white shadow-md">
                         <h2 className="font-bold text-xl text-gray-800 mb-4">Guida Completa alla Revisione</h2>
                         <ContentRenderer content={content} />
                     </section>
-                    
                     <section className="border rounded-lg p-6 bg-white shadow-md">
                         <h2 className="font-bold text-xl text-gray-800 mb-4">Verifica Ufficiale e Fonti</h2>
                         <ul className="prose prose-sm max-w-none text-gray-700 list-disc pl-5 space-y-2">
@@ -286,5 +255,4 @@ const RevisioneCalculator: React.FC = () => {
 };
 
 export default RevisioneCalculator;
-
 
