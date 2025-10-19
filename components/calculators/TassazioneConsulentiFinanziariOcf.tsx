@@ -1,10 +1,9 @@
 'use client';
 
-import { useState, useMemo, FC, ReactNode } from 'react';
+import { useState, FC, ReactNode } from 'react';
 
 // --- COMPONENTI UI AUSILIARI ---
 
-// Tooltip per spiegazioni
 const Tooltip: FC<{ text: string; children: ReactNode }> = ({ text, children }) => (
   <span className="group relative cursor-help">
     {children}
@@ -14,14 +13,12 @@ const Tooltip: FC<{ text: string; children: ReactNode }> = ({ text, children }) 
   </span>
 );
 
-// Icona per i tooltip
 const InfoIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
 );
 
-// Componente per le sezioni di contenuto
 const ContentSection: FC<{ title: string; children: ReactNode }> = ({ title, children }) => (
     <section className="space-y-4">
         <h2 className="text-2xl font-bold text-gray-800 border-b-2 border-blue-200 pb-2">{title}</h2>
@@ -93,7 +90,6 @@ export default function TassazioneConsulentiFinanziariOcf() {
     const contributiPagati = parseFloat(contributiVersati) || 0;
     if (fatturato === 0) return;
 
-    // Calcolo Forfettario
     const redditoImponibileLordoForfettario = fatturato * COEFFICIENTE_REDDITIVITA;
     const contributiInpsDovutiForfettario = redditoImponibileLordoForfettario * ALIQUOTA_INPS_GESTIONE_SEPARATA;
     const imponibileFiscaleNettoForfettario = Math.max(0, redditoImponibileLordoForfettario - contributiPagati);
@@ -102,7 +98,6 @@ export default function TassazioneConsulentiFinanziariOcf() {
     const totaleTasseEContributiForfettario = imposteDovuteForfettario + contributiInpsDovutiForfettario;
     const redditoNettoAnnuoForfettario = fatturato - totaleTasseEContributiForfettario;
 
-    // Calcolo Ordinario
     const redditoImponibileLordoOrdinario = Math.max(0, fatturato - costi);
     const contributiInpsDovutiOrdinario = redditoImponibileLordoOrdinario * ALIQUOTA_INPS_GESTIONE_SEPARATA;
     const imponibileFiscaleNettoOrdinario = Math.max(0, redditoImponibileLordoOrdinario - contributiPagati);
@@ -144,69 +139,7 @@ export default function TassazioneConsulentiFinanziariOcf() {
 
   const formatCurrency = (value: number) => value.toLocaleString('it-IT', { style: 'currency', currency: 'EUR' });
 
-  // --- CALCOLATORE E VISUALIZZAZIONE RISULTATI ---
-  const CalculatorUI = (
-    <div className="w-full mx-auto max-w-4xl space-y-8 rounded-lg bg-gray-50 p-4 sm:p-8 border-2 border-blue-500 shadow-xl my-12" id="simulatore">
-        <div>
-            <h2 className="text-center text-3xl font-bold text-gray-900">
-            🛠️ Il Tuo Simulatore Fiscale Interattivo
-            </h2>
-            <p className="text-center text-gray-600 mt-2">
-            Ora che conosci la teoria, mettila in pratica. Scopri il regime più adatto a te.
-            </p>
-        </div>
-        <div className="rounded-lg border bg-white p-6 shadow-md">
-            <h3 className="mb-6 border-b pb-4 text-lg font-semibold text-gray-800">
-            Inserisci i tuoi dati previsionali
-            </h3>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            <div>
-                <label className="mb-2 flex items-center gap-2 text-sm font-medium text-gray-700">
-                Fatturato Lordo Annuo Stimato (€)
-                <Tooltip text="L'incasso totale che prevedi di avere in un anno, al lordo di tasse e contributi.">
-                    <InfoIcon />
-                </Tooltip>
-                </label>
-                <input type="number" value={fatturatoAnnuo} onChange={(e) => setFatturatoAnnuo(e.target.value)} className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500" placeholder="Es. 65000" />
-            </div>
-            <div>
-                <label className="mb-2 flex items-center gap-2 text-sm font-medium text-gray-700">
-                Costi Deducibili Stimati (€)
-                <Tooltip text="Costi legati alla tua attività (es. software, affitto ufficio, marketing). Rilevanti solo per il Regime Ordinario.">
-                    <InfoIcon />
-                </Tooltip>
-                </label>
-                <input type="number" value={costiSostenuti} onChange={(e) => setCostiSostenuti(e.target.value)} className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500" placeholder="Es. 8000" />
-            </div>
-            <div>
-                <label className="mb-2 flex items-center gap-2 text-sm font-medium text-gray-700">
-                Contributi INPS già versati (€)
-                <Tooltip text="I contributi previdenziali versati nell'anno di riferimento. Sono deducibili dal reddito imponibile.">
-                    <InfoIcon />
-                </Tooltip>
-                </label>
-                <input type="number" value={contributiVersati} onChange={(e) => setContributiVersati(e.target.value)} className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500" placeholder="Es. 4000" />
-            </div>
-            <div className="flex items-center justify-center rounded-lg bg-gray-50 p-4">
-                <label htmlFor="startup-toggle" className="flex cursor-pointer items-center">
-                    <span className="mr-3 text-sm font-medium text-gray-900">Sei in Forfettario Start-up? (Tasse al 5%)</span>
-                    <div className="relative">
-                        <input type="checkbox" id="startup-toggle" className="sr-only" checked={isForfettarioStartUp} onChange={() => setIsForfettarioStartUp(!isForfettarioStartUp)} />
-                        <div className="block h-8 w-14 rounded-full bg-gray-300"></div>
-                        <div className={`dot absolute left-1 top-1 h-6 w-6 rounded-full bg-white transition ${isForfettarioStartUp ? 'translate-x-6 !bg-blue-600' : ''}`}></div>
-                    </div>
-                </label>
-            </div>
-            </div>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <button onClick={calculate} className="flex-1 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700">Calcola e Confronta</button>
-            <button onClick={reset} className="rounded-lg border border-gray-300 px-6 py-3 font-semibold transition-colors hover:bg-gray-100">Reset</button>
-            </div>
-        </div>
-        {results && <ResultDisplay results={results} />}
-    </div>
-  );
-
+  // --- DEFINIZIONE COMPONENTE RISULTATI ---
   const ResultDisplay = ({ results }: { results: CalculationResults }) => {
     const ResultCard = ({ data }: { data: RegimeResult }) => (
         <div className={`w-full rounded-lg p-6 ${data.isConveniente ? 'border-2 border-green-500 bg-green-50' : 'border border-gray-200 bg-white'}`}>
@@ -235,8 +168,56 @@ export default function TassazioneConsulentiFinanziariOcf() {
         </div>
     );
   };
+
+  // --- DEFINIZIONE UI CALCOLATORE ---
+  const CalculatorUI = (
+    <div className="w-full mx-auto max-w-4xl space-y-8 rounded-lg bg-gray-50 p-4 sm:p-8 border-2 border-blue-500 shadow-xl my-12" id="simulatore">
+        <div>
+            <h2 className="text-center text-3xl font-bold text-gray-900">
+            🛠️ Il Tuo Simulatore Fiscale Interattivo
+            </h2>
+            <p className="text-center text-gray-600 mt-2">
+            Ora che conosci la teoria, mettila in pratica. Scopri il regime più adatto a te.
+            </p>
+        </div>
+        <div className="rounded-lg border bg-white p-6 shadow-md">
+            <h3 className="mb-6 border-b pb-4 text-lg font-semibold text-gray-800">
+            Inserisci i tuoi dati previsionali
+            </h3>
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div>
+                    <label className="mb-2 flex items-center gap-2 text-sm font-medium text-gray-700">Fatturato Lordo Annuo Stimato (€)<Tooltip text="L'incasso totale che prevedi di avere in un anno, al lordo di tasse e contributi."><InfoIcon /></Tooltip></label>
+                    <input type="number" value={fatturatoAnnuo} onChange={(e) => setFatturatoAnnuo(e.target.value)} className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500" placeholder="Es. 65000" />
+                </div>
+                <div>
+                    <label className="mb-2 flex items-center gap-2 text-sm font-medium text-gray-700">Costi Deducibili Stimati (€)<Tooltip text="Costi legati alla tua attività (es. software, affitto ufficio, marketing). Rilevanti solo per il Regime Ordinario."><InfoIcon /></Tooltip></label>
+                    <input type="number" value={costiSostenuti} onChange={(e) => setCostiSostenuti(e.target.value)} className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500" placeholder="Es. 8000" />
+                </div>
+                <div>
+                    <label className="mb-2 flex items-center gap-2 text-sm font-medium text-gray-700">Contributi INPS già versati (€)<Tooltip text="I contributi previdenziali versati nell'anno di riferimento. Sono deducibili dal reddito imponibile."><InfoIcon /></Tooltip></label>
+                    <input type="number" value={contributiVersati} onChange={(e) => setContributiVersati(e.target.value)} className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:border-transparent focus:ring-2 focus:ring-blue-500" placeholder="Es. 4000" />
+                </div>
+                <div className="flex items-center justify-center rounded-lg bg-gray-50 p-4">
+                    <label htmlFor="startup-toggle" className="flex cursor-pointer items-center">
+                        <span className="mr-3 text-sm font-medium text-gray-900">Sei in Forfettario Start-up? (Tasse al 5%)</span>
+                        <div className="relative">
+                            <input type="checkbox" id="startup-toggle" className="sr-only" checked={isForfettarioStartUp} onChange={() => setIsForfettarioStartUp(!isForfettarioStartUp)} />
+                            <div className="block h-8 w-14 rounded-full bg-gray-300"></div>
+                            <div className={`dot absolute left-1 top-1 h-6 w-6 rounded-full bg-white transition ${isForfettarioStartUp ? 'translate-x-6 !bg-blue-600' : ''}`}></div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <button onClick={calculate} className="flex-1 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-700">Calcola e Confronta</button>
+                <button onClick={reset} className="rounded-lg border border-gray-300 px-6 py-3 font-semibold transition-colors hover:bg-gray-100">Reset</button>
+            </div>
+        </div>
+        {results && <ResultDisplay results={results} />}
+    </div>
+  );
   
-  // --- CONTENUTO INFORMATIVO DELLA PAGINA ---
+  // --- RENDER COMPONENTE PRINCIPALE CON CONTENUTI ---
   return (
     <div className="prose prose-lg max-w-4xl mx-auto p-4 sm:p-6">
         <header className="text-center mb-12">
@@ -280,7 +261,6 @@ export default function TassazioneConsulentiFinanziariOcf() {
                 </ul>
             </ContentSection>
 
-            {/* Inserimento del simulatore interattivo */}
             {CalculatorUI}
 
             <ContentSection title="🏛️ Oltre le Tasse: Gli Altri Costi del Consulente">
