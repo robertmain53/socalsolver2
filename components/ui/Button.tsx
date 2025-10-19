@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { motion, type HTMLMotionProps } from 'framer-motion';
+import { motion, type HTMLMotionProps, isMotionValue } from 'framer-motion';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 const buttonVariants = cva(
@@ -52,7 +52,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ) : leftIcon ? (
           <span className="mr-2">{leftIcon}</span>
         ) : null}
-        {children}
+        {isMotionValue(children) ? (
+          <motion.span>{children}</motion.span>
+        ) : (
+          children
+        )}
         {rightIcon && <span className="ml-2">{rightIcon}</span>}
       </motion.button>
     );
