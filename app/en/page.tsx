@@ -2,13 +2,13 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { getCalculatorsByLang } from '@/lib/calculator-registry';
 import { CATEGORIES, Lang } from '@/lib/categories';
-import { generateSEOMetadata, generateWebsiteSchema } from '@/lib/seo';
-import { getTranslation } from '@/lib/i18n';
+import { generateSEOMetadata, generateWebSiteSchema } from '@/lib/seo';
+import { getTranslations } from '@/lib/i18n';
 
 const LANG: Lang = 'en';
 
 export async function generateMetadata() {
-  const t = getTranslation(LANG);
+  const t = getTranslations(LANG);
   return generateSEOMetadata({
     title: t.home.title,
     description: t.home.description,
@@ -18,10 +18,10 @@ export async function generateMetadata() {
 }
 
 export default function HomePage() {
-  const t = getTranslation(LANG);
+  const t = getTranslations(LANG);
   const categories = CATEGORIES[LANG];
   const totalCalculators = getCalculatorsByLang(LANG).length;
-  const webSiteSchema = generateWebsiteSchema(LANG);
+  const webSiteSchema = generateWebSiteSchema(LANG);
 
   return (
     <>
