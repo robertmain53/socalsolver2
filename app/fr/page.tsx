@@ -6,7 +6,7 @@ import HomePageContent from '@/components/HomePageContent';
 const LANG: Lang = 'fr';
 
 export async function generateMetadata() {
-  const t = translations[LANG];
+  const t = (translations as any)[LANG];
   return generateSEOMetadata({
     title: t.home.title,
     description: t.home.description,

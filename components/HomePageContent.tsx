@@ -10,7 +10,7 @@ interface HomePageContentProps {
 }
 
 export default function HomePageContent({ lang }: HomePageContentProps) {
-  const t = translations[lang];
+  const t = (translations as any)[lang];
   const categories = CATEGORIES[lang];
   const totalCalculators = getCalculatorsByLang(lang).length;
 
