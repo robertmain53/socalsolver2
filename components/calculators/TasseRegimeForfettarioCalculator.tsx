@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useState, useRef, useCallback, useMemo, useEffect } from "react";
+import React, { useState, useRef, useCallback, useMemo } from "react";
 import { PieChart, Pie, Cell, Tooltip as ChartTooltip, ResponsiveContainer, Legend } from 'recharts';
-import { ChevronsUpDown, Check, Info } from 'lucide-react';
+import { Info } from 'lucide-react';
 
 // --- Icona per i Tooltip (da lucide-react) ---
-const InfoIcon = () => <Info size={16} className="text-gray-400 hover:text-gray-600 transition-colors" />;
+const InfoIcon = () => <Info size={16} className="text-gray-400 hover:text-gray-600 transition-colors ml-1" />;
 
 // --- Componente Tooltip ---
 const Tooltip = ({ text, children }: { text: string, children: React.ReactNode }) => (
@@ -18,7 +18,7 @@ const Tooltip = ({ text, children }: { text: string, children: React.ReactNode }
   </div>
 );
 
-// Dati dei codici ATECO (subset rappresentativo)
+// Dati dei codici ATECO
 const atecoData = [
     { code: "62.01.00", description: "Produzione di software, consulenza informatica", coefficient: 0.67 },
     { code: "70.22.09", description: "Altre attività di consulenza imprenditoriale", coefficient: 0.78 },
@@ -30,20 +30,30 @@ const atecoData = [
     { code: "71.12.10", description: "Attività degli studi di ingegneria", coefficient: 0.78 },
 ];
 
-// Dati delle casse previdenziali
-const pensionSchemes = {
-    'gestione-separata-inps': { name: 'Gestione Separata INPS', rate: 0.2607, fixed: 0, professional: true },
+// --- Definizione del tipo per le casse previdenziali ---
+type PensionSchemeType = {
+    name: string;
+    rate: number;
+    professional: boolean;
+    fixed?: number;
+    subjective?: boolean;
+    minimum?: number;
+    custom?: boolean;
+};
+
+// Dati delle casse previdenziali con il tipo applicato
+const pensionSchemes: Record<string, PensionSchemeType> = {
+    'gestione-separata-inps': { name: 'Gestione Separata INPS', rate: 0.2607, professional: true, fixed: 0 },
     'artigiani-commercianti-inps': { name: 'Artigiani e Commercianti INPS', rate: 0.24, fixed: 4515.43, professional: false },
     'inarcassa': { name: 'Inarcassa', rate: 0.145, subjective: true, minimum: 2475, professional: true },
     'cipag': { name: 'CIPAG (Geometri)', rate: 0.15, subjective: true, minimum: 3700, professional: true },
     'altre-casse-professionali': { name: 'Altre Casse Professionali', rate: 0, fixed: 0, professional: true, custom: true },
 };
 
-// Componente per il rendering del contenuto Markdown (semplificato)
+// Componente per il rendering del contenuto Markdown
 const ContentRenderer = ({ content }: { content: string }) => (
     <div className="prose prose-sm max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: content.replace(/\n/g, '<br />') }} />
 );
-
 
 export default function TasseRegimeForfettarioCalculator() {
     // --- STATI PRINCIPALI ---
@@ -75,22 +85,24 @@ export default function TasseRegimeForfettarioCalculator() {
         const taxableIncome = parsedRevenue * selectedAteco.coefficient;
         
         let pensionContributions = 0;
-        const selectedScheme = pensionSchemes[pensionScheme as keyof typeof pensionSchemes];
+        const selectedScheme = pensionSchemes[pensionScheme];
         
-        if (selectedScheme.custom) {
+        // --- CORREZIONE: Controllo sulla chiave invece che sulla proprietà ---
+        if (pensionScheme === 'altre-casse-professionali') {
             const rate = parseFloat(customPensionRate) / 100 || 0;
             const fixed = parseFloat(customPensionFixed) || 0;
             pensionContributions = (taxableIncome * rate) + fixed;
+        } else if (pensionScheme === 'artigiani-commercianti-inps') {
+            const minimalTaxable = 18415;
+            const fixedContribution = selectedScheme.fixed || 0;
+            const variablePart = taxableIncome > minimalTaxable ? (taxableIncome - minimalTaxable) * selectedScheme.rate : 0;
+            pensionContributions = fixedContribution + variablePart;
         } else {
-             if (pensionScheme === 'artigiani-commercianti-inps') {
-                const variablePart = taxableIncome > 18415 ? (taxableIncome - 18415) * selectedScheme.rate : 0;
-                pensionContributions = selectedScheme.fixed + variablePart;
-            } else {
-                 pensionContributions = taxableIncome * selectedScheme.rate;
-                 if (selectedScheme.minimum && pensionContributions < selectedScheme.minimum) {
-                    pensionContributions = selectedScheme.minimum;
-                 }
-            }
+             pensionContributions = taxableIncome * selectedScheme.rate;
+             // --- CORREZIONE: Controllo sull'esistenza della proprietà 'minimum' ---
+             if (selectedScheme.minimum && pensionContributions < selectedScheme.minimum) {
+                pensionContributions = selectedScheme.minimum;
+             }
         }
        
         const deductibleContributions = pensionContributions;
@@ -180,7 +192,7 @@ export default function TasseRegimeForfettarioCalculator() {
                         
                         {/* Input Fatturato Lordo */}
                         <div className="mb-4">
-                            <label htmlFor="revenue" className="flex items-center text-sm font-medium text-gray-700 mb-1">
+                             <label htmlFor="revenue" className="flex items-center text-sm font-medium text-gray-700 mb-1">
                                 Fatturato Lordo Annuo (€)
                                 <Tooltip text="Inserisci i ricavi o compensi totali che prevedi di incassare in un anno, al lordo di tasse e contributi.">
                                     <InfoIcon />
@@ -367,3 +379,4 @@ export default function TasseRegimeForfettarioCalculator() {
         </div>
     );
 }
+
