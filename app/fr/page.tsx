@@ -35,7 +35,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Categories Grid */}
+        {/* Categories  Grid */}
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 text-center">
             {t.home.exploreCategories}
