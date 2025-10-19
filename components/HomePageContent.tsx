@@ -3,13 +3,15 @@
 import Link from 'next/link';
 import { getCalculatorsByLang } from '@/lib/calculator-registry';
 import { CATEGORIES, Lang } from '@/lib/categories';
-import { aslations } from '@/lib/i18n';
+import { translations } from '@/lib/i18n';
 
+interface HomePageContentProps {
   lang: Lang;
 }
 
 export default function HomePageContent({ lang }: HomePageContentProps) {
-  const t = (translations as any)[lang];ng];
+  const t = (translations as any)[lang];
+  const categories = CATEGORIES[lang];
   const totalCalculators = getCalculatorsByLang(lang).length;
 
   return (
