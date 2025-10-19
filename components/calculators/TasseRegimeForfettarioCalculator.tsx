@@ -282,7 +282,7 @@ const TasseRegimeForfettarioCalculator: React.FC = () => {
                         <p className="text-gray-600 mb-4">Simula la tua tassazione, inclusi acconti e saldo, per una pianificazione fiscale senza sorprese.</p>
                         
                         <div className="text-xs text-amber-800 bg-amber-50 border border-amber-200 rounded-md p-3 mb-6">
-                            <strong>Disclaimer:</strong> Questo strumento offre una simulazione a scopo puramente informativo e non sostituisce in alcun modo una consulenza fiscale professionale. Le scadenze e le normative possono variare.
+                            <strong>wwDisclaimer:</strong> Questo strumento offre una simulazione a scopo puramente informativo e non sostituisce in alcun modo una consulenza fiscale professionale. Le scadenze e le normative possono variare.
                         </div>
 
                         {/* Sezione Input */}
