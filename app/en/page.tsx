@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { getCalculatorsByLang } from '@/lib/calculator-registry';
 import { CATEGORIES, Lang } from '@/lib/categories';
-import { generateSEOMetadata, generateWebsiteSchema } from '@/lib/seo';
+import { generateSEOMetadata, generateWebSiteSchema } from '@/lib/seo';
 import { getTranslations } from '@/lib/i18n';
 
 const LANG: Lang = 'en';
@@ -21,7 +21,7 @@ export default function HomePage() {
   const t = getTranslations(LANG);
   const categories = CATEGORIES[LANG];
   const totalCalculators = getCalculatorsByLang(LANG).length;
-  const webSiteSchema = generateWebsiteSchema(LANG);
+  const webSiteSchema = generateWebSiteSchema(LANG);
 
   return (
     <>
