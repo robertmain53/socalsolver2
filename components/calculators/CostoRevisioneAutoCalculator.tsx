@@ -99,15 +99,14 @@ const ChecklistPreRevisione = () => {
 
 // --- Componente Principale del Calcolatore ---
 const RevisioneCalculator: React.FC = () => {
-    const [tipoVeicolo, setTipoVeicolo] = useState<string>('standard');
-    const [calculationMode, setCalculationMode] = useState<string>('immatricolazione');
-    const [inputDate, setInputDate] = useState<string>('');
+    // ... existing states ...
     const [scadenza, setScadenza] = useState<string | null>(null);
+    const [scadenzaDate, setScadenzaDate] = useState<Date | null>(null); // Stato per la data effettiva
     const [costo, setCosto] = useState<number | null>(null);
     const [showResult, setShowResult] = useState(false);
     
     const [email, setEmail] = useState('');
-    const [notificationStatus, setNotificationStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [notificationStatus, setNotificationStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [modalContent, setModalContent] = useState({ title: '', body: '' });
@@ -130,25 +129,19 @@ const RevisioneCalculator: React.FC = () => {
         const date = new Date(inputDate);
         if (isNaN(date.getTime())) { openModal("Errore", "Per favore, inserisci una data valida."); return; }
 
-        let scadenzaDate = new Date(date);
-        calculationMode === 'immatricolazione' ? scadenzaDate.setFullYear(date.getFullYear() + 4) : scadenzaDate.setFullYear(date.getFullYear() + 2);
-        scadenzaDate.setMonth(scadenzaDate.getMonth() + 1, 0);
+        let scadenzaCalc = new Date(date);
+        calculationMode === 'immatricolazione' ? scadenzaCalc.setFullYear(date.getFullYear() + 4) : scadenzaCalc.setFullYear(date.getFullYear() + 2);
+        scadenzaCalc.setMonth(scadenzaCalc.getMonth() + 1, 0);
 
-        setScadenza(scadenzaDate.toLocaleDateString('it-IT', { year: 'numeric', month: 'long' }));
-        setCosto(tipoVeicolo === 'storico' ? 45.00 : 79.00); // Semplificato
+        setScadenzaDate(scadenzaCalc); // Salva l'oggetto Date
+        setScadenza(scadenzaCalc.toLocaleDateString('it-IT', { year: 'numeric', month: 'long' }));
+        setCosto(tipoVeicolo === 'storico' ? 45.00 : 79.00);
         setShowResult(true);
         setNotificationStatus('idle');
         setEmail('');
-
     }, [inputDate, calculationMode, tipoVeicolo]);
 
-    useEffect(() => {
-        if (showResult) resultRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }, [showResult]);
-
-    const handleReset = () => {
-        setShowResult(false);
-        setInputDate('');
+        setEmail('');
     };
 
     const handleSetReminder = useCallback(async () => {
@@ -157,10 +150,32 @@ const RevisioneCalculator: React.FC = () => {
         setNotificationStatus('error');
         return;
       }
-      // Simulazione chiamata API
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setNotificationStatus('success');
-    }, [email]);
+
+      setNotificationStatus('loading');
+
+      try {
+        const response = await fetch('/api/reminders/set', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email,
+                reminderDate: scadenzaDate?.toISOString(), // Invia la data in formato standard
+                vehicleType: tipoVeicolo
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error('Errore nel salvataggio del promemoria.');
+        }
+
+        setNotificationStatus('success');
+
+      } catch (error) {
+        console.error("Errore nell'impostare il promemoria:", error);
+        setNotificationStatus('error');
+        openModal("Errore", "Impossibile impostare il promemoria. Riprova più tardi.");
+      }
+    }, [email, scadenzaDate, tipoVeicolo]);
 
     const openModal = (title: string, body: string) => {
         setModalContent({ title, body });
@@ -228,14 +243,21 @@ const RevisioneCalculator: React.FC = () => {
                                 <h3 className="font-semibold text-gray-800">Non dimenticartene!</h3>
                                 <p className="text-sm text-gray-600 mb-3">Imposta un promemoria gratuito. Ti invieremo un'email un mese prima della scadenza.</p>
                                 {notificationStatus === 'success' ? (
-                                    <div className="text-green-600 font-semibold flex items-center p-3 bg-green-50 rounded-md"><CheckCircleIcon className='w-5 h-5 mr-2'/>Promemoria impostato per {email}!</div>
+                                    <div className="text-green-600 font-semibold flex items-center p-3 bg-green-50 rounded-md"><CheckCircleIcon className='w-5 h-5 mr-2'/>Promemoria impostato per {email}! Riceverai una notifica.</div>
                                 ) : (
                                     <div className="flex flex-col sm:flex-row gap-2">
                                         <div className="relative flex-grow">
                                             <MailIcon />
-                                            <input type="email" placeholder="La tua email" value={email} onChange={e => setEmail(e.target.value)} className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 text-sm" />
+                                            <input type="email" placeholder="La tua email" value={email} onChange={e => setEmail(e.target.value)} disabled={notificationStatus === 'loading'} className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500 text-sm disabled:bg-gray-100" />
                                         </div>
-                                        <button onClick={handleSetReminder} className="bg-gray-800 text-white font-semibold text-sm py-2 px-4 rounded-md hover:bg-gray-900 transition-colors">Imposta Promemoria</button>
+                                        <button onClick={handleSetReminder} disabled={notificationStatus === 'loading'} className="bg-gray-800 text-white font-semibold text-sm py-2 px-4 rounded-md hover:bg-gray-900 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed flex items-center justify-center">
+                                            {notificationStatus === 'loading' ? (
+                                                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                </svg>
+                                            ) : 'Imposta Promemoria'}
+                                        </button>
                                     </div>
                                 )}
                             </div>
@@ -264,3 +286,5 @@ const RevisioneCalculator: React.FC = () => {
 };
 
 export default RevisioneCalculator;
+
+
