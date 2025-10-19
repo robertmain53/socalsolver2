@@ -34,6 +34,7 @@ export interface ButtonProps
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  children?: React.ReactNode; // Explicitly define children as ReactNode
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -53,7 +54,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           <span className="mr-2">{leftIcon}</span>
         ) : null}
         {isMotionValue(children) ? (
-          <motion.span>{children}</motion.span>
+          <motion.span>{children as any}</motion.span>
         ) : (
           children
         )}
