@@ -5,9 +5,9 @@ import ToolsSidebar from './ToolsSidebar';
 // Context per condividere dati tra calcolatore e sidebar
 interface CalculatorContextType {
   results: Record<string, number>;
-  inputs: Record<string, any>;
+  inputs: Record<string, unknown>;
   updateResults: (results: Record<string, number>) => void;
-  updateInputs: (inputs: Record<string, any>) => void;
+  updateInputs: (inputs: Record<string, unknown>) => void;
 }
 
 const CalculatorContext = createContext<CalculatorContextType>({
@@ -33,13 +33,13 @@ export default function CalculatorWrapper({
   lang = 'it'
 }: CalculatorWrapperProps) {
   const [results, setResults] = useState<Record<string, number>>({});
-  const [inputs, setInputs] = useState<Record<string, any>>({});
+  const [inputs, setInputs] = useState<Record<string, unknown>>({});
 
   const updateResults = (newResults: Record<string, number>) => {
     setResults(newResults);
   };
 
-  const updateInputs = (newInputs: Record<string, any>) => {
+  const updateInputs = (newInputs: Record<string, unknown>) => {
     setInputs(newInputs);
   };
 

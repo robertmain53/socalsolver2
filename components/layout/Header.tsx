@@ -14,6 +14,28 @@ export type HeaderProps = {
 
 const GOOGLE_CX = '2410972eee36045f5';
 
+type GoogleCseElement = {
+  render?: (options: {
+    div: string;
+    tag: string;
+    attributes: Record<string, unknown>;
+  }) => void;
+};
+
+type GoogleCseGlobal = {
+  search?: {
+    cse?: {
+      element?: GoogleCseElement;
+    };
+  };
+};
+
+declare global {
+  interface Window {
+    google?: GoogleCseGlobal;
+  }
+}
+
 export default function Header({ lang }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [cseReady, setCseReady] = useState(false);
@@ -50,7 +72,7 @@ export default function Header({ lang }: HeaderProps) {
   useEffect(() => {
     const onReady = () => setCseReady(true);
     window.addEventListener('gcse-ready', onReady);
-    if ((window as any).google?.search?.cse?.element?.render) setCseReady(true);
+    if (window.google?.search?.cse?.element?.render) setCseReady(true);
     return () => window.removeEventListener('gcse-ready', onReady);
   }, []);
 
@@ -58,7 +80,7 @@ export default function Header({ lang }: HeaderProps) {
   useEffect(() => {
     if (!isOpen || !cseReady || renderedOnce.current) return;
 
-    const g = (window as any).google;
+    const g = window.google;
     const container = document.getElementById('gcse-searchbox');
     if (!container || !g?.search?.cse?.element?.render) return;
 
@@ -85,7 +107,7 @@ export default function Header({ lang }: HeaderProps) {
   return (
     <>
       {/* Load CSE config FIRST and emit a custom ready event */}
-      <Script id="gcse-config" strategy="beforeInteractive">
+      <Script id="gcse-config" strategy="afterInteractive">
         {`
           window.__gcse = {
             parsetags: 'explicit',

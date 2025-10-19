@@ -7,15 +7,13 @@ import Script from 'next/script';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import RelatedCalculators from '@/components/calculator/RelatedCalculators';
 import { getCalculator } from '@/lib/calculator-registry';
-import { CATEGORIES } from '@/lib/categories';
 import {
   generateSEOMetadata,
-  generateBreadcrumbSchema,
   generateCalculatorSchema,
   generateArticleSchema,
 } from '@/lib/seo';
 import { getRequestOrigin } from '@/lib/request-context';
-import CalculatorWrapper from '@/components/layout/CalculatorWrapper';
+import { buildCalculatorBreadcrumbs } from '@/lib/breadcrumbs';
 
 type Props = { params: { slug: string } };
 
@@ -77,19 +75,12 @@ export default async function CalculatorPage({ params }: Props) {
     notFound();
   }
 
-  // Get category info
-  const categories = CATEGORIES[LANG];
-  const categoryInfo = categories.find((cat) => cat.slug === CATEGORY);
-  const categoryName = categoryInfo?.name || 'Fisco e Lavoro Autonomo';
-
-  // Breadcrumbs
-  const crumbs = [
-    { name: 'Home', path: `/${LANG}` },
-    { name: categoryName, path: `/${LANG}/${CATEGORY}` },
-    { name: calcMeta.title },
-  ];
-
-  const breadcrumbSchema = generateBreadcrumbSchema(crumbs, LANG);
+  const { crumbs, breadcrumbSchema } = buildCalculatorBreadcrumbs({
+    lang: LANG,
+    calculator: calcMeta,
+    fallbackCategory: CATEGORY,
+    fallbackTitle: calcMeta.title,
+  });
   const calculatorSchema = generateCalculatorSchema({
     name: calcMeta.title,
     description: calcMeta.description,

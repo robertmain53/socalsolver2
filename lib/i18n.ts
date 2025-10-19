@@ -327,14 +327,23 @@ export function t(
   defaultValue: string = ''
 ): string {
   const keys = path.split('.');
-  let current: any = translations;
+  let current: unknown = translations;
 
   for (const key of keys) {
-    if (current[key] === undefined) {
+    if (typeof current !== 'object' || current === null || !(key in current)) {
       return defaultValue;
     }
-    current = current[key];
+    current = (current as Record<string, unknown>)[key];
   }
 
-  return current[lang] || defaultValue;
+  if (
+    typeof current === 'object' &&
+    current !== null &&
+    lang in current &&
+    typeof (current as Record<Lang, unknown>)[lang] === 'string'
+  ) {
+    return (current as Record<Lang, string>)[lang];
+  }
+
+  return defaultValue;
 }

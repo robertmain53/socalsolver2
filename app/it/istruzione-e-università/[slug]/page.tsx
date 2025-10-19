@@ -8,6 +8,7 @@ import { getCalculator } from '@/lib/calculator-registry';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getRequestOrigin } from '@/lib/request-context';
 import CalculatorWrapper from '@/components/layout/CalculatorWrapper';
+import { buildCalculatorBreadcrumbs } from '@/lib/breadcrumbs';
 
 type Props = { params: { slug: string } };
 
@@ -68,13 +69,12 @@ export default async function CalculatorPage({ params }: Props) {
     notFound();
   }
 
-  const categoryName = 'Istruzione e Università';
-
-  const crumbs = [
-    { name: 'Home', path: `/${LANG}` },
-    { name: categoryName, path: `/${LANG}/${CATEGORY}` },
-    { name: calcMeta.title },
-  ];
+  const { crumbs } = buildCalculatorBreadcrumbs({
+    lang: LANG,
+    calculator: calcMeta,
+    fallbackCategory: CATEGORY,
+    fallbackTitle: calcMeta.title,
+  });
 
   return (
     <div className="space-y-8">

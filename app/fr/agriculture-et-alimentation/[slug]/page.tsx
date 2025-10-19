@@ -8,18 +8,19 @@ import { generateSEOMetadata } from '@/lib/seo';
 import { getCalculator } from '@/lib/calculator-registry';
 import { getRequestOrigin } from '@/lib/request-context';
 import CalculatorWrapper from '@/components/layout/CalculatorWrapper';
+import { buildCalculatorBreadcrumbs } from '@/lib/breadcrumbs';
 
 type Props = { params: { slug: string } };
 
 const CATEGORY = 'agriculture-et-alimentation';
 const LANG = 'fr';
 
-async function getCalculatorComponent(slug: string) {
+async function getCalculatorComponent(componentName: string) {
   try {
-    const componentName = slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
     return (await import(`@/components/calculators/${componentName}`)).default;
   } catch (error) { return null; }
 }
+
 
 async function getContent(slug: string) {
   try {
@@ -52,17 +53,22 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function CalculatorPage({ params }: Props) {
-  const CalculatorComponent = await getCalculatorComponent(params.slug);
+  const calcMeta = getCalculator(params.slug, LANG);
+
+  if (!calcMeta) {
+    notFound();
+  }
+
+  const CalculatorComponent = await getCalculatorComponent(calcMeta.component);
   const content = await getContent(params.slug);
 
   if (!CalculatorComponent) notFound();
-  
-  const calculatorName = params.slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-  const crumbs = [
-      { name: "Home", path: "/fr" },
-      { name: "Agriculture et alimentation", path: "/fr/agriculture-et-alimentation" },
-      { name: calculatorName }
-  ];
+  const { crumbs } = buildCalculatorBreadcrumbs({
+    lang: LANG,
+    calculator: calcMeta,
+    fallbackCategory: CATEGORY,
+    fallbackTitle: calcMeta.title,
+  });
 
   return (
     <div className="space-y-8">

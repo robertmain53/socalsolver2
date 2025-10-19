@@ -8,6 +8,7 @@ import { getCalculator } from '@/lib/calculator-registry';
 import { generateSEOMetadata } from '@/lib/seo';
 import { getRequestOrigin } from '@/lib/request-context';
 import CalculatorWrapper from '@/components/layout/CalculatorWrapper';
+import { buildCalculatorBreadcrumbs } from '@/lib/breadcrumbs';
 
 type Props = { params: { slug: string } };
 
@@ -53,7 +54,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function CalculatorPage({ params }: Props) {
-  const calcMeta = getCalculator(params.slug, 'it');
+  const calcMeta = getCalculator(params.slug, LANG);
 
   if (!calcMeta) {
     notFound();
@@ -63,13 +64,13 @@ export default async function CalculatorPage({ params }: Props) {
   const content = await getContent(params.slug);
 
   if (!CalculatorComponent) notFound();
-  
-  const calculatorName = calcMeta.title;
-  const crumbs = [
-      { name: "Home", path: "/it" },
-      { name: "Auto e Trasporti", path: "/it/auto-e-trasporti" },
-      { name: calculatorName }
-  ];
+
+  const { crumbs } = buildCalculatorBreadcrumbs({
+    lang: LANG,
+    calculator: calcMeta,
+    fallbackCategory: CATEGORY,
+    fallbackTitle: calcMeta.title,
+  });
 
   return (
     <div className="space-y-8">

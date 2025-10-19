@@ -14,14 +14,14 @@ import {
 interface ToolsSidebarProps {
   calculatorName: string;
   results?: Record<string, number>;
-  inputs?: Record<string, any>;
+  inputs?: Record<string, unknown>;
   lang?: string;
 }
 
 interface SavedCalculation {
   id: string;
   calculator: string;
-  inputs: Record<string, any>;
+  inputs: Record<string, unknown>;
   results: Record<string, number>;
   savedAt: string;
 }
@@ -99,7 +99,9 @@ export default function ToolsSidebar({
         savedAt: new Date().toISOString()
       };
 
-      const existingSaves = JSON.parse(localStorage.getItem('calculator_saves') || '[]');
+      const existingSaves: SavedCalculation[] = JSON.parse(
+        localStorage.getItem('calculator_saves') || '[]'
+      );
       existingSaves.push(savedData);
       
       // Mantieni solo gli ultimi 50 salvataggi
@@ -361,17 +363,21 @@ export default function ToolsSidebar({
         </div>
       </body>
       </html>
-    `.replace(/formatValue\(([^)]+)\)/g, (match, value) => {
-      // Funzione per formattare i valori nel template string
-      return typeof value === 'number' ? value.toLocaleString(lang === 'it' ? 'it-IT' : 'en-US') : String(value);
-    });
+    `;
   };
 
-  const formatValue = (value: any): string => {
+  const formatValue = (value: unknown): string => {
+    if (value === null || value === undefined) return '-';
     if (typeof value === 'number') {
       return value.toLocaleString(lang === 'it' ? 'it-IT' : 'en-US');
     }
-    return String(value);
+    if (typeof value === 'boolean') {
+      return value ? 'true' : 'false';
+    }
+    if (typeof value === 'string') {
+      return value;
+    }
+    return JSON.stringify(value);
   };
 
   const viewSavedResults = () => {

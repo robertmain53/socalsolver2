@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type HTMLMotionProps } from 'framer-motion';
 import { cva, type VariantProps } from 'class-variance-authority';
 
 const buttonVariants = cva(
@@ -29,7 +29,7 @@ const buttonVariants = cva(
 );
 
 export interface ButtonProps
-  extends Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, 'onDrag' | 'onDragEnd' | 'onDragStart'>,
+  extends Omit<HTMLMotionProps<'button'>, 'onDrag' | 'onDragEnd' | 'onDragStart'>,
     VariantProps<typeof buttonVariants> {
   isLoading?: boolean;
   leftIcon?: React.ReactNode;
@@ -45,7 +45,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={isLoading || props.disabled}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        {...(props as any)}
+        {...props}
       >
         {isLoading ? (
           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current mr-2" />
