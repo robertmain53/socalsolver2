@@ -3,12 +3,12 @@ import Script from 'next/script';
 import { getCalculatorsByLang } from '@/lib/calculator-registry';
 import { CATEGORIES, Lang } from '@/lib/categories';
 import { generateSEOMetadata } from '@/lib/seo';
-import { getTranslation } from '@/lib/i18n';
+import { translations } from '@/lib/i18n';
 
 const LANG: Lang = 'es';
 
 export async function generateMetadata() {
-  const t = getTranslation(LANG);
+  const t = translations[LANG];
   return generateSEOMetadata({
     title: t.home.title,
     description: t.home.description,
@@ -18,7 +18,7 @@ export async function generateMetadata() {
 }
 
 export default function HomePage() {
-  const t = getTranslation(LANG);
+  const t = translations[LANG];
   const categories = CATEGORIES[LANG];
   const totalCalculators = getCalculatorsByLang(LANG).length;
 
