@@ -1,9 +1,7 @@
 import { NextResponse } from 'next/server';
-import { initializeApp, getApps, App } from 'firebase/app';
+import { initializeApp, getApps, FirebaseApp } from 'firebase/app'; // Correzione qui: App -> FirebaseApp
 import { getFirestore, collection, addDoc, Timestamp } from 'firebase/firestore';
 
-// --- Configurazione Firebase ---
-// Le variabili d'ambiente verranno fornite dalla piattaforma di hosting (es. Vercel)
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -14,7 +12,7 @@ const firebaseConfig = {
 };
 
 // Inizializza Firebase solo una volta
-let app: App;
+let app: FirebaseApp; // Correzione qui: App -> FirebaseApp
 if (!getApps().length) {
   app = initializeApp(firebaseConfig);
 } else {
@@ -22,13 +20,11 @@ if (!getApps().length) {
 }
 const db = getFirestore(app);
 
-// --- Handler della Richiesta POST ---
 export async function POST(request: Request) {
   try {
     const body = await request.json();
     const { email, reminderDate, vehicleType } = body;
 
-    // --- Validazione dei dati ---
     if (!email || !reminderDate) {
       return NextResponse.json({ error: 'Email e data del promemoria sono obbligatori.' }, { status: 400 });
     }
@@ -38,12 +34,11 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: 'Formato data non valido.' }, { status: 400 });
     }
 
-    // --- Salvataggio su Firestore ---
     await addDoc(collection(db, 'reminders'), {
       email,
       reminderDate: Timestamp.fromDate(reminderDateObj),
       vehicleType,
-      status: 'pending', // Stato iniziale
+      status: 'pending',
       createdAt: Timestamp.now(),
     });
 
@@ -54,3 +49,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Errore interno del server.' }, { status: 500 });
   }
 }
+

@@ -1,48 +1,43 @@
 import { NextResponse } from 'next/server';
-import { initializeApp, getApps, App } from 'firebase/app';
+import { initializeApp, getApps, FirebaseApp } from 'firebase/app'; // Correzione qui: App -> FirebaseApp
 import { getFirestore, collection, query, where, getDocs, Timestamp, writeBatch } from 'firebase/firestore';
-// NOTA: Dovrai installare un pacchetto per inviare email, es: `npm install resend`
-// import { Resend } from 'resend';
 
-// const resend = new Resend(process.env.RESEND_API_KEY);
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+};
 
-// Inizializzazione Firebase (copia dal file precedente)
-const firebaseConfig = { /* ... la tua config ... */ };
-let app: App;
+let app: FirebaseApp; // Correzione qui: App -> FirebaseApp
 if (!getApps().length) { app = initializeApp(firebaseConfig); } else { app = getApps()[0]; }
 const db = getFirestore(app);
 
-
-// Funzione di invio email (Esempio con Resend, un servizio di email transazionale)
 async function sendReminderEmail(email: string, reminderDate: Date) {
     const formattedDate = reminderDate.toLocaleDateString('it-IT', { year: 'numeric', month: 'long' });
-    console.log(`INVIO EMAIL A: ${email} per scadenza ${formattedDate}`);
-    
-    // Logica di invio REALE (qui è simulata)
-    // await resend.emails.send({
-    //     from: 'Promemoria Revisione <noreply@tuodominio.com>',
-    //     to: email,
-    //     subject: `Promemoria: Scadenza Revisione Veicolo`,
-    //     html: `<p>Ciao! Ti ricordiamo che la revisione del tuo veicolo scade a <strong>${formattedDate}</strong>. Prenota per tempo un appuntamento!</p>`,
-    // });
-
-    return Promise.resolve(); // Simula successo
+    console.log(`SIMULAZIONE INVIO EMAIL A: ${email} per scadenza ${formattedDate}`);
+    // Qui andrebbe la logica REALE di invio email con un servizio come Resend, SendGrid, etc.
+    return Promise.resolve();
 }
 
-
 export async function GET(request: Request) {
-    // Sicurezza: Proteggi l'endpoint da accessi non autorizzati
     const authHeader = request.headers.get('authorization');
     if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
         return new Response('Unauthorized', { status: 401 });
     }
 
     try {
-        const now = Timestamp.now();
+        const now = new Date();
+        const oneMonthFromNow = new Date();
+        oneMonthFromNow.setMonth(now.getMonth() + 1);
+
         const remindersRef = collection(db, 'reminders');
-        
-        // Query: trova tutti i promemoria pendenti la cui data è passata
-        const q = query(remindersRef, where('status', '==', 'pending'), where('reminderDate', '<=', now));
+        const q = query(remindersRef, 
+            where('status', '==', 'pending'), 
+            where('reminderDate', '<=', Timestamp.fromDate(oneMonthFromNow))
+        );
         
         const querySnapshot = await getDocs(q);
         if (querySnapshot.empty) {
@@ -56,23 +51,19 @@ export async function GET(request: Request) {
             const data = doc.data();
             const reminderDate = (data.reminderDate as Timestamp).toDate();
             
-            // Aggiungi l'invio dell'email alla lista di promesse
+            // Invia l'email e aggiorna lo stato
             emailPromises.push(sendReminderEmail(data.email, reminderDate));
-            
-            // Aggiorna lo stato del documento a 'sent'
             batch.update(doc.ref, { status: 'sent' });
         });
 
-        // Esegui tutte le promesse di invio email
         await Promise.all(emailPromises);
-        
-        // Esegui l'aggiornamento batch su Firestore
         await batch.commit();
 
-        return NextResponse.json({ message: `Inviati ${querySnapshot.size} promemoria.` });
+        return NextResponse.json({ message: `Processati ${querySnapshot.size} promemoria.` });
 
     } catch (error) {
         console.error('Errore nel task di invio promemoria:', error);
         return NextResponse.json({ error: 'Errore interno del server.' }, { status: 500 });
     }
 }
+
