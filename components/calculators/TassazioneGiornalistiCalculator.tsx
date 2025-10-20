@@ -22,7 +22,6 @@ const TassazioneGiornalistiCalculator = () => {
   const = useState<string>('');
   const [anzianitaPiva, setAnzianitaPiva] = useState<'startup' | 'regime'>('startup');
   const [anzianitaOrdine, setAnzianitaOrdine] = useState<'meno5' | 'piu5'>('meno5');
-  const [contributiVersati, setContributiVersati] = useState<string>('');
 
   // State per i risultati del calcolo e per la gestione degli errori
   const = useState<ICalculationResults | null>(null);
@@ -104,10 +103,9 @@ const TassazioneGiornalistiCalculator = () => {
     const guadagnoNettoAnnuo = ricaviNum - impostaSostitutiva - contributiObbligatori;
     
     // Percentuali per il grafico
-    const totaleTassazione = impostaSostitutiva + contributiObbligatori;
-    const percentualeNetto = (guadagnoNettoAnnuo / ricaviNum) * 100;
-    const percentualeContributi = (contributiObbligatori / ricaviNum) * 100;
-    const percentualeTasse = (impostaSostitutiva / ricaviNum) * 100;
+    const percentualeNetto = ricaviNum > 0? (guadagnoNettoAnnuo / ricaviNum) * 100 : 0;
+    const percentualeContributi = ricaviNum > 0? (contributiObbligatori / ricaviNum) * 100 : 0;
+    const percentualeTasse = ricaviNum > 0? (impostaSostitutiva / ricaviNum) * 100 : 0;
 
     setResults({
       ricaviLlordi: ricaviNum,
@@ -238,6 +236,5 @@ const TassazioneGiornalistiCalculator = () => {
     </div>
   );
 };
-
 
 export default TassazioneGiornalistiCalculator;
