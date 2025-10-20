@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, FormEvent } from 'react';
 
 // Interfaccia per strutturare i risultati del calcolo
