@@ -35,7 +35,7 @@ const TassazioneGiornalistiCalculator = () => {
     }).format(value);
   };
 
-  // Logica di calcolo principale
+  // Logica di ca lcolo principale
   const handleCalculate = (e: FormEvent) => {
     e.preventDefault();
     const ricaviNum = parseFloat(ricavi);
