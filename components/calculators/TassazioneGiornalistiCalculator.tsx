@@ -2,7 +2,7 @@
 
 import React, { useState, FormEvent } from 'react';
 
-// Interfaccia per strutturare i risultati del calcolo
+// Interfaccia  per strutturare i risultati del calcolo
 interface ICalculationResults {
   ricaviLordi: number;
   redditoImponibileLordo: number;
