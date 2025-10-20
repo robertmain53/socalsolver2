@@ -2,7 +2,7 @@
 import React, { useState, createContext, useContext } from 'react';
 import ToolsSidebar from './ToolsSidebar';
 
-// Context per  condividere dati tra calcolatore e sidebar
+// Context per   condividere dati tra calcolatore e sidebar
 interface CalculatorContextType {
   results: Record<string, number>;
   inputs: Record<string, any>;
