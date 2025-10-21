@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Lang } from '@/lib/categories';
 import { generateSEOMetadata } from '@/lib/seo';
-import SearchPageContent from '@/components/calculators/SearchPageContentProps';
+import SearchPageContent from '@/components/calculators/SearchPageContent';
 
 const LANG: Lang = 'en';
 
