@@ -3,6 +3,78 @@
 import React, { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import dynamic from 'next/dynamic';
 
+// --- NUOVO: Componente Modale per le spese dettagliate ---
+const GastosModal = ({
+  isOpen,
+  onClose,
+  gastos,
+  setGastos
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  gastos: Record<string, number>;
+  setGastos: (gastos: Record<string, number>) => void;
+}) => {
+  if (!isOpen) return null;
+
+  const categorias = [
+    { id: 'viajes', label: 'Viajes y dietas' },
+    { id: 'material', label: 'Material técnico/deportivo' },
+    { id: 'agentes', label: 'Agentes y representantes' },
+    { id: 'vestuario', label: 'Vestuario específico' },
+    { id: 'formacion', label: 'Formación y cursos' },
+    { id: 'seguros', label: 'Seguros (RC, médico)' },
+    { id: 'alquileres', label: 'Alquiler de salas/instalaciones' },
+    { id: 'otros', label: 'Otros gastos deducibles' },
+  ];
+
+  const handleChange = (id: string, value: string) => {
+    const n = parseFloat(value);
+    setGastos({ ...gastos, [id]: isNaN(n) ? 0 : n });
+  };
+
+  const total = Object.values(gastos).reduce((acc, v) => acc + v, 0);
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+      <div className="bg-white rounded-lg shadow-xl p-6 w-full max-w-md">
+        <h3 className="text-xl font-bold mb-4">Detalle de Gastos Deducibles</h3>
+        <div className="space-y-3 max-h-80 overflow-y-auto pr-2">
+          {categorias.map(({ id, label }) => (
+            <div key={id} className="flex items-center">
+              <label htmlFor={id} className="w-1/2 text-sm text-gray-700">{label}</label>
+              <div className="relative w-1/2">
+                <input
+                  id={id}
+                  type="number"
+                  inputMode="decimal"
+                  min="0"
+                  step="100"
+                  className="w-full border-gray-300 rounded-md shadow-sm pl-3 pr-10 py-2"
+                  value={gastos[id] || ''}
+                  onChange={(e) => handleChange(id, e.target.value)}
+                />
+                <span className="absolute inset-y-0 right-0 pr-3 flex items-center text-sm text-gray-500">€</span>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 border-t pt-4 flex justify-between items-center">
+          <span className="font-bold">Total Gastos:</span>
+          <span className="text-xl font-bold">{formatEUR(total)}</span>
+        </div>
+        <button
+          onClick={onClose}
+          className="mt-6 w-full bg-indigo-600 text-white rounded-md py-2 hover:bg-indigo-700"
+        >
+          Confirmar y Cerrar
+        </button>
+      </div>
+    </div>
+  );
+};
+
+
 // ---------- Dynamic Chart (client-only) ----------
 const ChartLoading = () => (
   <div className="flex items-center justify-center h-full text-gray-500">Cargando gráfico...</div>
@@ -29,7 +101,7 @@ const DynamicBarChart = dynamic(
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} layout="vertical" margin={{ top: 8, right: 20, left: 20, bottom: 8 }}>
             <XAxis type="number" hide />
-            <YAxis type="category" dataKey="name" width={160} />
+            <YAxis type="category" dataKey="name" width={160} tick={{ fontSize: 12 }} />
             <ChartTooltip formatter={(v: unknown) => CurrencyFmt(Number(v) || 0)} cursor={{ fill: 'rgba(239,246,255,0.5)' }} />
             <Bar dataKey="value">
               <LabelList
@@ -143,7 +215,8 @@ const MarkdownRenderer = ({ content }: { content: string }) => {
   );
 };
 
-// ---------- Embedded config (self-contained) ----------
+
+// --- MODIFICATO: Configurazione del calcolatore ---
 const calculatorData = {
   slug: "calculadora-irpf-artistas-deportistas",
   category: "Impuestos y trabajo autonomo",
@@ -158,17 +231,13 @@ const calculatorData = {
       min: 0,
       step: 1000,
       tooltip:
-        "Total facturado en el año natural por actuaciones, partidos, conciertos o exhibiciones, antes de impuestos."
+        "Total facturado en el año natural por actuaciones, partidos, conciertos, derechos de imagen o exhibiciones, antes de impuestos y gastos."
     },
     {
-      id: "gastosDeducibles",
-      label: "Gastos deducibles anuales",
-      type: "number" as const,
-      unit: "€",
-      min: 0,
-      step: 500,
-      tooltip:
-        "Costes necesarios: viajes, dietas, material, agentes, entrenadores, vestuario, seguros, alquiler de salas, etc."
+        id: 'gastosDeducibles',
+        label: 'Gastos deducibles anuales',
+        type: 'modal_button' as const, // Tipo custom per il bottone
+        tooltip: 'Haz clic para detallar los costes necesarios para tu actividad: viajes, material, agentes, etc. Un desglose preciso es clave para una correcta deducción.',
     },
     {
       id: "retencionesPracticadas",
@@ -178,7 +247,7 @@ const calculatorData = {
       min: 0,
       step: 500,
       tooltip:
-        "Suma de IRPF ya retenido por promotores, clubes o empresas en tus facturas."
+        "Suma total del IRPF que ya te han retenido los promotores, clubes o empresas en tus facturas a lo largo del año."
     },
     {
       id: "tipoRetencion",
@@ -189,23 +258,46 @@ const calculatorData = {
         { value: "7", label: "7% - Reducida (inicio actividad)" },
         { value: "24", label: "24% - No residentes (simplificado)" }
       ],
-      tooltip: "Selecciona el porcentaje que sueles aplicar según tu situación."
-    }
+      tooltip: "Selecciona el porcentaje que sueles aplicar. Es un campo informativo que no afecta al cálculo final, ya que éste depende de las retenciones ya practicadas."
+    },
+    // --- NUOVI INPUT ---
+    {
+        id: 'hijosACargo',
+        label: 'Hijos a cargo (< 25 años)',
+        type: 'number' as const,
+        unit: 'Nº',
+        min: 0,
+        step: 1,
+        tooltip: 'Número de hijos que conviven contigo y no tienen rentas superiores a 8.000€. Esto aumenta tu mínimo personal y reduce la base imponible.',
+    },
+    {
+        id: 'aportacionPension',
+        label: 'Aportación a plan de pensiones',
+        type: 'number' as const,
+        unit: '€',
+        min: 0,
+        step: 100,
+        tooltip: 'Total anual aportado a planes de pensiones privados. Reduce la base imponible, con un límite legal (máx. 1.500€ o el 30% de tus rendimientos netos).',
+    },
   ],
+  // --- NUOVI OUTPUT ---
   outputs: [
     { id: "rendimientoNeto", label: "Rendimiento neto", unit: "€" },
-    { id: "baseImponible", label: "Base imponible tras mínimo personal", unit: "€" },
-    { id: "cuotaIntegra", label: "Cuota íntegra estimada", unit: "€" },
-    { id: "resultadoDeclaracion", label: "Resultado final de la declaración", unit: "€" }
+    { id: "baseImponible", label: "Base imponible final", unit: "€" },
+    { id: "cuotaIntegra", label: "Cuota íntegra IRPF (Total impuesto)", unit: "€" },
+    { id: "resultadoDeclaracion", label: "Resultado final de la declaración", unit: "€" },
+    { id: "pagoTrimestral", label: "Pago trimestral estimado (Mod. 130)", unit: "€" }
   ],
   formulaSteps: [
-    "Rendimiento neto previo = Ingresos brutos - Gastos deducibles",
-    "Gastos de difícil justificación = 7% del rendimiento neto previo, con tope 2.000 €",
-    "Rendimiento neto = Rendimiento neto previo - gastos de difícil justificación (mínimo 0)",
-    "Base imponible = max(0, Rendimiento neto - mínimo personal 5.550 €)",
-    "Tramos IRPF: 19% hasta 12.450 €, 24% hasta 20.200 €, 30% hasta 35.200 €, 37% hasta 60.000 €, 45% hasta 300.000 €, 47% en adelante",
-    "Cuota íntegra = suma por tramos",
-    "Resultado final = Cuota íntegra - Retenciones practicadas"
+    "Rendimiento neto previo = Ingresos brutos - Gastos deducibles detallados",
+    "Gastos de difícil justificación = 7% del rendimiento neto previo (tope 2.000 €)",
+    "Rendimiento neto = Rendimiento neto previo - Gastos de difícil justificación",
+    "Reducción por pensiones = Mínimo entre Aportación y el límite legal (1.500 €)",
+    "Mínimo personal y familiar = 5.550 € + Incremento por hijos a cargo",
+    "Base imponible = max(0, Rendimiento neto - Reducción por pensiones - Mínimo personal y familiar)",
+    "Cuota íntegra = Aplicación de los tramos progresivos del IRPF a la base imponible",
+    "Resultado final = Cuota íntegra - Retenciones practicadas",
+    "Pago trimestral (Mod. 130) = 20% del rendimiento neto trimestral (Ingresos - Gastos) / 4"
   ],
   examples: [
     {
@@ -214,7 +306,9 @@ const calculatorData = {
         ingresosBrutos: 25000,
         gastosDeducibles: 6000,
         retencionesPracticadas: 1750,
-        tipoRetencion: "7"
+        tipoRetencion: "7",
+        hijosACargo: 0,
+        aportacionPension: 0,
       },
       outputs: {
         rendimientoNeto: 17175,
@@ -226,12 +320,14 @@ const calculatorData = {
         "Cantante novel, aplica retención reducida del 7% durante el año de inicio y los dos siguientes."
     },
     {
-      title: "Deportista profesional (retención 15%)",
+      title: "Deportista profesional con 1 hijo",
       inputs: {
         ingresosBrutos: 120000,
         gastosDeducibles: 30000,
         retencionesPracticadas: 18000,
-        tipoRetencion: "15"
+        tipoRetencion: "15",
+        hijosACargo: 1,
+        aportacionPension: 1500,
       },
       outputs: {
         rendimientoNeto: 83700,
@@ -240,7 +336,7 @@ const calculatorData = {
         resultadoDeclaracion: 7409
       },
       description:
-        "Futbolista residente en España, retención estándar del 15%."
+        "Futbolista residente, 1 hijo a cargo y aportación máxima al plan de pensiones."
     }
   ],
   tags:
@@ -252,16 +348,17 @@ Esta calculadora está pensada para **artistas y deportistas autónomos en Espa�
 ### Guía al Uso del Calcolatore
 
 * **Ingresos brutos anuales**: Todo lo facturado durante el año natural, antes de impuestos.
-* **Gastos deducibles**: Costes necesarios y vinculados a la actividad (viajes, dietas, material, seguros, agentes, entrenadores, alquiler de salas, vestuario de escena, etc.).
+* **Gastos deducibles**: Haz clic en "Detallar Gastos" para desglosar costes necesarios y vinculados a la actividad (viajes, dietas, material, seguros, agentes, etc.).
 * **Retenciones ya aplicadas**: Suma de las retenciones practicadas por tus pagadores.
-* **Tipo de retención aplicado**: 15% general, 7% (inicio actividad) o 24% (no residentes) — selección informativa para el usuario.
+* **Hijos a cargo / Plan de pensiones**: Introduce tus datos personales para un cálculo más ajustado a tu realidad.
 
 ### Metodología de Calcolo Spiegata
 
 1. **Rendimiento neto**: ingresos menos gastos, y se restan los **gastos de difícil justificación (7%, tope 2.000 €)**.
-2. **Mínimo personal**: se deducen **5.550 €** para obtener la base imponible.
-3. **Tramos progresivos**: se aplican los tipos por tramos vigentes para estimar la **cuota íntegra**.
-4. **Resultado final**: se restan las **retenciones practicadas** a lo largo del año.
+2. **Reducciones**: Se restan las aportaciones a planes de pensiones (con límites).
+3. **Mínimo personal y familiar**: se deduce un mínimo general de **5.550 €**, que aumenta según el número de hijos a cargo.
+4. **Tramos progresivos**: se aplican los tipos por tramos vigentes para estimar la **cuota íntegra**.
+5. **Resultado final**: se restan las **retenciones practicadas** a lo largo del año.
 
 ### Analisi Approfondita: Particularidades de artistas y deportistas
 
@@ -322,48 +419,86 @@ const CalculadoraIrpfArtistasDeportistas: React.FC = () => {
   const { slug, title, inputs, outputs, content, examples, seoSchema } = calculatorData;
   const containerRef = useRef<HTMLDivElement>(null);
   const [isClient, setIsClient] = useState(false);
+  
+  // --- NUOVO: Stato per la modale ---
+  const [isGastosModalOpen, setIsGastosModalOpen] = useState(false);
 
   useEffect(() => setIsClient(true), []);
 
+  // --- MODIFICATO: Stati iniziali ---
   const initialStates: Record<string, number | string | ''> = {
     ingresosBrutos: 40000,
     gastosDeducibles: 8000,
     retencionesPracticadas: 6000,
-    tipoRetencion: '15'
+    tipoRetencion: '15',
+    hijosACargo: 0,
+    aportacionPension: 0,
   };
 
   const [states, setStates] = useState<Record<string, number | string | ''>>(initialStates);
+  
+  // --- NUOVO: Stato per le spese dettagliate ---
+  const [gastosDetallados, setGastosDetallados] = useState<Record<string, number>>({
+    viajes: 3000, material: 2000, agentes: 1500, otros: 1500,
+  });
+
+  // Sincronizza il totale delle spese dettagliate con lo stato principale
+  useEffect(() => {
+    const totalGastos = Object.values(gastosDetallados).reduce((sum, val) => sum + val, 0);
+    setStates(prev => ({...prev, gastosDeducibles: totalGastos }));
+  }, [gastosDetallados]);
 
   const handleChange = (id: string, value: string) => {
     if (id === 'tipoRetencion') return setStates((p) => ({ ...p, [id]: value }));
     setStates((p) => ({ ...p, [id]: value === '' ? '' : toNumber(value) }));
   };
 
-  const handleReset = () => setStates(initialStates);
+  const handleReset = () => {
+    setStates(initialStates);
+    setGastosDetallados({viajes: 3000, material: 2000, agentes: 1500, otros: 1500});
+  }
 
-  const loadExample = (exInputs: Record<string, number | string>) => setStates(exInputs);
-
+  const loadExample = (exInputs: Record<string, number | string>) => {
+    setStates(exInputs);
+    // Semplificazione per l'esempio: si assume che tutti i costi siano 'altri'
+    setGastosDetallados({ otros: toNumber(exInputs.gastosDeducibles) });
+  };
+  
+  // --- MODIFICATO: Logica di calcolo ---
   const calculated = useMemo(() => {
     const ingresos = Math.max(0, toNumber(states.ingresosBrutos));
     const gastos = Math.max(0, toNumber(states.gastosDeducibles));
     const retPract = Math.max(0, toNumber(states.retencionesPracticadas));
+    const hijos = Math.max(0, Math.floor(toNumber(states.hijosACargo)));
+    const pension = Math.max(0, toNumber(states.aportacionPension));
 
+    // 1. Rendimiento Neto
     const netoPrev = Math.max(0, ingresos - gastos);
     const diffJust = Math.min(2000, netoPrev * 0.07);
     const rendimientoNeto = Math.max(0, netoPrev - diffJust);
 
-    const minimoPersonal = 5550;
-    const baseImponible = Math.max(0, rendimientoNeto - minimoPersonal);
+    // 2. Mínimo Personal y Familiar (simplificado)
+    const minimoPorDescendientes = [0, 2400, 2700, 4000, 4500];
+    let incrementoHijos = 0;
+    if (hijos > 0) incrementoHijos += minimoPorDescendientes[1] || 0;
+    if (hijos > 1) incrementoHijos += minimoPorDescendientes[2] || 0;
+    if (hijos > 2) incrementoHijos += minimoPorDescendientes[3] || 0;
+    if (hijos > 3) incrementoHijos += (hijos - 3) * (minimoPorDescendientes[4] || 0);
+    const minimoTotal = 5550 + incrementoHijos;
 
+    // 3. Reducción por plan de pensiones
+    const limitePension = Math.min(1500, rendimientoNeto * 0.30);
+    const reduccionPension = Math.min(pension, limitePension);
+
+    // 4. Base Imponible
+    const baseImponible = Math.max(0, rendimientoNeto - reduccionPension - minimoTotal);
+
+    // 5. Cuota Íntegra (Tramos IRPF)
     const tramos = [
-      { limite: 12450, tipo: 0.19 },
-      { limite: 20200, tipo: 0.24 },
-      { limite: 35200, tipo: 0.3 },
-      { limite: 60000, tipo: 0.37 },
-      { limite: 300000, tipo: 0.45 },
-      { limite: Infinity, tipo: 0.47 }
+      { limite: 12450, tipo: 0.19 }, { limite: 20200, tipo: 0.24 },
+      { limite: 35200, tipo: 0.30 }, { limite: 60000, tipo: 0.37 },
+      { limite: 300000, tipo: 0.45 }, { limite: Infinity, tipo: 0.47 }
     ];
-
     let cuotaIntegra = 0;
     let resto = baseImponible;
     let prev = 0;
@@ -375,9 +510,14 @@ const CalculadoraIrpfArtistasDeportistas: React.FC = () => {
       prev = t.limite;
     }
 
+    // 6. Resultado Final
     const resultadoDeclaracion = cuotaIntegra - retPract;
 
-    return { rendimientoNeto, baseImponible, cuotaIntegra, resultadoDeclaracion };
+    // 7. Pago Trimestral (Modelo 130)
+    const rendimientoNetoTrimestral = (ingresos - gastos) / 4;
+    const pagoTrimestral = Math.max(0, rendimientoNetoTrimestral * 0.20);
+
+    return { rendimientoNeto, baseImponible, cuotaIntegra, resultadoDeclaracion, pagoTrimestral };
   }, [states]);
 
   const saveResult = useCallback(() => {
@@ -408,16 +548,27 @@ const CalculadoraIrpfArtistasDeportistas: React.FC = () => {
     }
   }, [slug]);
 
+  // --- MODIFICATO: Dati per il grafico ---
   const chartData = [
     { name: 'Ingresos brutos', value: toNumber(states.ingresosBrutos), fill: '#4ade80' },
+    { name: 'Gastos Deducibles', value: toNumber(states.gastosDeducibles), fill: '#facc15' },
     { name: 'Rendimiento neto', value: calculated.rendimientoNeto, fill: '#38bdf8' },
-    { name: 'Cuota IRPF', value: calculated.cuotaIntegra, fill: '#f87171' },
-    { name: 'Resultado final', value: calculated.resultadoDeclaracion, fill: '#a78bfa' }
+    { name: 'Retenciones Practicadas', value: toNumber(states.retencionesPracticadas), fill: '#fb923c' },
+    { name: 'Cuota Total IRPF', value: calculated.cuotaIntegra, fill: '#f87171' },
+    { name: 'Resultado Declaración', value: calculated.resultadoDeclaracion, fill: '#a78bfa' }
   ];
 
   return (
     <>
       <SeoSchema schema={calculatorData.seoSchema} />
+      {/* --- NUOVO: Render della modale --- */}
+      <GastosModal 
+        isOpen={isGastosModalOpen}
+        onClose={() => setIsGastosModalOpen(false)}
+        gastos={gastosDetallados}
+        setGastos={setGastosDetallados}
+      />
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4 md:p-6 bg-gray-50 font-sans">
         <main className="lg:col-span-2">
           <div className="bg-white rounded-lg shadow-md" ref={containerRef}>
@@ -426,7 +577,8 @@ const CalculadoraIrpfArtistasDeportistas: React.FC = () => {
               <p className="text-gray-600 mb-6">
                 Estima tu IRPF anual como artista o deportista y anticipa tu resultado (a pagar / a devolver).
               </p>
-
+              
+              {/* --- MODIFICATO: Rendering degli input --- */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {inputs.map((input) => (
                   <div key={input.id}>
@@ -443,8 +595,17 @@ const CalculadoraIrpfArtistasDeportistas: React.FC = () => {
                         </Tooltip>
                       ) : null}
                     </label>
-
-                    {input.type === 'select' ? (
+                    
+                    {/* --- NUOVO: Bottone per la modale --- */}
+                    {input.type === 'modal_button' ? (
+                        <button
+                            onClick={() => setIsGastosModalOpen(true)}
+                            className="w-full border-gray-300 rounded-md shadow-sm px-3 py-2 text-left bg-white hover:bg-gray-50 flex justify-between items-center"
+                        >
+                            <span className="text-gray-800">{isClient ? formatEUR(toNumber(states.gastosDeducibles)) : '…'}</span>
+                            <span className="text-indigo-600 text-sm font-semibold">Detallar Gastos</span>
+                        </button>
+                    ) : input.type === 'select' ? (
                       <select
                         id={input.id}
                         className="w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 px-3 py-2"
@@ -489,13 +650,15 @@ const CalculadoraIrpfArtistasDeportistas: React.FC = () => {
                   <div
                     key={o.id}
                     className={`flex items-baseline justify-between border-l-4 p-4 rounded-r-lg ${
-                      o.id === 'resultadoDeclaracion' ? 'bg-indigo-50 border-indigo-500' : 'bg-white border-gray-300'
+                      o.id === 'resultadoDeclaracion' ? 'bg-indigo-50 border-indigo-500' : 
+                      o.id === 'pagoTrimestral' ? 'bg-amber-50 border-amber-500' : 'bg-white border-gray-300'
                     }`}
                   >
                     <span className="text-sm md:text-base font-medium text-gray-700">{o.label}</span>
                     <span
                       className={`text-xl md:text-2xl font-bold ${
-                        o.id === 'resultadoDeclaracion' ? 'text-indigo-600' : 'text-gray-800'
+                        o.id === 'resultadoDeclaracion' ? 'text-indigo-600' : 
+                        o.id === 'pagoTrimestral' ? 'text-amber-700' : 'text-gray-800'
                       }`}
                     >
                       {isClient ? formatEUR((calculated as any)[o.id]) : '…'}
@@ -506,12 +669,12 @@ const CalculadoraIrpfArtistasDeportistas: React.FC = () => {
                   {isClient && (
                     <p
                       className={`text-sm ${
-                        calculated.resultadoDeclaracion > 0 ? 'text-red-600' : 'text-green-600'
+                        calculated.resultadoDeclaracion >= 0 ? 'text-red-600' : 'text-green-600'
                       }`}
                     >
-                      {calculated.resultadoDeclaracion > 0
-                        ? `A PAGAR: ${formatEUR(calculated.resultadoDeclaracion)}.`
-                        : `A DEVOLVER: ${formatEUR(Math.abs(calculated.resultadoDeclaracion))}.`}
+                      {calculated.resultadoDeclaracion >= 0
+                        ? `RESULTADO A PAGAR: ${formatEUR(calculated.resultadoDeclaracion)}.`
+                        : `RESULTADO A DEVOLVER: ${formatEUR(Math.abs(calculated.resultadoDeclaracion))}.`}
                     </p>
                   )}
                 </div>
@@ -520,7 +683,7 @@ const CalculadoraIrpfArtistasDeportistas: React.FC = () => {
 
             <div className="p-6">
               <h3 className="text-lg font-semibold text-gray-700 mb-2">Desglose visual</h3>
-              <div className="h-80 w-full bg-slate-50 p-4 rounded-lg">
+              <div className="h-[28rem] w-full bg-slate-50 p-4 rounded-lg">
                 {isClient ? <DynamicBarChart data={chartData} /> : <ChartLoading />}
               </div>
             </div>
