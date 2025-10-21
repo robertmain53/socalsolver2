@@ -10,9 +10,6 @@ export async function generateMetadata() {
     title: 'Résultats de Recherche',
     description: 'Résultats de recherche pour les calculateurs sur SoCalSolver.',
     lang: LANG,
+    path: `/${LANG}/search`,
   });
-}
-
-export default function SearchPage() {
-  return <Suspense fallback={<div>Chargement...</div>}><SearchPageContent lang={LANG} /></Suspense>;
 }
