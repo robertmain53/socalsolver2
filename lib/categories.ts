@@ -16,7 +16,6 @@ export const CATEGORIES: Record<Lang, Category[]> = {
     { name: 'Fisco e Lavoro Autonomo', slug: 'fisco-e-lavoro-autonomo', icon: '💼' },
     { name: 'Legale e Amministrativo', slug: 'legale-e-amministrativo', icon: '⚖️' },
     { name: 'Immobiliare e Casa', slug: 'immobiliare-e-casa', icon: '🏠' },
-    { name: 'Finanza Personale', slug: 'finanza-personale', icon: '💰' },
     { name: 'Risparmio e Investimenti', slug: 'risparmio-e-investimenti', icon: '📈' },
     { name: 'PMI e Impresa', slug: 'pmi-e-impresa', icon: '🏢' },
     { name: 'Istruzione e Università', slug: 'istruzione-e-università', icon: '🎓' },
