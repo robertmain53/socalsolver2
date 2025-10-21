@@ -196,7 +196,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'tassazione-dividendi-italiani-esteri',
     component: 'TassazioneDividendiItalianiEsteriCalculator',
-    category: 'risparmio-e-investimenti',
+    category: 'risparmio-e-investimenti', // Was finanza-personale
     lang: 'it',
     title: 'Calcolo Tassazione Dividendi Italiani ed Esteri',
     description: 'Calcola tassazione al 26% su dividendi azionari italiani ed esteri. Ritenuta alla fonte e netto percepito.',
@@ -206,7 +206,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'rendimento-netto-btp-vs-conto-deposito',
     component: 'RendimentoNettoBtpVsContoDepositoCalculator',
-    category: 'risparmio-e-investimenti',
+    category: 'risparmio-e-investimenti', // Was finanza-personale
     lang: 'it',
     title: 'BTP vs Conto Deposito: Confronto Rendimento Netto',
     description: 'Confronta rendimento netto di BTP e conti deposito al netto di tasse e inflazione.',
@@ -216,7 +216,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'tassazione-criptovalute-quadro-rw',
     component: 'TassazioneCriptovaluteQuadroRwCalculator',
-    category: 'risparmio-e-investimenti',
+    category: 'risparmio-e-investimenti', // Was finanza-personale
     lang: 'it',
     title: 'Calcolo Tasse Criptovalute e Quadro RW',
     description: 'Calcola tasse su plusvalenze crypto, imposta 26%, compilazione quadro RW e soglia 2000€.',
@@ -226,7 +226,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'tassazione-crowdfunding-equity-lending',
     component: 'TassazioneCrowdfundingEquityLendingCalculator',
-    category: 'risparmio-e-investimenti',
+    category: 'risparmio-e-investimenti', // Was finanza-personale
     lang: 'it',
     title: 'Tassazione Crowdfunding Equity e Lending',
     description: 'Calcola tasse su rendimenti da crowdfunding immobiliare, equity e lending. Tassazione 26%.',
@@ -236,7 +236,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'tassazione-polizze-vita-ramo-1-3',
     component: 'TassazionePolizzeVitaRamo13Calculator',
-    category: 'risparmio-e-investimenti',
+    category: 'risparmio-e-investimenti', // Was finanza-personale
     lang: 'it',
     title: 'Tassazione Polizze Vita Ramo I e Ramo III',
     description: 'Calcola tassazione su polizze vita: 26% su unit linked (ramo III), 12.5% su gestioni separate (ramo I).',
@@ -246,7 +246,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
   {
     slug: 'convenienza-fondo-pensione-vs-tfr',
     component: 'ConvenienzaFondoPensioneVsTfrCalculator',
-    category: 'risparmio-e-investimenti',
+    category: 'risparmio-e-investimenti', // Was finanza-personale
     lang: 'it',
     title: 'Fondo Pensione vs TFR: Convenienza e Confronto',
     description: 'Confronta convenienza tra fondo pensione integrativo e TFR in azienda. Calcola vantaggi fiscali.',
@@ -1489,6 +1489,7 @@ export const CALCULATOR_REGISTRY: CalculatorMetadata[] = [
     hasContent: true,
   },
 
+  
   {
     slug: 'costo-consulente-finanziario',
     component: 'CostoConsulenteFinanziario',
