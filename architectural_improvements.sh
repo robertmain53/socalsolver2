@@ -43,7 +43,6 @@ declare -A CATEGORIES_IT=(
     ["fisco-e-lavoro-autonomo"]="Fisco e Lavoro Autonomo"
     ["veicoli-e-trasporti"]="Veicoli e Trasporti"
     ["immobiliare-e-casa"]="Immobiliare e Casa"
-    ["finanza-personale"]="Finanza Personale"
     ["salute-e-benessere"]="Salute e Benessere"
     ["matematica-e-geometria"]="Matematica e Geometria"
     ["conversioni"]="Conversioni"
