@@ -17,6 +17,3 @@ export async function generateMetadata() {
 export default function SearchPage() {
   return <Suspense fallback={<div>Cargando...</div>}><SearchPageContent lang={LANG} /></Suspense>;
 }
-export default function SearchPage() {
-  return <Suspense fallback={<div>Cargando...</div>}><SearchPageContent lang={LANG} /></Suspense>;
-}
