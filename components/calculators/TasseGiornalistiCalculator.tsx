@@ -127,7 +127,7 @@ const TasseGiornalistiCalculator = () => {
   return (
     <div style={{ fontFamily: 'sans-serif', maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
       <header style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <h1>Calcolatore Tasse 2025 per Giornalisti in Regime Forfettario: Lo Strumento Definitivo</h1>
+        <h1>Calcolatore Tasse 2025 per Giornalisti in Regime Forfettario</h1>
         <p>
           Benvenuto nello strumento di calcolo fiscale definitivo, progettato esclusivamente per i giornalisti autonomi in Italia.
           La nostra missione è semplice: offrirti uno strumento <strong>neutrale, iper-accurato, trasparente e gratuito</strong>, il cui unico scopo è fornirti il calcolo più affidabile possibile per la tua pianificazione finanziaria.

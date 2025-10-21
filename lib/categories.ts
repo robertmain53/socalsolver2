@@ -28,7 +28,6 @@ export const CATEGORIES: Record<Lang, Category[]> = {
     { name: 'Famiglia e Vita Quotidiana', slug: 'famiglia-e-vita-quotidiana', icon: '👨‍👩‍👧‍👦' },
     { name: 'Varie e Vita Quotidiana', slug: 'varie-e-vita-quotidiana', icon: '🧰' },
     { name: 'Agricoltura e Cibo', slug: 'agricoltura-e-cibo', icon: '🌾' },
-    { name: 'Vita Quotidiana', slug: 'vita-quotidiana', icon: '📱' },
     { name: 'Matematica e Geometria', slug: 'matematica-e-geometria', icon: '📊' },
   ],
   en: [
