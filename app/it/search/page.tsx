@@ -3,16 +3,16 @@ import { Lang } from '@/lib/categories';
 import { generateSEOMetadata } from '@/lib/seo';
 import SearchPageContent from '@/components/calculators/SearchPageContentProps';
 
-const LANG: Lang = 'es';
+const LANG: Lang = 'it';
 
 export async function generateMetadata() {
   return generateSEOMetadata({
-    title: 'Resultados de Búsqueda',
-    description: 'Resultados de búsqueda para las calculadoras en SoCalSolver.',
+    title: 'Risultati della Ricerca',
+    description: 'Risultati della ricerca per i calcolatori su SoCalSolver.',
     lang: LANG,
   });
 }
 
 export default function SearchPage() {
-  return <Suspense fallback={<div>Cargando...</div>}><SearchPageContent lang={LANG} /></Suspense>;
+  return <Suspense fallback={<div>Caricamento...</div>}><SearchPageContent lang={LANG} /></Suspense>;
 }

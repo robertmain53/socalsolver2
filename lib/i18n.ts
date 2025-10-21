@@ -316,6 +316,38 @@ export const translations = {
       fr: 'Accueil',
     },
   },
+  search: {
+    resultsTitle: {
+      it: 'Risultati per',
+      en: 'Results for',
+      es: 'Resultados para',
+      fr: 'Résultats pour',
+    },
+    resultFound: {
+      it: 'risultato trovato',
+      en: 'result found',
+      es: 'resultado encontrado',
+      fr: 'résultat trouvé',
+    },
+    resultsFound: {
+      it: 'risultati trovati',
+      en: 'results found',
+      es: 'resultados encontrados',
+      fr: 'résultats trouvés',
+    },
+    noResultsTitle: {
+      it: 'Nessun risultato trovato',
+      en: 'No results found',
+      es: 'No se encontraron resultados',
+      fr: 'Aucun résultat trouvé',
+    },
+    noResultsText: {
+      it: 'Prova a cercare con termini diversi o più generici.',
+      en: 'Try searching with different or more general terms.',
+      es: 'Intenta buscar con términos diferentes o más generales.',
+      fr: 'Essayez de rechercher avec des termes différents ou plus généraux.',
+    },
+  },
 };
 
 /**

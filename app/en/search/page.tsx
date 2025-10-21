@@ -1,17 +1,18 @@
 import { Suspense } from 'react';
-import SearchClient from './SearchClient';
+import { Lang } from '@/lib/categories';
+import { generateSEOMetadata } from '@/lib/seo';
+import SearchPageContent from '@/components/calculators/SearchPageContentProps';
 
-/**
- * Se vuoi evitare che Next.js provi comunque a prerenderizzare questa pagina
- * puoi tenere la direttiva qui sotto.  In caso contrario, puoi rimuoverla:
- */
-export const dynamic = 'force-dynamic';
+const LANG: Lang = 'en';
 
-export default function SearchPage() {
-  return (
-    <Suspense fallback={<p>Caricamento…</p>}>
-      <SearchClient />
-    </Suspense>
-  );
+export async function generateMetadata() {
+  return generateSEOMetadata({
+    title: 'Search Results',
+    description: 'Search results for calculators on SoCalSolver.',
+    lang: LANG,
+  });
 }
 
+export default function SearchPage() {
+  return <Suspense fallback={<div>Loading...</div>}><SearchPageContent lang={LANG} /></Suspense>;
+}
