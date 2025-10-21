@@ -13,3 +13,7 @@ export async function generateMetadata() {
     path: `/${LANG}/search`,
   });
 }
+
+export default function SearchPage() {
+  return <Suspense fallback={<div>Caricamento...</div>}><SearchPageContent lang={LANG} /></Suspense>;
+}
