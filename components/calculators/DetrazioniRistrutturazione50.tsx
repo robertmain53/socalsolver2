@@ -65,12 +65,12 @@ const FaqSchema = () => (
   />
 );
 
-// --- Componente per il rendering del contenuto Markdown ---
+// --- [CODICE CORRETTO] Componente per il rendering del contenuto Markdown ---
 const ContentRenderer = ({ content }: { content: string }) => {
     const processInlineFormatting = (text: string) => {
-        return text
-            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-            .replace(/_(.*?)_/g, '<em>$1</em>');
+        let processedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        processedText = processedText.replace(/_(.*?)_/g, '<em>$1</em>');
+        return processedText;
     };
 
     const blocks = content.split('\n\n');
@@ -79,28 +79,33 @@ const ContentRenderer = ({ content }: { content: string }) => {
         <div className="prose prose-sm max-w-none text-gray-700">
             {blocks.map((block, index) => {
                 const trimmedBlock = block.trim();
+                if (!trimmedBlock) return null;
+
                 if (trimmedBlock.startsWith('### **')) {
-                    return <h3 key={index} className="text-xl font-bold mt-6 mb-4 text-gray-800" dangerouslySetInnerHTML={{ __html: processInlineFormatting(trimmedBlock.replace(/### \*\*/g, '').replace(/\*\*/g, '')) }} />;
+                    const innerHtml = processInlineFormatting(trimmedBlock.replace(/^### \*\*/, '').replace(/\*\*$/, ''));
+                    return <h3 key={index} className="text-xl font-bold mt-6 mb-4 text-gray-800" dangerouslySetInnerHTML={{ __html: innerHtml }} />;
                 }
+
                 if (trimmedBlock.startsWith('#### **')) {
-                    return <h4 key={index} className="text-lg font-semibold mt-4 mb-3 text-gray-700" dangerouslySetInnerHTML={{ __html: processInlineFormatting(trimmedBlock.replace(/#### \*\*/g, '').replace(/\*\*/g, '')) }} />;
+                    const innerHtml = processInlineFormatting(trimmedBlock.replace(/^#### \*\*/, '').replace(/\*\*$/, ''));
+                    return <h4 key={index} className="text-lg font-semibold mt-4 mb-3 text-gray-700" dangerouslySetInnerHTML={{ __html: innerHtml }} />;
                 }
-                 if (trimmedBlock.startsWith('- ')) {
-                     const items = trimmedBlock.split('\n').map(item => item.replace(/^- /, ''));
-                     return (
-                        <ul key={index} className="list-disc pl-5 space-y-2 mb-4">
-                            {items.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: processInlineFormatting(item) }} />)}
-                        </ol>
-                     );
+
+                if (trimmedBlock.startsWith('- ')) {
+                    const items = trimmedBlock.split('\n').map(item => item.replace(/^- /, '').trim());
+                    return (
+                       <ul key={index} className="list-disc pl-5 space-y-2 mb-4">
+                           {items.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: processInlineFormatting(item) }} />)}
+                       </ul>
+                    );
                 }
-                if (trimmedBlock) {
-                    return <p key={index} className="mb-4" dangerouslySetInnerHTML={{ __html: processInlineFormatting(trimmedBlock) }} />;
-                }
-                return null;
+                
+                return <p key={index} className="mb-4" dangerouslySetInnerHTML={{ __html: processInlineFormatting(trimmedBlock) }} />;
             })}
         </div>
     );
 };
+
 
 // --- Dati di configurazione del calcolatore ---
 const calculatorData = {
@@ -122,7 +127,7 @@ const calculatorData = {
     { "id": "detrazione_complessiva", "label": "Detrazione Fiscale Complessiva", "unit": "€" },
     { "id": "rata_annuale_complessiva", "label": "Risparmio Fiscale Annuo Totale", "unit": "€" }
   ],
-  "content": "### **Guida Completa al Bonus Ristrutturazione 50% e Bonus Mobili**\n\n**Come funziona, quali spese sono ammesse e come massimizzare il risparmio fiscale.**\n\nIl **Bonus Ristrutturazione** è una delle agevolazioni fiscali più importanti per chi desidera migliorare la propria abitazione. Permette di recuperare una parte significativa dei costi sostenuti attraverso una detrazione dall'imposta sul reddito (IRPEF).\n\nQuesto strumento ti aiuta a simulare il tuo beneficio fiscale e a capire quali documenti sono necessari. Ricorda, i risultati sono una stima: per una consulenza su misura, rivolgiti sempre a un professionista qualificato.\n\n### **Parte 1: Il Bonus Ristrutturazione al 50%**\n\nConsiste in una detrazione dall'IRPEF del **50%** delle spese sostenute per interventi di recupero del patrimonio edilizio.\n\n#### **Massimale di Spesa**\n\nIl limite massimo di spesa su cui calcolare la detrazione è di **96.000 euro** per singola unità immobiliare. Questo importo include sia i costi dei lavori sia le spese professionali (progettazione, perizie, oneri, IVA, etc.).\n\n#### **Modalità di Rimborso**\n\nLa detrazione viene ripartita in **10 quote annuali** di pari importo. Ad esempio, su una spesa di 50.000 €, la detrazione totale sarà di 25.000 €, rimborsata con una detrazione di 2.500 € all'anno dall'IRPEF per 10 anni.\n\n### **Parte 2: Il Bonus Mobili ed Elettrodomestici**\n\nQuesto bonus è strettamente collegato al primo. Per poterne usufruire, è **necessario** aver realizzato un intervento di ristrutturazione su cui si beneficia della detrazione del 50%.\n\n- **Aliquota e Massimale**: La detrazione è del **50%** su una spesa massima di **5.000 euro** (limite per l'anno 2024). \n- **Beni Acquistabili**: Mobili nuovi (cucine, letti, armadi, etc.) e grandi elettrodomestici di classe non inferiore alla A per i forni, E per lavatrici/asciugatrici, F per frigoriferi/congelatori.\n\n_Importante_: La data di inizio dei lavori di ristrutturazione deve essere **precedente** a quella in cui si acquistano i mobili.\n\n### **Parte 3: La Checklist dei Documenti**\n\nPer non avere problemi in fase di controllo da parte dell'Agenzia delle Entrate, è fondamentale conservare tutta la documentazione. I documenti principali sono:\n\n- **Titolo abilitativo**: A seconda del tipo di intervento, può essere la CILA (Comunicazione di Inizio Lavori Asseverata), la SCIA (Segnalazione Certificata di Inizio Attività) o il Permesso di Costruire.\n- **Fatture e Ricevute**: Tutte le fatture intestate a chi sostiene la spesa.\n- **Bonifico Parlante**: I pagamenti devono essere effettuati tramite bonifico bancario o postale 'parlante', che riporti la causale del versamento, il codice fiscale del beneficiario della detrazione e il numero di partita IVA del soggetto a favore del quale il bonifico è effettuato.\n- **Visura Catastale**: Per identificare correttamente l'immobile.\n\nPer gli interventi in **condominio**, è inoltre richiesta la **delibera dell'assemblea** che approva i lavori e la tabella di ripartizione delle spese."
+  "content": "### **Guida Completa al Bonus Ristrutturazione 50% e Bonus Mobili**\n\n**Come funziona, quali spese sono ammesse e come massimizzare il risparmio fiscale.**\n\nIl **Bonus Ristrutturazione** è una delle agevolazioni fiscali più importanti per chi desidera migliorare la propria abitazione. Permette di recuperare una parte significativa dei costi sostenuti attraverso una detrazione dall'imposta sul reddito (IRPEF).\n\nQuesto strumento ti aiuta a simulare il tuo beneficio fiscale e a capire quali documenti sono necessari. Ricorda, i risultati sono una stima: per una consulenza su misura, rivolgiti sempre a un professionista qualificato.\n\n### **Parte 1: Il Bonus Ristrutturazione al 50%**\n\nConsiste in una detrazione dall'IRPEF del **50%** delle spese sostenute per interventi di recupero del patrimonio edilizio.\n\n#### **Massimale di Spesa**\n\nIl limite massimo di spesa su cui calcolare la detrazione è di **96.000 euro** per singola unità immobiliare. Questo importo include sia i costi dei lavori sia le spese professionali (progettazione, perizie, oneri, IVA, etc.).\n\n#### **Modalità di Rimborso**\n\nLa detrazione viene ripartita in **10 quote annuali** di pari importo. Ad esempio, su una spesa di 50.000 €, la detrazione totale sarà di 25.000 €, rimborsata con una detrazione di 2.500 € all'anno dall'IRPEF per 10 anni.\n\n### **Parte 2: Il Bonus Mobili ed Elettrodomestici**\n\nQuesto bonus è strettamente collegato al primo. Per poterne usufruire, è **necessario** aver realizzato un intervento di ristrutturazione su cui si beneficia della detrazione del 50%.\n\n- **Aliquota e Massimale**: La detrazione è del **50%** su una spesa massima di **5.000 euro** (limite per l'anno 2024).\n- **Beni Acquistabili**: Mobili nuovi (cucine, letti, armadi, etc.) e grandi elettrodomestici di classe non inferiore alla A per i forni, E per lavatrici/asciugatrici, F per frigoriferi/congelatori.\n\n_Importante_: La data di inizio dei lavori di ristrutturazione deve essere **precedente** a quella in cui si acquistano i mobili.\n\n### **Parte 3: La Checklist dei Documenti**\n\nPer non avere problemi in fase di controllo da parte dell'Agenzia delle Entrate, è fondamentale conservare tutta la documentazione. I documenti principali sono:\n\n- **Titolo abilitativo**: A seconda del tipo di intervento, può essere la CILA (Comunicazione di Inizio Lavori Asseverata), la SCIA (Segnalazione Certificata di Inizio Attività) o il Permesso di Costruire.\n- **Fatture e Ricevute**: Tutte le fatture intestate a chi sostiene la spesa.\n- **Bonifico Parlante**: I pagamenti devono essere effettuati tramite bonifico bancario o postale 'parlante', che riporti la causale del versamento, il codice fiscale del beneficiario della detrazione e il numero di partita IVA del soggetto a favore del quale il bonifico è effettuato.\n- **Visura Catastale**: Per identificare correttamente l'immobile.\n\nPer gli interventi in **condominio**, è inoltre richiesta la **delibera dell'assemblea** che approva i lavori e la tabella di ripartizione delle spese."
 };
 
 
@@ -150,18 +155,15 @@ const DetrazioniRistrutturazione50: React.FC = () => {
     const { calculatedOutputs, checklist } = useMemo(() => {
         const { spesa_lavori, include_bonus_mobili, spesa_mobili, tipo_immobile } = states;
 
-        // Costanti
         const MASSIMALE_LAVORI = 96000;
-        const MASSIMALE_MOBILI = 5000; // Valido per il 2024
+        const MASSIMALE_MOBILI = 5000;
         const ALIQUOTA = 0.50;
         const ANNI_RATE = 10;
 
-        // Calcolo Bonus Ristrutturazione
         const spesa_ammissibile_lavori = Math.min(spesa_lavori, MASSIMALE_LAVORI);
         const detrazione_totale_lavori = spesa_ammissibile_lavori * ALIQUOTA;
         const rata_annuale_lavori = detrazione_totale_lavori / ANNI_RATE;
 
-        // Calcolo Bonus Mobili
         let detrazione_totale_mobili = 0;
         let rata_annuale_mobili = 0;
         if (include_bonus_mobili && spesa_lavori > 0) {
@@ -170,11 +172,9 @@ const DetrazioniRistrutturazione50: React.FC = () => {
             rata_annuale_mobili = detrazione_totale_mobili / ANNI_RATE;
         }
 
-        // Totali
         const detrazione_complessiva = detrazione_totale_lavori + detrazione_totale_mobili;
         const rata_annuale_complessiva = rata_annuale_lavori + rata_annuale_mobili;
         
-        // Checklist Documentale Dinamica
         let checklist_items: { text: string; details: string; }[] = [];
         if (spesa_lavori > 0) {
             checklist_items = [
@@ -219,6 +219,8 @@ const DetrazioniRistrutturazione50: React.FC = () => {
             pdf.save(`${slug}_simulazione.pdf`);
         } catch (_e) { alert("Impossibile generare il PDF in questo ambiente."); }
     }, [slug]);
+
+
 
     const formatCurrency = (value: number) => new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' }).format(value);
 
