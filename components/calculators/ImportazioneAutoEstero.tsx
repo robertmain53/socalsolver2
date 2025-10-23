@@ -115,7 +115,6 @@ const calculatorData = {
         { id: "veicolo_nuovo", label: "Il veicolo è fiscalmente 'nuovo'?", type: "boolean" as const, tooltip: "Un veicolo è 'nuovo' ai fini IVA se ha meno di 6 mesi O meno di 6.000 km. In questo caso l'IVA va versata in Italia." },
         { id: "potenza_kw", label: "Potenza del Veicolo (kW)", type: "number" as const, unit: "kW", min: 0, step: 1, tooltip: "Indica la potenza del motore in kiloWatt (kW), come riportato sul libretto di circolazione. È un dato fondamentale per il calcolo dell'IPT." },
         { id: "provincia_immatricolazione", label: "Provincia di Immatricolazione", type: "select" as const, options: [
-            // Aggiungo solo alcune province per brevità, ma l'elenco può essere completato
             {value: 'rm', label: 'Roma'},
             {value: 'mi', label: 'Milano'},
             {value: 'na', label: 'Napoli'},
@@ -167,12 +166,18 @@ const useCalculatorLogic = (states: { [key: string]: any }) => {
         }
 
         // --- Calcolo IPT (Imposta Provinciale di Trascrizione) ---
-        // Formula: Importo base + (kW - 53) * Tariffa per kW * Maggiorazione provinciale
         let costo_ipt = 0;
         if (potenza_kw > 0) {
             const ipt_base = potenza_kw <= 53 ? 150.81 : 196.00;
             const tariffa_kw_base = potenza_kw <= 53 ? 0 : 4.57; // Euro per ogni kW sopra i 53
-            const maggiorazione_provinciale = { mi: 1.3, rm: 1.3, na: 1.3, to: 1.3, fi: 1.3, ve: 1.3, altre: 1.25 }[provincia_immatricolazione] || 1.3;
+            
+            const maggiorazioniProvinciali = {
+                mi: 1.3, rm: 1.3, na: 1.3, to: 1.3, fi: 1.3, ve: 1.3, altre: 1.25
+            };
+
+            // FIX: Assert the type of provincia_immatricolazione to be a key of the object
+            const key = provincia_immatricolazione as keyof typeof maggiorazioniProvinciali;
+            const maggiorazione_provinciale = maggiorazioniProvinciali[key] || 1.3;
             
             const parte_variabile = potenza_kw > 53 ? (potenza_kw - 53) * tariffa_kw_base : 0;
             costo_ipt = (ipt_base + parte_variabile) * maggiorazione_provinciale;
@@ -194,7 +199,7 @@ const useCalculatorLogic = (states: { [key: string]: any }) => {
 
 
 // --- Componente Principale ---
-const ImportazioneAutoEsteroCalculator: React.FC = () => {
+const ImportazioneAutoEstero: React.FC = () => {
     const { slug, title, inputs, outputs, content } = calculatorData;
     const calcolatoreRef = useRef<HTMLDivElement>(null);
     const [isClient, setIsClient] = useState(false);
@@ -367,4 +372,4 @@ const ImportazioneAutoEsteroCalculator: React.FC = () => {
     );
 };
 
-export default ImportazioneAutoEsteroCalculator;
+export default ImportazioneAutoEstero;
