@@ -194,10 +194,12 @@ a {
     box-shadow: none;
     background: transparent;
     overflow: visible;
+    display: contents;
   }
 
   .calculator-card__inner {
     padding: 0.5rem !important;
+    display: contents;
   }
 
   .calculator-card__inner > * {
@@ -209,23 +211,23 @@ a {
   .calculator-card__inner [class*="px-6"],
   .calculator-card__inner [class*="px-7"],
   .calculator-card__inner [class*="px-8"] {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 
   .calculator-card__inner [class*="px-5"] {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
   }
 
   .calculator-card__inner [class*="px-4"] {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 
   .calculator-card__inner [class*="px-3"] {
-    padding-left: 0.75rem !important;
-    padding-right: 0.75rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 
   main .space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -271,5 +273,10 @@ a {
 
   .calculator-card form {
     width: 100%;
+  }
+
+  main.container {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
 }
