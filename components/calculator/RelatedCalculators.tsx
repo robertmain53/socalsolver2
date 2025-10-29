@@ -54,7 +54,7 @@ export default function RelatedCalculators({
 
   if (isLoading) {
     return (
-      <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
+      <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6">
         <div className="animate-pulse">
           <div className="h-6 bg-gray-200 rounded w-1/3 mb-4"></div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -75,7 +75,7 @@ export default function RelatedCalculators({
   }
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 mt-12">
+    <div className="calculator-related bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl shadow-lg p-3 sm:p-5 md:p-8 mt-10 sm:mt-12">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 gap-4">
         <div className="flex items-start sm:items-center">
           <div className="text-2xl sm:text-3xl mr-3">{categoryIcon}</div>
@@ -106,7 +106,7 @@ export default function RelatedCalculators({
             href={`/${lang}/${calculator.category}/${calculator.slug}`}
             className="group block bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100 hover:border-blue-200"
           >
-            <div className="p-4 sm:p-6">
+            <div className="p-3 sm:p-5">
               {/* Header con icona */}
               <div className="flex items-start mb-3">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-xl font-bold mr-3 sm:mr-4 group-hover:scale-110 transition-transform duration-200 flex-shrink-0">

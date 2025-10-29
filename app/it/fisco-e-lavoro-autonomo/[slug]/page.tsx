@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import Script from 'next/script';
 import Breadcrumb from '@/components/layout/Breadcrumb';
 import RelatedCalculators from '@/components/calculator/RelatedCalculators';
+import CalculatorWrapper from '@/components/layout/CalculatorWrapper';
 import { getCalculator } from '@/lib/calculator-registry';
 import {
   generateSEOMetadata,
@@ -124,9 +125,9 @@ export default async function CalculatorPage({ params }: Props) {
         <Breadcrumb crumbs={crumbs} />
 
         {/* Calculator */}
-        <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden">
+        <CalculatorWrapper>
           <CalculatorComponent />
-        </div>
+        </CalculatorWrapper>
 
         {/* Content */}
         {content && (
