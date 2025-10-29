@@ -12,7 +12,7 @@ interface CalculatorWrapperProps {
 export default function CalculatorWrapper({ children }: CalculatorWrapperProps) {
   return (
     <div className="calculator-card w-full bg-white rounded-2xl shadow-lg overflow-hidden">
-      <div className="calculator-card__inner p-4 sm:p-6 md:p-8">
+      <div className="calculator-card__inner p-3 sm:p-5 md:p-8">
         {children}
       </div>
     </div>
