@@ -1,7 +1,7 @@
 ---
 title: "Calculadora Amortización Vehículo Empresa"
-description: "Calcula amortización fiscal de vehículos de empresa: turismos, furgonetas, camiones."
-keywords: ["amortización vehículo"]
+description: "Simula la amortización fiscal de turismos, furgonetas y camiones con tablas AEAT 2025, libertad ECO y coeficientes acelerados para vehículos usados."
+keywords: ["amortización vehículo", "coeficientes AEAT", "libertad de amortización"]
 lang: "es"
 category: "automoviles-y-transporte"
 slug: "calculadora-amortizacion-vehiculo"
@@ -9,118 +9,107 @@ slug: "calculadora-amortizacion-vehiculo"
 
 # Calculadora Amortización Vehículo Empresa
 
-Calcula amortización fiscal de vehículos de empresa: turismos, furgonetas, camiones.
-
-## Qué Es
-
-Calculadora Amortización Vehículo Empresa es una herramienta profesional y gratuita que te permite calcular de forma precisa y rápida amortización vehículo.
-
-Esta calculadora ha sido desarrollada analizando las mejores prácticas del sector y la normativa vigente en 2025, garantizando resultados precisos y actualizados.
-
-### Características Principales
-
-- **Cálculo Inmediato**: Resultados en tiempo real sin esperas
-- **Siempre Actualizado**: Normativa y tipos 2025
-- **100% Gratuito**: Sin registro requerido
-- **Privacidad Garantizada**: Tus datos no se guardan
-
-## Cómo Funciona
-
-La calculadora utiliza fórmulas precisas y actualizadas para procesar los datos que introduces y proporcionarte resultados detallados.
-
-### Método de Cálculo
-
-1. **Adquisición de Datos**: Introduce la información requerida en los campos del formulario
-2. **Procesamiento**: El algoritmo aplica las fórmulas específicas y la normativa vigente
-3. **Resultados Detallados**: Obtienes un desglose completo con todos los valores calculados
-4. **Interpretación**: Cada resultado viene acompañado de explicaciones claras
-
-## Por Qué Usar
-
-### Ventajas de Nuestra Calculadora
-
-✅ **Precisión Garantizada**
-Fórmulas verificadas y normativa 2025 integradas en el sistema de cálculo.
-
-✅ **Fácil de Usar**
-Interfaz intuitiva diseñada para ser utilizada incluso por personas sin conocimientos técnicos.
-
-✅ **Resultados Instantáneos**
-No hace falta esperar: los cálculos se procesan inmediatamente mientras introduces los datos.
-
-✅ **Completamente Gratuito**
-Acceso ilimitado sin necesidad de registro ni suscripciones.
-
-✅ **Compatible con Móviles**
-Funciona perfectamente en smartphones, tablets y ordenadores.
-
-## Cómo Utilizarla
-
-### Guía Paso a Paso
-
-#### Paso 1: Preparación de Datos
-
-Antes de utilizar la calculadora, asegúrate de tener a mano todos los datos necesarios. Esto hará el proceso más rápido y eficiente.
-
-#### Paso 2: Rellenar Campos
-
-Introduce los valores requeridos en los campos de la calculadora. Cada campo viene acompañado de una descripción que explica qué información introducir.
-
-#### Paso 3: Cálculo
-
-Haz clic en el botón "Calcular" para procesar los datos. El sistema generará inmediatamente los resultados.
-
-#### Paso 4: Análisis de Resultados
-
-Examina atentamente los resultados proporcionados. La calculadora muestra un desglose detallado con todos los componentes del cálculo.
-
-#### Paso 5: Guardar (Opcional)
-
-Puedes guardar o imprimir los resultados para conservarlos o compartirlos con tu asesor.
-
-## Preguntas Frecuentes
-
-### Pregunta 1: ¿Los resultados son vinculantes?
-
-Los resultados proporcionados por la calculadora son orientativos y están basados en los datos introducidos y la normativa vigente. Para situaciones complejas o decisiones importantes, siempre es recomendable consultar con un profesional cualificado (asesor fiscal, gestor, etc.).
-
-### Pregunta 2: ¿Qué tan actualizados están los datos?
-
-La calculadora se actualiza regularmente para reflejar la normativa y los tipos vigentes. Todos los cálculos están basados en la legislación de 2025.
-
-### Pregunta 3: ¿Se guardan mis datos?
-
-No, todos los cálculos se realizan localmente en tu navegador. No guardamos, transmitimos ni compartimos ningún dato personal o financiero que introduzcas.
-
-### Pregunta 4: ¿Puedo usar la calculadora en el móvil?
-
-Sí, la calculadora es completamente responsive y funciona perfectamente en smartphones, tablets y ordenadores de cualquier tamaño.
-
-### Pregunta 5: ¿Qué hago si encuentro un error?
-
-Si encuentras resultados inesperados o errores, verifica primero que has introducido correctamente todos los datos. Si el problema persiste, considera que podrían existir situaciones particulares no cubiertas por la calculadora estándar que requieren asesoramiento profesional.
-
-## Fuentes
-
-1. [Add authoritative source]
-2. [Add authoritative source]
+Calcula la amortización fiscal de tu vehículo de empresa con las tablas oficiales de la Agencia Tributaria (AEAT) para 2025. El simulador admite compras de turismos, furgonetas, camiones, vehículos mixtos y flotas de transporte, contemplando coeficientes dobles para bienes usados, libertad de amortización ECO 2024–2025 e importación de tus propias tablas.
 
 ---
 
-**Análisis de Competidores Completado:**
-- [Competitor 1](https://www.idf-af.com/calculadora-de-amortizacion-de-vehiculos-de-transporte/)
-- [Competitor 2](https://lcoches.es/calculadora-financiacion/)
-- [Competitor 3](https://www.financlick.es/simulador-leasing)
-- [Competitor 4](https://www.auto-empire.de/es/servicio/calculadora-prestamos/)
-- [Competitor 5](https://essabank.com/es/calculadoras/calculadora-de-liquidaci%C3%B3n-anticipada-de-pr%C3%A9stamos-para-autom%C3%B3viles/)
-- [Competitor 6](https://www.billin.net/calculadora-tablas-amortizacion/)
-- [Competitor 7](https://www.bbva.es/personas/productos/prestamos/simulador-prestamos-coches.html)
-- [Competitor 8](https://www.legalitas.com/actualidad/amortizacion-vehiculo-empresa)
-- [Competitor 9](https://www.plangeneralcontable.com/?tit=calculadora-de-la-cuota-y-cuadro-de-amortizacion-de-un-leasing&name=Simuladores&fid=cf0bcap)
-- [Competitor 10](https://www.bankofamerica.com/auto-loans/auto-loan-calculator/es/)
+## Qué resuelve esta herramienta
 
-**Última Actualización:** 2025-10-10
+- **Determina el plan fiscal año a año** según la estimación directa (normal o simplificada) o el régimen objetivo de módulos.  
+- **Simula escenarios avanzados**: porcentaje de afectación a la actividad, valor residual, inversión en vehículos sostenibles o seminuevos.  
+- **Calcula automáticamente el IVA soportado y deducible**, incluyendo el límite del 50 % para turismos de uso mixto y el 100 % para transporte de viajeros, autoescuelas o vehículos industriales.  
+- **Exporta a CSV o PDF** y guarda hasta 20 escenarios distintos para compararlos con un clic.
 
 ---
 
-*Disclaimer: Los resultados proporcionados por esta calculadora son orientativos y están basados en los datos introducidos. Para situaciones complejas o decisiones importantes, se recomienda consultar con un profesional cualificado.*
+## Datos que necesitas antes de empezar
+
+1. **Régimen fiscal**: estimación directa normal, simplificada o módulos.  
+2. **Familia y categoría AEAT**: por ejemplo, turismo, furgoneta o autocamión (coeficiente y período máximo incluidos).  
+3. **Valor de adquisición sin IVA** y, si procede, **valor residual estimado**.  
+4. **Fecha de puesta en funcionamiento** (la calculadora aplica pro‑rata por días el primer ejercicio).  
+5. **Porcentaje de deducción del IVA** (50 % genérico, 100 % para transporte de mercancías, VTC/taxi, autoescuelas, etc.).  
+6. **Marcar si es bien usado** (para duplicar el coeficiente) y si el vehículo cumple los requisitos ECO con libertad de amortización en 2024–2025.
+
+---
+
+## Cómo interpretar los resultados
+
+### Resumen IRPF/IS
+
+- **Base amortizable**: valor contable tras restar el residual.  
+- **Coeficiente aplicado**: máximo AEAT ajustado por uso (nuevo/usado) y por incentivos ECO.  
+- **Vida útil estimada**: años necesarios para agotar la base con el coeficiente aplicado.  
+- **Total amortizado**: suma de las cuotas generadas por el plan calculado.
+
+### Resumen IVA
+
+- **IVA soportado**: importe de la factura multiplicado por el tipo seleccionado.  
+- **IVA deducible**: aplica el porcentaje deducible automático (50 % por defecto, 100 % en actividades con derecho pleno o afectación exclusiva).  
+- **Avisos**: la calculadora muestra notas cuando falta la afectación exclusiva o se aplica valor residual.
+
+### Tabla IRPF
+
+La tabla detalla por ejercicio: base inicial, cuota, residuo y notas (prorrateo del primer año, libertad ECO, etc.). Puedes ordenar o exportar la tabla para adjuntarla a tu contabilidad o a tu gestor.
+
+---
+
+## Estrategias para optimizar la amortización
+
+### 1. Aprovecha la libertad de amortización ECO
+- Vehículos eléctricos, de hidrógeno o con etiqueta CERO adquiridos en 2024 o 2025 pueden amortizar hasta el 100 % el primer año (LIS art. 12.3 TRLIS, Real Decreto‑ley 5/2023).  
+- El porcentaje se configura con el deslizador del primer año. El resto de la base seguirá el coeficiente AEAT estándar.
+
+### 2. Vehículos usados con coeficiente duplicado
+- La AEAT permite aplicar hasta el doble del coeficiente máximo para bienes de segunda mano (Orden ETD/1217/2023).  
+- Marca la casilla “Bien de segunda mano” para duplicar automáticamente el coeficiente y recalcular la vida útil.
+
+### 3. Ajusta el porcentaje de IVA deducible
+- Turismos de uso mixto: 50 % deducible salvo prueba en contrario (art. 95 LIVA).  
+- Transporte de mercancías, taxis, VTC, autoescuelas, agentes comerciales: 100 %.  
+- Si trabajas con prorrata general o especial, introduce el porcentaje calculado por tu gestoría.
+
+### 4. Escenarios comparables
+- Guarda una versión con coeficiente estándar y otra aplicando libertad ECO o coeficiente duplicado.  
+- Selecciona hasta tres escenarios para comparar vida útil, IVA deducible y total amortizado. Ideal para justificar inversiones ante dirección financiera.
+
+---
+
+## Errores habituales y cómo evitarlos
+
+| Error frecuente | Consecuencia | Solución en la calculadora |
+| --- | --- | --- |
+| Registrar la fecha real de compra en lugar de la de puesta en funcionamiento | El primer año puede quedar sobrevalorado | Introduce la fecha de alta en el libro registro para que el prorrateo sea correcto |
+| No marcar la afectación exclusiva | El plan se anula (base amortizable 0) | Activa la casilla IRPF si el vehículo se afecta al 100 % y documenta la política interna |
+| Olvidar el valor residual pactado en leasing | Deducción excesiva y riesgo de ajuste | Introduce el residual para limitar la base contable y respetar el valor pactado |
+| Aplicar 100 % de IVA deducible sin justificar | Regularización posterior por la AEAT | Utiliza la casilla de porcentaje y documenta los supuestos admitidos (VTC, transporte, etc.) |
+
+---
+
+## Preguntas frecuentes
+
+### ¿Sirve para leasing o renting?
+Sí. Introduce el valor de adquisición (principal), marca el residual si existe opción de compra y registra las cuotas financieras en tu contabilidad. El leasing mantiene derecho a deducción de IVA si el vehículo está afecto a la actividad.
+
+### ¿Qué pasa si vendo el vehículo antes de terminar el plan?
+Debes regularizar las cuotas deducidas. Exporta el plan a CSV para conocer lo amortizado hasta la fecha y calcula la regularización en tu contabilidad. La herramienta te permite guardar un escenario actualizado con la fecha real de baja.
+
+### ¿Puedo amortizar dos vehículos a la vez?
+Sí. Guarda un escenario por vehículo (por ejemplo, “Furgoneta 2025” y “Turismo comercial”). Cada uno mantiene su propio plan, coeficiente y porcentaje de IVA.
+
+### ¿Cómo se integra con mi gestoría?
+Descarga el plan en CSV o PDF y envíalo junto a la factura de compra. El fichero incluye todos los parámetros (familia AEAT, coeficiente, valor residual, porcentaje de IVA) para que el asesor lo importe en su software.
+
+---
+
+## Recursos y normativa
+
+1. [Orden ETD/1217/2023, de 29 de noviembre – Tablas oficiales de coeficientes de amortización AEAT](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-24046)  
+2. [Ley 37/1992 del IVA, art. 95 – Deducciones limitadas en vehículos](https://www.boe.es/buscar/act.php?id=BOE-A-1992-28740)  
+3. [Real Decreto-ley 5/2023 – Libertad de amortización para inversiones en movilidad sostenible](https://www.boe.es/eli/es/rdl/2023/06/28/5)  
+4. [Plan General de Contabilidad – Normas de registro y valoración sobre inmovilizado material](https://www.boe.es/buscar/doc.php?id=BOE-A-2007-19884)
+
+---
+
+**Última actualización editorial:** febrero de 2025  
+*La información tiene carácter divulgativo. Antes de tomar decisiones fiscales, consulta con tu asesor o con la Agencia Tributaria.*

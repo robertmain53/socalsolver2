@@ -8,6 +8,7 @@ import { generateSEOMetadata } from '@/lib/seo';
 import { getCalculator } from '@/lib/calculator-registry';
 import { getRequestOrigin } from '@/lib/request-context';
 import CalculatorWrapper from '@/components/layout/CalculatorWrapper';
+import RelatedCalculators from '@/components/calculator/RelatedCalculators';
 import { buildCalculatorBreadcrumbs } from '@/lib/breadcrumbs';
 
 type Props = { params: { slug: string } };
@@ -71,40 +72,25 @@ export default async function CalculatorPage({ params }: Props) {
   });
 
   return (
-    <div className="space-y-8">
-        <Breadcrumb crumbs={crumbs} />
-        
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Calculator */}
-            <CalculatorWrapper>
-                <CalculatorComponent />
-            </CalculatorWrapper>
-            
-            {/* Sidebar */}
-            <div className="lg:col-span-1">
-                <div className="p-6 bg-white rounded-2xl shadow-lg">
-                    <h3 className="text-xl font-bold mb-4">Tools</h3>
-                    <div className="space-y-2">
-                        <button className="w-full p-3 text-left rounded-lg hover:bg-gray-100 transition-colors">
-                            📊 Save Result
-                        </button>
-                        <button className="w-full p-3 text-left rounded-lg hover:bg-gray-100 transition-colors">
-                            📄 Export PDF
-                        </button>
-                        <button className="w-full p-3 text-left rounded-lg hover:bg-gray-100 transition-colors">
-                            🔗 Share
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        {/* Content */}
-        {content && (
-            <article className="prose lg:prose-xl max-w-none bg-white p-8 rounded-2xl shadow-lg">
-                <ReactMarkdown>{content}</ReactMarkdown>
-            </article>
-        )}
+    <div className="space-y-6 sm:space-y-8">
+      <Breadcrumb crumbs={crumbs} />
+
+      <CalculatorWrapper>
+        <CalculatorComponent />
+      </CalculatorWrapper>
+
+      {content && (
+        <article className="prose prose-sm sm:prose md:prose-lg lg:prose-xl max-w-none rounded-2xl border border-slate-200 bg-white/90 p-4 sm:p-6 md:p-8 shadow-sm">
+          <ReactMarkdown>{content}</ReactMarkdown>
+        </article>
+      )}
+
+      <RelatedCalculators
+        currentSlug={params.slug}
+        category={CATEGORY}
+        lang={LANG}
+        maxItems={6}
+      />
     </div>
   );
 }
