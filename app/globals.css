@@ -190,12 +190,14 @@ a {
 /* Calculator page mobile refinements */
 @media (max-width: 640px) {
   .calculator-card {
-    border-radius: 1rem;
-    box-shadow: 0 12px 24px -18px rgba(58, 42, 26, 0.18);
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    overflow: visible;
   }
 
   .calculator-card__inner {
-    padding: 0.75rem !important;
+    padding: 0.5rem !important;
   }
 
   .calculator-card__inner > * {
@@ -251,8 +253,13 @@ a {
   }
 
   .calculator-related {
-    margin-top: 2rem !important;
-    padding: 1rem !important;
+    margin-top: 1.5rem !important;
+    padding: 0.75rem !important;
+    background: #ffffff;
+    background-image: none !important;
+    border-radius: 0.75rem;
+    box-shadow: none;
+    border: 1px solid rgba(226, 232, 240, 0.8);
   }
 
   .calculator-card input,
