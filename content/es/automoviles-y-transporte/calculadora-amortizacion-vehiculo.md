@@ -11,16 +11,12 @@ slug: "calculadora-amortizacion-vehiculo"
 
 Calcula la amortización fiscal de tu vehículo de empresa con las tablas oficiales de la Agencia Tributaria (AEAT) para 2025. El simulador admite compras de turismos, furgonetas, camiones, vehículos mixtos y flotas de transporte, contemplando coeficientes dobles para bienes usados, libertad de amortización ECO 2024–2025 e importación de tus propias tablas.
 
----
-
 ## Qué resuelve esta herramienta
 
 - **Determina el plan fiscal año a año** según la estimación directa (normal o simplificada) o el régimen objetivo de módulos.  
 - **Simula escenarios avanzados**: porcentaje de afectación a la actividad, valor residual, inversión en vehículos sostenibles o seminuevos.  
 - **Calcula automáticamente el IVA soportado y deducible**, incluyendo el límite del 50 % para turismos de uso mixto y el 100 % para transporte de viajeros, autoescuelas o vehículos industriales.  
 - **Exporta a CSV o PDF** y guarda hasta 20 escenarios distintos para compararlos con un clic.
-
----
 
 ## Datos que necesitas antes de empezar
 
@@ -30,8 +26,6 @@ Calcula la amortización fiscal de tu vehículo de empresa con las tablas oficia
 4. **Fecha de puesta en funcionamiento** (la calculadora aplica pro‑rata por días el primer ejercicio).  
 5. **Porcentaje de deducción del IVA** (50 % genérico, 100 % para transporte de mercancías, VTC/taxi, autoescuelas, etc.).  
 6. **Marcar si es bien usado** (para duplicar el coeficiente) y si el vehículo cumple los requisitos ECO con libertad de amortización en 2024–2025.
-
----
 
 ## Cómo interpretar los resultados
 
@@ -52,8 +46,6 @@ Calcula la amortización fiscal de tu vehículo de empresa con las tablas oficia
 
 La tabla detalla por ejercicio: base inicial, cuota, residuo y notas (prorrateo del primer año, libertad ECO, etc.). Puedes ordenar o exportar la tabla para adjuntarla a tu contabilidad o a tu gestor.
 
----
-
 ## Estrategias para optimizar la amortización
 
 ### 1. Aprovecha la libertad de amortización ECO
@@ -73,8 +65,6 @@ La tabla detalla por ejercicio: base inicial, cuota, residuo y notas (prorrateo 
 - Guarda una versión con coeficiente estándar y otra aplicando libertad ECO o coeficiente duplicado.  
 - Selecciona hasta tres escenarios para comparar vida útil, IVA deducible y total amortizado. Ideal para justificar inversiones ante dirección financiera.
 
----
-
 ## Errores habituales y cómo evitarlos
 
 | Error frecuente | Consecuencia | Solución en la calculadora |
@@ -83,8 +73,6 @@ La tabla detalla por ejercicio: base inicial, cuota, residuo y notas (prorrateo 
 | No marcar la afectación exclusiva | El plan se anula (base amortizable 0) | Activa la casilla IRPF si el vehículo se afecta al 100 % y documenta la política interna |
 | Olvidar el valor residual pactado en leasing | Deducción excesiva y riesgo de ajuste | Introduce el residual para limitar la base contable y respetar el valor pactado |
 | Aplicar 100 % de IVA deducible sin justificar | Regularización posterior por la AEAT | Utiliza la casilla de porcentaje y documenta los supuestos admitidos (VTC, transporte, etc.) |
-
----
 
 ## Preguntas frecuentes
 
@@ -100,16 +88,12 @@ Sí. Guarda un escenario por vehículo (por ejemplo, “Furgoneta 2025” y “T
 ### ¿Cómo se integra con mi gestoría?
 Descarga el plan en CSV o PDF y envíalo junto a la factura de compra. El fichero incluye todos los parámetros (familia AEAT, coeficiente, valor residual, porcentaje de IVA) para que el asesor lo importe en su software.
 
----
-
 ## Recursos y normativa
 
 1. [Orden ETD/1217/2023, de 29 de noviembre – Tablas oficiales de coeficientes de amortización AEAT](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-24046)  
 2. [Ley 37/1992 del IVA, art. 95 – Deducciones limitadas en vehículos](https://www.boe.es/buscar/act.php?id=BOE-A-1992-28740)  
 3. [Real Decreto-ley 5/2023 – Libertad de amortización para inversiones en movilidad sostenible](https://www.boe.es/eli/es/rdl/2023/06/28/5)  
 4. [Plan General de Contabilidad – Normas de registro y valoración sobre inmovilizado material](https://www.boe.es/buscar/doc.php?id=BOE-A-2007-19884)
-
----
 
 **Última actualización editorial:** febrero de 2025  
 *La información tiene carácter divulgativo. Antes de tomar decisiones fiscales, consulta con tu asesor o con la Agencia Tributaria.*
