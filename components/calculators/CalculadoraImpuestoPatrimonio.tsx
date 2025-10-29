@@ -80,8 +80,7 @@ const ContentRenderer = ({ content }: { content: string }) => {
 };
 
 // ----------------------------------
-// --- [MODIFICA] ---
-// Dati e Logica: Campi di input migliorati
+// Dati e Logica: Campi di input
 // ----------------------------------
 const calculatorData = {
   slug: 'calculadora-impuesto-patrimonio',
@@ -89,9 +88,12 @@ const calculatorData = {
   title: 'Calculadora de Impuesto sobre el Patrimonio y Grandes Fortunas',
   lang: 'es',
   inputs: [
-    { id: 'valor_bienes', label: 'Valor total de bienes y derechos', type: 'number' as const, unit: '€', min: 0, step: 10000, tooltip: 'Suma el valor de todos tus activos: inmuebles (sin incluir la vivienda habitual), depósitos bancarios, fondos de inversión, acciones, seguros de vida, vehículos, etc. La vivienda habitual se introduce abajo.', step: 1 },
-    { id: 'valor_vivienda_habitual', label: 'Valor de la vivienda habitual', type: 'number' as const, unit: '€', min: 0, step: 5000, tooltip: 'Introduce el valor total de tu vivienda principal. La ley aplica una exención automática sobre este valor con un límite de 300.000€.', step: 1 },
-    { id: 'valor_deudas', label: 'Deudas deducibles', type: 'number' as const, unit: '€', min: 0, step: 5000, tooltip: 'Incluye hipotecas (incluida la parte proporcional de la vivienda habitual) o préstamos para la adquisición de bienes que forman parte del patrimonio.', step: 1 },
+    // --- [CORREZIONE] --- Rimosso 'step: 10000' duplicato
+    { id: 'valor_bienes', label: 'Valor total de bienes y derechos', type: 'number' as const, unit: '€', min: 0, tooltip: 'Suma el valor de todos tus activos: inmuebles (sin incluir la vivienda habitual), depósitos bancarios, fondos de inversión, acciones, seguros de vida, vehículos, etc. La vivienda habitual se introduce abajo.', step: 1 },
+    // --- [CORREZIONE] --- Rimosso 'step: 5000' duplicato
+    { id: 'valor_vivienda_habitual', label: 'Valor de la vivienda habitual', type: 'number' as const, unit: '€', min: 0, tooltip: 'Introduce el valor total de tu vivienda principal. La ley aplica una exención automática sobre este valor con un límite de 300.000€.', step: 1 },
+    // --- [CORREZIONE] --- Rimosso 'step: 5000' duplicato
+    { id: 'valor_deudas', label: 'Deudas deducibles', type: 'number' as const, unit: '€', min: 0, tooltip: 'Incluye hipotecas (incluida la parte proporcional de la vivienda habitual) o préstamos para la adquisición de bienes que forman parte del patrimonio.', step: 1 },
     { id: 'comunidad_autonoma', label: 'Comunidad Autónoma de residencia fiscal', type: 'select' as const, options: [
       'Andalucía', 'Aragón', 'Asturias', 'Baleares', 'Canarias', 'Cantabria', 'Castilla-La Mancha', 'Castilla y León', 'Cataluña', 'Extremadura', 'Galicia', 'Madrid', 'Murcia', 'La Rioja', 'Comunidad Valenciana', 'Estatal (No residentes)'
     ], tooltip: 'La Comunidad Autónoma determina el mínimo exento, la tarifa aplicable y las posibles bonificaciones en la cuota.', step: 2 },
@@ -109,7 +111,6 @@ const calculatorData = {
     { id: 'itsgf_a_pagar', label: 'Total a Pagar (Grandes Fortunas)', unit: '€', itsgf: true },
     { id: 'total_impuestos', label: 'TOTAL IMPUESTOS (IP + ITSGF)', unit: '€', final: true },
   ],
-  // --- [MODIFICA] --- Contenuto aggiornato per includere ITSGF
   content: `### Introducción: ¿Qué es el Impuesto sobre el Patrimonio (IP)?
 
 El Impuesto sobre el Patrimonio (IP) es un tributo estatal, cedido a las Comunidades Autónomas, que grava el **patrimonio neto** de las personas físicas.
@@ -134,11 +135,11 @@ Esta calculadora incluye la innovación clave de calcular simultáneamente el Im
 2.  **Base Imponible**: Al patrimonio neto se le resta la exención por vivienda habitual (máx. 300.000€).
 3.  **Cálculo IP (Regional)**:
     * \`Base Liquidable (IP) = Base Imponible - Mínimo Exento (Regional)\`
-    * Se aplica la tarifa regional (o estatal) para obtener la \`Cuota Íntegra (IP)\`.
-    * Se aplica la bonificación regional (ej. 100% en Madrid) para obtener el \`Total a Pagar (IP)\`.
+    * Se aplica la tarifa regional (o estatal) per ottenere la \`Cuota Íntegra (IP)\`.
+    * Se aplica la bonificación regional (ej. 100% en Madrid) per ottenere el \`Total a Pagar (IP)\`.
 4.  **Cálculo ITSGF (Estatal)**:
     * \`Base Liquidable (ITSGF) = Base Imponible - 700.000€ (Mínimo estatal)\`
-    * Se aplica la tarifa estatal de Grandes Fortunas para obtener la \`Cuota Íntegra (ITSGF)\`.
+    * Se aplica la tarifa estatal de Grandes Fortunas per ottenere la \`Cuota Íntegra (ITSGF)\`.
     * \`ITSGF a Pagar = MAX(0, Cuota Íntegra (ITSGF) - Total a Pagar (IP))\`
 5.  **Total Impuestos**: \`Total a Pagar (IP) + ITSGF a Pagar\`.
 
@@ -158,7 +159,6 @@ Los bienes comunes se atribuyen al 50% a cada cónyuge. Esto permite que cada un
     '@type': 'FAQPage',
     mainEntity: [
       { '@type': 'Question', name: '¿Quién está obligado a presentar la declaración del Impuesto sobre el Patrimonio (Modelo 714)?', acceptedAnswer: { '@type': 'Answer', text: 'Están obligados a presentar la declaración los contribuyentes cuya cuota tributaria, después de aplicar las deducciones y bonificaciones correspondientes, resulte a ingresar. También están obligados aquellos que, sin tener cuota a ingresar, posean un valor de bienes o derechos superior a los 2.000.000 de euros.' } },
-      // --- [MODIFICA] --- FAQ aggiornata per ITSGF
       { '@type': 'Question', name: 'Si vivo en Madrid y mi IP es 0€ por la bonificación, ¿tengo que pagar el Impuesto a las Grandes Fortunas (ITSGF)?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, es posible. El ITSGF actúa como un impuesto mínimo estatal. Si tu base imponible (patrimonio neto menos exención por vivienda) supera los 3.700.000€, es probable que generes una cuota de ITSGF. A esa cuota se le resta lo que pagas de IP (que en Madrid es 0€), por lo que deberás pagar la totalidad de la cuota del ITSGF al Estado.' } },
       { '@type': 'Question', name: '¿Cómo afecta el régimen de gananciales en un matrimonio al impuesto?', acceptedAnswer: { '@type': 'Answer', text: 'En un matrimonio bajo el régimen de bienes gananciales, los activos y pasivos comunes se atribuyen al 50% a cada cónyuge a efectos del impuesto. Esto puede ser ventajoso, ya que permite aplicar el mínimo exento y la exención por vivienda habitual a cada uno por separado, duplicando de facto los umbrales de no tributación para el patrimonio familiar.' } },
     ],
@@ -166,7 +166,6 @@ Los bienes comunes se atribuyen al 50% a cada cónyuge. Esto permite que cada un
 };
 
 // ----------------------------------
-// --- [MODIFICA] ---
 // Database tariffe e normative
 // ----------------------------------
 type Tramo = { limite: number; cuota: number; tipo: number };
@@ -217,7 +216,7 @@ const TARIFA_BALEARES: Tramo[] = [
   { limite: 11228165.57, cuota: 265681.93, tipo: 0.0345 },
 ];
 
-// --- [NUOVO] --- Tariffa per Impuesto Temporal de Solidaridad de las Grandes Fortunas (ITSGF)
+// Tariffa per Impuesto Temporal de Solidaridad de las Grandes Fortunas (ITSGF)
 const TARIFA_ITSGF: Tramo[] = [
   { limite: 0, cuota: 0, tipo: 0.0 }, // Esente fino a 3.000.000 di Base Liquidabile
   { limite: 3000000, cuota: 0, tipo: 0.017 },
@@ -258,8 +257,8 @@ const aplicarTarifa = (base: number, tarifa: Tramo[]) => {
 };
 const fmtEUR = (v: number) => new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(v);
 
-// --- [MODIFICA] ---
-// Funzione di calcolo principale (per CCAA singola o per tutte)
+// -----------------------
+// Funzione di calcolo principale
 // -----------------------
 const calcularImpuestos = (
   baseStates: { valor_bienes: number; valor_vivienda_habitual: number; valor_deudas: number },
@@ -322,10 +321,8 @@ const CalculadoraImpuestoPatrimonio: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
   useEffect(() => { setIsClient(true); }, []);
 
-  // --- [MODIFICA] --- Stato per il Wizard
   const [step, setStep] = useState(1);
 
-  // --- [MODIFICA] --- Stati iniziali aggiornati
   const initialStates = {
     valor_bienes: 3500000,
     valor_vivienda_habitual: 500000,
@@ -340,7 +337,6 @@ const CalculadoraImpuestoPatrimonio: React.FC = () => {
     setStep(1); // Resetta anche il wizard
   };
 
-  // --- [MODIFICA] --- Logica di calcolo principale
   const calculatedOutputs = useMemo(() => {
     const { valor_bienes, valor_vivienda_habitual, valor_deudas, comunidad_autonoma } = states;
     return calcularImpuestos({
@@ -350,7 +346,6 @@ const CalculadoraImpuestoPatrimonio: React.FC = () => {
     }, comunidad_autonoma);
   }, [states]);
 
-  // --- [MODIFICA] --- Grafico di comparazione regionale dinamico
   const chartData = useMemo(() => {
     const { valor_bienes, valor_vivienda_habitual, valor_deudas } = states;
     const baseStates = {
@@ -371,8 +366,32 @@ const CalculadoraImpuestoPatrimonio: React.FC = () => {
   }, [states.valor_bienes, states.valor_deudas, states.valor_vivienda_habitual]);
 
   // Funzioni di export (invariate)
-  const handleExportPDF = useCallback(async () => { /* ... (codice invariato) ... */ }, [slug]);
-  const handleSaveResult = useCallback(() => { /* ... (codice invariato) ... */ }, [states, calculatedOutputs, slug, title]);
+  const handleExportPDF = useCallback(async () => {
+    try {
+      const html2canvas = (await import('html2canvas')).default;
+      const jsPDF = (await import('jspdf')).default as any;
+      if (!calculatorRef.current) return;
+      const canvas = await html2canvas(calculatorRef.current, { scale: 2, backgroundColor: '#ffffff' });
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF({ orientation: 'p', unit: 'px', format: 'a4' });
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+      pdf.save(`${slug}.pdf`);
+    } catch {
+      alert('Error al generar el PDF.');
+    }
+   }, [slug]);
+  const handleSaveResult = useCallback(() => {
+    try {
+      const payload = { slug, title, inputs: states, outputs: calculatedOutputs, ts: Date.now() };
+      const results = JSON.parse(localStorage.getItem('calc_results') || '[]');
+      localStorage.setItem('calc_results', JSON.stringify([payload, ...results].slice(0, 10)));
+      alert('Resultado guardado en el navegador.');
+    } catch {
+      alert('No se pudo guardar el resultado.');
+    }
+   }, [states, calculatedOutputs, slug, title]);
 
   const formatCurrency = (value: number) => fmtEUR(value);
 
@@ -387,7 +406,7 @@ const CalculadoraImpuestoPatrimonio: React.FC = () => {
               Estima el IP y el ITSGF (Impuesto a Grandes Fortunas) y compara la carga fiscal en toda España.
             </p>
 
-            {/* --- [MODIFICA] --- Contenitore del Wizard */}
+            {/* Contenitore del Wizard */}
             <div className="border border-gray-200 rounded-lg">
               
               {/* Navigazione Wizard */}
@@ -467,7 +486,7 @@ const CalculadoraImpuestoPatrimonio: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* --- [MODIFICA] --- Grafico comparativo migliorato --- */}
+                  {/* Grafico comparativo migliorato */}
                   <div className="mt-8">
                     <h3 className="text-xl font-semibold text-gray-700 mb-4">Comparativa de Impuesto Total por CCAA</h3>
                     <div className="h-96 w-full bg-gray-50 p-4 rounded-lg">
@@ -501,7 +520,7 @@ const CalculadoraImpuestoPatrimonio: React.FC = () => {
           </div>
         </div>
 
-        {/* --- [MODIFICA] --- Sidebar aggiornata */}
+        {/* Sidebar aggiornata */}
         <aside className="lg:col-span-1 space-y-6">
           <section className="border rounded-lg p-4 bg-white shadow-md">
             <h2 className="font-semibold mb-3 text-gray-800">Acciones</h2>
@@ -512,7 +531,7 @@ const CalculadoraImpuestoPatrimonio: React.FC = () => {
             </div>
           </section>
 
-          {/* --- [NUOVO] --- Sezione Affidabilità */}
+          {/* Sezione Affidabilità */}
           <section className="border rounded-lg p-4 bg-white shadow-md">
             <h2 className="font-semibold mb-2 text-gray-800">Fiabilidad y Fuentes</h2>
             <p className="text-xs text-gray-600 mb-3">
@@ -540,7 +559,7 @@ const CalculadoraImpuestoPatrimonio: React.FC = () => {
 };
 
 // ==================================================
-// --- [NUOVO] --- Componenti UI per il Wizard
+// Componenti UI per il Wizard
 // ==================================================
 
 // Componente per la linguetta del passo
